@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 type: article
 
-title: "Substrate Stability Under Persistent Disagreement: Structural Constraints for Neutral Substrates"
-version: "draft"
+title: "Substrate Stability Under Persistent Disagreement: Structural Constraints for Neutral Ontological Substrates"
+version: "v0.1.0"
 date-released: "2025-12-27"
 
 authors:
@@ -25,6 +25,7 @@ keywords:
   - accountability
   - neutral substrates
   - extension stability
-  - causal and normative commitments
+  - causal and normative commitment
+  - structural explainability
 
 message: "If you use this software, please cite it as described in this file."

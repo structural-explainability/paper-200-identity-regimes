@@ -21,10 +21,20 @@ all stated representational requirements without introducing hidden
 structure or interpretive commitments.
 
 The result is therefore tight.
-It does not merely show that six regimes are adequate, 
-nor that fewer regimes are inadequate under particular conditions, 
-but that six regimes are both necessary and sufficient 
+The result does not merely show adequacy or inadequacy 
+under particular conditions; 
+it establishes that six regimes are both necessary and sufficient 
 under the stated optimization objective.
+
+\begin{theorem}[Tightness of the six-regime bound]
+\label{thm:tightness}
+Under the assumptions of Sections~\ref{sec:assumptions}--\ref{sec:requirements},
+exactly six identity-and-persistence regimes are necessary and sufficient
+for a neutral accountability substrate under persistent disagreement.
+\end{theorem}
+\begin{proof}
+Immediate from Lemma~\ref{lem:necessity} and Proposition~\ref{prop:sufficiency-six}.
+\end{proof}
 
 \subsection{Minimality Relative to Stability}
 
@@ -32,22 +42,22 @@ The result should not be read as a claim about simplicity in an intuitive
 or engineering sense.
 Ontologies with fewer explicit entity kinds may be easier to describe or extend
 within a coordinated interpretive community.
-However, when such reductions are achieved by encoding stability-critical
+However, when such reductions are achieved by encoding \stabilitycritical{}
 distinctions as roles, flags, or contextual predicates, total structural
 complexity is not reduced.
 Instead, it is displaced into extension layers whose interpretation cannot
 be held fixed under disagreement.
 
 In this paper, minimality is defined relative to stability.
-A representation is minimal only if removing explicit structure does not
-require reintroducing the same distinctions implicitly.
+\emph{A representation is minimal only if removing explicit structure does not
+require reintroducing the same distinctions implicitly.}
 From this perspective, an ontology with fewer explicit kinds but greater
 interpretive burden is not simpler, but less explicit.
 
 \subsection{Why Hidden Regimes Are Excluded}
 
 Hidden regimes are often effective where interpretation is shared,
-enforced, or inexpensive to renegotiate.
+enforced, or low-cost to renegotiate.
 They support flexibility and expressive economy within a single
 governance framework.
 
@@ -82,6 +92,8 @@ such as neutrality, stability under incompatible extension,
 or the exclusion of hidden regimes, 
 the optimization criterion is invalidated 
 and the bound no longer applies.
+We do not claim that these assumptions are universally correct; 
+we claim only that the result follows when they are adopted.
 
 Within the stated scope, however, the result is unavoidable.
 Any attempt to reduce the number of regimes must either sacrifice stability,
@@ -96,10 +108,13 @@ prescriptive.
 It provides a principled way to evaluate claims that an ontology supports
 neutral interoperability under disagreement.
 If such a framework relies on implicit roles or context-dependent typing
-for stability-critical distinctions, the present result explains why those
+for \stabilitycritical{} distinctions, the present result explains why those
 claims cannot be sustained simultaneously under the stated constraints.
 
 Conversely, for designers who share the stated optimization objective, the
-result identifies which distinctions must be made explicit, and which may
-safely be deferred to extension layers, in order to preserve neutrality and
-stable reference across incompatible interpretations.
+result identifies which distinctions must be made explicit,
+and which may safely be deferred to extension layers, 
+in order to preserve neutrality and stable reference 
+across incompatible interpretations.
+The six-regime structure thus serves both as a lower bound and 
+as a design template for accountability substrates in contested domains.

@@ -17,25 +17,35 @@ For concreteness, each regime is defined solely by its
 identity conditions, persistence behavior, and admissible relations:
 
 \begin{itemize}
-  \item \textbf{K1 (Actors):} enduring entities capable of bearing obligations,
-        rights, or responsibilities.
-  \item \textbf{K2 (Loci/Assets):} enduring physical or operational entities that
+  \item \textbf{K1:} enduring entities capable of bearing obligations
+        or responsibilities.
+  \item \textbf{K2:} enduring physical or operational entities that
         may be acted upon but do not bear obligations.
-  \item \textbf{K3 (Instruments):} enduring authority-bearing structures that
+  \item \textbf{K3:} enduring authority-bearing structures that
         ground obligations or permissions independently of any particular
         occurrence.
-  \item \textbf{K4 (Occurrences):} time-indexed actions or events whose identity
+  \item \textbf{K4:} time-indexed actions or events whose identity
         is inseparable from temporal realization and provenance.
-  \item \textbf{K5 (Scopes):} enduring applicability contexts that delimit where,
+  \item \textbf{K5:} enduring applicability contexts that delimit where,
         to whom, or under what conditions instruments apply.
-  \item \textbf{K6 (Indicators):} descriptive records or measurements that assert
+  \item \textbf{K6:} descriptive records or measurements that assert
         observed or derived facts without asserting causal or normative claims.
 \end{itemize}
 
+These six regimes correspond directly to the six capacities derived in
+Section~\ref{sec:requirements}:
+obligation-bearing capacity (K1),
+acted-upon reference (K2),
+normative grounding without execution (K3),
+time-indexed occurrence (K4),
+applicability and scope (K5), and
+descriptive indication without causal commitment (K6).
+
 Each regime fixes a distinct identity criterion that is invariant under
 incompatible extension.
-No regime changes over time, and no regime’s identity depends on
-interpretation supplied by analytic or application layers.
+No entity changes regime over time, and no regime's identity conditions
+depend on interpretation supplied by analytic or application layers.
+
 
 \subsection{Admissible Relations}
 
@@ -59,6 +69,11 @@ Representative relations include:
         $\textit{measures} : \text{K6} \rightarrow
         (\text{K1} \mid \text{K2} \mid \text{K5})$
 \end{itemize}
+
+Indicators are not taken to measure occurrences directly in the substrate.
+Occurrences serve as temporal and provenance anchors for indicators,
+while measurements target enduring referents whose identity
+persists across incompatible extensions.
 
 This relation set is not exhaustive, but illustrates that no additional
 identity regimes are required to satisfy the structural constraints.
@@ -106,6 +121,9 @@ No requirement demands an additional regime, and no regime is redundant under
 the stated optimization criterion.
 Because the construction preserves stable reference under incompatible
 extension and introduces no hidden distinctions, it is sufficient.
+Non-redundancy follows from the necessity argument:
+each regime is required by at least one of R2--R6,
+so omitting any regime would violate a stated requirement.
 \end{proof}
 
 \subsection{Tightness of the Bound}

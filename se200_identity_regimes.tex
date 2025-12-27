@@ -119,6 +119,8 @@
   #2
   \end{tcolorbox}
 }
+% Notation for stability-critical 
+\newcommand{\stabilitycritical}{stability-critical}
 
 % ============================================================
 % Annotations (REQ / WHY / OBS) scan-friendly
@@ -162,7 +164,7 @@
 
 % ============================================================
 \title{Substrate Stability Under Persistent Disagreement: \\
-Structural Constraints for Neutral Substrates }
+Structural Constraints for \\ Neutral Ontological Substrates }
 % ============================================================
 
 \author[1,2]{Denise M. Case}
@@ -190,19 +192,22 @@ In such settings, interoperability cannot rely on shared interpretation,
 negotiated semantics, or centralized authority.
 Instead, representations must function as neutral substrates that preserve
 stable reference across incompatible extensions.
+
 This paper investigates the structural constraints imposed on ontological
 design by this requirement.
 Building on a neutrality framework that treats interpretive non-commitment and
 stability under extension as explicit design constraints, we ask what minimal
 ontological structure is forced if accountability relationships are to remain
 referable and comparable under disagreement.
-Minimality is understood not as reducing explicit structure at any cost, but as
-minimizing identity-and-persistence regimes without reintroducing stability-
-critical distinctions as hidden roles, flags, or contextual predicates.
+Minimality here is not mere parsimony:
+a reduction is admissible only if it does not 
+reintroduce \stabilitycritical{} distinctions 
+as hidden roles, flags, or contextual predicates.
+
 We establish a conditional lower-bound result: any ontology capable of
 supporting accountability under persistent disagreement must realize at least
 six distinct identity-and-persistence regimes.
-We further show that a construction with a minimal set of six such regimes is sufficient
+We further show that a construction with exactly six such regimes is sufficient
 to satisfy the stated requirements without embedding causal or normative
 commitments in the substrate.
 The result is not a proposal for a universal ontology, but a constraint on what
@@ -237,12 +242,12 @@ agnostic with respect to causal and normative interpretation.
 The formal statement and proof appear in Section~\ref{sec:interpretation}.
 
 \keywords{
-  Formal ontology;
+  formal ontology;
   ontological neutrality;
   accountability;
   neutral substrates;
   extension stability;
-  causal and normative commitments
+  causal and normative commitment
 }
 
 \ifShowAnnotations

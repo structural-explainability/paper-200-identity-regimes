@@ -2,26 +2,32 @@
 \section{Structural Requirements for Accountability Substrates}
 \label{sec:requirements}
 
-Given the assumptions and optimization criterion fixed in the previous
-section, we now state the representational requirements that an ontological
-substrate must satisfy in order to support accountability analysis under
-persistent disagreement.
+Given the assumptions and optimization criterion
+fixed in Section~\ref{sec:assumptions}, 
+the central question is not which ontology is most expressive or convenient, 
+but which structural distinctions are unavoidable.
+We therefore state the representational requirements 
+that an ontological substrate must satisfy in order to 
+support accountability analysis under persistent disagreement.
+
 These requirements are structural rather than interpretive.
-They do not prescribe how accountability should be understood, evaluated, or
-enforced; instead, they specify what must be representable in a stable and
-neutral manner.
+They do not prescribe how accountability
+should be understood, evaluated, or enforced; instead, 
+they specify what must be representable in a stable and neutral manner.
 
 The requirements are framed as necessary capacities.
-They are not derived from any particular domain, policy area, or theory of
-governance, but from the minimal conditions under which accountability claims
-can be stated, inspected, and compared without embedding causal or normative
-commitments in the substrate.
+They are not derived from any 
+particular domain, policy area, or theory of governance, 
+but from the minimal conditions under which accountability claims
+can be stated, inspected, and compared 
+without embedding causal or normative commitments in the substrate.
 
 \subsection{R1: Stable Identity and Persistence}
 
 The substrate must support stable reference to entities over time.
 Each entity must have identity and persistence conditions that are invariant
-under incompatible extensions.
+under incompatible extensions, independent of how the entity is later
+classified, interpreted, or evaluated.
 Changes in interpretation, role, status, or evaluation must not require
 reclassification of entities or modification of their identity criteria.
 
@@ -32,8 +38,8 @@ relationships or analyses, stable reference is not preserved.
 
 \subsection{R2: Obligation-Bearing Capacity}
 
-The substrate must support representation of entities that can bear rights,
-obligations, or responsibilities.
+The substrate must support representation of entities that can bear
+obligations or responsibilities.
 Such entities must be referable independently of the particular occurrences
 in which obligations are fulfilled, violated, or discharged.
 
@@ -59,7 +65,7 @@ The substrate must support representation of time-indexed occurrences.
 Occurrences must be individuated by their temporal realization and provenance,
 and must be distinguishable from enduring entities.
 
-This requirement applies to actions as well as to other discrete happenings
+This requirement applies to actions as well as to other discrete occurrences
 relevant to accountability, such as filings, inspections, or transactions.
 Occurrences are not required to carry interpretive or evaluative meaning; they
 must only assert that something occurred at a particular time and place.
@@ -87,8 +93,8 @@ evaluative judgments, or explanatory claims.
 This requirement is necessary to support longitudinal comparison and outcome
 inspection while preserving neutrality.
 Collapsing indicators into occurrences or into interpretive annotations
-eliminates stable reference to descriptive records across time and analytic
-frameworks.
+eliminates stable reference to descriptive records 
+over time and across analytic frameworks.
 
 \subsection{Summary}
 
@@ -102,3 +108,23 @@ operate.
 In the following section, these requirements are used to derive a lower bound
 on the number of distinct identity-and-persistence regimes that a substrate
 must realize in order to satisfy them simultaneously.
+
+% Use asterisk to omit numbering from TOC this is just a definition
+\subsection*{Identity-and-Persistence Regimes}
+
+Before deriving the lower bound, we make explicit what is meant by an
+\emph{identity-and-persistence regime}.
+An identity-and-persistence regime specifies the conditions under which
+entities remain the same entities over time and across incompatible extensions,
+together with the relations they may admit without reclassification.
+Two entities belong to the same regime if and only if 
+they share the same \stabilitycritical{} identity criteria, 
+persistence conditions, and admissible relations under
+the neutrality and stability constraints adopted here.
+Informally, a regime captures a distinct way of being an entity:
+regimes differ in what it means for an entity to persist
+and in which relations it can structurally admit without reclassification.
+
+Regimes are not introduced as ontological kinds or domain categories.
+They are structural distinctions forced by the requirement that identity and
+admissibility remain invariant under persistent disagreement.
