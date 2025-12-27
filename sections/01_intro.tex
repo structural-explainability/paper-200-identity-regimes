@@ -1,0 +1,86 @@
+% !TeX root = se200_identity_regimes.tex
+\section{Introduction: Structure Under Disagreement}
+\label{sec:intro}
+
+Modern data systems increasingly operate in environments characterized by
+persistent legal, political, and analytic disagreement.
+In such settings, no single interpretive authority can be assumed, and
+semantic convergence cannot be enforced without excluding legitimate
+participants or perspectives.
+Nevertheless, shared use of data remains necessary:
+entities must be referable, actions traceable, and
+records comparable across frameworks that may diverge
+in assumptions, methods, or evaluative standards.
+
+This paper addresses a structural question that arises in this context:
+\emph{what ontological structure is required if a representation is to remain
+usable as a shared substrate across incompatible interpretations?}
+The focus is not on
+domain modeling, explanatory adequacy, or normative correctness,
+but on the conditions under which stable reference and accountability
+can be preserved when disagreement is treated as
+a persistent feature rather than a temporary obstacle.
+
+We adopt a neutrality framework developed in prior work~\cite{case2025neutrality},
+treating ontological neutrality as a design constraint rather than an
+aspirational ideal.
+Neutrality is understood here as interpretive non-commitment combined with
+stability under incompatible extension.
+Under this view, a substrate must permit independent extensions to introduce
+causal, normative, or analytic structure without requiring revision of the
+underlying representation.
+Accordingly, explanatory and evaluative structure is externalized, and the
+substrate is constrained to remain pre-causal and pre-normative at the
+substrate level.
+
+Within this setting, ontological minimality cannot be understood solely as a
+reduction in the number of primitives.
+Many apparent simplifications achieve parsimony by reintroducing essential
+distinctions indirectly, through roles, flags, contextual typing, or other
+internal discriminators whose interpretation is supplied by extension layers.
+Such encodings rely on shared interpretive assumptions, which may not be
+available in settings characterized by persistent disagreement.
+For this reason, the present analysis excludes reductions that preserve
+stability only by deferring essential distinctions to interpretive mechanisms
+not represented at the substrate level.
+
+The specific focus of this paper is accountability.
+Accountability analysis requires stable reference to participants, authority
+structures, regulated occurrences, applicability contexts, and descriptive
+records, without embedding causal claims or normative judgments in the
+substrate itself.
+The question addressed here is not how these elements should be interpreted,
+but whether a neutral substrate can support them at all, and if so, with what
+irreducible structural commitments.
+
+The central contribution of this paper is a conditional bound on ontological
+structure given the design goals outlined above.
+Under explicit neutrality and stability constraints, we show that any ontology
+capable of supporting accountability under persistent disagreement must
+realize at least six distinct identity-and-persistence regimes.
+We further show that a construction with a minimal set of six such regimes is
+sufficient to satisfy the stated requirements without introducing hidden or
+implicit structure.
+The result is not a proposal for a universal ontology, but a constraint on
+what is possible under a specific optimization objective.
+
+Alternative optimization objectives prioritize different tradeoffs, such as
+interpretive convergence, domain-specific efficiency, or context-dependent
+classification at the substrate level.
+The results presented here apply only under the stated constraints, within
+which a minimal, domain-independent bound on ontological structure is
+established for stable reference and accountability.
+
+The remainder of the paper proceeds as follows.
+Section~\ref{sec:assumptions} states the assumptions, neutrality constraints,
+and optimization criterion.
+Section~\ref{sec:requirements} formalizes the structural requirements imposed
+by accountability analysis.
+Section~\ref{sec:necessity} derives a lower bound on the number of required
+identity-and-persistence regimes.
+Section~\ref{sec:sufficiency} presents a construction achieving this bound.
+Section~\ref{sec:interpretation} discusses the scope and implications of the
+result.
+Section~\ref{sec:related} situates the work relative to existing ontology
+frameworks.
+Section~\ref{sec:conclusion} concludes.

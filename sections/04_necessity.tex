@@ -1,0 +1,120 @@
+% !TeX root = se200_identity_regimes.tex
+\section{Necessity: A Lower Bound on Ontological Structure}
+\label{sec:necessity}
+
+This section establishes a lower bound on ontological structure under the
+assumptions and optimization criterion fixed in Section~\ref{sec:assumptions}.
+The result is a necessity claim: if a substrate is to support accountability
+under persistent disagreement while maintaining neutrality and stable
+reference, then a minimum number of distinct identity-and-persistence regimes
+is unavoidable.
+
+The argument proceeds in two steps.
+First, we identify the representational capacities that an accountability
+substrate must support, independent of any particular ontology.
+Second, we show that collapsing any two of the resulting identity regimes
+either violates stable reference or reintroduces hidden distinctions that are
+inadmissible under the stated optimization.
+
+\subsection{Identity-and-Persistence Regimes}
+
+Under the neutrality constraint, ontological distinctions cannot be grounded
+in function, role, or interpretation.
+They must instead be grounded in differences in identity, persistence, and
+admissible relations.
+An \emph{identity-and-persistence regime} specifies what it means for an
+entity to remain the same entity over time and across incompatible extensions,
+and which relations it may admit without reclassification.
+
+Accountability analysis requires support for at least the following distinct
+regimes:
+
+\begin{enumerate}
+  \item \textbf{Obligation-bearing entities:} enduring referents that may bear
+        rights, obligations, or responsibilities and remain identifiable as
+        parties across time.
+  \item \textbf{Authority-bearing structures:} enduring referents that ground
+        obligations or permissions without being tied to any single
+        occurrence.
+  \item \textbf{Acted-upon referents:} enduring non-obligation-bearing entities
+        that may be regulated, operated on, or affected by occurrences.
+  \item \textbf{Time-indexed occurrences:} entities individuated by their
+        temporal realization and provenance, recording that something
+        happened.
+  \item \textbf{Applicability contexts:} referents that scope where, to whom,
+        or under what conditions authority applies, and which may be nested or
+        overlapping.
+  \item \textbf{Descriptive records or indicators:} referents that report
+        measured or derived properties without asserting causal or normative
+        conclusions.
+\end{enumerate}
+
+Each regime differs in its identity conditions, persistence behavior, and
+admissible relations.
+Treating these differences as merely contextual or role-based distinctions
+would make admissibility depend on interpretation, violating the requirement
+of stable reference.
+
+\subsection{Collapse Strategy and Admissibility}
+
+To establish a lower bound, we consider whether any two of the regimes above
+can be collapsed into a single identity regime without violating the assumptions of
+Section~\ref{sec:assumptions}.
+A collapse is admissible only if the resulting representation admits a single,
+extension-stable identity regime and does not require hidden discriminators to
+recover the original distinction.
+
+For each possible collapse, at least one of the following outcomes arises:
+
+\begin{itemize}
+  \item \textbf{Identity instability:} the collapsed regime requires
+        incompatible persistence criteria, so that identity varies across
+        extensions.
+  \item \textbf{Category error:} the collapsed regime admits relations that are
+        structurally inappropriate, requiring interpretive rules to block
+        them.
+  \item \textbf{Hidden regime reintroduction:} the distinction is reintroduced
+        via roles, flags, or contextual predicates, violating the
+        no-smuggling criterion.
+\end{itemize}
+
+Because such mechanisms rely on interpretive agreement supplied by extension
+layers, they are excluded by the stated optimization objective.
+
+\subsection{Lower-Bound Result}
+
+\begin{lemma}[Necessity of distinct regimes]
+\label{lem:necessity}
+Under the assumptions of Section~\ref{sec:assumptions}, no ontology whose stable partition
+contains fewer than six distinct identity-and-persistence regimes can satisfy
+the representational requirements of accountability while remaining neutral
+and stable under incompatible extension.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+Suppose an ontology realizes fewer than six identity-and-persistence regimes.
+Then at least two of the regimes required for accountability are collapsed
+into a single identity regime.
+By the collapse analysis above, any such collapse either forces incompatible
+identity criteria, admits structurally invalid relations, or requires internal
+discriminators whose interpretation is supplied by extension layers.
+Each case violates either stable reference or the neutrality constraint.
+Therefore no ontology with fewer than six regimes can satisfy all stated
+requirements simultaneously.
+\end{proof}
+
+\subsection{Interpretation of the Necessity Result}
+
+The necessity result is conditional and structural.
+It does not claim that fewer regimes are impossible in general, but that they
+are incompatible with the optimization objective fixed in Section~\ref{sec:assumptions}.
+Ontologies optimized for local agreement, negotiated semantics, or expressive
+flexibility may legitimately employ fewer explicit distinctions by relying on
+hidden or interpretive mechanisms.
+
+Within the stated constraints, however, the result establishes a sharp lower
+bound: any neutral substrate capable of supporting accountability under
+persistent disagreement must realize at least six distinct
+identity-and-persistence regimes.
+The following section shows that this bound is tight by exhibiting a
+construction that satisfies all requirements with a minimal set of six regimes.

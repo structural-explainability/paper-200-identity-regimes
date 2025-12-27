@@ -1,0 +1,107 @@
+% !TeX root = se200_identity_regimes.tex
+
+\section*{Proof Contract and Direction of Dependence}
+\label{sec:proof-contract}
+\addcontentsline{toc}{section}{Proof Contract and Direction of Dependence}
+
+This paper establishes structural constraints for neutral substrates
+optimized for interoperability under persistent disagreement.
+All claims are structural, not empirical, causal, normative, or evaluative.
+
+%------------------------------------------
+\subsection*{Paper-Level Constraints}
+%------------------------------------------
+
+\REQ{GOAL}{All arguments in this paper MUST address stability and admissibility
+  of substrate structure under persistent disagreement, and no broader claim.}
+\WHY{GOAL}{Restricting the proof target prevents scope creep into ontology design,
+  governance, or application-specific modeling.}
+
+\REQ{OPT}{This paper MUST treat interoperability under persistent disagreement
+  and stable reference as the sole optimization objective.}
+\WHY{OPT}{Alternative objectives (e.g., expressive convenience, local agreement)
+  admit different structures and are explicitly out of scope.}
+
+\REQ{COND}{All results MUST be conditional on the stated assumptions.
+  The analysis applies only under these assumptions; alternative assumptions
+  motivate different results and are outside the present scope.}
+\WHY{COND}{This paper establishes constraint results, not universal prescriptions.}
+
+\REQ{PROOF}{All claims MUST follow from explicit definitions, stated assumptions,
+  and logical inference.
+  No causal, empirical, or normative premises are admitted unless explicitly
+  marked as OBS.}
+\WHY{PROOF}{Substrate-layer claims must remain valid across incompatible
+  interpretive frameworks.
+  Hidden commitments undermine extension stability.}
+
+%------------------------------------------
+\subsection*{Foundational Assumptions}
+%------------------------------------------
+
+\REQ{DISAGREE}{Persistent disagreement MUST be treated as a stable condition,
+  not a temporary failure to converge.}
+\WHY{DISAGREE}{The substrate is intended for environments where interpretive
+  convergence cannot be assumed or enforced.}
+
+\REQ{EXT}{Extensions to the substrate MUST be admissible without coordination.}
+\WHY{EXT}{Neutral substrates must support independent extension without revision
+  of identity or admissibility conditions.}
+
+\REQ{NEUTRAL}{The substrate MUST be pre-causal and pre-normative.}
+\WHY{NEUTRAL}{Causal and normative commitments impose interpretive direction and
+  prevent plural extension.}
+
+%------------------------------------------
+\subsection*{Stable Reference Requirements}
+%------------------------------------------
+
+\REQ{ID}{Identity conditions MUST be fixed prior to explanation or interpretation.}
+\WHY{ID}{Explanation presupposes stable referents; without identity,
+  comparison and accountability are impossible.}
+
+\REQ{ID-STABLE}{Identity and admissible relations MUST remain invariant across
+  incompatible extensions.}
+\WHY{ID-STABLE}{If admissibility depends on interpretation, stability is lost
+  under disagreement.}
+
+\REQ{NO-HIDDEN}{Stability-critical distinctions MUST NOT be encoded solely as
+  roles, flags, contextual predicates, or other internal discriminators.}
+\WHY{NO-HIDDEN}{Such encodings rely on shared interpretation and therefore
+  do not satisfy the stability constraint under disagreement.}
+
+%------------------------------------------
+\subsection*{Minimality Constraint}
+%------------------------------------------
+
+\REQ{MIN}{Minimality MUST be understood as minimizing explicit identity-and-
+  persistence regimes subject to stability and neutrality constraints.}
+\WHY{MIN}{Reductions that reintroduce the same distinctions as hidden structure
+  do not reduce total complexity and are excluded by this criterion.}
+
+%------------------------------------------
+\subsection*{Direction of Dependence}
+%------------------------------------------
+
+\REQ{DEP}{The direction of dependence MUST be:
+  \emph{Identity precedes admissibility; admissibility precedes interpretation}.}
+\WHY{DEP}{Reversing this order smuggles interpretive commitments into the substrate,
+  undermining neutrality and stable reference.}
+
+%------------------------------------------
+\subsection*{Explicit Non-Goals}
+%------------------------------------------
+
+\OBS{NG}{This paper does NOT define an ontology of entities or entity kinds.}
+\OBS{NG}{This paper does NOT propose a domain model or exchange protocol.}
+\OBS{NG}{This paper does NOT evaluate causes, outcomes, policies, or obligations.}
+\OBS{NG}{This paper does NOT argue that all ontologies should satisfy these constraints.}
+
+%------------------------------------------
+\subsection*{Obligations of Subsequent Sections}
+%------------------------------------------
+
+Each subsequent section exists solely to discharge one or more stated REQ items.
+Material that does not advance a stated REQ is out of scope.
+
+\noindent\textbf{End of Proof Contract.}
