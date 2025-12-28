@@ -116,3 +116,5 @@ PRIVATE_NOTES.md
 # === Project-Specific ===
 # WHY: Include key PDF in the repository root
 !se200_identity_regimes.pdf
+!tools/build/
+!tools/build/**

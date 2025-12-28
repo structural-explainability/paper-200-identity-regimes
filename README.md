@@ -11,6 +11,7 @@
 ## Paper
 
 - [PDF](./se200_identity_regimes.pdf)
+- Status: Submitted to journal; under review.
 
 ## Repository Structure
 
