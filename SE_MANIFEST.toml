@@ -1,4 +1,17 @@
+# ============================================================
+# SE_MANIFEST.toml (Repository Intent, Scope, and Role)
+# ============================================================
+
 schema = "se-manifest-1"
+schema_url = "https://github.com/structural-explainability/spec-se/blob/main/manifests/se-manifest-1.md"
+
+[meta]
+# Non-normative contextual information
+framework = "Structural Explainability"
+framework_url = "https://github.com/structural-explainability"
+framework_note = "Provides definitions and conventions for SE_MANIFEST semantics."
+description = "Declarative claim of repository intent, scope, and role."
+purpose = "To make explicit the boundaries, responsibilities, and expectations of this repository relative to others."
 
 [repo]
 name = "P200_Identity_Regimes"
@@ -6,7 +19,7 @@ org  = "structural-explainability"
 kind = "paper"
 status = "explanatory"
 since = "2025"
-summary = "Applied Ontology paper establishing the necessity and sufficiency of the identity regime basis."
+summary = "Applied ontology paper establishing the necessity and sufficiency of the identity regime basis."
 
 [layer]
 space = "SE"
@@ -17,7 +30,14 @@ required = []
 optional = []
 
 [provides]
-artifacts = ["README.md", "paper/*.tex", "CITATION.cff"]
+artifacts = [
+    "ANNOTATIONS.md",
+    "CITATION.cff",
+    "LICENSE",
+    "README.md",
+    "SE_MANIFEST.toml",
+    "paper/*.tex"
+]
 
 [scope]
 includes = [
