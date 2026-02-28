@@ -95,6 +95,14 @@ dist/
 *.egg
 *.egg-info/
 *.whl
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
 
 # WHY: Tooling caches should not be tracked.
 .coverage
@@ -107,7 +115,6 @@ dist/
 
 # WHY: Notebook checkpoint state is generated.
 .ipynb_checkpoints/
-
 
 # === Project-Specific ===
 # WHY: Include key PDF in the repository root
