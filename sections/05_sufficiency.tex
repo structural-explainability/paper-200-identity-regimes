@@ -2,84 +2,80 @@
 \section{Sufficiency: A Six-Regime Construction}
 \label{sec:sufficiency}
 
-This section shows that the lower bound established in
-Section~\ref{sec:necessity} is tight.
-We exhibit a construction with a minimal set of six distinct
-identity-and-persistence regimes that satisfies all structural requirements
-stated in Section~\ref{sec:requirements}, while respecting the neutrality and
-stability constraints fixed in Section~\ref{sec:assumptions}.
-No additional regimes or hidden interpretive mechanisms are required.
-
 \subsection{The Six Identity-and-Persistence Regimes}
 
-We realize six pairwise-disjoint identity-and-persistence regimes.
-For concreteness, each regime is defined solely by its
-identity conditions, persistence behavior, and admissible relations:
+We realize exactly the six identity-and-persistence regimes
+derived in Section~\ref{sec:necessity}.
+No additional regimes are introduced,
+and none of the induced regimes are merged or weakened.
 
-\begin{itemize}
-  \item \textbf{K1:} enduring entities capable of bearing obligations
-        or responsibilities.
-  \item \textbf{K2:} enduring physical or operational entities that
-        may be acted upon but do not bear obligations.
-  \item \textbf{K3:} enduring authority-bearing structures that
-        ground obligations or permissions independently of any particular
-        occurrence.
-  \item \textbf{K4:} time-indexed actions or events whose identity
-        is inseparable from temporal realization and provenance.
-  \item \textbf{K5:} enduring applicability contexts that delimit where,
-        to whom, or under what conditions instruments apply.
-  \item \textbf{K6:} descriptive records or measurements that assert
-        observed or derived facts without asserting causal or normative claims.
-\end{itemize}
+Each regime is implemented with the identity conditions
+and admissible-relation profile specified in the derivation.
+The construction fixes these regimes as pairwise disjoint,
+with extension-invariant persistence criteria,
+and without interpretive flags or role-based discriminators.
 
-These six regimes correspond directly to the six capacities derived in
-Section~\ref{sec:requirements}:
-obligation-bearing capacity (K1),
-acted-upon reference (K2),
-normative grounding without execution (K3),
-time-indexed occurrence (K4),
-applicability and scope (K5), and
-descriptive indication without causal commitment (K6).
-
-Each regime fixes a distinct identity criterion that is invariant under
-incompatible extension.
-No entity changes regime over time, and no regime's identity conditions
-depend on interpretation supplied by analytic or application layers.
+We now specify a minimal set of typed relations
+that connects these regimes while preserving
+neutrality and stable reference.
 
 
 \subsection{Admissible Relations}
 
-A minimal set of typed, directional relations suffices to connect the six
-regimes and to satisfy all stated requirements.
+A minimal set of typed, directional relations suffices
+to connect the six regimes and to satisfy all stated requirements.
 Representative relations include:
 
 \begin{itemize}
   \item authority grounding and delegation:
-        $\textit{enacts}, \textit{issues} : \text{K1} \rightarrow \text{K3}$
-  \item participation:
-        $\textit{party-to} : \text{K1} \rightarrow \text{K3}$
+        $\textit{enacts}, \textit{issues} : \text{OBL} \rightarrow \text{NOR}$
+  \item participation and party status:
+        $\textit{party\text{-}to} : \text{OBL} \rightarrow \text{NOR}$,
+        $\textit{involves} : \text{OCC} \rightarrow \text{OBL}$,
+        $\textit{has\text{-}patient} : \text{OCC} \rightarrow \text{ENR}$
   \item execution under authority:
-        $\textit{occurs-under} : \text{K4} \rightarrow \text{K3}$
+        $\textit{occurs\text{-}under} : \text{OCC} \rightarrow \text{NOR}$
   \item involvement and action:
-        $\textit{involves} : \text{K4} \rightarrow \text{K1}$,
-        $\textit{acts-on} : \text{K4} \rightarrow \text{K2}$
+        $\textit{involves} : \text{OCC} \rightarrow \text{OBL}$,
+        $\textit{has\text{-}patient} : \text{OCC} \rightarrow \text{ENR}$
   \item applicability:
-        $\textit{applies-in} : \text{K3} \rightarrow \text{K5}$
+        $\textit{applies\text{-}in} : \text{NOR} \rightarrow \text{CTX}$
   \item description:
-        $\textit{measures} : \text{K6} \rightarrow
-        (\text{K1} \mid \text{K2} \mid \text{K5})$
+        $\textit{measures} : \text{REC} \rightarrow
+        (\text{OBL} \mid \text{ENR} \mid \text{CTX})$
 \end{itemize}
 
-Indicators are not taken to measure occurrences directly in the substrate.
-Occurrences serve as temporal and provenance anchors for indicators,
-while measurements target enduring referents whose identity
+% REVISED
+Relations in this construction are structural and descriptive.
+They assert reference, participation, scoping, or provenance,
+but do not encode causal mechanism or normative validity.
+
+Authority grounding and delegation record that an
+obligation-bearing entity enacts or issues a normative structure,
+without asserting validity or enforceability.
+
+Participation relations record that an occurrence
+is associated with enduring referents in specified roles.
+The relations \emph{involves} and \emph{has-patient}
+denote recorded association only;
+they do not assert agency, causal transformation,
+or normative responsibility.
+
+The \emph{measures} relation associates a descriptive record
+with an enduring referent,
+without asserting accuracy, causal relevance,
+or evaluative significance.
+
+Occurrences serve as temporal and provenance anchors.
+Descriptive records target enduring referents whose identity
 persists across incompatible extensions.
 
-This relation set is not exhaustive, but illustrates that no additional
-identity regimes are required to satisfy the structural constraints.
-Temporal and provenance information attach only to K4 and K6 via attribute
-schemas; no separate entities for time, provenance, or explanation are
-introduced.
+This relation set suffices to satisfy R1--R6
+without introducing additional identity regimes,
+role-based typing, or extension-layer discriminators.
+Temporal and provenance information attach only to OCC and REC
+via attribute schemas;
+no additional identity-bearing categories are introduced.
 
 \subsection{Satisfaction of Structural Requirements}
 
@@ -87,50 +83,74 @@ We briefly verify that the construction satisfies the requirements of
 Section~\ref{sec:requirements}:
 
 \begin{itemize}
-  \item \textbf{R1 (Stable identity):} each regime fixes a distinct, invariant
-        identity criterion under extension.
-  \item \textbf{R2 (Obligation-bearing):} obligations attach only to K1 via K3,
-        preserving role stability.
-  \item \textbf{R3 (Normative reference):} K3 grounds authority independently of
-        execution, without causal or evaluative claims.
-  \item \textbf{R4 (Time-indexed occurrence):} K4 captures temporal action without
-        persistence ambiguity.
-  \item \textbf{R5 (Applicability):} K5 provides first-class scope referents that
-        support nesting and overlap without reclassification.
-  \item \textbf{R6 (Descriptive records):} K6 represents indicators as stable
-        referents distinct from occurrences, enabling longitudinal comparison
-        without causal commitment.
+  \item \textbf{R1 (Stable identity):}
+        Each regime fixes an extension-invariant
+        identity-and-persistence criterion.
+  \item \textbf{R2 (Obligation-bearing capacity):}
+        OBL admits normative attribution
+        without reclassification.
+  \item \textbf{R3 (Normative reference without execution):}
+        NOR grounds authority independently of OCC.
+  \item \textbf{R4 (Time-indexed occurrence):}
+        OCC captures temporally individuated events.
+  \item \textbf{R5 (Applicability and scope):}
+        CTX provides first-class scoping referents
+        supporting nesting and overlap.
+  \item \textbf{R6 (Descriptive indicators):}
+        REC represents measurements as stable referents
+        distinct from OCC and NOR.
 \end{itemize}
 
-All requirements are satisfied without introducing hidden regimes,
-role-based typing, or interpretive predicates at the substrate level.
+No additional identity regimes or extension-layer
+discriminators are required.
 
 \subsection{Sufficiency Proposition}
 
 \begin{proposition}[Sufficiency of six regimes]
 \label{prop:sufficiency-six}
-The six-regime construction defined above satisfies the neutrality, stability,
-and accountability requirements fixed in
-Sections~\ref{sec:assumptions} and~\ref{sec:requirements}.
+The six-regime construction specified in this section
+satisfies R1--R6 under the assumptions of
+Section~\ref{sec:assumptions}.
 \end{proposition}
 
 \begin{proof}
-Each requirement is satisfied by a distinct identity-and-persistence regime
-with explicitly constrained admissible relations.
-No requirement demands an additional regime, and no regime is redundant under
-the stated optimization criterion.
-Because the construction preserves stable reference under incompatible
-extension and introduces no hidden distinctions, it is sufficient.
-Non-redundancy follows from the necessity argument:
-each regime is required by at least one of R2--R6,
-so omitting any regime would violate a stated requirement.
+By construction, each of R2--R6 is realized
+by a distinct identity-and-persistence regime,
+and all regimes satisfy R1.
+The regimes are pairwise disjoint,
+and their admissible relations introduce no
+cross-regime persistence dependencies.
+Hence satisfying the requirements jointly
+does not generate structural conflict.
+No additional regimes are required,
+and no interpretive flags or extension-layer
+discriminators are introduced.
+Non-redundancy of the construction follows because
+each of the six regimes realizes a persistence-and-admissibility
+profile shown in Lemma~\ref{lem:necessity} to be non-collapsible:
+any identification of two regimes in this construction
+would instantiate one of the three failure modes
+established in Section~\ref{sec:collapse_strategy},
+violating either extension-invariant identity or the neutrality constraint.
 \end{proof}
 
 \subsection{Tightness of the Bound}
 
-Together with the necessity result of Section~\ref{sec:necessity}, the
-sufficiency proposition establishes that six identity-and-persistence regimes
-are both necessary and sufficient for a neutral accountability substrate under
-the stated assumptions.
-The bound is therefore tight with respect to the optimization objective of
-interoperability under persistent disagreement.
+Combining Lemma~\ref{lem:necessity}
+and Proposition~\ref{prop:sufficiency-six},
+we obtain that six identity-and-persistence regimes
+are both necessary and sufficient
+for a neutral accountability substrate
+under the stated assumptions.
+The lower bound is therefore tight
+with respect to the optimization objective
+of interoperability under persistent disagreement.
+Any substrate realizing fewer regimes must either
+embed interpretive commitments at the substrate level,
+violating neutrality,
+or delegate essential identity-and-persistence distinctions
+to extension layers as hidden regimes,
+violating the admissibility criterion.
+Neither relaxation is available under the stated constraints,
+confirming that six is the minimum achievable structure,
+not merely a lower bound on an open range.

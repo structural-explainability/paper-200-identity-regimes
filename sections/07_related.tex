@@ -12,10 +12,10 @@ structural stability.
 
 A substantial body of work has shown that classification systems embed
 institutional, social, and political commitments rather than functioning
-as neutral descriptive devices~\cite{bowker1999sorting,haslanger2012resisting}.
+as neutral descriptive devices~\citep{bowker1999sorting,haslanger2012resisting}.
 In scientific and policy contexts, disagreement is often persistent rather
 than transient, reflecting incompatible evaluative frameworks rather than
-resolvable empirical uncertainty~\cite{longino1990science}.
+resolvable empirical uncertainty~\citep{longino1990science}.
 
 These observations motivate the need for representations that remain usable
 without assuming interpretive convergence.
@@ -27,20 +27,20 @@ permanent and interpretive commitments are externalized rather than negotiated?
 
 Formal ontology has long emphasized the role of identity conditions and
 persistence criteria in category formation.
-The OntoClean methodology~\cite{guarino2002evaluating} clarifies why roles are
-anti-rigid and unsuitable as identity-defining categories~\cite{guarino1998roles},
+The OntoClean methodology~\citep{guarino2002evaluating} clarifies why roles are
+anti-rigid and unsuitable as identity-defining categories~\citep{guarino1998roles},
 and subsequent work on social and institutional entities has further
-developed these distinctions~\cite{masolo2003wonderweb}.
+developed these distinctions~\citep{masolo2003wonderweb}.
 
 This paper builds on these insights but applies them at the substrate level.
 The present analysis operates at a different level than role-based modeling,
 deriving substrate-level identity-and-persistence regimes
 from neutrality requirements rather than from domain classifications.
 
-\subsection{Upper Ontologies}
+\subsection{Upper Ontologies} % REVISED TO CLARIFY RELATION TO BFO AND DOLCE
 
-Upper ontologies such as BFO~\cite{smith2015basic}, DOLCE~\cite{gangemi2002dolce},
-and UFO~\cite{guizzardi2005ontological} provide rich accounts of dependence,
+Upper ontologies such as BFO~\citep{smith2015basic}, DOLCE~\citep{gangemi2002dolce},
+and UFO~\citep{guizzardi2005ontological} provide rich accounts of dependence,
 endurants and perdurants, and social objects.
 They differ substantially in commitments and optimization objectives, and
 are not designed primarily as neutral substrates for interoperability under
@@ -49,35 +49,94 @@ persistent disagreement.
 The present work does not compare expressivity or advocate alignment with any
 particular upper ontology.
 Instead, it derives lower-bound constraints that apply independently of such
-frameworks, conditional on the neutrality and stability requirements adopted
-here.
-Whether the regimes derived here
-align with, refine, or cross-cut the category structures of
-existing upper ontologies is an open question
-beyond the scope of this paper.
+frameworks, conditional on the neutrality and stability requirements adopted here.
+The regime structure derived here can be situated with respect to two
+widely-used frameworks to clarify where under-constraints arise
+not as defects in those frameworks but as points where implementations
+built on them would need to introduce additional commitments
+to satisfy the neutrality and stability requirements assumed here.
 
-\subsection{Relation to Common Logic and ontology exchange}
+BFO~\citep{smith2015basic} organizes entities under the
+continuant/occurrent distinction:
+continuants persist through time
+while occurrents unfold across it~\citep{arp2015building}.
+K4 (time-indexed occurrences) maps cleanly onto BFO occurrents.
+K1 through K3 map onto independent and generically dependent continuants,
+but BFO does not enforce the regime-level separation between them:
+obligation-bearing entities (K1), authority-bearing structures (K3),
+and descriptive indicators (K6) are all candidates for
+Generically Dependent Continuant, leaving their
+stability-critical distinctions to the implementer.
+K5 (applicability and scope) has no first-class BFO home;
+non-spatial applicability contexts such as normative jurisdiction
+or conditional scope collapse into GDC,
+conflating K5 with K3 under a BFO-based implementation.
+Under persistent disagreement, these conflations require
+hidden discriminators to recover regime-level distinctions,
+introducing implicit structure of precisely the kind
+the neutrality constraint prohibits.
+
+DOLCE~\citep{gangemi2002dolce} introduces social objects as
+first-class entities and provides a richer treatment of
+institutional and normative structure than BFO~\citep{masolo2003wonderweb}.
+This makes DOLCE a better fit for K2 and K3 as distinct categories.
+However, the K3/K6 conflation persists: both normative structures and
+descriptive indicators are candidates for social object or quality,
+and the distinction between authority-as-referent and
+descriptive-record-as-referent is not enforced at the type level.
+DOLCE's region-based account of scope is spatiotemporal,
+leaving normative applicability contexts (K5) without a
+structural home distinct from K3 or K6,
+and the K2/K3 boundary (between obligation-bearer and
+normative structure) is mediated by participation relations
+rather than enforced by regime membership~\citep{masolo2003wonderweb}.
+As with BFO, implementations resolving these under-constraints
+under persistent disagreement silently introduce hidden regimes.
+
+These observations do not constitute objections to BFO or DOLCE
+as general-purpose ontological frameworks.
+They locate a specific point where the optimization objectives
+of those frameworks (expressiveness, metaphysical coverage,
+alignment with scientific practice) diverge from the
+optimization objective assumed here,
+and where that divergence has structural consequences
+for neutral interoperability under persistent disagreement.
+
+% They can when constrained
+When constrained to enforce conservative extension
+over identity and admissibility conditions,
+such frameworks can realize the regime structure derived here.
+The contribution of this paper is to identify the structural constraints
+required when neutrality under persistent disagreement is taken as the primary objective.
+
+The present result is therefore not a competing upper ontology,
+but a constraint on any ontology intended to function as a
+neutral, stability-preserving substrate under persistent disagreement.
+
+\subsection{Relation to Common Logic and ontology exchange} % ADD 4 CITATIONS
 
 The neutral substrate and derived regimes can be
-expressed in ISO/IEC 24707 Common Logic as a conservative theory,
+expressed in ISO/IEC 24707 Common Logic~\citep{iso24707} as a conservative theory,
 supporting interpreter-independent exchange
 without reliance on description-logic restrictions or fixed signatures.
 Here, conservative means that
 extensions add structure
 without altering the consequences
-derivable about substrate-level terms,
+derivable about substrate-level terms~\citep{hodges1997shorter},
 ensuring that incompatible interpretive frameworks
 do not retroactively change the meaning of shared references.
 This enables compatibility with ontology exchange workflows
-widely used in applied ontology and digital twin contexts.
+widely used in applied ontology~\citep{kutz2010carnap}
+and digital twin infrastructures~\citep{grieves2016digital},
+where multiple interpretive layers must interoperate over stable referents.
 
 \subsection{Causality, Explanation, and Infrastructure}
 
 Separating descriptive structure from causal or explanatory claims is a
-well-established principle in causal analysis~\cite{pearl2009causality}.
+well-established principle in causal analysis~\citep{pearl2009causality}.
 Similarly, research on large-scale information infrastructures emphasizes
 the importance of long-term stability and interpretive restraint across
-institutional boundaries~\cite{edwards2011infrastructure}.
+institutional boundaries~\citep{edwards2011infrastructure}.
 
 These perspectives align with the pre-causal and pre-normative constraints assumed in this paper.
 The ontology analyzed here is not an explanatory theory, but an
@@ -100,4 +159,4 @@ stable reference must be supported independently of
 causal, normative, or evaluative agreement.
 The identity-and-persistence regimes derived here therefore constrain the
 ontological substrates upon which FAIR-compliant systems implicitly rely
-when reuse is expected across incompatible extensions.
+when reuse occurs under persistent disagreement.

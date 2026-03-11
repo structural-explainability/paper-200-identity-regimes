@@ -15,7 +15,7 @@ resolved, but a persistent condition.
 Legal interpretation, policy evaluation, and analytic methodology may remain
 incompatible across communities and over time.
 Accordingly, no single interpretive authority or shared semantic framework
-can be assumed at the substrate level.
+is assumed at the substrate level.
 
 We further assume that extensions to the substrate may occur without
 coordination.
@@ -24,6 +24,9 @@ and such extensions must not require revision of the substrate itself.
 This assumption does not rely on
 global semantic agreement, centralized governance, or
 negotiated meaning as preconditions for interoperability.
+Under these assumptions,
+substrate-level admissibility must not depend
+on interpretive agreement among extensions.
 
 \subsection{Neutrality Constraint}
 
@@ -35,7 +38,8 @@ how actions ought to be evaluated.
 Instead, it provides stable referents and structural relations upon which
 external interpretive layers may operate.
 
-Neutrality further requires stability under incompatible extension.
+Neutrality further requires stability under incompatible extension
+at the level of identity conditions and admissible relations.
 If two extensions disagree in interpretation, evaluation, or explanation,
 their disagreement must not force reclassification of entities, alteration
 of identity conditions, or revision of the substrate.
@@ -46,18 +50,29 @@ agreement does not satisfy this constraint.
 
 For a substrate to support accountability, entities must remain referable
 over time and across extensions.
-Identity conditions and admissible relationships must be invariant under
+Identity conditions and admissible relationships must not depend
+on interpretive convergence under
 changes in interpretation.
-An entity may participate in new relationships or acquire additional
-annotations, but it must not change its ontological status
-(i.e., its identity conditions or persistence regime)
-in order to remain usable as a shared referent.
+If an entity must change its ontological status in order to participate in new
+relationships or analyses, stable reference is not preserved.
+This requirement is not satisfied by representations in which identity is
+determined contextually or retroactively by interpretive layers.
+If identity conditions shift when an institution introduces a new
+classificatory scheme, the provenance chain breaks and accountability
+for the record's content and custody cannot be maintained.
 
 This requirement excludes representations in which \stabilitycritical{}
 distinctions are encoded only as roles, flags, or contextual predicates.
 Such mechanisms rely on interpretive conventions supplied by extension layers
 and therefore permit divergent admissibility judgments under persistent
 disagreement.
+
+The stability requirement is intentionally strong.
+Many engineering systems address identity pressure through contextual
+or negotiated identity schemes.
+The present analysis instead examines the case
+where such mechanisms are unavailable and
+stable reference must be preserved independently of interpretive convergence.
 
 \subsection{Optimization Criterion}
 
@@ -74,6 +89,11 @@ Collapsing regimes while reintroducing their distinctions via internal
 discriminators, contextual typing, or role predicates does not reduce total
 structural complexity and is therefore excluded by the optimization criterion
 adopted here.
+
+The minimality criterion adopted here is analytical rather than prescriptive:
+it is introduced to determine what ontological structure
+is unavoidable when neutrality and stability under persistent disagreement
+are treated as design constraints.
 
 Alternative optimization objectives prioritize different tradeoffs, such as
 interpretive coordination, domain-specific efficiency, or context-dependent
