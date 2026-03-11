@@ -401,9 +401,9 @@ if (-not $NoClean) {
 Invoke-OrStop { Build-Paper -PaperDir $PaperDir -TexFile $PaperTex -Name "Paper" -RepoRoot $RepoRoot } `
     "Stopping: Paper standard build failed."
 
-Invoke-OrStop { Build-Paper-Annotated -PaperDir $PaperDir -TexFile $PaperTex -Name "Paper (Annotated)" -RepoRoot $RepoRoot } `
-    "Stopping: Paper annotated build failed."
+# Invoke-OrStop { Build-Paper-Annotated -PaperDir $PaperDir -TexFile $PaperTex -Name "Paper (Annotated)" -RepoRoot $RepoRoot } `
+#     "Stopping: Paper annotated build failed."
 
 Write-Ok ""
-Write-Ok "ALL BUILDS SUCCEEDED (standard + annotated)."
+Write-Ok "ALL BUILDS SUCCEEDED."
 exit 0
