@@ -62,12 +62,13 @@ are forced by R2--R6 when satisfied simultaneously
 under R1's requirement of extension-invariant identity
 and admissible relations.
 
-An identity-and-persistence regime is determined by
+An identity-and-persistence regime is characterized by
 (i) persistence conditions and
 (ii) the class of relations admissible without reclassification.
 
-Each structural requirement induces at least one
-non-reducible persistence-and-admissibility profile.
+When the requirements are satisfied simultaneously under R1,
+their persistence and admissibility constraints give rise to
+distinct candidate identity-and-persistence profiles.
 We extract these profiles in turn.
 
 \subsubsection{Profile induced by R2: Obligation-bearing persistence}
@@ -92,7 +93,7 @@ This induces a third distinct persistence profile incompatible with enduring ent
 
 \subsubsection{Profile induced by R5: Applicability-context persistence}
 
-R5 requires representation of scopes or applicability contexts as stable referents.
+R5 requires representation of scopes or applicability contexts as enduring entities.
 Such entities admit nesting, overlap, and conditional scoping without collapsing into either authority or bearer entities.
 This induces a fourth structurally distinct profile: applicability-context.
 
@@ -167,11 +168,14 @@ induced identity-and-persistence regimes can be collapsed
 into a single regime without violating the constraints of
 Section~\ref{sec:assumptions}.
 
-A collapse of two regimes is admissible only if the resulting
+A collapse of two regimes is admissible only if the merged
 representation realizes a single extension-stable identity
-and persistence profile and admits a unified class of relations
-without requiring interpretive flags, role predicates,
-or contextual discriminators at the extension layer.
+and persistence profile and supports a unified class of admissible relations
+without introducing interpretive flags, role predicates,
+or contextual discriminators at the extension layer,
+which would reintroduce regime distinctions contrary to
+the neutrality and extension-stability constraints of
+Section~\ref{sec:assumptions}.
 
 Under R1, identity and admissibility must be invariant across
 incompatible extensions.
@@ -208,69 +212,92 @@ through one of the three failure modes defined above.
 
 Suppose an obligation-bearing entity and an enduring
 non-normative referent are collapsed into a single regime.
+
 The merged regime must admit a unified class of admissible relations.
 Obligation-bearing entities admit normative attribution relations
 such as \emph{hasObligation} or \emph{isResponsibleFor}
 without reclassification.
+
 If those relations are structurally admissible for all instances
 of the merged regime, then every enduring referent becomes
 eligible for normative attribution in principle,
 embedding a normative commitment at the substrate level.
+
 If, instead, normative attribution is restricted to only some instances,
 implementations must introduce a discriminator
 such as \emph{isObligationBearer} to block inappropriate attributions.
 The original distinction is thereby reintroduced at the extension layer.
+
 In either case, the collapse is inadmissible.
 
 \subsubsection{Identity instability: Obligation-bearing and Normative structure}
 
 Suppose an obligation-bearing entity and a normative structure
 are collapsed into a single regime.
+
 Obligation-bearing entities persist across compliance,
 violation, and delegation.
 Normative structures persist across enactment,
 amendment, and repeal.
+
 These persistence criteria are non-equivalent.
 No single identity condition can preserve both
 without making persistence judgments vary across extensions.
+
 The collapse therefore violates extension-invariant identity under R1.
 
 \subsubsection{Category error: Normative structure and Applicability context}
 
 Suppose a normative structure and an applicability context
 are collapsed into a single regime.
+
 Normative structures admit structural modification relations
 such as enactment, amendment, delegation, and repeal.
-Applicability contexts admit scoping relations
+Applicability contexts instead admit scoping relations
 such as nesting, overlap, and conditional refinement.
-If both are identified, the merged regime must admit
+
+If the two are identified, the merged regime must admit
 both modification-type and scoping-type relations
 as structurally admissible.
-Amendment is a temporal structural modification
-preserving the identity of a normative structure across change.
-Nesting and overlap are spatial or conditional relations
-among scopes that do not constitute structural modification
-of normative content.
+However, these relation classes serve fundamentally different roles.
+Amendment is a structural modification
+that preserves the identity of a normative structure across change.
+Whereas nesting and overlap are relations
+among scopes that organize applicability conditions without modifying
+normative content.
+
 No single admissible-relation profile can unify
-these relation classes without misclassifying
-some instances or restricting relations contextually.
+these relation classes.
+Either the relations are admitted uniformly,
+producing category error for some instances,
+or their admissibility must be restricted contextually,
+reintroducing the distinction through a hidden discriminator.
+
 If all relations are admitted uniformly,
-entities that are merely scopes become amendable
+entities that are merely applicability scopes become amendable
 normative structures, producing category error.
 If relation admissibility is restricted by a predicate
 such as \emph{isNormative} or \emph{isScope},
 the original distinction is reintroduced
 as a hidden regime at the extension layer.
+
+If relation admissibility is restricted by a predicate
+such as \emph{isNormative} or \emph{isScope},
+the original distinction is reintroduced
+as a hidden regime at the extension layer.
+
 The collapse is therefore inadmissible.
 
 \subsubsection{Hidden-regime reintroduction: Normative structure and Descriptive record}
 
 Suppose a normative structure and a descriptive record
 are collapsed into a single regime.
+
 Normative structures ground obligations and admit
 normative evaluation, enforcement, and modification.
 Descriptive records report measured or derived properties
 without asserting causal or normative commitments.
+
 If both are identified, the merged regime must admit
 a unified admissible-relation profile.
 If normative evaluation relations are structurally admissible
@@ -278,6 +305,7 @@ for all instances of the merged regime,
 then purely descriptive records become eligible
 for normative grounding,
 embedding evaluative commitments at the substrate level.
+
 If, instead, normative evaluation is restricted to
 a subset of instances,
 implementations must introduce a discriminator
@@ -286,6 +314,7 @@ to distinguish grounding entities from descriptive ones.
 Such a discriminator reintroduces the original distinction
 at the extension layer,
 violating the admissibility criterion and the neutrality constraint.
+
 The collapse is therefore inadmissible.
 
 \subsubsection{Summary of representative collapse failures.}
@@ -339,7 +368,7 @@ The following section establishes that this bound is tight:
 a construction realizing exactly six regimes satisfies R1--R6
 without hidden discriminators or additional identity categories,
 confirming that six is the minimum achievable structure
-under the stated constraints rather than a lower bound on an open range.
+under the stated constraints.
 
 % ============================================================
 \subsection{Lower-Bound Result}

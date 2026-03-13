@@ -35,9 +35,6 @@ Representative relations include:
         $\textit{has\text{-}patient} : \text{OCC} \rightarrow \text{ENR}$
   \item execution under authority:
         $\textit{occurs\text{-}under} : \text{OCC} \rightarrow \text{NOR}$
-  \item involvement and action:
-        $\textit{involves} : \text{OCC} \rightarrow \text{OBL}$,
-        $\textit{has\text{-}patient} : \text{OCC} \rightarrow \text{ENR}$
   \item applicability:
         $\textit{applies\text{-}in} : \text{NOR} \rightarrow \text{CTX}$
   \item description:
@@ -55,7 +52,7 @@ obligation-bearing entity enacts or issues a normative structure,
 without asserting validity or enforceability.
 
 Participation relations record that an occurrence
-is associated with enduring referents in specified roles.
+is associated with enduring referents in recorded participation relations.
 The relations \emph{involves} and \emph{has-patient}
 denote recorded association only;
 they do not assert agency, causal transformation,
@@ -66,16 +63,19 @@ with an enduring referent,
 without asserting accuracy, causal relevance,
 or evaluative significance.
 
-Occurrences serve as temporal and provenance anchors.
+Occurrences serve as temporal and provenance anchors
+for participation and measurement relations.
 Descriptive records target enduring referents whose identity
 persists across incompatible extensions.
 
 This relation set suffices to satisfy R1--R6
 without introducing additional identity regimes,
 role-based typing, or extension-layer discriminators.
+
 Temporal and provenance information attach only to OCC and REC
-via attribute schemas;
-no additional identity-bearing categories are introduced.
+via typed attributes or admissible relations.
+These annotations do not introduce new identity criteria
+or additional identity-bearing categories.
 
 \subsection{Satisfaction of Structural Requirements}
 
@@ -138,8 +138,8 @@ violating either extension-invariant identity or the neutrality constraint.
 
 Combining Lemma~\ref{lem:necessity}
 and Proposition~\ref{prop:sufficiency-six},
-we obtain that six identity-and-persistence regimes
-are both necessary and sufficient
+establishes that exactly six identity-and-persistence regimes
+are necessary and sufficient
 for a neutral accountability substrate
 under the stated assumptions.
 The lower bound is therefore tight
