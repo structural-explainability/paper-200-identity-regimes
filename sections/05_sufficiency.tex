@@ -27,22 +27,61 @@ to connect the six regimes and to satisfy all stated requirements.
 Representative relations include:
 
 \begin{itemize}
-  \item authority grounding and delegation:
-        $\textit{enacts}, \textit{issues} : \text{OBL} \rightarrow \text{NOR}$
-  \item participation and party status:
-        $\textit{party\text{-}to} : \text{OBL} \rightarrow \text{NOR}$,
-        $\textit{involves} : \text{OCC} \rightarrow \text{OBL}$,
-        $\textit{has\text{-}patient} : \text{OCC} \rightarrow \text{ENR}$
-  \item execution under authority:
-        $\textit{occurs\text{-}under} : \text{OCC} \rightarrow \text{NOR}$
-  \item applicability:
-        $\textit{applies\text{-}in} : \text{NOR} \rightarrow \text{CTX}$
-  \item description:
-        $\textit{measures} : \text{REC} \rightarrow
-        (\text{OBL} \mid \text{ENR} \mid \text{CTX})$
+
+\item authority grounding and delegation:
+{\small
+\[
+\renewcommand{\arraystretch}{0.9}
+\begin{array}{lcl}
+\textit{enacts},\ \textit{issues} &:& \mathrm{OBL} \to \mathrm{NOR}
+\end{array}
+\]
+}
+
+\item participation and party status:
+{\small
+\[
+\renewcommand{\arraystretch}{0.9}
+\begin{array}{lcl}
+\textit{party-to}   &:& \mathrm{OBL} \to \mathrm{NOR} \\
+\textit{involves}   &:& \mathrm{OCC} \to \mathrm{OBL} \\
+\textit{has-patient}&:& \mathrm{OCC} \to \mathrm{ENR}
+\end{array}
+\]
+}
+
+\item execution under authority:
+{\small
+\[
+\renewcommand{\arraystretch}{0.9}
+\begin{array}{lcl}
+\textit{occurs-under} &:& \mathrm{OCC} \to \mathrm{NOR}
+\end{array}
+\]
+}
+
+\item applicability:
+{\small
+\[
+\renewcommand{\arraystretch}{0.9}
+\begin{array}{lcl}
+\textit{applies-in} &:& \mathrm{NOR} \to \mathrm{CTX}
+\end{array}
+\]
+}
+
+\item description:
+{\small
+\[
+\renewcommand{\arraystretch}{0.9}
+\begin{array}{lcl}
+\textit{measures} &:& \mathrm{REC} \to (\mathrm{OBL} \mid \mathrm{ENR} \mid \mathrm{CTX})
+\end{array}
+\]
+}
+
 \end{itemize}
 
-% REVISED
 Relations in this construction are structural and descriptive.
 They assert reference, participation, scoping, or provenance,
 but do not encode causal mechanism or normative validity.
