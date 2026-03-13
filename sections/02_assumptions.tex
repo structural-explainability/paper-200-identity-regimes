@@ -1,5 +1,5 @@
 % !TeX root = se200_identity_regimes.tex
-\section{Assumptions, Neutrality, and Optimization Criterion}
+\section{Assumptions and Design Constraints}
 \label{sec:assumptions}
 
 This section fixes the problem setting for the remainder of the paper.
@@ -8,7 +8,7 @@ The purpose is not to argue that these assumptions are universally correct,
 but to make explicit the constraints under which a neutral substrate for
 accountability is possible.
 
-\subsection{Persistent Disagreement and Uncoordinated Extension}
+\subsection{Persistent Disagreement and Extension Without Coordination}
 
 We assume environments in which disagreement is not an anomaly to be
 resolved, but a persistent condition.
@@ -28,6 +28,25 @@ Under these assumptions,
 substrate-level admissibility must not depend
 on interpretive agreement among extensions.
 
+\subsection{Stability Under Persistent Disagreement}
+
+Stable reference in this work concerns regime-level persistence conditions,
+not immunity to transformation or versioning at interpretive layers.
+The substrate must preserve the referential integrity of entities and records
+even as their interpretation evolves in incompatible ways across extensions.
+Persistent disagreement, as used in this work, is defined by four conditions:
+\begin{itemize}
+\item Extensions may introduce incompatible causal accounts.
+\item Extensions may introduce incompatible normative attributions.
+\item Extensions cannot be forced into convergence.
+\item Substrate revision is not permitted to resolve interpretive conflict.
+\end{itemize}
+Under these conditions, the substrate must remain interpretively agnostic
+while preserving referential stability across extensions.
+% Ship of Theseus clarification
+Stability is a property of the identity-and-persistence regime,
+rather than any particular token or interpretive assignment within it.
+
 \subsection{Neutrality Constraint}
 
 This work assumes substrate neutrality and stability
@@ -41,7 +60,7 @@ external interpretive layers may operate.
 Neutrality further requires stability under incompatible extension
 at the level of identity conditions and admissible relations.
 If two extensions disagree in interpretation, evaluation, or explanation,
-their disagreement must not force reclassification of entities, alteration
+that disagreement must not force reclassification of entities, alteration
 of identity conditions, or revision of the substrate.
 Any representation whose admissibility conditions depend on interpretive
 agreement does not satisfy this constraint.
@@ -50,16 +69,14 @@ agreement does not satisfy this constraint.
 
 For a substrate to support accountability, entities must remain referable
 over time and across extensions.
-Identity conditions and admissible relationships must not depend
-on interpretive convergence under
-changes in interpretation.
+Identity conditions and admissible relations must not depend
+on interpretive convergence.
 If an entity must change its ontological status in order to participate in new
 relationships or analyses, stable reference is not preserved.
 This requirement is not satisfied by representations in which identity is
 determined contextually or retroactively by interpretive layers.
-If identity conditions shift when an institution introduces a new
-classificatory scheme, the provenance chain breaks and accountability
-for the record's content and custody cannot be maintained.
+The domain consequences of this requirement are illustrated in
+Section~\ref{sec:requirements} under R1.
 
 This requirement excludes representations in which \stabilitycritical{}
 distinctions are encoded only as roles, flags, or contextual predicates.
@@ -83,12 +100,9 @@ the smallest possible number of primitives in the abstract,
 but as the smallest number of explicit identity-and-persistence
 regimes required to preserve neutrality and stable reference.
 
-A proposed reduction is counted as a simplification only if it does not
-reintroduce the same distinctions through hidden or interpretive mechanisms.
-Collapsing regimes while reintroducing their distinctions via internal
-discriminators, contextual typing, or role predicates does not reduce total
-structural complexity and is therefore excluded by the optimization criterion
-adopted here.
+A proposed reduction constitutes a genuine simplification only if it does not
+reintroduce the collapsed distinctions through hidden discriminators,
+interpretive mechanisms, or role predicates.
 
 The minimality criterion adopted here is analytical rather than prescriptive:
 it is introduced to determine what ontological structure
@@ -100,3 +114,8 @@ interpretive coordination, domain-specific efficiency, or context-dependent
 classification at the substrate level.
 The results presented here apply only to substrates optimized for
 interoperability under persistent disagreement.
+
+These assumptions and constraints determine the design space
+within which a neutral accountability substrate must operate.
+The following section states the representational capacities that any
+substrate must satisfy under these conditions.
