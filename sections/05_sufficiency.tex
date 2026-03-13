@@ -19,19 +19,19 @@ We now specify a minimal set of typed relations
 that connects these regimes while preserving
 neutrality and stable reference.
 
-
 \subsection{Admissible Relations}
 
-A minimal set of typed, directional relations suffices
-to connect the six regimes and to satisfy all stated requirements.
-Representative relations include:
+The following typed relations realize the admissibility profiles
+required by R2--R6.
+Each requirement is realized by at least one listed relation;
+the mapping is made explicit in
+Section~\ref{sec:requirements_verification} below.
 
 \begin{itemize}
 
 \item authority grounding and delegation:
 {\small
 \[
-\renewcommand{\arraystretch}{0.9}
 \begin{array}{lcl}
 \textit{enacts},\ \textit{issues} &:& \mathrm{OBL} \to \mathrm{NOR}
 \end{array}
@@ -41,11 +41,10 @@ Representative relations include:
 \item participation and party status:
 {\small
 \[
-\renewcommand{\arraystretch}{0.9}
 \begin{array}{lcl}
-\textit{party-to}   &:& \mathrm{OBL} \to \mathrm{NOR} \\
-\textit{involves}   &:& \mathrm{OCC} \to \mathrm{OBL} \\
-\textit{has-patient}&:& \mathrm{OCC} \to \mathrm{ENR}
+\textit{party\text{-}to}    &:& \mathrm{OBL} \to \mathrm{NOR} \\
+\textit{involves}           &:& \mathrm{OCC} \to \mathrm{OBL} \\
+\textit{has\text{-}patient} &:& \mathrm{OCC} \to \mathrm{ENR}
 \end{array}
 \]
 }
@@ -53,9 +52,8 @@ Representative relations include:
 \item execution under authority:
 {\small
 \[
-\renewcommand{\arraystretch}{0.9}
 \begin{array}{lcl}
-\textit{occurs-under} &:& \mathrm{OCC} \to \mathrm{NOR}
+\textit{occurs\text{-}under} &:& \mathrm{OCC} \to \mathrm{NOR}
 \end{array}
 \]
 }
@@ -63,9 +61,10 @@ Representative relations include:
 \item applicability:
 {\small
 \[
-\renewcommand{\arraystretch}{0.9}
 \begin{array}{lcl}
-\textit{applies-in} &:& \mathrm{NOR} \to \mathrm{CTX}
+\textit{applies\text{-}in} &:& \mathrm{NOR} \to \mathrm{CTX} \\
+\textit{refines}           &:& \mathrm{CTX} \to \mathrm{CTX} \\
+\textit{overlaps}          &:& \mathrm{CTX} \leftrightarrow \mathrm{CTX}
 \end{array}
 \]
 }
@@ -73,7 +72,6 @@ Representative relations include:
 \item description:
 {\small
 \[
-\renewcommand{\arraystretch}{0.9}
 \begin{array}{lcl}
 \textit{measures} &:& \mathrm{REC} \to (\mathrm{OBL} \mid \mathrm{ENR} \mid \mathrm{CTX})
 \end{array}
@@ -91,11 +89,8 @@ obligation-bearing entity enacts or issues a normative structure,
 without asserting validity or enforceability.
 
 Participation relations record that an occurrence
-is associated with enduring referents in recorded participation relations.
-The relations \emph{involves} and \emph{has-patient}
-denote recorded association only;
-they do not assert agency, causal transformation,
-or normative responsibility.
+is associated with obligation-bearing entities via \emph{involves}
+and with enduring non-normative referents via \emph{has-patient}.
 
 The \emph{measures} relation associates a descriptive record
 with an enduring referent,
@@ -117,29 +112,44 @@ These annotations do not introduce new identity criteria
 or additional identity-bearing categories.
 
 \subsection{Satisfaction of Structural Requirements}
+\label{sec:requirements_verification}
 
-We briefly verify that the construction satisfies the requirements of
-Section~\ref{sec:requirements}:
+The relation set defined above satisfies R1--R6 by the
+following coverage mapping:
 
 \begin{itemize}
   \item \textbf{R1 (Stable identity):}
         Each regime fixes an extension-invariant
         identity-and-persistence criterion.
+        No relation in the construction propagates
+        persistence criteria across regime boundaries.
   \item \textbf{R2 (Obligation-bearing capacity):}
-        OBL admits normative attribution
-        without reclassification.
+        \textit{enacts}, \textit{issues}, \textit{party-to},
+        and \textit{involves} realize normative attribution
+        for OBL without reclassification.
   \item \textbf{R3 (Normative reference without execution):}
-        NOR grounds authority independently of OCC.
+        \textit{enacts}, \textit{issues}, and \textit{applies-in}
+        ground NOR independently of any OCC instance.
   \item \textbf{R4 (Time-indexed occurrence):}
-        OCC captures temporally individuated events.
+        \textit{involves}, \textit{has-patient}, and
+        \textit{occurs-under} anchor OCC to its participants
+        and governing normative structure
+        without altering their identity.
   \item \textbf{R5 (Applicability and scope):}
-        CTX provides first-class scoping referents
-        supporting nesting and overlap.
+        \textit{applies-in} scopes NOR within CTX;
+        \textit{refines} realizes conditional nesting;
+        \textit{overlaps} realizes non-hierarchical
+        partial scope without requiring containment.
   \item \textbf{R6 (Descriptive indicators):}
-        REC represents measurements as stable referents
-        distinct from OCC and NOR.
+        \textit{measures} associates REC with enduring
+        referents (OBL, ENR, CTX) without asserting
+        causal or normative conclusions.
 \end{itemize}
 
+Each requirement is realized by at least one listed relation.
+No requirement introduces a relation that propagates
+persistence criteria or normative commitments
+outside the regime for which it is specified.
 No additional identity regimes or extension-layer
 discriminators are required.
 
@@ -154,42 +164,42 @@ Section~\ref{sec:assumptions}.
 
 \begin{proof}
 By construction, each of R2--R6 is realized
-by a distinct identity-and-persistence regime,
+by at least one listed relation
+within the six-regime construction,
 and all regimes satisfy R1.
 The regimes are pairwise disjoint,
-and their admissible relations introduce no
-cross-regime persistence dependencies.
-Hence satisfying the requirements jointly
-does not generate structural conflict.
-No additional regimes are required,
-and no interpretive flags or extension-layer
-discriminators are introduced.
-Non-redundancy of the construction follows because
-each of the six regimes realizes a persistence-and-admissibility
-profile shown in Lemma~\ref{lem:necessity} to be non-collapsible:
-any identification of two regimes in this construction
-would instantiate one of the three failure modes
-established in Section~\ref{sec:collapse_strategy},
-violating either extension-invariant identity or the neutrality constraint.
+and the typed relation set connects them
+only through descriptive, participation, and scoping relations
+whose admissibility conditions
+do not propagate persistence criteria across regime boundaries.
+Each requirement is realized by at least one listed relation,
+and the construction introduces no interpretive flags,
+role-based discriminators, or additional identity regimes.
+Hence the construction satisfies R1--R6.
 \end{proof}
 
 \subsection{Tightness of the Bound}
 
-Combining Lemma~\ref{lem:necessity}
-and Proposition~\ref{prop:sufficiency-six},
-establishes that exactly six identity-and-persistence regimes
-are necessary and sufficient
-for a neutral accountability substrate
-under the stated assumptions.
-The lower bound is therefore tight
-with respect to the optimization objective
-of interoperability under persistent disagreement.
-Any substrate realizing fewer regimes must either
-embed interpretive commitments at the substrate level,
-violating neutrality,
-or delegate essential identity-and-persistence distinctions
-to extension layers as hidden regimes,
-violating the admissibility criterion.
-Neither relaxation is available under the stated constraints,
-confirming that six is the minimum achievable structure,
-not merely a lower bound on an open range.
+Lemma~\ref{lem:necessity} establishes that any ontology satisfying R1--R6
+must realize at least six distinct identity-and-persistence regimes.
+Proposition~\ref{prop:sufficiency-six} shows that the construction
+presented in this section satisfies those requirements with six regimes.
+
+The six regimes of the construction are pairwise non-equivalent
+under R1's stability constraint:
+each pair differs in persistence conditions,
+admissible-relation classes,
+or both,
+as established in Section~\ref{sec:regimes}.
+Any identification of two regimes would therefore instantiate one of
+the failure modes defined in Section~\ref{sec:collapse_strategy},
+violating either extension-invariant identity or the neutrality constraint.
+
+Thus the lower bound established in Lemma~\ref{lem:necessity}
+is achieved exactly by the present construction.
+Six regimes are both necessary and sufficient,
+and the bound is therefore tight.
+
+No compliant construction can realize fewer regimes
+without violating either extension-invariant identity
+or the neutrality constraint.
