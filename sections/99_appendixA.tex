@@ -3,48 +3,88 @@
 \label{app:collapse}
 \addcontentsline{toc}{section}{Appendix A. Complete Pairwise Collapse Enumeration}
 
-All $\binom{6}{2} = 15$ unordered pairs among the six induced regimes
-are classified below by failure mode under the admissibility criterion
+All $\binom{6}{2} = 15$ unordered pairs among the six regimes
+are classified below by primary failure mode under the admissibility criterion
 of Section~\ref{sec:collapse_strategy}.
+Each pair appears exactly once in the enumeration.
 
 \subsection*{Identity Instability}
 
-Five pairs cannot be collapsed without violating extension-invariant identity:
+Six pairs cannot be collapsed without violating extension-invariant identity.
 
 \begin{itemize}
-\item OBL/NOR (incompatible persistence across delegation and amendment);
-\item OBL/OCC (obligation-bearing continuity conflicts with occurrence closure
-at temporal realization);
-\item OCC/ENR (time-indexed individuation conflicts with enduring persistence);
-\item OCC/NOR (temporal realization conflicts with normative persistence across repeal);
-\item OCC/CTX (time-indexed individuation conflicts with scope persistence).
+\item OBL/NOR (incompatible persistence criteria: obligation-bearing entities
+persist across delegation and compliance, whereas normative structures
+persist across enactment, amendment, and repeal);
+
+\item OBL/OCC (incompatible persistence criteria: obligation-bearing entities
+are enduring referents, whereas occurrences are individuated by temporal
+realization and do not persist through modification);
+
+\item OCC/ENR (incompatible persistence criteria: occurrences are
+time-indexed realizations, whereas enduring referents persist
+independently of temporal realization);
+
+\item OCC/NOR (incompatible persistence criteria: occurrences are
+individuated by realization events, whereas normative structures
+persist across amendment and repeal);
+
+\item OCC/CTX (incompatible persistence criteria: occurrences are
+time-indexed realizations, whereas applicability contexts persist
+as enduring scoping referents);
+
+\item OCC/REC (incompatible persistence criteria: occurrences are
+individuated by temporal realization, whereas descriptive records
+persist as enduring referents whose identity is not determined by
+any single realization event).
 \end{itemize}
 
 \subsection*{Category Error}
 
 Six pairs cannot be collapsed without producing a category error
-under the neutrality constraint:
+under the neutrality constraint.
+
 \begin{itemize}
-\item OBL/ENR (normative attribution becomes universally admissible or requires
-blocking discriminator);
-\item OBL/CTX (obligation-bearing and scoping admit incompatible relation profiles);
-\item NOR/CTX (modification and scoping relations admit no unified profile);
-\item NOR/ENR (normative grounding relations misclassify purely enduring referents);
-\item CTX/ENR (scoping relations conflict with unscoped enduring persistence);
-\item CTX/REC (scoping relations misclassify descriptive records as applicability contexts).
+\item OBL/ENR (normative attribution relations appropriate to
+obligation-bearing entities would become structurally admissible
+for all enduring referents, misclassifying non-normative entities
+as potential obligation-bearers);
+
+\item OBL/CTX (obligation-bearing entities admit normative attribution
+relations, whereas applicability contexts admit scoping relations,
+yielding incompatible admissible-relation classes);
+
+\item NOR/CTX (normative structures admit modification relations
+such as enactment and amendment, whereas applicability contexts
+admit scoping relations such as nesting and refinement);
+
+\item NOR/ENR (normative grounding relations appropriate to normative
+structures would misclassify purely enduring referents as sources
+of authority);
+
+\item CTX/ENR (scoping relations appropriate to applicability contexts
+would misclassify ordinary enduring referents as scope-defining entities);
+
+\item CTX/REC (scoping relations appropriate to applicability contexts
+would misclassify descriptive records as scope-defining referents).
 \end{itemize}
 
 \subsection*{Hidden-regime Reintroduction}
 
-Four pairs cannot be collapsed without reintroducing
-the original distinction as a hidden regime:
+Three pairs cannot be collapsed without reintroducing
+the original distinction through hidden discriminators.
+
 \begin{itemize}
-\item NOR/REC (normative grounding requires \emph{isNormative} discriminator
-to protect descriptive records);
-\item OBL/REC (normative attribution requires discriminator to exclude
-descriptive instances);
-\item ENR/REC (measurement targets and descriptive records require
-\emph{isDescriptive} flag to distinguish them);
-\item OCC/REC (provenance discriminator required to separate occurrence anchors
-from reports).
+\item NOR/REC (normative grounding relations would require an
+\emph{isNormative} discriminator to prevent descriptive records
+from functioning as normative authorities);
+
+\item OBL/REC (normative attribution relations would require a
+discriminator such as \emph{isObligationBearer} to prevent
+descriptive records from being treated as obligation-bearing
+entities, reintroducing the distinction at the extension layer);
+
+\item ENR/REC (measurement targets and descriptive records would
+require an \emph{isDescriptive} flag to distinguish descriptive
+representations from the entities they describe).
 \end{itemize}
