@@ -84,8 +84,10 @@ the minimal structure required for a neutral, extension-stable substrate under p
 Frameworks optimized for other goals may legitimately occupy different
 points in that space.
 
-Table~\ref{tab:regime-mapping} provides a mapping of each
-regime K1--K6 against its closest correspondent in BFO~2.0 and DOLCE.
+Table~\ref{tab:regime-mapping} illustrates common representation
+strategies for these regimes in BFO~2.0 and DOLCE and highlights
+where regime-level distinctions required for neutrality are not
+structurally enforced.
 
 The comparison is structural rather than taxonomic;
 it identifies where regime-level distinctions
@@ -98,31 +100,32 @@ They are points where neutral substrate implementations built on those framework
 might need to introduce additional modeling commitments
 that the present substrate treats as regime-level structure.
 
-K1--K6 are not derived from gaps in existing frameworks:
-rather, independently motivated requirements expose where those frameworks
+The six regimes are not derived from gaps in existing frameworks.
+Rather, independently motivated requirements reveal where those frameworks
 leave regime-level distinctions to the implementer.
 
 %\clearpage
 \begin{table}[!htbp]
 \centering
-\caption{Mapping of regimes K1--K6 to BFO~2.0 and DOLCE, with structural
-under-constraints under neutrality and stability requirements.}
+\caption{Illustrative representation strategies for the six regimes
+in BFO~2.0 and DOLCE, with structural under-constraints
+under neutrality and stability requirements.}
 \label{tab:regime-mapping}
 \small
 \renewcommand{\arraystretch}{1.35}
 \begin{tabular}{@{} p{2cm} p{4.7cm} p{4.7cm}@{}}
 \toprule
-\textbf{Regime, Forced by} & \textbf{BFO 2.0} & \textbf{DOLCE} \\
+\textbf{Regime} & \textbf{BFO 2.0} & \textbf{DOLCE} \\
 \midrule
 
-K1 R1: Stable enduring particulars & Independent Continuant (material object).
+ENR (enduring non-normative referent) & Independent Continuant (material object).
 Clean for material entities; institutional and fiat entities
 require additional modeling choices not enforced by the framework. &
 Physical or Social Object (endurant).
 Social object is first-class, providing a cleaner fit for
 institutional referents than BFO. \\
 
-K2 R2: Obligation-bearing capacity &
+OBL (obligation-bearing entity) &
 Specifically Dependent Continuant (Role or Disposition)
 inhering in an Independent Continuant.
 Obligation-bearing is not a first-class category;
@@ -130,20 +133,20 @@ it is realized via a role--bearer pair,
 splitting what the present substrate treats as a single regime. &
 Quality or property of a Social Object.
 Obligation-bearing capacity is not a structural first-class
-distinction; the K2/K3 boundary remains implementation-dependent. \\
+distinction; the OBL/NOR boundary remains implementation-dependent. \\
 
-K3 R3: Normative reference without execution &
+NOR (normative structure) &
 Generically Dependent Continuant (information artifact,
 normative document).
-The substrate-level separation between authority-as-referent (K3)
-and authority-as-executed (K4) is a modeling choice,
+The substrate-level separation between authority-as-referent (NOR)
+and authority-as-executed (OCC) is a modeling choice,
 not structurally enforced. &
 Social Object (normative structure).
 Better motivated than BFO, but authority and execution
 can both be represented as social objects or perdurants
-without a regime-level firewall between K3 and K4. \\
+without a regime-level firewall between NOR and OCC. \\
 
-K4 R4: Time-indexed occurrence &
+OCC (time-indexed occurrence) &
 Process or Process Boundary (occurrent).
 Closest mapping in both frameworks;
 BFO occurrents are well-individuated temporally. &
@@ -151,20 +154,20 @@ Perdurant (Event or Process).
 DOLCE distinguishes achievements from activities,
 which is richer than required but not incompatible. \\
 
-K5 R5: Applicability and scope &
+CTX (applicability context) &
 Site (immaterial Independent Continuant) for spatial scope only.
 Non-spatial applicability contexts (normative jurisdiction,
 conditional scope) have no stable BFO home and collapse
-into GDC, conflating K5 with K3. &
+into GDC, conflating CTX with NOR. &
 Abstract Region or Feature.
 DOLCE regions are spatiotemporal;
 normative applicability collapses into Social Object
-(conflating K5 with K3) or Quality (conflating K5 with K6). \\
+(conflating CTX with NOR) or Quality (conflating CTX with REC). \\
 
-K6 R6: Descriptive indicators without causal commitment &
+REC (descriptive indicators without causal commitment) &
 Generically Dependent Continuant (data item,
 measurement information entity).
-Both normative structures (K3) and descriptive indicators (K6)
+Both normative structures (NOR) and descriptive indicators (REC)
 map to GDC; the stability-critical distinction between them
 is invisible at the BFO type level. &
 Quality (quale or abstract region).
@@ -193,20 +196,20 @@ neutrality and stability requirements.}
 \midrule
 
 
-K3/K6 conflated &
+NOR/REC conflated &
 Both normative structures and descriptive indicators map to GDC;
 the stability-critical distinction between them is invisible
 at the type level and left to the implementer. &
 Both map to Social Object or Quality depending on implementation;
 the distinction is a modeling discipline, not structurally enforced. \\
 
-K5 has no structural home &
+CTX has no structural home &
 Non-spatial applicability contexts collapse into GDC,
-conflating K5 with K3. &
-Normative applicability collapses into Social Object (conflating K5
-with K3) or Quality (conflating K5 with K6). \\
+conflating CTX with NOR. &
+Normative applicability collapses into Social Object (conflating CTX
+with NOR) or Quality (conflating CTX with REC). \\
 
-K2/K3 boundary implementation-dependent &
+OBL/NOR boundary implementation-dependent &
 The separation between obligation-bearer and normative structure
 is mediated by the inheres-in relation, not enforced by
 regime membership; unstable under delegated authority. &
@@ -239,15 +242,16 @@ If stability is weakened to allow context-dependent
 regime membership (e.g., role- or viewpoint-relative identity/admissibility),
 some regimes may be representable as
 role- or parameter-dependent refinements of fewer base regimes,
-but doing so shifts shifts structural burden into
+but doing so shifts structural burden into
 coordination, versioning, or exchange mechanisms
 whose admissibility conditions are not fixed
 at the substrate level and are outside the scope of this analysis;
 the lower bound therefore does not apply under such weakenings.
 
 Within the stated scope, however, the result is unavoidable.
-Any attempt to reduce the number of regimes must either sacrifice stability,
-reintroduce hidden distinctions, or weaken the neutrality constraint.
+Under the stated assumptions, any attempt to reduce the number of regimes
+would require sacrificing stability,
+reintroducing hidden distinctions, or weakening the neutrality constraint.
 The six-regime structure thus emerges not as a design preference, but as a
 structural consequence of the problem as posed.
 
@@ -294,24 +298,24 @@ Each case introduced in Section~\ref{sec:intro} exercises the full structure and
 illustrates what stable reference under persistent disagreement concretely requires.
 
 \subsubsection{Multi-jurisdiction regulatory reporting.}
-A corporate entity is represented as an obligation-bearing referent (K2)
+A corporate entity is represented as an obligation-bearing referent (OBL)
 that persists across jurisdictional differences in how corporate
 personhood or subsidiary liability is defined.
 The reporting statute under which it operates is represented as an
-authority-bearing structure (K3) that persists across amendments,
+authority-bearing structure (NOR) that persists across amendments,
 contested interpretations, and delayed enforcement.
 Each filing, inspection, or transaction is represented as a
-time-indexed occurrence (K4) individuated by when and where it happened,
+time-indexed occurrence (OCC) individuated by when and where it happened,
 independently of how any jurisdiction evaluates it.
-The jurisdiction itself is represented as an applicability context (K5)
+The jurisdiction itself is represented as an applicability context (CTX)
 that scopes which obligations apply to which entities without collapsing
 into either the statute or the filer.
 Performance and compliance indicators are represented as descriptive
-records (K6) that remain comparable across jurisdictions without
+records (REC) that remain comparable across jurisdictions without
 carrying evaluative or causal commitments.
 Any entity that is regulated but does not itself bear obligations ---
 such as a regulated substance or a monitored facility --- is
-represented as an acted-upon referent (K1).
+represented as an acted-upon referent (ENR).
 The six-regime construction allows two jurisdictions to refer to the
 same corporation, the same statute, and the same filing while
 maintaining incompatible evaluations of compliance,
@@ -319,20 +323,20 @@ without either forcing interpretive convergence or losing
 the shared referential ground required for audit comparison.
 
 \subsubsection{Legislative history tracking.}
-A statute is represented as an authority-bearing structure (K3) that
+A statute is represented as an authority-bearing structure (NOR) that
 remains the same normative referent across the legislative acts that
-enacted it (K4), the amendments that modified it (K4), and the
-administrative decisions that applied it (K4).
+enacted it (OCC), the amendments that modified it (OCC), and the
+administrative decisions that applied it (OCC).
 The legislature and the agencies that implement the statute are
-represented as obligation-bearing referents (K2) whose identity
+represented as obligation-bearing referents (OBL) whose identity
 does not depend on any particular enactment event.
 Jurisdictions and conditional scopes --- such as the geographic or
 subject-matter boundaries of the statute's application --- are
-represented as applicability contexts (K5) that may be nested,
+represented as applicability contexts (CTX) that may be nested,
 overlapping, or contested without destabilizing reference to the
 statute itself.
 Records of legislative proceedings, judicial interpretations, and
-compliance histories are represented as descriptive indicators (K6)
+compliance histories are represented as descriptive indicators (REC)
 that characterize outcomes without asserting which interpretation
 of the statute is correct.
 The construction allows legal historians, policy analysts, and
@@ -343,24 +347,24 @@ means or which application was legitimate.
 
 \subsubsection{Cross-institutional provenance.}
 A research or administrative record is represented as an
-acted-upon referent (K1) whose identity and persistence conditions
+acted-upon referent (ENR) whose identity and persistence conditions
 are invariant under the classificatory schemes of any receiving
 institution.
 The institution that produced the record and the institutions that
 subsequently hold or analyze it are represented as obligation-bearing
-referents (K2) that remain identifiable as custodians across
+referents (OBL) that remain identifiable as custodians across
 transfers, mergers, and re-organizations.
 Policies governing data use, retention, or sharing are represented
-as authority-bearing structures (K3) that persist independently of
+as authority-bearing structures (NOR) that persist independently of
 whether they have been enforced or contested in any particular transfer.
 Each transfer, annotation event, or re-analysis is represented as a
-time-indexed occurrence (K4) individuated by its provenance,
+time-indexed occurrence (OCC) individuated by its provenance,
 independently of how institutions classify the action.
 Institutional scope conditions, such as which data a policy governs
 or which entities fall under a data-sharing agreement, are
-represented as applicability contexts (K5).
+represented as applicability contexts (CTX).
 Derived indicators, quality metrics, and outcome summaries attached
-to the record are represented as descriptive records (K6) that remain
+to the record are represented as descriptive records (REC) that remain
 comparable across institutions whose causal and evaluative frameworks
 differ.
 The construction preserves the provenance chain as a stable referential
