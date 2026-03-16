@@ -14,16 +14,21 @@ description = "Declarative claim of repository intent, scope, and role."
 purpose = "To make explicit the boundaries, responsibilities, and expectations of this repository relative to others."
 
 [repo]
-name = "P200_Identity_Regimes"
+name = "paper-200-identity-regimes"
 org  = "structural-explainability"
 kind = "paper"
-status = "explanatory"
-since = "2025"
-summary = "Applied ontology paper establishing the necessity and sufficiency of the identity regime basis."
+status = "under-review"
+since = "2026"
+summary = "Applied ontology paper establishing a tight structural bound of six identity-and-persistence regimes required for neutral substrates under persistent disagreement."
 
 [layer]
 space = "SE"
 role  = "justification-identity"
+
+[result]
+type = "structural-bound"
+bound = 6
+object = "identity-and-persistence regimes"
 
 [depends]
 required = []
@@ -36,23 +41,26 @@ artifacts = [
     "LICENSE",
     "README.md",
     "SE_MANIFEST.toml",
-    "paper/*.tex"
+    "paper/*.tex",
+    "glossary/*.tex"
 ]
 
 [scope]
 includes = [
-  "theoretical justification for identity regimes",
-  "formal argument for regime closure for v1",
+  "structural analysis of identity and persistence regimes",
+  "necessity proof establishing a lower bound on regime structure",
+  "sufficiency construction realizing the minimal regime basis",
 ]
 excludes = [
   "normative specification text",
   "implementation requirements",
+  "exchange or state-transition protocols",
 ]
 
 [citation]
 cff = "CITATION.cff"
 preferred = "paper"
-bib_hint = "case2025identity"
+bib_hint = "case2026identity"
 
 [traceability]
 identifier_map = "none"

@@ -4,7 +4,8 @@
 
 \subsection{The Six Identity-and-Persistence Regimes}
 
-We realize exactly the six identity-and-persistence regimes
+This section exhibits a construction realizing
+the six identity-and-persistence regimes
 derived in Section~\ref{sec:necessity}.
 No additional regimes are introduced,
 and none of the induced regimes are merged or weakened.
@@ -21,11 +22,12 @@ neutrality and stable reference.
 
 \subsection{Admissible Relations}
 
-The following typed relations realize the admissibility profiles
-required by R2--R6.
-Each requirement is realized by at least one listed relation;
-the mapping is made explicit in
-Section~\ref{sec:requirements_verification} below.
+The construction introduces the following typed relations.
+Together these relations realize the admissibility profiles
+required to satisfy R2--R6.
+Each requirement is realized by at least one listed relation.
+The coverage mapping is made explicit in
+Section~\ref{sec:requirements_verification}.
 
 \begin{itemize}
 
@@ -84,7 +86,7 @@ Relations in this construction are structural and descriptive.
 They assert reference, participation, scoping, or provenance,
 but do not encode causal mechanism or normative validity.
 
-Authority grounding and delegation record that an
+Authority grounding and delegation records that an
 obligation-bearing entity enacts or issues a normative structure,
 without asserting validity or enforceability.
 
@@ -146,7 +148,6 @@ following coverage mapping:
         causal or normative conclusions.
 \end{itemize}
 
-Each requirement is realized by at least one listed relation.
 No requirement introduces a relation that propagates
 persistence criteria or normative commitments
 outside the regime for which it is specified.
@@ -164,15 +165,14 @@ Section~\ref{sec:assumptions}.
 
 \begin{proof}
 By construction, each of R2--R6 is realized
-by at least one listed relation
-within the six-regime construction,
+by at least one typed relation
+in the construction,
 and all regimes satisfy R1.
 The regimes are pairwise disjoint,
 and the typed relation set connects them
 only through descriptive, participation, and scoping relations
 whose admissibility conditions
 do not propagate persistence criteria across regime boundaries.
-Each requirement is realized by at least one listed relation,
 and the construction introduces no interpretive flags,
 role-based discriminators, or additional identity regimes.
 Hence the construction satisfies R1--R6.

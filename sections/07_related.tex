@@ -4,9 +4,10 @@
 
 This paper is situated at the intersection of formal ontology, knowledge
 representation, and the study of classification under disagreement.
-Rather than surveying ontology engineering broadly, it situates the
-present result with respect to prior work on neutrality, identity, and
-structural stability.
+Rather than surveying ontology engineering broadly, this section situates the
+present result relative to prior work on
+classification under disagreement, identity and roles in formal ontology,
+and upper-ontology design.
 
 \subsection{Classification, Disagreement, and Neutrality}
 
@@ -21,7 +22,7 @@ These observations motivate the need for representations that remain usable
 without assuming interpretive convergence.
 The present work adopts this motivation but addresses a distinct question:
 what minimal structural commitments are unavoidable when disagreement is treated as
-permanent and interpretive commitments are externalized rather than negotiated?
+persistent and interpretive commitments are externalized rather than negotiated?
 
 \subsection{Identity, Roles, and Ontological Methodology}
 
@@ -63,7 +64,7 @@ while occurrents unfold across it~\citep{arp2015building}.
 OCC (time-indexed occurrences) maps cleanly onto BFO occurrents.
 ENR through NOR map onto independent and generically dependent continuants,
 but BFO does not enforce the regime-level separation between them:
-obligation-bearing entities (ENR), authority-bearing structures (NOR),
+obligation-bearing entities (OBL), authority-bearing structures (NOR),
 and descriptive indicators (REC) are all candidates for
 Generically Dependent Continuant, leaving their
 stability-critical distinctions to the implementer.
@@ -73,8 +74,8 @@ or conditional scope are represented as GDC,
 conflating CTX with NOR under a BFO-based implementation.
 Under persistent disagreement, these conflations require
 hidden discriminators to recover regime-level distinctions,
-introducing implicit structure of precisely the kind
-the neutrality constraint prohibits.
+introducing implicit structure of the kind
+prohibited by the neutrality constraint.
 
 DOLCE~\citep{gangemi2002dolce} introduces social objects as
 first-class entities and provides a richer treatment of
@@ -102,7 +103,6 @@ optimization objective assumed here,
 and where that divergence has structural consequences
 for neutral interoperability under persistent disagreement.
 
-% They can when constrained
 When constrained to enforce conservative extension
 over identity and admissibility conditions,
 such frameworks can realize the regime structure derived here.
@@ -113,11 +113,11 @@ The present result is therefore not a competing upper ontology,
 but a constraint on any ontology intended to function as a
 neutral, stability-preserving substrate under persistent disagreement.
 
-\subsection{Relation to Common Logic and ontology exchange} % ADD 4 CITATIONS
+\subsection{Relation to Common Logic and Ontology Exchange}
 
 The neutral substrate and derived regimes can be
 expressed in ISO/IEC 24707 Common Logic~\citep{iso24707} as a conservative theory,
-supporting interpreter-independent exchange
+supporting interpreter-independent ontology exchange
 without reliance on description-logic restrictions or fixed signatures.
 Here, conservative means that
 extensions add structure
