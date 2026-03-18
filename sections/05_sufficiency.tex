@@ -75,7 +75,8 @@ Section~\ref{sec:requirements_verification}.
 {\small
 \[
 \begin{array}{lcl}
-\textit{measures} &:& \mathrm{REC} \to (\mathrm{OBL} \mid \mathrm{ENR} \mid \mathrm{CTX})
+\textit{measures}           &:& \mathrm{REC} \to (\mathrm{OBL} \mid \mathrm{ENR} \mid \mathrm{CTX}) \\
+\textit{observes}           &:& \mathrm{REC} \to \mathrm{OCC}
 \end{array}
 \]
 }
@@ -96,11 +97,13 @@ and with enduring non-normative referents via \emph{has-patient}.
 
 The \emph{measures} relation associates a descriptive record
 with an enduring referent,
-without asserting accuracy, causal relevance,
+while \emph{observes} anchors a descriptive record
+to a time-indexed occurrence.
+Neither relation asserts accuracy, causal relevance,
 or normative significance.
 
 Occurrences serve as temporal and provenance anchors
-for participation and measurement relations.
+for participation and descriptive relations.
 Descriptive records target enduring referents whose identity
 persists across incompatible extensions.
 
@@ -133,8 +136,8 @@ following coverage mapping:
         \textit{enacts}, \textit{issues}, and \textit{applies-in}
         ground NOR independently of any OCC instance.
   \item \textbf{R4 (Time-indexed occurrence):}
-        \textit{involves}, \textit{has-patient}, and
-        \textit{occurs-under} anchor OCC to its participants
+        \textit{involves}, \textit{has-patient}, \textit{occurs-under},
+        and \textit{observes} anchor OCC to its participants
         and governing normative structure
         without altering their identity.
   \item \textbf{R5 (Applicability and scope):}

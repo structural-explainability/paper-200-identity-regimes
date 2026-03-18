@@ -56,11 +56,11 @@ Windows:
 ## Stats
 
 ```text
-Sum count: 10779
-Words in text: 10423
-Words in headers: 309
+Sum count: 10751
+Words in text: 10402
+Words in headers: 302
 Words outside text (captions, etc.): 41
-Number of headers: 76
+Number of headers: 75
 Number of floats/tables/figures: 3
 Number of math inlines: 1
 Number of math displayed: 5
