@@ -9,8 +9,7 @@
 [![ArXiv Prep](https://github.com/structural-explainability/paper-200-identity-regimes/actions/workflows/arxiv-prep.yml/badge.svg?branch=main)](https://github.com/structural-explainability/paper-200-identity-regimes/actions/workflows/arxiv-prep.yml)
 [![DOI](https://img.shields.io/badge/DOI-10.48550/arXiv.2601.16152-blue)](https://doi.org/10.48550/arXiv.2601.16152)
 
-> This paper derives necessary and sufficient structural constraints on neutral ontological substrates
-> required to support stable reference and accountability under persistent disagreement.
+> This paper derives structural consequences of ontological neutrality for substrates operating under persistent interpretive disagreement.
 
 ## Paper
 
