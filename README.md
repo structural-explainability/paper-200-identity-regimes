@@ -43,12 +43,28 @@ Requires a LaTeX distribution with `latexmk` (MiKTeX, TeX Live, or MacTeX):
 
 ```bash
 latexmk -pdf se200_identity_regimes.tex
+
+texcount -inc -sum -total se200_identity_regimes.tex
 ```
 
 Windows:
 
 ```pwsh
 .\tools\build\build.ps1
+```
+
+## Stats
+
+```text
+Sum count: 10779
+Words in text: 10423
+Words in headers: 309
+Words outside text (captions, etc.): 41
+Number of headers: 76
+Number of floats/tables/figures: 3
+Number of math inlines: 1
+Number of math displayed: 5
+Files: 12
 ```
 
 ## Annotations
