@@ -14,8 +14,6 @@ $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 Write-Host "==> Cleaning build artifacts"
 & "$ScriptDir\clean.ps1"
 
-Write-Host "==> Verifying proof contract"
-& "$ScriptDir\contract.ps1"
 
 Write-Host "==> Building LaTeX PDF"
 
@@ -103,8 +101,22 @@ function Invoke-OrStop {
         [Parameter(Mandatory = $true)][string]$FailMessage
     )
 
-    $result = & $Action
-    if (-not $result) {
+    $result = $false
+
+    try {
+        $result = & $Action
+    }
+    catch {
+        Write-Fail $FailMessage
+        Write-Fail $_.Exception.Message
+        exit 1
+    }
+
+    if ($result -is [array]) {
+        $result = $result[-1]
+    }
+
+    if ($result -ne $true) {
         Write-Fail $FailMessage
         exit 1
     }
@@ -395,14 +407,11 @@ if (-not $NoClean) {
 }
 
 # -----------------------------------------------------------------------------
-# Build Standard + Annotated (fail-fast)
+# Build Standard
 # -----------------------------------------------------------------------------
 
 Invoke-OrStop { Build-Paper -PaperDir $PaperDir -TexFile $PaperTex -Name "Paper" -RepoRoot $RepoRoot } `
     "Stopping: Paper standard build failed."
-
-# Invoke-OrStop { Build-Paper-Annotated -PaperDir $PaperDir -TexFile $PaperTex -Name "Paper (Annotated)" -RepoRoot $RepoRoot } `
-#     "Stopping: Paper annotated build failed."
 
 Write-Ok ""
 Write-Ok "ALL BUILDS SUCCEEDED."

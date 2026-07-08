@@ -1,0 +1,215 @@
+% !TeX root = ../se200_identity_regimes.tex
+
+\subsection{Refinement of Applicability Contexts}
+\label{subsec:ctx_split}
+
+This subsection shows that applicability contexts do not define a single
+regime profile under the transformation basis, and must be refined.
+
+%--------------------------------------------
+\subsubsection{Initial CTX Profile}
+
+\begin{definition}[Provisional CTX profile]
+A provisional CTX profile is a regime profile whose identity carrier is
+an applicability scope or condition, i.e., a structure that determines
+where, to whom, or under what conditions authority applies.
+\end{definition}
+
+
+Under this provisional formulation, identity is intended to track persistence
+of applicability independently of internal structure.
+
+
+%--------------------------------------------
+\subsubsection{Transformation Behavior}
+
+We examine the classification of transformations under the provisional CTX profile.
+
+\begin{itemize}
+\item $\mathrm{RE}$: IGN
+\item $\mathrm{AN}$: IGN
+\item $\mathrm{RF}$: PRS or BRK
+\item $\mathrm{AD}$: PRS or BRK
+\item $\mathrm{RC}$: PRS or BRK
+\item $\mathrm{RA}$: IGN or BRK
+\item $\mathrm{SU}$: BRK
+\item $\mathrm{BF}$: PRS or BRK
+\item $\mathrm{PV}$: IGN
+\item $\mathrm{SE}$: not applicable
+      ($\mathrm{Appl}_P(\mathrm{SE}) = 0$;
+      normative structures do not undergo state evolution).
+\end{itemize}
+
+
+The classification of decomposition is indeterminate under the provisional CTX profile:
+it is identity-preserving when applicability extension is unchanged,
+but identity-breaking when internal structure is changed.
+This indeterminacy is the source of split pressure.
+
+
+%--------------------------------------------
+\subsubsection{Split Pressure}
+
+\begin{proposition}[CTX split pressure]
+\label{prop:ctx_split_pressure}
+The provisional CTX profile is under split pressure with respect to
+the decomposition transformation $\mathrm{AD}$.
+\end{proposition}
+
+\begin{proof}[Proof of Proposition~\ref{prop:ctx_split_pressure}]
+Let $x \in \mathcal{R}$ be a context representation whose identity is
+determined by applicability extension:
+$x$ represents a jurisdiction defined as the set of cases
+falling under a given authority,
+independently of how that jurisdiction is internally organized.
+Let $\tau$ be a decomposition transformation producing subcontexts
+whose union covers the same set of cases as $x$, and
+let $y := \tau(x)$.
+Since the applicability extension of
+$y$ equals that of $x$,
+identity-preservation is required:
+$\mathrm{Class}_P(\mathrm{AD}) = \mathrm{PRS}$.
+
+Let $x' \in \mathcal{R}$ be a context representation whose identity is
+determined by internal structure: $x'$ represents a partition of cases
+into named subregions, where the partition itself constitutes the context.
+Let $\tau'$ be a decomposition transformation that subdivides $x'$
+into finer subregions, producing
+$y' := \tau'(x')$ with different internal organization.
+Since the structure of $y'$ differs from that of $x'$,
+identity-breaking is required: $\mathrm{Class}_P(\mathrm{AD}) = \mathrm{BRK}$.
+
+Both $x$ and $x'$ are admissible instances of the provisional CTX profile,
+as both are applicability scopes independent of normative or causal content.
+The requirements $\mathrm{PRS}$ and $\mathrm{BRK}$ are contradictory.
+Therefore the provisional CTX profile is under split pressure
+with respect to $\mathrm{AD}$.
+\end{proof}
+
+[Informally]
+After decomposition, the applicability can remain the same even when the structure does not.
+
+
+%--------------------------------------------
+\subsubsection{Separated Profiles}
+
+We therefore define two distinct regime profiles.
+
+\begin{definition}[CTX-E profile]
+The extensional applicability profile $\mathrm{CTX\mbox{-}E}$ is defined by:
+\begin{itemize}
+\item carrier: applicability scope or condition,
+\item identity basis: persistence of the same applicability extension,
+\item transformation classification:
+\begin{itemize}
+  \item $\mathrm{RE}$: IGN
+  \item $\mathrm{AN}$: IGN
+  \item $\mathrm{RF}$: PRS
+  \item $\mathrm{AD}$: PRS
+  \item $\mathrm{RC}$: PRS \quad (re-contextualization preserves
+        applicability extension by definition of CTX-E)
+  \item $\mathrm{RA}$: IGN \quad (reassignment does not alter
+        applicability extension)
+  \item $\mathrm{SU}$: BRK
+  \item $\mathrm{BF}$: PRS
+  \item $\mathrm{PV}$: IGN
+  \item $\mathrm{SE}$: not applicable
+      ($\mathrm{Appl}_P(\mathrm{SE}) = 0$;
+      normative structures do not undergo state evolution).
+\end{itemize}
+\end{itemize}
+\end{definition}
+
+\begin{definition}[CTX-S profile]
+The structured applicability profile $\mathrm{CTX\mbox{-}S}$ is defined by:
+\begin{itemize}
+\item carrier: applicability structure,
+\item identity basis: persistence of the same structure,
+\item transformation classification:
+\begin{itemize}
+  \item $\mathrm{RE}$: IGN
+  \item $\mathrm{AN}$: IGN
+  \item $\mathrm{RF}$: BRK
+  \item $\mathrm{AD}$: BRK
+  \item $\mathrm{RC}$: BRK \quad (re-contextualization alters
+        applicability structure)
+  \item $\mathrm{RA}$: BRK \quad (reassignment alters the structural
+        bearer of applicability)
+  \item $\mathrm{SU}$: BRK
+  \item $\mathrm{BF}$: BRK
+  \item $\mathrm{PV}$: IGN
+  \item $\mathrm{SE}$: not applicable
+      ($\mathrm{Appl}_P(\mathrm{SE}) = 0$;
+      normative structures do not undergo state evolution).
+\end{itemize}
+\end{itemize}
+\end{definition}
+
+
+The classifications of $\mathrm{RC}$ and $\mathrm{RA}$ are fully determined
+by the identity basis of each profile. Under CTX-E, both are PRS or IGN
+because neither alters applicability extension. Under CTX-S, both are BRK
+because each alters the structural configuration that constitutes identity.
+
+This does not induce further split pressure.
+In both profiles, re-contextualization or reassignment is identity-preserving
+if and only if the defining identity basis is unchanged:
+applicability extension for $\mathrm{CTX\mbox{-}E}$,
+and applicability structure for $\mathrm{CTX\mbox{-}S}$.
+
+Thus the variation in classification reflects dependence on whether the
+underlying invariant is preserved, rather than the presence of distinct
+regime profiles.
+
+
+%--------------------------------------------
+\subsubsection{Non-Collapse}
+
+\begin{proposition}[CTX-E and CTX-S do not collapse]
+\label{prop:ctx_noncollapse}
+The profiles $\mathrm{CTX\mbox{-}E}$ and $\mathrm{CTX\mbox{-}S}$ induce
+distinct equivalence relations on $\mathcal{R}$.
+\end{proposition}
+
+\begin{proof}[Proof of Proposition~\ref{prop:ctx_noncollapse}]
+Let $x \in \mathcal{R}$ be a context representation.
+Let $\tau$ be a decomposition transformation producing subcontexts
+whose union has the same applicability extension as $x$,
+and let $y := \tau(x)$.
+
+Under $\mathrm{CTX\mbox{-}E}$:
+\[
+\mathrm{Class}_{\mathrm{CTX\mbox{-}E}}(\mathrm{AD}) = \mathrm{PRS},
+\]
+so $\tau$ is identity-preserving and $x \sim_{\mathrm{CTX\mbox{-}E}} y$.
+
+Under $\mathrm{CTX\mbox{-}S}$:
+\[
+\mathrm{Class}_{\mathrm{CTX\mbox{-}S}}(\mathrm{AD}) = \mathrm{BRK},
+\]
+so $\tau$ is identity-breaking and $x \not\sim_{\mathrm{CTX\mbox{-}S}} y$.
+
+Therefore $\sim_{\mathrm{CTX\mbox{-}E}} \neq \sim_{\mathrm{CTX\mbox{-}S}}$.
+\end{proof}
+
+[Informally]
+After decomposition, two representations can have the same applicability
+even when their structure differs.
+
+
+%--------------------------------------------
+\subsubsection{Result}
+
+\begin{theorem}[CTX refinement]
+Applicability contexts must be refined into at least two distinct regime profiles:
+\[
+\mathrm{CTX\mbox{-}E}
+\quad\text{and}\quad
+\mathrm{CTX\mbox{-}S}.
+\]
+\end{theorem}
+
+[Informally]
+Two representations can apply to the same cases even when their internal structure differs,
+but cannot be the same structure once decomposition changes that organization.
+
