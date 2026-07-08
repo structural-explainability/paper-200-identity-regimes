@@ -1,4 +1,5 @@
-% !TeX root = se200_identity_regimes.tex
+% !TeX root = ../se200_identity_regimes.tex
+
 \section{Introduction: Structure Under Disagreement}
 \label{sec:intro}
 
@@ -25,12 +26,12 @@ These cases are not offered as empirical evidence;
 they function as structural diagnostics that make concrete
 the requirements of Section~\ref{sec:requirements}.
 
-Upper ontologies and general-purpose representational frameworks
-including BFO~\citep{arp2015bfo}, DOLCE~\citep{gangemi2002dolce},
-and PROV-O~\citep{lebo2013prov} are expressive and well-motivated
-for their intended purposes.
-They support rich domain modeling, causal attribution,
-and normative classification.
+% Upper ontologies and general-purpose representational frameworks
+% including BFO~\citep{arp2015bfo}, DOLCE~\citep{gangemi2002dolce},
+% and PROV-O~\citep{lebo2013prov} are expressive and well-motivated
+% for their intended purposes.
+% They support rich domain modeling, causal attribution,
+% and normative classification.
 
 However, the design objective considered in this paper is different.
 The goal is not representational adequacy within a shared
@@ -54,7 +55,7 @@ entities must be referable, actions traceable, and
 records comparable across frameworks that may diverge
 in assumptions, methods, or evaluative standards.
 Recent work is consistent with the view that systems without explicit structural commitments
-produce unstable and context-dependent categorical behavior~\citep{kohler2025mercurial},
+% produce unstable and context-dependent categorical behavior~\citep{kohler2025mercurial},
 further motivating the need for substrates that enforce stable reference
 structurally rather than relying on interpretive consistency.
 
@@ -77,7 +78,7 @@ incompatible with the optimization criterion adopted here.
 
 This analysis identifies a design objective that is distinct
 from the general problem of ontology construction.
-We adopt a neutrality framework developed in prior work~\citep{anon2026neutrality},
+% We adopt a neutrality framework developed in prior work~\citep{case2026neutralSubstrates},
 treating ontological neutrality as a structural design constraint.
 Neutrality is understood as interpretive non-commitment at the substrate level
 combined with stability under incompatible extension:
@@ -85,7 +86,7 @@ a substrate must permit independent extensions to introduce
 causal or normative structure without requiring revision of the
 underlying representation.
 Explanatory and evaluative structure is externalized;
-the substrate is constrained to remain pre-causal and pre-normative.
+the substrate is constrained to remain neutral by design.
 
 The substrate is not intended to adjudicate causal or normative claims.
 Its role is limited to preserving referential comparability
@@ -111,7 +112,7 @@ Such encodings do not eliminate structure;
 they merely relocate it to extension layers that presuppose shared interpretive commitments.
 Under persistent disagreement, those commitments cannot be assumed.
 Minimality therefore requires that
-all operationally necessary identity-and-persistence distinctions
+all operationally necessary referential distinctions
 be explicit and structurally enforced at the substrate level.
 
 Accountability is the specific capacity discussed in this paper.
@@ -122,8 +123,8 @@ time-indexed occurrences, applicability contexts, and descriptive records (R2--R
 without embedding causal claims or normative judgments in the substrate itself.
 These are introduced as representational capacities whose simultaneous support
 places structural constraints on any neutral substrate.
-Whether they can be realized within fewer identity-and-persistence regimes
-is addressed in Section~\ref{sec:necessity};
+Whether they can be realized within fewer referential regimes
+is addressed in Section~\ref{sec:six};
 the question is whether a neutral substrate can support them at all,
 and if so, with what irreducible structural commitments.
 The diagnostic cases introduced above (multi-jurisdiction regulatory reporting,
@@ -136,9 +137,7 @@ structure under the design objectives stated above.
 Under explicit constraints of neutrality, stability under incompatible extension,
 and exclusion of hidden structural discriminations, we show that any substrate
 capable of supporting accountability under persistent disagreement must
-realize at least six distinct identity-and-persistence regimes.
-We further show that a construction realizing exactly six such regimes
-suffices without introducing hidden or excess structure.
+realize at least nine distinct referential regimes.
 The result is a constraint on
 what is structurally possible under a specific optimization objective,
 not a proposal for a universal ontology.
@@ -146,13 +145,80 @@ Alternative objectives, such as interpretive convergence, domain-specific effici
 or context-dependent substrate classification,
 yield different tradeoffs and are not addressed here.
 
+Systems of practical and theoretical interest frequently exhibit
+persistent interpretive disagreement.
+In such settings, competing frameworks assign different interpretations
+to the same underlying structure, while the structure itself remains unchanged.
+
+A representation suitable for such systems must therefore satisfy
+a neutrality requirement:
+it must support stable reference and structural comparison
+without committing to any particular
+interpretive framework.
+
+% The neutral-substrate constraint~\cite{case2026neutralSubstrates}
+establishes constraints for such neutrality, requiring that
+the substrate exclude causal and normative commitment while preserving
+extension-invariant identity.
+
+The present paper addresses the representational problem:
+whether such systems admit a structural representation
+that is both expressive and neutral.
+
+We proceed by restricting attention to admissible relations and
+defining a path-based grammar for multi-stage structure. We show
+that all admissible finite systems can be realized as families of
+paths over a minimal relation set.
+We then construct a regime-typed directed multigraph
+embedding that preserves entity identity,
+regime typing, and admissible relations, and is faithful up to
+regime-typed isomorphism.
+
+Within this representation:
+
+\begin{itemize}
+    \item all admissible structure is realized as path families,
+    \item structural comparison reduces to comparison of such families,
+    \item interventions correspond to admissible transformations of path structure.
+\end{itemize}
+
+Crucially, the representation introduces no causal or normative predicates.
+Such interpretations arise only in extensions over REC-anchored paths.
+
+This establishes that admissible systems under persistent disagreement
+can be represented, compared, and transformed entirely at the level of
+neutral structure.
+
 The remainder of the paper proceeds as follows.
+Section~\ref{sec:background} situates the analysis as a refinement of
+the neutral-substrate constraint introduced in SE-100.
 Section~\ref{sec:assumptions} states the assumptions, neutrality constraints,
 and optimization criterion.
 Section~\ref{sec:requirements} formalizes the structural requirements imposed
 by accountability analysis.
-Section~\ref{sec:necessity} derives the lower bound.
-Section~\ref{sec:sufficiency} presents a construction achieving this bound.
-Section~\ref{sec:interpretation} discusses the scope and implications.
+Section~\ref{sec:preliminaries} fixes the formal vocabulary used in the
+derivations.
+Section~\ref{sec:formal_setting} introduces the formal setting, including
+admissible transformations, regime profiles, and path-grammar adequacy.
+
+Section~\ref{sec:six} derives the six-family lower bound:
+the coarse requirements force distinct referential regime families before
+transformation-driven refinement is considered.
+Section~\ref{sec:six} gives the corresponding six-family construction
+before refinement.
+Section~\ref{sec:refinement} then derives the required refinements.
+In particular, Sections~\ref{subsec:enr_split}, \ref{subsec:ctx_split},
+and~\ref{subsec:nor_split} show that enduring non-normative referents,
+applicability contexts, and normative structures split into distinct
+referential regimes under transformation pressure.
+
+Section~\ref{sec:nine} states the resulting nine-regime lower bound.
+Section~\ref{sec:representation} constructs the neutral regime embedding.
+Section~\ref{sec:consequences} derives consequences for interpretation,
+comparison, and intervention.
+Section~\ref{sec:interpretation} discusses boundary conditions and the scope
+of the result.
 Section~\ref{sec:related} situates the work relative to existing frameworks.
+Section~\ref{sec:limits} states limitations, including the absence of an
+upper-bound or completeness claim.
 Section~\ref{sec:conclusion} concludes.

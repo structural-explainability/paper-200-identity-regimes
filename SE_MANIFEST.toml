@@ -1,38 +1,44 @@
 # ============================================================
-# SE_MANIFEST.toml (Repository Intent, Scope, and Role)
+# SE_MANIFEST.toml (Repository Declaration)
 # ============================================================
 
-schema = "se-manifest-1"
-schema_url = "https://github.com/structural-explainability/spec-se/blob/main/manifests/se-manifest-1.md"
+schema = "se-manifest-schema"
+schema_version = "0.5.0"
+schema_url = "https://raw.githubusercontent.com/structural-explainability/se-manifest-schema/main/manifest-schema.toml"
+
+# === Framework Context ===
 
 [meta]
-# Non-normative contextual information
 framework = "Structural Explainability"
 framework_url = "https://github.com/structural-explainability"
-framework_note = "Provides definitions and conventions for SE_MANIFEST semantics."
-description = "Declarative claim of repository intent, scope, and role."
-purpose = "To make explicit the boundaries, responsibilities, and expectations of this repository relative to others."
+purpose = "Declares this repository's role in the Structural Explainability ecosystem."
 
-[repo]
+# === Repository Identity ===
+
+[repository]
+organization = "structural-explainability"
 name = "paper-200-identity-regimes"
-org  = "structural-explainability"
+class = "paper"
 kind = "paper"
 status = "under-review"
 since = "2026"
-summary = "Applied ontology paper establishing a tight structural bound of six identity-and-persistence regimes required for neutral substrates under persistent disagreement."
+summary = "Paper deriving the referential-regime structure required by neutral substrates under persistent interpretive disagreement."
+
+# === Layer Position ===
 
 [layer]
-space = "SE"
-role  = "justification-identity"
+space = "structural-explainability"
+role = "justification-identity"
 
-[result]
-type = "structural-bound"
-bound = 6
-object = "identity-and-persistence regimes"
+# === Dependency Declarations ===
 
 [depends]
-required = []
+required = [
+    { repository = "paper-100-neutral-substrate", kind = "semantic", reason = "Uses the neutral-substrate constraint and referential-regime framing introduced in SE-100." },
+]
 optional = []
+
+# === Provided Artifacts ===
 
 [provides]
 artifacts = [
@@ -41,26 +47,41 @@ artifacts = [
     "LICENSE",
     "README.md",
     "SE_MANIFEST.toml",
-    "paper/*.tex",
-    "glossary/*.tex"
+    "se200_identity_regimes.tex",
+    "sections/*.tex",
+    "bibliography/*.bib",
 ]
+
+# === Scope ===
 
 [scope]
 includes = [
-  "structural analysis of identity and persistence regimes",
-  "necessity proof establishing a lower bound on regime structure",
-  "sufficiency construction realizing the minimal regime basis",
+    "referential-regime structure for neutral substrates",
+    "identity and persistence structure under persistent interpretive disagreement",
+    "six-family lower-bound analysis before refinement",
+    "transformation-driven refinement of enduring non-normative referents",
+    "transformation-driven refinement of applicability contexts",
+    "transformation-driven refinement of normative structures",
+    "current lower bound of at least nine pairwise non-collapsing referential regimes",
+    "representation and comparison consequences for neutral substrates",
+    "boundary conditions for stable reference",
 ]
 excludes = [
-  "normative specification text",
-  "implementation requirements",
-  "exchange or state-transition protocols",
+    "upper-bound claim for referential regimes",
+    "completeness claim for all possible ontological systems",
+    "normative specification text",
+    "implementation requirements",
+    "exchange or state-transition protocols",
+    "verification tooling for accountable records",
 ]
+
+# === Citation ===
 
 [citation]
 cff = "CITATION.cff"
 preferred = "paper"
-bib_hint = "case2026identity"
+
+# === Traceability ===
 
 [traceability]
 identifier_map = "none"

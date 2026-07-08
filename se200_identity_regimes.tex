@@ -51,6 +51,7 @@
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{note}[theorem]{Note}
+\newtheorem{convention}[theorem]{Convention}
 
 % Optional: unnumbered versions for front-matter previews/callouts
 % (This is also standard when you want a preview without numbering.)
@@ -64,6 +65,7 @@
 \newtheorem*{example*}{Example}
 \newtheorem*{remark*}{Remark}
 \newtheorem*{note*}{Note}
+\newtheorem*{convention*}{Convention}
 
 % Bibliography management and hyperlink support
 \usepackage{url}
@@ -126,20 +128,35 @@
 \providecommand{\Raw}{\mathrm{Raw}}
 \providecommand{\Canon}{\mathrm{Canon}}
 
+% =============================================================================
+% PREFERRED CITATION SPECIFICATION
+%
+% @techreport{case2026regimes,
+%   author      = {Case, Denise M.},
+%   title       = {Referential Regimes: Identity and Persistence Structure for Neutral Substrates},
+%   institution = {Preprint},
+%   year        = {2026},
+%   doi         = {10.48550/arXiv.2601.16152},
+%   url         = {https://doi.org/10.48550/arXiv.2601.16152}
+% }
+% =============================================================================
+
+
 % ============================================================
-\title{Substrate Stability Under Persistent Disagreement: \\
-Structural Constraints on Individuation  \\
-in Neutral Ontological Substrates}
+\title{Referential Regimes:  \\
+Identity and Persistence Structure \\
+for Neutral Substrates}
 % ============================================================
 \author{Denise M. Case}
 \affil{Northwest Missouri State University, Computer Science and Information Systems, Maryville, MO, USA}
-\date{\today} %TODO: change to \date{} when submitting to arxiv
+\date{} %TODO: change to \date{} when submitting to arxiv
 
 \begin{document}
 
 \maketitle
 \vspace{-1em}
 % 200 word maximum
+
 \begin{abstract}
 Modern data systems increasingly operate under conditions of persistent
 legal, political, and analytic disagreement.
@@ -147,23 +164,18 @@ In systems that adopt a neutral substrate, shared interpretation cannot
 be assumed, and representations must preserve stable reference across
 incompatible extensions.
 This paper examines the structural consequences of that architectural choice.
-Treating interpretive neutrality and extension-stable identity as explicit
-design constraints, the analysis asks what minimal
-ontological structure is required for entities and their relations to remain
+Treating interpretive neutrality and stable reference as explicit
+design constraints, the analysis asks what
+structure is required for entities and their relations to remain
 referable and comparable under persistent disagreement.
 Minimality is defined structurally:
 reductions are admissible only if they do not
 reintroduce identity-relevant distinctions
 through hidden roles, flags, or contextual predicates.
-A conditional lower bound is established: any ontology intended to
-function as a neutral substrate under
-persistent disagreement must realize at least
-six distinct identity-and-persistence regimes.
-A construction with exactly six regimes satisfies the stated
-requirements without embedding causal or normative commitments in the
-substrate.
-Together these results establish a tight structural bound on
-entity individuation in neutral substrates.
+A current lower bound is established: under the stated assumptions,
+a neutral substrate operating under persistent disagreement must realize
+at least nine distinct referential regimes.
+The result is a lower-bound result, not an upper-bound or completeness claim.
 \end{abstract}
 
 % =============================================================================
@@ -173,13 +185,12 @@ entity individuation in neutral substrates.
 \bigskip
 \noindent\textbf{Preview of Main Result.}
 \emph{Under explicit neutrality and stability constraints, attempts to
-  simplify ontological structure by collapsing distinctions reintroduce
+  simplify structure by collapsing distinctions reintroduce
   those distinctions as hidden interpretive mechanisms.
   Excluding such hidden regimes implies
-  six distinct identity-and-persistence regimes
+  nine distinct referential regimes
   required for accountability under persistent disagreement:
-  fewer do not satisfy the stated requirements,
-  and additional regimes introduce no further structural capacity.}
+  fewer do not satisfy the stated requirements.}
 
 \medskip
 \noindent
@@ -191,67 +202,70 @@ This requirement constrains how entities may be individuated.
 Attempts to simplify the individuation structure by collapsing
 categories reintroduce those distinctions as hidden interpretive
 mechanisms.
-Conversely, a construction with six identity-and-persistence regimes
-provides sufficient structure to preserve stable reference without
-embedding causal or normative commitments in the substrate.
-Together these results establish a tight structural bound of six regimes.
 
 % \medskip
 % \noindent
-% The formal necessity argument appears in Section~\ref{sec:necessity},
-% and the sufficiency construction in Section~\ref{sec:sufficiency}.
-% 5 max keywords, with supplementary keywords extracted
+% The formal necessity argument appears in Section~\ref{sec:six}.
 \keywords{
   formal ontology;
   identity and persistence;
   neutral substrates;
   extension stability;
-  ontological neutrality;
+  neutral substrates;
   accountability;
   causal commitment;
   normative commitment;
 }
 
 \input{sections/01_intro}
-\input{sections/02_assumptions}
-\input{sections/03_requirements}
-\input{sections/04_necessity}
-\input{sections/05_sufficiency}
-\input{sections/06_interpretation}
-\input{sections/07_related}
-\input{sections/08_conclusion}
 
+\input{sections/02_background}
+\input{sections/03_assumptions}
+\input{sections/04_requirements}
+
+\input{sections/05_preliminaries}
+\input{sections/06_formal_setting}
+
+\input{sections/07_six_family_lower_bound}
+\input{sections/08_six_family_construction_before_refinement}
+
+\input{sections/09_refinement}
+\input{sections/09aa_enr_split}
+\input{sections/09ab_ctx_split}
+\input{sections/09ac_nor_split}
+
+\input{sections/10_nine}
+\input{sections/11_representation}
+\input{sections/12_consequences}
+\input{sections/13_interpretation}
+
+\input{sections/14_related_work}
+\input{sections/15_limits}
+\input{sections/16_conclusion}
+
+% =============================================================================
 \section*{Statements and Declarations}
+% =============================================================================
+
+\subsection*{Acknowledgments} The author thanks the anonymous reviewers
+of an earlier version of this work for comments that helped improve
+the framing, organization, and presentation of the work.
 
 \subsection*{Author Contributions}
-The author was solely responsible for the conception, analysis, and writing of this manuscript.
+The author is the sole contributor to this work and
+is responsible for all aspects of the research, authorship, and publication.
+
+\subsection*{Use of AI-Assisted Tools}
+AI-assisted tools were used for editing, formatting, and consistency checking.
+The author reviewed all suggestions and is solely responsible for the content.
 
 \subsection*{Declaration of Conflicting Interest}
-The author declares no potential conflicts of interest
-with respect to the research, authorship,
-and/or publication of this article.
-
-\subsection*{Funding}
-This research received no external funding.
-
-\subsection*{Data Availability}
-No datasets were generated or analyzed
-during the current study.
-
-\subsection*{Ethical Approval}
-Not applicable.
-
-\subsection*{Consent to Participate}
-Not applicable.
-
-\subsection*{Consent for Publication}
-Not applicable.
+The author declares no potential conflicts of interest with respect to the
+research, authorship, and publication of this work.
 
 \appendix
 \clearpage
 \input{sections/99_appendixA}   % pairwise collapse enumeration
-\clearpage
-\input{sections/99_appendixG}   % Glossary
 
 \bibliographystyle{plainnat}
 \bibliography{bibliography/bibliography}

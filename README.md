@@ -9,20 +9,20 @@
 [![ArXiv Prep](https://github.com/structural-explainability/paper-200-identity-regimes/actions/workflows/arxiv-prep.yml/badge.svg?branch=main)](https://github.com/structural-explainability/paper-200-identity-regimes/actions/workflows/arxiv-prep.yml)
 [![DOI](https://img.shields.io/badge/DOI-10.48550/arXiv.2601.16152-blue)](https://doi.org/10.48550/arXiv.2601.16152)
 
-> This paper derives structural consequences of ontological neutrality for substrates operating under persistent interpretive disagreement.
+> IN-PROGRESS. This paper derives the referential-regime structure
+> required by neutral substrates operating
+> under persistent interpretive disagreement.
 
 ## Paper
 
 - [PDF](./se200_identity_regimes.pdf)
-- Status: Submitted to journal; under review.
 
 ## Repository Structure
 
-```
+```text
 .github/         # CI workflows
 .vscode/         # Editor settings
 bibliography/    # BibTeX references
-glossary/        # Term definitions
 tools/           # Scripts
 ```
 
@@ -51,20 +51,23 @@ Windows:
 
 ```pwsh
 .\tools\build\build.ps1
+.\size.ps1
+rg -n "\\section|\\subsection|\\subsubsection|\\paragraph" sections
+texcount -merge -sub=section -inc -sum se200_identity_regimes.tex
 ```
 
 ## Stats
 
 ```text
-Sum count: 10751
-Words in text: 10402
-Words in headers: 302
+Sum count: 17882
+Words in text: 16842
+Words in headers: 491
 Words outside text (captions, etc.): 41
-Number of headers: 75
+Number of headers: 150
 Number of floats/tables/figures: 3
-Number of math inlines: 1
-Number of math displayed: 5
-Files: 12
+Number of math inlines: 473
+Number of math displayed: 35
+Files: 21
 ```
 
 ## Annotations
@@ -82,3 +85,9 @@ See [CITATION.cff](./CITATION.cff).
 ## SE Manifest
 
 [SE_MANIFEST](./SE_MANIFEST.toml)
+
+Validate with:
+
+```shell
+uvx se-manifest-schema validate-manifest --path SE_MANIFEST.toml --strict
+```

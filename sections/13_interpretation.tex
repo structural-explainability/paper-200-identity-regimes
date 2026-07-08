@@ -1,4 +1,5 @@
-% !TeX root = se200_identity_regimes.tex
+% !TeX root = ../se200_identity_regimes.tex
+
 \section{Interpretation of the Result}
 \label{sec:interpretation}
 
@@ -15,28 +16,19 @@ conditional optimality claim.
 Under the assumptions of Section~\ref{sec:assumptions},
 any ontology intended to function as a neutral substrate
 for accountability under persistent disagreement
-must realize at least six distinct identity-and-persistence regimes.
-Conversely, a construction with a minimal set of six such regimes suffices to meet
+must realize at least nine distinct referential regimes.
+Conversely, a construction with a minimal set of nine such regimes suffices to meet
 all stated representational requirements without introducing hidden
 structure or interpretive commitments.
 
-The result is therefore tight.
+The result is a conditional lower bound:
+it establishes that no representation with fewer than
+nine regimes can satisfy the stated requirements
+ under the adopted optimization criterion.
 It does not merely show adequacy or inadequacy
 under particular conditions;
-it establishes that six regimes are both necessary and sufficient
+it establishes that at least nine regimes are necessary
 under the stated optimization objective.
-
-\medskip
-\begin{theorem}[Tightness of the six-regime bound]
-\label{thm:tightness}
-Under the assumptions of Sections~\ref{sec:assumptions}--\ref{sec:requirements},
-exactly six identity-and-persistence regimes are necessary and sufficient
-for a neutral accountability substrate under persistent disagreement.
-\end{theorem}
-\begin{proof}
-The theorem follows directly from Lemma~\ref{lem:necessity}
-and Proposition~\ref{prop:sufficiency-six}.
-\end{proof}
 
 \subsection{Minimality Relative to Stability}
 
@@ -71,19 +63,25 @@ or admissible relations.
 Stability then depends on interpretive convergence, which the substrate is
 explicitly designed not to assume.
 
-\subsection{Relation to Other Ontological Strategies}
+\subsection{Relation to Other Modeling Strategies}
 
-Many upper ontologies and modeling frameworks adopt different optimization
-objectives, including metaphysical coverage, expressive richness, or
-alignment with natural language or scientific theory.
-Such frameworks may introduce additional kinds or tolerate contextual
-typing precisely in order to support richer modeling.
+Many modeling frameworks adopt optimization objectives different from those
+adopted here, including expressive richness, domain coverage, implementation
+convenience, explanatory power, or alignment with existing legal, scientific,
+or institutional vocabularies.
+Such frameworks may introduce additional categories, contextual typing,
+role predicates, or domain-specific commitments precisely in order to support
+richer forms of representation and use.
 
-The result presented here neither subsumes nor contradicts those frameworks.
+The result presented here neither subsumes nor contradicts those strategies.
 It identifies a specific point in the design space:
-the minimal structure required for a neutral, extension-stable substrate under persistent disagreement.
-Frameworks optimized for other goals may legitimately occupy different
-points in that space.
+the referential-regime structure required, under the stated assumptions,
+for a neutral substrate operating under persistent interpretive disagreement.
+Frameworks optimized for other goals may occupy different
+points in that space, including designs that add further distinctions or
+accept forms of contextual classification excluded by the neutrality and
+stable-reference constraints used in this paper.
+
 
 The following comparison is illustrative rather than evaluative.
 Table~\ref{tab:regime-mapping} shows common representation
@@ -102,14 +100,14 @@ They are points where neutral substrate implementations built on those framework
 might need to introduce additional modeling commitments
 that the present substrate treats as regime-level structure.
 
-The six regimes are not derived from gaps in existing frameworks.
+The nine regimes are not derived from gaps in existing frameworks.
 Rather, independently motivated requirements reveal where those frameworks
 leave regime-level distinctions to the implementer.
 
 %\clearpage
 \begin{table}[!htbp]
 \centering
-\caption{Illustrative representation strategies for the six regimes
+\caption{Illustrative representation strategies for the nine regimes
 in BFO~2.0 and DOLCE, with structural under-constraints
 under neutrality and stability requirements.}
 \label{tab:regime-mapping}
@@ -224,7 +222,7 @@ regime-level enforcement is absent. \\
 \begin{minipage}{\textwidth}
 \footnotesize
 \textit{Implementations that resolve these under-constraints silently
-introduce hidden regimes in the sense defined in Section~\ref{sec:necessity}.}
+introduce hidden regimes in the sense defined in Section~\ref{sec:six}.}
 \end{minipage}
 \end{table}
 
@@ -253,11 +251,11 @@ Within the stated scope, however, the result is unavoidable.
 Under the stated assumptions, any attempt to reduce the number of regimes
 would require sacrificing stability,
 reintroducing hidden distinctions, or weakening the neutrality constraint.
-The six-regime structure thus emerges not as a design preference, but as a
+The nine-regime structure thus emerges not as a design preference, but as a
 structural consequence of the problem as posed.
 
 The present analysis does not model state transitions,
-versioning mechanisms, or exchange protocols.
+versioning mechanisms, or evolution protocols.
 Such structures may be required for practical interoperability,
 but they operate downstream of the regime-level identity constraints
 established here.
@@ -277,7 +275,7 @@ result identifies which distinctions must be made explicit,
 and which may safely be deferred to extension layers,
 in order to preserve neutrality and stable reference
 across incompatible interpretations.
-The six-regime structure thus serves both as a lower bound and
+The nine-regime structure thus serves both as a lower bound and
 as a design template for accountability substrates in contested domains.
 
 The resulting regime structure can be understood
@@ -294,7 +292,7 @@ causal and normative commitments to be introduced by extensions.
 
 \subsection{Grounding the Construction in the Running Cases}
 
-The six-regime construction is not an abstract partition.
+The nine-regime construction is not an abstract partition.
 Each case introduced in Section~\ref{sec:intro} exercises the full structure and
 illustrates what stable reference under persistent disagreement concretely requires.
 
@@ -317,7 +315,7 @@ carrying causal or normative commitments.
 Any entity that is regulated but does not itself bear obligations,
 such as a regulated substance or a monitored facility, is
 represented as an acted-upon referent (ENR).
-The six-regime construction allows two jurisdictions to refer to the
+The nine-regime construction allows two jurisdictions to refer to the
 same corporation, the same statute, and the same filing while
 maintaining incompatible evaluations of compliance,
 without either forcing interpretive convergence or losing

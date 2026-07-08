@@ -10,8 +10,9 @@
 
 cff-version: "1.2.0"
 type: article
+message: "If you use this work, please cite it as below."
 
-title: "Substrate Stability Under Persistent Disagreement: Structural Constraints on Individuation in Neutral Ontological Substrates"
+title: "Referential Regimes: Identity and Persistence Structure for Neutral Substrates"
 version: "v0.2.0"
 date-released: "2026-03-15"
 
@@ -22,38 +23,37 @@ authors:
     affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
 
 repository-code: "https://github.com/structural-explainability/paper-200-identity-regimes"
-url: "https://github.com/structural-explainability/paper-200-identity-regimes"
 license: CC-BY-4.0
 
 abstract: >
-  This paper derives structural consequences of ontological neutrality
-  for substrates operating under persistent interpretive disagreement.
-  Treating interpretive neutrality and extension-stable identity as
-  design constraints, it establishes a tight structural bound on the
-  individuation of entities in neutral substrates. Any ontology intended
-  to function as a neutral substrate preserving stable reference across
-  incompatible interpretive extensions must realize at least six distinct
-  identity-and-persistence regimes. A construction with exactly six regimes
-  satisfies the stated constraints without embedding causal or normative
-  commitments in the substrate.
+  This paper derives the referential-regime structure required by neutral
+  substrates operating under persistent interpretive disagreement. Treating
+  interpretive neutrality and stable reference as design constraints, it first
+  derives six coarse referential regime families required for accountability
+  analysis. It then shows that transformation-driven refinement of enduring
+  non-normative referents, applicability contexts, and normative structures
+  yields a current lower bound of at least nine pairwise non-collapsing
+  referential regimes. The result is conditional on the stated neutrality,
+  stable-reference, and no-hidden-regime assumptions. No upper bound or
+  completeness claim is made.
 
 keywords:
   - formal ontology
-  - ontological neutrality
+  - neutral substrates
+  - referential regimes
   - identity and persistence
   - individuation
-  - neutral substrates
   - persistent disagreement
-  - extension stability
+  - stable reference
   - accountability
   - structural explainability
   - identity regimes
 
 references:
   - type: article
-    title: "The Ontological Neutrality Theorem: Structural Constraints for Neutral Substrates Under Persistent Interpretive Disagreement"
+    title: "Neutral Substrates: A Design Constraint for Shared Records Under Persistent Interpretive Disagreement"
     authors:
       - family-names: Case
         given-names: Denise M.
-        
-message: "If using this work, please cite it as described in this file."
+    doi: "10.48550/arXiv.2601.14271"
+    url: "https://doi.org/10.48550/arXiv.2601.14271"

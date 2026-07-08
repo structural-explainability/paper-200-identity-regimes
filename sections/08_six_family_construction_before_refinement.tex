@@ -1,12 +1,14 @@
-% !TeX root = se200_identity_regimes.tex
-\section{Sufficiency: A Six-Regime Construction}
-\label{sec:sufficiency}
+% !TeX root = ../se200_identity_regimes.tex
 
-\subsection{The Six Identity-and-Persistence Regimes}
+\section{A Six-Family Construction Before Refinement}
+\label{sec:before_refinement}
+
+
+\subsection{The Initial Six Referential Regimes}
 
 This section exhibits a construction realizing
-the six identity-and-persistence regimes
-derived in Section~\ref{sec:necessity}.
+the six initial referential regimes
+derived in Section~\ref{sec:six}.
 No additional regimes are introduced,
 and none of the induced regimes are merged or weakened.
 
@@ -125,7 +127,7 @@ following coverage mapping:
 \begin{itemize}
   \item \textbf{R1 (Stable identity):}
         Each regime fixes an extension-invariant
-        identity-and-persistence criterion.
+        referential criterion.
         No relation in the construction propagates
         persistence criteria across regime boundaries.
   \item \textbf{R2 (Obligation-bearing capacity):}
@@ -157,15 +159,6 @@ outside the regime for which it is specified.
 No additional identity regimes or extension-layer
 discriminators are required.
 
-\subsection{Sufficiency Proposition}
-
-\begin{proposition}[Sufficiency of six regimes]
-\label{prop:sufficiency-six}
-The six-regime construction specified in this section
-satisfies R1--R6 under the assumptions of
-Section~\ref{sec:assumptions}.
-\end{proposition}
-
 \begin{proof}
 By construction, each of R2--R6 is realized
 by at least one typed relation
@@ -181,28 +174,16 @@ role-based discriminators, or additional identity regimes.
 Hence the construction satisfies R1--R6.
 \end{proof}
 
-\subsection{Tightness of the Bound}
 
-Lemma~\ref{lem:necessity} establishes that any ontology satisfying R1--R6
-must realize at least six distinct identity-and-persistence regimes.
-Proposition~\ref{prop:sufficiency-six} shows that the construction
-presented in this section satisfies those requirements with six regimes.
+The preceding results should be read in two stages. First, R1--R6 force a
+coarse six-family structure: obligation-bearing entities, normative structures,
+time-indexed occurrences, applicability contexts, descriptive records, and
+enduring non-normative referents. Second, transformation-driven refinement
+shows that three of those families cannot remain single regime profiles:
+ENR splits into ENR-L and ENR-I, CTX splits into CTX-E and CTX-S, and
+NOR splits into NOR-C and NOR-S.
 
-The six regimes of the construction are pairwise non-equivalent
-under R1's stability constraint:
-each pair differs in persistence conditions,
-admissible-relation classes,
-or both,
-as established in Section~\ref{sec:regimes}.
-Any identification of two regimes would therefore instantiate one of
-the failure modes defined in Section~\ref{sec:collapse_strategy},
-violating either extension-invariant identity or the neutrality constraint.
-
-Thus the lower bound established in Lemma~\ref{lem:necessity}
-is achieved exactly by the present construction.
-Six regimes are both necessary and sufficient,
-and the bound is therefore tight.
-
-No compliant construction can realize fewer regimes
-without violating either extension-invariant identity
-or the neutrality constraint.
+The operative lower-bound result is therefore Theorem~10.4: under the stated
+assumptions, a compliant substrate must realize at least nine pairwise
+non-collapsing regime profiles. This is a current lower bound, not a tight
+bound, not an upper bound, and not a completeness claim.

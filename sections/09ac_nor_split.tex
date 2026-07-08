@@ -1,0 +1,188 @@
+% !TeX root = ../se200_identity_regimes.tex
+
+\subsection{Refinement of Normative Structures}
+\label{subsec:nor_split}
+
+This section shows that normative structures do not define a single
+regime profile under the transformation basis, and must be refined.
+
+%--------------------------------------------
+\subsubsection{Initial NOR Profile}
+
+\begin{definition}[Provisional NOR profile]
+A provisional NOR profile is a regime profile whose identity carrier is
+a normative structure, i.e., an enduring referent that grounds obligations
+or permissions independently of any particular occurrence.
+\end{definition}
+
+
+Under this provisional formulation, identity is intended to track persistence
+of a normative structure independently of representation or organization.
+
+
+%--------------------------------------------
+\subsubsection{Transformation Behavior}
+
+We examine the classification of transformations under the provisional NOR profile.
+
+\begin{itemize}
+\item $\mathrm{RE}$: IGN
+\item $\mathrm{AN}$: IGN
+\item $\mathrm{RF}$: PRS or BRK
+\item $\mathrm{AD}$: PRS or BRK
+\item $\mathrm{RC}$: IGN
+\item $\mathrm{RA}$: IGN
+\item $\mathrm{SU}$: BRK
+\item $\mathrm{BF}$: BRK
+\item $\mathrm{PV}$: IGN
+\item $\mathrm{SE}$: not applicable
+      ($\mathrm{Appl}_P(\mathrm{SE}) = 0$;
+      normative structures do not undergo state evolution).
+\end{itemize}
+
+
+The classification of refinement is indeterminate under the provisional NOR profile:
+it is identity-preserving when normative content is unchanged,
+but identity-breaking when structural organization changes.
+This indeterminacy is the source of split pressure.
+
+
+%--------------------------------------------
+\subsubsection{Split Pressure}
+
+\begin{proposition}[NOR split pressure]
+\label{prop:nor_split_pressure}
+The provisional NOR profile is under split pressure with respect to
+the refinement transformation $\mathrm{RF}$.
+\end{proposition}
+
+\begin{proof}[Proof of Proposition~\ref{prop:nor_split_pressure}]
+Let $x \in \mathcal{R}$ be a normative structure and let $\tau$ be a
+refinement transformation producing a representation
+$y := \tau(x)$ that preserves the same normative content.
+
+If identity is determined by normative content,
+then $\mathrm{Class}_P(\mathrm{RF}) = \mathrm{PRS}$ is required,
+i.e., refinement must be identity-preserving.
+
+If identity is determined by structural organization,
+then $\mathrm{Class}_P(\mathrm{RF}) = \mathrm{BRK}$ is required,
+i.e., refinement must be identity-breaking.
+
+These requirements are contradictory.
+No single value of $\mathrm{Class}_P(\mathrm{RF})$ is consistent with both cases.
+Therefore the provisional NOR profile is under split pressure with respect to $\mathrm{RF}$.
+\end{proof}
+
+[Informally]
+After refinement, the same normative content can remain
+even when the structure does not.
+
+
+%--------------------------------------------
+\subsubsection{Separated Profiles}
+
+We therefore define two distinct regime profiles.
+
+\begin{definition}[NOR-C profile]
+The content-preserving normative profile $\mathrm{NOR\mbox{-}C}$ is defined by:
+\begin{itemize}
+\item carrier: normative structure,
+\item identity basis: persistence of the same normative content,
+\item transformation classification:
+\begin{itemize}
+\item $\mathrm{RE}$: IGN
+\item $\mathrm{AN}$: IGN
+\item $\mathrm{RF}$: PRS
+\item $\mathrm{AD}$: PRS
+\item $\mathrm{RC}$: IGN
+\item $\mathrm{RA}$: IGN
+\item $\mathrm{SU}$: BRK
+\item $\mathrm{BF}$: BRK
+\item $\mathrm{PV}$: IGN
+\item $\mathrm{SE}$: not applicable
+      ($\mathrm{Appl}_P(\mathrm{SE}) = 0$;
+      normative structures do not undergo state evolution).
+\end{itemize}
+\end{itemize}
+\end{definition}
+
+\begin{definition}[NOR-S profile]
+The structural normative profile $\mathrm{NOR\mbox{-}S}$ is defined by:
+\begin{itemize}
+\item carrier: normative structure,
+\item identity basis: persistence of the same structure,
+\item transformation classification:
+\begin{itemize}
+\item $\mathrm{RE}$: IGN
+\item $\mathrm{AN}$: IGN
+\item $\mathrm{RF}$: BRK
+\item $\mathrm{AD}$: BRK
+\item $\mathrm{RC}$: IGN
+\item $\mathrm{RA}$: IGN
+\item $\mathrm{SU}$: BRK
+\item $\mathrm{BF}$: BRK
+\item $\mathrm{PV}$: IGN
+\item $\mathrm{SE}$: not applicable
+      ($\mathrm{Appl}_P(\mathrm{SE}) = 0$;
+      normative structures do not undergo state evolution).
+\end{itemize}
+\end{itemize}
+\end{definition}
+
+
+Both $\mathrm{NOR\mbox{-}C}$ and $\mathrm{NOR\mbox{-}S}$ share the same carrier
+(normative structure). The refinement is by identity basis rather than carrier type:
+normative content versus structural organization.
+
+
+%--------------------------------------------
+\subsubsection{Non-Collapse}
+
+\begin{proposition}[NOR-C and NOR-S do not collapse]
+\label{prop:nor_noncollapse}
+The profiles $\mathrm{NOR\mbox{-}C}$ and $\mathrm{NOR\mbox{-}S}$ induce
+distinct equivalence relations on $\mathcal{R}$.
+\end{proposition}
+
+\begin{proof}[Proof of Proposition~\ref{prop:nor_noncollapse}]
+Let $x \in \mathcal{R}$ be a normative structure and let $\tau$ be a
+refinement transformation producing a representation
+$y := \tau(x)$ with the same normative content.
+
+Under $\mathrm{NOR\mbox{-}C}$:
+\[
+\mathrm{Class}_{\mathrm{NOR\mbox{-}C}}(\mathrm{RF}) = \mathrm{PRS},
+\]
+so $\tau$ is identity-preserving and $x \sim_{\mathrm{NOR\mbox{-}C}} y$.
+
+Under $\mathrm{NOR\mbox{-}S}$:
+\[
+\mathrm{Class}_{\mathrm{NOR\mbox{-}S}}(\mathrm{RF}) = \mathrm{BRK},
+\]
+so $\tau$ is identity-breaking and $x \not\sim_{\mathrm{NOR\mbox{-}S}} y$.
+
+Therefore $\sim_{\mathrm{NOR\mbox{-}C}} \neq \sim_{\mathrm{NOR\mbox{-}S}}$.
+\end{proof}
+
+[Informally]
+After refinement, two representations can express the same normative content
+even when their structure differs.
+
+
+%--------------------------------------------
+\subsubsection{Result}
+
+\begin{theorem}[NOR refinement]
+Normative structures must be refined into at least two distinct regime profiles:
+\[
+\mathrm{NOR\mbox{-}C}
+\quad\text{and}\quad
+\mathrm{NOR\mbox{-}S}.
+\]
+\end{theorem}
+
+[Informally]
+Two representations can encode the same normative content even when organized differently,
+but cannot be the same structure once that organization changes.
+
