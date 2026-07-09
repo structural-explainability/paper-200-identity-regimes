@@ -9,12 +9,12 @@
 # USAGE: See https://citation-file-format.github.io/ for details.
 
 cff-version: "1.2.0"
-type: article
+type: software
 message: "If you use this work, please cite it as below."
 
-title: "Referential Regimes: Identity and Persistence Structure for Neutral Substrates"
-version: "v0.2.0"
-date-released: "2026-03-15"
+title: "Referential Regimes: Transformation-Invariant Identity for Neutral Substrates"
+version: "v0.3.0"
+date-released: "2026-07-08"
 
 authors:
   - family-names: Case
@@ -24,30 +24,47 @@ authors:
 
 repository-code: "https://github.com/structural-explainability/paper-200-identity-regimes"
 license: CC-BY-4.0
+doi: "10.48550/arXiv.2601.16152"
+url: "https://doi.org/10.48550/arXiv.2601.16152"
 
 abstract: >
-  This paper derives the referential-regime structure required by neutral
-  substrates operating under persistent interpretive disagreement. Treating
-  interpretive neutrality and stable reference as design constraints, it first
-  derives six coarse referential regime families required for accountability
-  analysis. It then shows that transformation-driven refinement of enduring
-  non-normative referents, applicability contexts, and normative structures
-  yields a current lower bound of at least nine pairwise non-collapsing
-  referential regimes. The result is conditional on the stated neutrality,
-  stable-reference, and no-hidden-regime assumptions. No upper bound or
-  completeness claim is made.
+  This repository contains the source materials for Referential Regimes:
+  Transformation-Invariant Identity for Neutral Substrates. The paper derives
+  a nine-regime lower-bound core for neutral accountability substrates operating
+  under persistent interpretive disagreement. Treating interpretive neutrality
+  and stable reference as design constraints, it first identifies six required
+  reference kinds for accountability analysis. It then shows that ordinary
+  transformations force three of those kinds to split by identity basis:
+  plain referents into locus-fixed and object-fixed identity, scopes into
+  extension-fixed and structure-fixed identity, and rules into content-fixed
+  and structure-fixed identity. Under the stated assumptions, stable reference
+  therefore requires at least nine core identity regimes. The result is
+  conditional on the stated neutrality, stable-reference, minimality, and
+  no-hidden-regime assumptions. No upper bound or completeness claim is made.
 
 keywords:
   - formal ontology
   - neutral substrates
   - referential regimes
+  - identity regimes
   - identity and persistence
   - individuation
   - persistent disagreement
   - stable reference
   - accountability
   - structural explainability
-  - identity regimes
+
+preferred-citation:
+  type: article
+  title: "Referential Regimes: Transformation-Invariant Identity for Neutral Substrates"
+  authors:
+    - family-names: Case
+      given-names: Denise M.
+      orcid: "https://orcid.org/0000-0001-6165-7389"
+      affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
+  year: 2026
+  doi: "10.48550/arXiv.2601.16152"
+  url: "https://doi.org/10.48550/arXiv.2601.16152"
 
 references:
   - type: article

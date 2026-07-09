@@ -1,6 +1,6 @@
-$tex = ".\se200_identity_regimes.tex"
+$tex = ".\se200_referential_regimes.tex"
 
-Select-String -Path build\se200_identity_regimes.log -Pattern "Reference .* undefined|Citation .* undefined" |
+Select-String -Path build\se200_referential_regimes.log -Pattern "Reference .* undefined|Citation .* undefined" |
   ForEach-Object { $_.Line } |
   Sort-Object -Unique
 

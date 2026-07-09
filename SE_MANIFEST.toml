@@ -20,9 +20,9 @@ organization = "structural-explainability"
 name = "paper-200-identity-regimes"
 class = "paper"
 kind = "paper"
-status = "under-review"
+status = "draft"
 since = "2026"
-summary = "Paper deriving the referential-regime structure required by neutral substrates under persistent interpretive disagreement."
+summary = "Paper deriving a nine-regime lower-bound core for neutral substrates under persistent interpretive disagreement."
 
 # === Layer Position ===
 
@@ -34,7 +34,7 @@ role = "justification-identity"
 
 [depends]
 required = [
-    { repository = "paper-100-neutral-substrate", kind = "semantic", reason = "Uses the neutral-substrate constraint and referential-regime framing introduced in SE-100." },
+    { repository = "paper-100-neutral-substrate", kind = "semantic", reason = "Uses the neutral-substrate constraint developed in Neutral Substrates." },
 ]
 optional = []
 
@@ -47,7 +47,7 @@ artifacts = [
     "LICENSE",
     "README.md",
     "SE_MANIFEST.toml",
-    "se200_identity_regimes.tex",
+    "se200_referential_regimes.tex",
     "sections/*.tex",
     "bibliography/*.bib",
 ]
@@ -57,17 +57,19 @@ artifacts = [
 [scope]
 includes = [
     "referential-regime structure for neutral substrates",
-    "identity and persistence structure under persistent interpretive disagreement",
-    "six-family lower-bound analysis before refinement",
-    "transformation-driven refinement of enduring non-normative referents",
-    "transformation-driven refinement of applicability contexts",
-    "transformation-driven refinement of normative structures",
-    "current lower bound of at least nine pairwise non-collapsing referential regimes",
-    "representation and comparison consequences for neutral substrates",
+    "identity and persistence under persistent interpretive disagreement",
+    "six required reference kinds for accountability analysis",
+    "carrier-basis pairs required by the lower-bound construction",
+    "locus-fixed and object-fixed identity for plain referents",
+    "extension-fixed and structure-fixed identity for scopes",
+    "content-fixed and structure-fixed identity for rules",
+    "nine-regime lower-bound core",
+    "transformation-invariant identity regimes",
     "boundary conditions for stable reference",
 ]
 excludes = [
-    "upper-bound claim for referential regimes",
+    "upper-bound claim for identity regimes",
+    "completeness claim for all admissible identity bases",
     "completeness claim for all possible ontological systems",
     "normative specification text",
     "implementation requirements",

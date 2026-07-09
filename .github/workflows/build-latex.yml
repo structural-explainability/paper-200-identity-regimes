@@ -68,4 +68,4 @@ jobs:
           mkdir -p artifacts
           latexmk -pdf -bibtex -interaction=nonstopmode -halt-on-error \
             -auxdir=artifacts -outdir=artifacts \
-            se200_identity_regimes.tex
+            se200_referential_regimes.tex

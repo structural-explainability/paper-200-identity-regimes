@@ -48,7 +48,7 @@ jobs:
           mkdir -p arxiv_src
 
           # WHY: Copy main tex file
-          cp se200_identity_regimes.tex arxiv_src/
+          cp se200_referential_regimes.tex arxiv_src/
 
           # WHY: Copy content directories
           cp -r sections arxiv_src/
@@ -56,8 +56,8 @@ jobs:
 
           # WHY: Include .bbl if present to reduce arXiv bibliography failures
           # OBS: This is a no-op if file does not exist
-          if [ -f se200_identity_regimes.bbl ]; then
-            cp se200_identity_regimes.bbl arxiv_src/
+          if [ -f se200_referential_regimes.bbl ]; then
+            cp se200_referential_regimes.bbl arxiv_src/
           fi
 
       # WHY: arXiv builds from source - doesn't need build artifacts

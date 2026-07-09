@@ -392,7 +392,7 @@ Assert-Command "latexmk"
 
 $RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $PaperDir = $RepoRoot
-$PaperTex = "se200_identity_regimes.tex"
+$PaperTex = "se200_referential_regimes.tex"
 $null = Resolve-ExistingPath (Join-Path $PaperDir $PaperTex) "paper TeX file"
 
 

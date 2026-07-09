@@ -15,7 +15,7 @@
 
 ## Paper
 
-- [PDF](./se200_identity_regimes.pdf)
+- [PDF](./se200_referential_regimes.pdf)
 
 ## Repository Structure
 
@@ -42,9 +42,9 @@ On Windows (MiKTeX):
 Requires a LaTeX distribution with `latexmk` (MiKTeX, TeX Live, or MacTeX):
 
 ```bash
-latexmk -pdf se200_identity_regimes.tex -f
+latexmk -pdf se200_referential_regimes.tex -f
 
-texcount -inc -sum -total se200_identity_regimes.tex
+texcount -inc -sum -total se200_referential_regimes.tex
 ```
 
 Windows:
@@ -52,22 +52,21 @@ Windows:
 ```pwsh
 .\tools\build\build.ps1
 .\size.ps1
-rg -n "\\section|\\subsection|\\subsubsection|\\paragraph" sections
-texcount -merge -sub=section -inc -sum se200_identity_regimes.tex
+texcount -merge -sub=section -inc -sum se200_referential_regimes.tex
 ```
 
 ## Stats
 
 ```text
-Sum count: 17882
-Words in text: 16842
-Words in headers: 491
-Words outside text (captions, etc.): 41
-Number of headers: 150
-Number of floats/tables/figures: 3
-Number of math inlines: 473
-Number of math displayed: 35
-Files: 21
+Sum count: 12288
+Words in text: 11789
+Words in headers: 211
+Words outside text (captions, etc.): 48
+Number of headers: 81
+Number of floats/tables/figures: 1
+Number of math inlines: 222
+Number of math displayed: 18
+Files: 14
 ```
 
 ## Annotations
