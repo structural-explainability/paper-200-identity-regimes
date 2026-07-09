@@ -1,0 +1,116 @@
+% !TeX root = ../se200_identity_regimes.tex
+
+% =============================================================================
+\section{Nine Regimes of Referential Identity}
+\label{sec:nine}
+% =============================================================================
+
+The transformation analysis of Section~\ref{sec:algebra} yields nine identity regimes.
+Three reference kinds have a single identity basis.
+Three reference kinds split into two identity bases each.
+
+The table uses the following short regime labels:
+
+\begin{description}[style=nextline,leftmargin=2.5cm]
+  \item[$\OBL$] obligation-bearer identity.
+  \item[$\OCC$] occurrence identity.
+  \item[$\REC$] record identity.
+  \item[$\LOC$] locus-fixed plain-referent identity.
+  \item[$\OBJ$] object-fixed plain-referent identity.
+  \item[$\SCOPEE$] extension-fixed scope identity.
+  \item[$\SCOPES$] structure-fixed scope identity.
+  \item[$\RULEC$] content-fixed rule identity.
+  \item[$\RULES$] structure-fixed rule identity.
+\end{description}
+
+Their classifications over $\Fset$ are collected in Table~\ref{tab:master}.
+The table records the lower-bound profiles used in this paper.
+It is not a complete classification of every identity basis a deployed system may need.
+Additional identity bases may refine these profiles or introduce further regimes.
+
+\begin{table}[ht]
+  \centering
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}l ccc cc cc cc@{}}
+    \toprule
+       & OBL  & OCC  & REC  & LOC  & OBJ  & SCOPE-E & SCOPE-S & RULE-C & RULE-S \\
+    \midrule
+    RE & \NEU & \NEU & \NEU & \NEU & \NEU & \NEU    & \NEU    & \NEU   & \NEU   \\
+    AN & \NEU & \NEU & \PRS & \NEU & \NEU & \NEU    & \NEU    & \NEU   & \NEU   \\
+    RF & \PRS & \PRS & \PRS & \PRS & \PRS & \PRS    & \BRK    & \PRS   & \BRK   \\
+    AD & \PRS & \BRK & \PRS & \PRS & \PRS & \PRS    & \BRK    & \PRS   & \BRK   \\
+    RC & \NEU & \NEU & \NEU & \NEU & \NEU & \PRS    & \BRK    & \NEU   & \NEU   \\
+    RA & \NEU & \NA  & \NEU & \NA  & \NA  & \NEU    & \BRK    & \NEU   & \NEU   \\
+    SU & \BRK & \BRK & \BRK & \BRK & \BRK & \BRK    & \BRK    & \BRK   & \BRK   \\
+    BF & \NEU & \NA  & \PRS & \PRS & \BRK & \PRS    & \BRK    & \BRK   & \BRK   \\
+    PV & \NEU & \NEU & \PRS & \NEU & \NEU & \NEU    & \NEU    & \NEU   & \NEU   \\
+    SE & \NEU & \PRS & \NEU & \PRS & \PRS & \NA     & \NA     & \NA    & \NA    \\
+    \bottomrule
+  \end{tabular}
+  \caption{Classification of each regime profile over the transformation basis $\Fset$.
+    \PRS{}: preserves identity;
+    \BRK{}: breaks identity;
+    \NEU{}: identity-neutral/non-breaking;
+    \NA{}: not applicable.
+    Each dual-basis pair has a canonical separating operation that forces its split:
+    plain referent at BF, scope at AD, and rule at RF.
+    Some basis differences propagate to additional transformation families.}
+  \label{tab:master}
+\end{table}
+
+The table should be read as a compact statement of identity behavior.
+A \PRS{} entry means that the transformation \emph{preserves} the regime's identity basis.
+A \BRK{} entry means that the transformation \emph{breaks} that basis and produces a distinct referent under the regime.
+An \NEU{} entry means that the transformation is \emph{identity-neutral} for that regime.
+An \NA{} entry means that the transformation is \emph{not applicable} to that regime.
+
+The dual-basis pairs are the crucial rows of the result.
+$\LOC$ and $\OBJ$ are separated canonically by branching or forking.
+$\SCOPEE$ and $\SCOPES$ are separated canonically by aggregation or decomposition.
+$\RULEC$ and $\RULES$ are separated canonically by refinement.
+The canonical separating operation explains why the split is forced,
+though the two profiles may differ at other transformations as well.
+
+These regimes are defined by identity basis and transformation behavior,
+introducing no additional ontological categories.
+
+\begin{definition}[Separation witness]
+  \label{def:separation_witness}
+  A \emph{separation witness} for identity regimes $\tau$ and $\tau'$ is a pair of representations $(r,s)$ such that
+  \[
+    r \sim_\tau s
+    \qquad\text{and}\qquad
+    r \not\sim_{\tau'} s,
+  \]
+  or conversely.
+\end{definition}
+
+\begin{proposition}[Pairwise distinctness]
+  \label{se200.prop.distinct}
+  The nine profiles of Table~\ref{tab:master} are pairwise distinct.
+\end{proposition}
+
+\begin{proof}
+  Same-carrier pairs are separated by the split propositions of Section~\ref{sec:algebra}.
+  By Proposition~\ref{se200.prop.PlainReferentUnderdetermination}, $\LOC$ and $\OBJ$ are separated at BF.
+  By Proposition~\ref{se200.prop.ScopeUnderdetermination}, $\SCOPEE$ and $\SCOPES$ are separated at AD.
+  By Proposition~\ref{se200.prop.RuleUnderdetermination}, $\RULEC$ and $\RULES$ are separated at RF.
+  In each case there is a separation witness: a pair identified under one regime and separated under the other.
+
+  Profiles with different carriers govern disjoint sets of representations.
+  A representation of an obligation-bearer is never a representation of an occurrence,
+  an occurrence never a record,
+  a rule never a scope,
+  a scope never a plain referent,
+  and a record never the thing it records.
+  Two regimes whose carriers have disjoint representation domains induce
+  identity relations that differ on those domains,
+  and are therefore distinct by Definition~\ref{se200.def.Collapse}.
+  Identifying such profiles would collapse the reference inventory of
+  Section~\ref{sec:inventory} and force one carrier to stand in for another.
+
+  Therefore every pair of regimes in Table~\ref{tab:master} is
+  separated either by a same-carrier transformation witness or by carrier difference.
+  Appendix~\ref{app:sep} records a separating operation or carrier difference for all $\binom{9}{2}=36$ pairs.
+\end{proof}

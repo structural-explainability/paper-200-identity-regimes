@@ -1,224 +1,130 @@
 % !TeX root = ../se200_identity_regimes.tex
 
-\section{Introduction: Structure Under Disagreement}
+\section{Introduction}
 \label{sec:intro}
 
-Modern data systems increasingly operate across settings characterized
-by persistent legal, political, and analytic disagreement,
-where no single interpretive authority can be assumed.
-Three recurring settings make the structural requirements concrete.
-First, in multi-jurisdiction regulatory reporting,
-a single corporate entity operates under overlapping legal regimes
-that individuate obligations, violations, and responsible parties differently;
-audit trails must remain comparable across jurisdictions
-without presupposing which regime governs.
-Second, in legislative history tracking,
-statutory authority is amended, delegated, and contested over time,
-requiring stable reference to normative structures
-independently of the occurrences that enact or challenge them.
-Third, in cross-institutional provenance analysis,
-research or administrative records are produced,
-transferred, and re-analyzed across institutions whose
-classificatory and causal assumptions diverge,
-yet must remain referable as the same records
-across those divergent frameworks.
-These cases are not offered as empirical evidence;
-they function as structural diagnostics that make concrete
-the requirements of Section~\ref{sec:requirements}.
+Modern accountability systems increasingly operate under legal,
+institutional, and analytic disagreement.
+In such settings, a shared data substrate cannot
+assume a single interpretation of what records mean,
+yet it must still preserve stable reference as records are amended,
+branched, refined, decomposed, aggregated, and reclassified.
+This paper studies the identity conditions required by that setting.
 
-% Upper ontologies and general-purpose representational frameworks
-% including BFO~\citep{arp2015bfo}, DOLCE~\citep{gangemi2002dolce},
-% and PROV-O~\citep{lebo2013prov} are expressive and well-motivated
-% for their intended purposes.
-% They support rich domain modeling, causal attribution,
-% and normative classification.
+The analysis treats identity as transformation-invariance:
+two referents count as the same only relative
+to the transformations that preserve or break their identity.
+A minimal accountability inventory supplies the
+referents that must remain addressable,
+while ordinary provenance and versioning operations
+determine which referents can share an identity profile.
+The result is a lower bound: under neutral-substrate constraints,
+at least nine distinct referential regimes are required.
+Collapsing any pair either changes what is
+preserved through transformation or
+reintroduces the distinction through
+hidden roles, flags, or contextual predicates.
+The result is not an upper ontology or completeness claim;
+it identifies a stability constraint that is often implicit,
+and may be violated, in applied ontology and data-governance practice.
 
-However, the design objective considered in this paper is different.
-The goal is not representational adequacy within a shared
-interpretive framework, but substrate stability across
-incompatible interpretive contexts.
-This shifts the design problem from domain modeling
-to the individuation of entities within a neutral substrate.
-When ontologies are deployed as shared substrates under persistent disagreement
-without additional constraints,
-commitments such as what counts as an agent,
-what individuates an event, and
-what constitutes an authority,
-may become sites of interpretive conflict
-rather than stable reference points.
+Three diagnostic settings make the problem concrete.
+In multi-jurisdiction regulatory reporting,
+one corporate entity operates under overlapping legal
+regimes that individuate obligations,
+violations, and responsible parties
+differently; audit trails must stay
+comparable across jurisdictions without
+presupposing which regime governs.
+In legislative history tracking,
+statutory authority is
+enacted, amended, delegated, and contested over time;
+reference to the governing rule must
+remain stable and independent of the acts that enact or challenge it.
+In cross-institutional provenance, a
+record is produced, transferred, and
+re-analyzed across institutions whose
+classificatory and causal assumptions differ,
+yet must remain referable as
+the same record throughout.
 
-No single interpretive authority can be presupposed,
-and semantic convergence cannot be enforced
-without excluding legitimate participants or perspectives.
-Nevertheless, shared use of data remains necessary:
-entities must be referable, actions traceable, and
-records comparable across frameworks that may diverge
-in assumptions, methods, or evaluative standards.
-Recent work is consistent with the view that systems without explicit structural commitments
-% produce unstable and context-dependent categorical behavior~\citep{kohler2025mercurial},
-further motivating the need for substrates that enforce stable reference
-structurally rather than relying on interpretive consistency.
+The tempting response is to minimize commitment: represent entities,
+occurrences, authorities, and records as one undifferentiated type,
+distinguished only by role predicates such as \texttt{isAgent} or
+\texttt{isAuthority},
+or by contextual flags supplied at query time.
+This buys surface parsimony but not neutrality.
+It relocates essential
+distinctions from the substrate to interpretive mechanisms whose consistent
+application requires the shared commitments that persistent disagreement denies.
+We call such relocated discriminations \emph{hidden
+regimes}: distinctions that are operationally necessary
+but not represented at the substrate level.
+Under disagreement, a hidden regime cannot be
+relied on because its application is not fixed.
 
-A natural response might be to reduce ontological commitment by collapsing
-distinctions and representing entities, occurrences, authorities, and records
-as a single undifferentiated type, differentiated only by role predicates
-(e.g., \emph{isAgent}, \emph{isOccurrence}, \emph{isAuthority})
-or using contextual flags supplied at query or extension time.
-This achieves surface parsimony but not structural neutrality.
-Such encodings relocate essential distinctions from the substrate
-to interpretive mechanisms that are not represented at the substrate level,
-and whose consistent application requires precisely the shared commitments
-that persistent disagreement denies.
-We refer to these as \emph{hidden regimes}:
-structural discriminations that are operationally necessary
-but ontologically unacknowledged.
-Such encodings make referential stability contingent on interpretive consensus
-that cannot be assumed under persistent disagreement, and are therefore
-incompatible with the optimization criterion adopted here.
+This paper describes the kinds of things
+the substrate must name,
+and what makes two representations the same entity.
+Fix the ordinary operations these systems perform,
+and identity becomes something to compute
+rather than to stipulate.
+An accountability substrate must be able to refer
+to six kinds of thing: obligation-bearers, rules, occurrences, scopes,
+records, and plain referents that are merely acted upon.
+That inventory is
+not the theorem.
+The theorem begins when three of those kinds fail to
+determine a single identity criterion.
 
-This analysis identifies a design objective that is distinct
-from the general problem of ontology construction.
-% We adopt a neutrality framework developed in prior work~\citep{case2026neutralSubstrates},
-treating ontological neutrality as a structural design constraint.
-Neutrality is understood as interpretive non-commitment at the substrate level
-combined with stability under incompatible extension:
-a substrate must permit independent extensions to introduce
-causal or normative structure without requiring revision of the
-underlying representation.
-Explanatory and evaluative structure is externalized;
-the substrate is constrained to remain neutral by design.
+A jurisdiction can be individuated
+by which cases it covers or by how it is
+internally organized.
+A rule can be individuated by what it requires or by
+how its text is structured.
+A physical referent can be individuated by its
+location or by the object occupying it.
+These are not shades of meaning.
+In each case, an ordinary operation separates two readings:
+decomposing a jurisdiction, refining a rule, or forking a referent.
+The two readings land in different equivalence classes,
+so they are different identity regimes.
+Counting kinds gives six;
+counting the identity regimes the substrate must enforce gives nine.
 
-The substrate is not intended to adjudicate causal or normative claims.
-Its role is limited to preserving referential comparability
-across independently evolving extensions.
-All causal explanation, normative evaluation, and
-domain-specific interpretation are delegated to extension layers.
+The contribution is this reframing and its consequence.
+Identity regime is determined by transformation behavior
+over an identity basis, not by ontological kind.
+Because three kinds underdetermine their basis,
+the number of regimes a neutral accountability substrate
+must enforce strictly exceeds the number of kinds it names.
+The three surplus regimes answer to no kind on the inventory.
+They are forced by operations.
+An analysis that stops at naming kinds will undercount.
 
-Central to this constraint is the notion of stable reference,
-which in turn constrains how entities may be individuated
-within the substrate.
-Stable reference in this work concerns regime-level persistence conditions,
-not immunity to reinterpretation at extension layers.
-The precise assumptions defining persistent disagreement
-and extension without coordination are stated in
-Section~\ref{sec:assumptions}.
-Given stable reference as a structural constraint,
-minimality cannot be defined simply as a reduction in primitive count.
-
-Apparent simplifications may achieve surface parsimony
-by relocating essential distinctions into roles, flags,
-contextual typing, or other interpretive mechanisms.
-Such encodings do not eliminate structure;
-they merely relocate it to extension layers that presuppose shared interpretive commitments.
-Under persistent disagreement, those commitments cannot be assumed.
-Minimality therefore requires that
-all operationally necessary referential distinctions
-be explicit and structurally enforced at the substrate level.
-
-Accountability is the specific capacity discussed in this paper.
-Accountability analysis requires that a neutral substrate
-maintain stable reference conditions across all entities it represents (R1),
-and support representation of obligation-bearing entities, normative structures,
-time-indexed occurrences, applicability contexts, and descriptive records (R2--R6),
-without embedding causal claims or normative judgments in the substrate itself.
-These are introduced as representational capacities whose simultaneous support
-places structural constraints on any neutral substrate.
-Whether they can be realized within fewer referential regimes
-is addressed in Section~\ref{sec:six};
-the question is whether a neutral substrate can support them at all,
-and if so, with what irreducible structural commitments.
-The diagnostic cases introduced above (multi-jurisdiction regulatory reporting,
-legislative history tracking, and cross-institutional provenance)
-recur throughout the paper as structural illustrations.
-
-The central contribution of this paper is a constraint result:
-a conditional lower bound on ontological
-structure under the design objectives stated above.
-Under explicit constraints of neutrality, stability under incompatible extension,
-and exclusion of hidden structural discriminations, we show that any substrate
-capable of supporting accountability under persistent disagreement must
-realize at least nine distinct referential regimes.
-The result is a constraint on
-what is structurally possible under a specific optimization objective,
-not a proposal for a universal ontology.
-Alternative objectives, such as interpretive convergence, domain-specific efficiency,
-or context-dependent substrate classification,
-yield different tradeoffs and are not addressed here.
-
-Systems of practical and theoretical interest frequently exhibit
-persistent interpretive disagreement.
-In such settings, competing frameworks assign different interpretations
-to the same underlying structure, while the structure itself remains unchanged.
-
-A representation suitable for such systems must therefore satisfy
-a neutrality requirement:
-it must support stable reference and structural comparison
-without committing to any particular
-interpretive framework.
-
-% The neutral-substrate constraint~\cite{case2026neutralSubstrates}
-establishes constraints for such neutrality, requiring that
-the substrate exclude causal and normative commitment while preserving
-extension-invariant identity.
-
-The present paper addresses the representational problem:
-whether such systems admit a structural representation
-that is both expressive and neutral.
-
-We proceed by restricting attention to admissible relations and
-defining a path-based grammar for multi-stage structure. We show
-that all admissible finite systems can be realized as families of
-paths over a minimal relation set.
-We then construct a regime-typed directed multigraph
-embedding that preserves entity identity,
-regime typing, and admissible relations, and is faithful up to
-regime-typed isomorphism.
-
-Within this representation:
-
-\begin{itemize}
-    \item all admissible structure is realized as path families,
-    \item structural comparison reduces to comparison of such families,
-    \item interventions correspond to admissible transformations of path structure.
-\end{itemize}
-
-Crucially, the representation introduces no causal or normative predicates.
-Such interpretations arise only in extensions over REC-anchored paths.
-
-This establishes that admissible systems under persistent disagreement
-can be represented, compared, and transformed entirely at the level of
-neutral structure.
+The result is conditional.
+It holds under the neutrality and stability
+assumptions fixed in Section~\ref{sec:formal_setting}.
+It is a lower bound,
+not an upper bound, and it makes no completeness claim:
+we do not assert that the operation set is complete,
+nor that these nine profiles exhaust the coherent ones.
+Adding transformations cannot collapse distinctions
+already witnessed by the current basis;
+it may leave the bound unchanged or force additional splits.
+Structural comparison, intervention, and conformance checking
+are left to companion analysis;
+this paper addresses only identity.
 
 The remainder of the paper proceeds as follows.
-Section~\ref{sec:background} situates the analysis as a refinement of
-the neutral-substrate constraint introduced in SE-100.
-Section~\ref{sec:assumptions} states the assumptions, neutrality constraints,
-and optimization criterion.
-Section~\ref{sec:requirements} formalizes the structural requirements imposed
-by accountability analysis.
-Section~\ref{sec:preliminaries} fixes the formal vocabulary used in the
-derivations.
-Section~\ref{sec:formal_setting} introduces the formal setting, including
-admissible transformations, regime profiles, and path-grammar adequacy.
-
-Section~\ref{sec:six} derives the six-family lower bound:
-the coarse requirements force distinct referential regime families before
-transformation-driven refinement is considered.
-Section~\ref{sec:six} gives the corresponding six-family construction
-before refinement.
-Section~\ref{sec:refinement} then derives the required refinements.
-In particular, Sections~\ref{subsec:enr_split}, \ref{subsec:ctx_split},
-and~\ref{subsec:nor_split} show that enduring non-normative referents,
-applicability contexts, and normative structures split into distinct
-referential regimes under transformation pressure.
-
-Section~\ref{sec:nine} states the resulting nine-regime lower bound.
-Section~\ref{sec:representation} constructs the neutral regime embedding.
-Section~\ref{sec:consequences} derives consequences for interpretation,
-comparison, and intervention.
-Section~\ref{sec:interpretation} discusses boundary conditions and the scope
-of the result.
-Section~\ref{sec:related} situates the work relative to existing frameworks.
-Section~\ref{sec:limits} states limitations, including the absence of an
-upper-bound or completeness claim.
-Section~\ref{sec:conclusion} concludes.
+Section~\ref{sec:background} imports definitions the proofs use and states the one new primitive.
+Section~\ref{sec:formal_setting} fixes the operating conditions.
+Section~\ref{sec:inventory} states the reference inventory.
+Section~\ref{sec:algebra} develops the transformation algebra.
+Section~\ref{sec:nine} derives the nine regimes.
+Section~\ref{sec:bound} proves the lower bound.
+Section~\ref{sec:determinacy} establishes determinacy.
+Section~\ref{sec:application} exhibits the regimes in the diagnostic settings.
+Section~\ref{sec:related} situates the result in prior work.
+Section~\ref{sec:limits} states limits.
+Appendix~\ref{app:sep} gives the pairwise separation.

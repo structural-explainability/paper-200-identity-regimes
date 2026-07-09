@@ -1,0 +1,245 @@
+% !TeX root = ../se200_identity_regimes.tex
+
+% =============================================================================
+\section{Formal Setting}
+\label{sec:formal_setting}
+% =============================================================================
+
+The results in this paper are conditional on the assumptions fixed here.
+These assumptions specify the operating conditions under which the
+neutral-substrate constraint of Section~\ref{sec:background} is applied.
+The goal is to identify the lower-bound identity structure required of a
+neutral accountability substrate under those conditions.
+
+% -----------------------------------------------------------------------------
+\subsection{Persistent Disagreement}
+\label{subsec:persistent_disagreement}
+% -----------------------------------------------------------------------------
+
+We assume environments in which disagreement is persistent and extensions are uncoordinated.
+Extensions may introduce
+incompatible causal accounts, incompatible normative attributions, and
+incompatible interpretive classifications.
+They cannot be forced to converge.
+Substrate revision may not be used to resolve interpretive conflict.
+Consequently, substrate-level admissibility must not depend on agreement among extensions.
+Neutrality must be maintained without recourse to convergence.
+
+Persistent disagreement is not mere temporary uncertainty.
+It is the condition in which multiple admissible frameworks
+may remain simultaneously usable while disagreeing about
+causation, responsibility, justification, applicability, or normative significance.
+A neutral substrate must therefore support shared reference
+without embedding any one framework's interpretation as the substrate-level account.
+
+% -----------------------------------------------------------------------------
+\subsection{Stable Reference in Strong Form}
+\label{subsec:stable_reference_strong}
+% -----------------------------------------------------------------------------
+
+Extension-stable reference is inherited from \emph{Neutral Substrates}.
+Here we fix the demanding case in which stability must
+survive ordinary transformations of records.
+Identity conditions must not depend on interpretive convergence.
+An entity that must change its ontological status to enter a
+new relationship has not been stably referred to.
+A stability-critical distinction may not be carried only by a
+role, flag, or contextual predicate.
+Such devices rely on downstream conventions and can therefore
+permit divergent judgments under persistent disagreement.
+
+This is a deliberately strong setting.
+Engineering systems often manage identity pressure through
+negotiated, local, or context-relative schemes, which may be useful in
+practice but are not the case analyzed here.
+This paper studies the case in which stable reference must be available
+as common ground before interpretive agreement is available.
+
+% -----------------------------------------------------------------------------
+\subsection{Minimality}
+\label{subsec:minimality}
+% -----------------------------------------------------------------------------
+
+We minimize referential structure subject to the above constraints.
+Minimality is measured by the number of identity regimes
+needed to preserve neutrality and stable reference.
+A reduction is admissible only when it preserves the relevant identity distinctions
+without relocating them into hidden discriminators.
+
+A reduction counts as genuine only when it does not reintroduce
+a collapsed distinction through
+a role, flag, contextual predicate, workflow state, schema convention,
+or application-level discriminator.
+The criterion is analytic.
+It identifies the regime structure required under the stated constraints.
+It does not recommend use of the core set beyond
+the neutral-substrate conditions analyzed here.
+
+% -----------------------------------------------------------------------------
+\subsection{Transformation Basis}
+\label{subsec:transformation_basis}
+% -----------------------------------------------------------------------------
+
+Identity pressure appears when records are transformed.
+We therefore fix a finite transformation basis
+\[
+\Fset =
+\{\mathrm{RE},\mathrm{AN},\mathrm{RF},\mathrm{AD},\mathrm{RC},
+\mathrm{RA},\mathrm{SU},\mathrm{BF},\mathrm{PV},\mathrm{SE}\}.
+\]
+The basis is not claimed to be complete for all possible record systems.
+It is a representative basis of ordinary operations in
+provenance, versioning, institutional recordkeeping, and data-governance practice.
+The lower-bound result is conditional on this basis.
+Adding further transformations cannot collapse distinctions
+already witnessed by this basis.
+It may leave the lower bound unchanged or force additional splits.
+
+\begin{definition}[Transformation basis]
+\label{def:transformation_basis}
+The transformation basis $\Fset$ consists of the following admissible operation families:
+\begin{enumerate}[label=(\alph*),nosep]
+  \item $\mathrm{RE}$, re-expression: change of representation format while preserving the represented content;
+  \item $\mathrm{AN}$, annotation: addition of non-identity-bearing information;
+  \item $\mathrm{RF}$, refinement: increase in descriptive, structural, or normative detail;
+  \item $\mathrm{AD}$, aggregation or decomposition: restructuring into coarser or finer components;
+  \item $\mathrm{RC}$, re-contextualization: change in applicability context;
+  \item $\mathrm{RA}$, reassignment: change in association, bearer, or assignment relation;
+  \item $\mathrm{SU}$, substitution: replacement of the identity carrier;
+  \item $\mathrm{BF}$, branch or fork: divergence into multiple continuations;
+  \item $\mathrm{PV}$, provenance extension: addition of historical, derivational, or evidentiary metadata;
+  \item $\mathrm{SE}$, state evolution: change in state of an enduring referent over time.
+\end{enumerate}
+\end{definition}
+
+The transformation families are structural rather than interpretive.
+They do not assert causal or normative claims.
+They describe operations that may be logged or recognized without
+deciding what those operations mean under any particular admissible framework.
+Their significance for this paper lies only in their effect on identity.
+
+% -----------------------------------------------------------------------------
+\subsection{Classification of Transformations}
+\label{subsec:classification_transformations}
+% -----------------------------------------------------------------------------
+
+A regime classifies each applicable transformation by how it affects the declared identity basis.
+We use three classifications.
+
+\begin{definition}[Transformation classification]
+\label{def:transformation_classification}
+For a regime $\tau$ and transformation family $f\in\Fset$, the classification
+\[
+\Class_\tau(f)\in\{\PRS,\BRK,\NEU,\NA\}
+\]
+has the following meaning:
+\begin{enumerate}[label=(\alph*),nosep]
+  \item $\PRS$: the transformation is identity-preserving for $\tau$;
+  \item $\BRK$: the transformation is identity-breaking for $\tau$;
+  \item $\NEU$: the transformation is identity-neutral for $\tau$;
+  \item $\NA$: the transformation is inapplicable to $\tau$.
+\end{enumerate}
+\end{definition}
+
+The distinction between $\PRS$ and $\NEU$ matters.
+A $\PRS$ transformation preserves identity in a way that is relevant to the regime's identity basis.
+An $\NEU$ transformation does not bear on that identity basis.
+Both are non-breaking.
+Only $\BRK$ breaks identity.
+Thus $\NEU$ does not mean that the operation is ignored by the system.
+It means that the operation does not alter identity under the regime being considered.
+A fourth value, $\NA$, marks a transformation that cannot arise for the regime's carrier at all,
+as distinct from one that arises but leaves identity untouched.
+
+\begin{definition}[Non-breaking transformation]
+\label{def:nonbreaking}
+A transformation family $f$ is \emph{non-breaking} for regime $\tau$ when
+\[
+\Class_\tau(f)\in\{\PRS,\NEU\}.
+\]
+It is \emph{breaking} for $\tau$ when
+\[
+\Class_\tau(f)=\BRK.
+\]
+\end{definition}
+
+% -----------------------------------------------------------------------------
+\subsection{Identity Regimes}
+\label{subsec:identity_regimes}
+% -----------------------------------------------------------------------------
+
+The new primitive of this paper is the identity regime.
+An identity regime is not an ontological kind.
+It is a transformation profile over an identity basis.
+
+\begin{definition}[Identity regime]
+\label{def:identity_regime}
+An \emph{identity regime} $\tau$ consists of an identity basis
+together with a classification function
+\[
+\Class_\tau:\Fset\to\{\PRS,\BRK,\NEU,\NA\}.
+\]
+The identity basis states what counts as sameness for the referent.
+The classification function states how each transformation family affects sameness under that basis.
+\end{definition}
+
+\begin{definition}[Induced identity relation]
+\label{def:induced_identity}
+Let $\tau$ be an identity regime.
+The induced identity relation $\sim_\tau$ is the equivalence relation
+generated by transformations that are non-breaking for $\tau$.
+Thus $r\sim_\tau s$ means that $r$ and $s$ are representations of the same referent under regime $\tau$.
+\end{definition}
+
+This definition makes identity transformation-relative.
+The same pair of representations may coincide under one regime
+and diverge under another.
+The substrate must declare which identity basis is being preserved.
+
+% -----------------------------------------------------------------------------
+\subsection{Hidden Regimes}
+\label{subsec:hidden_regimes}
+% -----------------------------------------------------------------------------
+
+A hidden regime is a collapsed identity distinction recovered outside
+the declared substrate structure.
+Hidden regimes obstruct genuine minimality.
+They allow a system to appear to use fewer identity regimes
+while relying on downstream discriminators to perform the missing identity work.
+
+\begin{definition}[Hidden regime]
+\label{def:hidden_regime}
+A \emph{hidden regime} is a stability-critical distinction that
+is not represented as an identity regime in the substrate,
+but is instead recovered through a role, flag, contextual predicate,
+workflow state, schema convention, or application-level discriminator.
+\end{definition}
+
+Hidden regimes violate the neutral-substrate discipline because their
+application is not fixed by the substrate.
+They require agreement about how the discriminator should be interpreted.
+Under persistent disagreement, that agreement cannot be assumed.
+A collapse that can be repaired only by a hidden regime is therefore
+not a genuine reduction in declared referential structure.
+
+% -----------------------------------------------------------------------------
+\subsection{Scope of the Lower Bound}
+\label{subsec:lower_bound_scope}
+% -----------------------------------------------------------------------------
+
+The lower bound proved below is conditional.
+It holds for neutral accountability substrates satisfying the assumptions
+of this section and using the transformation basis of Definition~\ref{def:transformation_basis}.
+It asserts that, under the stated constraints,
+fewer than nine regimes cannot preserve stable reference
+without changing transformation behavior or reintroducing a hidden regime.
+The claim is a lower bound only:
+it does not assert that nine regimes
+are sufficient for every substrate,
+nor that the nine derived below exhaust
+the coherent identity regimes.
+
+The next section states the reference inventory.
+The inventory supplies the referents that must remain addressable.
+The transformation basis supplied here determines
+which of those referents can share an identity regime.

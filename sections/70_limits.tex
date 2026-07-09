@@ -1,0 +1,166 @@
+% !TeX root = ../se200_identity_regimes.tex
+
+% =============================================================================
+\section{Limits and Boundary Conditions}
+\label{sec:limits}
+% =============================================================================
+
+The result of this paper is deliberately narrow.
+It applies only to neutral accountability substrates satisfying the
+assumptions of Section~\ref{sec:formal_setting}.
+It establishes a necessary lower bound on identity regimes:
+a floor, not a ceiling.
+It does not certify that a deployed system has chosen the correct regime for every real-world referent.
+
+% -----------------------------------------------------------------------------
+\subsection{Conditional Scope}
+\label{subsec:limits_conditional_scope}
+% -----------------------------------------------------------------------------
+
+The lower bound depends on the neutral-substrate constraint developed in
+\emph{Neutral Substrates}~\citep{case2026neutral} and on the formal setting fixed in this paper.
+In particular, it assumes persistent disagreement, strong stable reference, minimality,
+and exclusion of hidden regimes.
+If those assumptions are rejected, the bound need not apply.
+
+The result is structural rather than domain-specific.
+It concerns identity behavior under transformation.
+It does not depend on any particular legal theory,
+policy framework, institutional vocabulary, or causal model.
+It says that, under the stated assumptions, fewer than nine core regimes
+cannot preserve stable reference for the carrier-basis pairs analyzed here
+without either changing identity behavior or hiding a regime distinction elsewhere.
+
+% -----------------------------------------------------------------------------
+\subsection{No Upper Bound or Completeness Claim}
+\label{subsec:limits_no_completeness}
+% -----------------------------------------------------------------------------
+
+The nine-regime lower-bound core is a lower bound only.
+It leaves three questions open:
+whether these nine regimes exhaust the coherent identity regimes;
+whether the transformation basis $\Fset$ is complete for all possible record systems;
+and whether some domains require additional reference kinds.
+
+The monotonicity result of Corollary~\ref{se200.cor.Monotonicity} is one-directional.
+Adding transformations cannot collapse distinctions already witnessed by $\Fset$.
+A richer basis may leave the bound unchanged or force additional splits.
+It cannot make the nine-regime lower bound disappear.
+
+The inventory of Section~\ref{sec:inventory} is likewise scoped.
+It identifies reference kinds required for the accountability settings considered here.
+Additional domains may require additional carriers.
+Additional carriers may require additional regimes.
+They do not remove the regimes already forced for the carrier-basis pairs analyzed in this paper.
+
+The paper does not claim that obligation-bearers, occurrences, or records
+admit no further admissible identity bases.
+For example, a record may be tracked by descriptive content or by a
+particular carrier, file, signature, or chain-of-custody token.
+An occurrence may be tracked as a fine-grained realization or as a coarser event complex.
+An obligation-bearer may be tracked as a legal person, office-holder,
+delegated role, or responsible organizational unit.
+If such bases are required by a deployment, they may force additional regimes.
+That possibility does not weaken the lower bound.
+It confirms that the present result is a lower-bound core, not a completeness theorem.
+
+% -----------------------------------------------------------------------------
+\subsection{Excluded Systems}
+\label{subsec:limits_excluded_systems}
+% -----------------------------------------------------------------------------
+
+Several classes of systems fall outside the scope of the result.
+
+\paragraph{Interpretively dependent identity.}
+A system is outside the scope if the identity condition of a referent depends
+on causal, normative, evaluative, or methodological commitments supplied by an extension.
+Such a system may be useful within a coordinated framework.
+It is not a neutral substrate in the sense analyzed here.
+
+\paragraph{Relation-determined identity.}
+A system is outside the scope if relations introduce, modify, or
+determine the identity conditions of their relata.
+Relations may connect already-individuated referents.
+They may not supply the identity basis that makes those referents the same or different.
+
+\paragraph{Extension-variant identity.}
+A system is outside the scope if identity conditions vary when admissible extensions are added.
+Such systems violate the stable-reference requirement.
+They may support local or negotiated identity.
+They do not support the strong form of stable reference studied here.
+
+\paragraph{Embedded interpretive commitments.}
+A system is outside the scope if it makes substrate-level causal or normative commitments
+whose validity depends on a particular interpretive framework.
+The substrate may record attributed causal or normative claims.
+It may not assert them as object-level substrate facts.
+
+\paragraph{Undeclared hidden regimes.}
+A system is outside the scope if it collapses regimes
+and then recovers the lost distinction through roles, flags,
+contextual predicates, workflow states, schema conventions, or application-level discriminators.
+Such a system has not reduced structure.
+It has relocated structure into an interpretive mechanism.
+
+\paragraph{Unmodeled transformation behavior.}
+A system is outside the scope when its essential identity behavior
+depends on transformations not represented in $\Fset$ and not reducible to the
+transformation families used here.
+Such a case does not refute the lower bound.
+It indicates that the transformation basis should be enlarged.
+By monotonicity, such enlargement may preserve the bound or force additional regimes.
+
+% -----------------------------------------------------------------------------
+\subsection{Non-Goals and Weakened Objectives}
+\label{subsec:limits_nongoals}
+% -----------------------------------------------------------------------------
+
+Several questions remain outside this paper.
+This paper constructs no causal or normative extensions.
+It takes no position on which causal account is correct or which normative interpretation should govern.
+It offers no domain-specific modeling guidance.
+It does not claim that all useful ontologies should be neutral substrates.
+It does not claim that hidden regimes are always poor engineering.
+Its claim is only that hidden regimes are incompatible with the specific objective analyzed here:
+stable substrate-level reference under persistent disagreement.
+
+If stability is weakened to permit context-dependent regime membership,
+some distinctions may be represented as role-relative or parameter-dependent refinements of fewer base types.
+That may be a reasonable engineering choice in coordinated settings.
+But then the structural burden moves into coordination, versioning, governance,
+or application logic whose admissibility is not fixed at the substrate level.
+The lower bound proved here does not apply under that weakened objective.
+
+% -----------------------------------------------------------------------------
+\subsection{Boundary with Accountable Records}
+\label{subsec:limits_boundary_accountable_records}
+% -----------------------------------------------------------------------------
+
+This paper concerns identity.
+It derives the lower-bound regime structure required for stable reference.
+It does not provide a conformance checker for deployed record systems.
+It does not specify how schemas must declare bases, logs, or discriminator surfaces.
+It does not decide whether an implementation has disclosed every identity-relevant surface.
+
+Those questions are deferred to the companion \emph{Accountable Records} paper.
+That paper is intended to develop accountable records, basis declaration,
+transformation logs, and conformance checks.
+The present paper supplies the lower-bound identity core that such a conformance analysis requires.
+It establishes part of the identity cost of the neutral-substrate constraint,
+while \emph{Accountable Records} studies how that cost
+can be made checkable in deployed record systems.
+
+% -----------------------------------------------------------------------------
+\subsection{Boundary of the Claim}
+\label{subsec:limits_boundary_claim}
+% -----------------------------------------------------------------------------
+
+Within the stated scope, the conclusion is unavoidable.
+A neutral accountability substrate that supports the inventory of Section~\ref{sec:inventory},
+preserves stable reference under the transformation basis $\Fset$,
+and excludes hidden regimes must realize
+at least the nine identity regimes in the lower-bound core.
+Outside that scope, different optimization objectives may yield different structures.
+The result is best understood as a constraint theorem:
+for neutral substrate-level reference under persistent disagreement,
+at least this much identity structure is required.

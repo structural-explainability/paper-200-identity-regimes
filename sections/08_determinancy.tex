@@ -1,0 +1,158 @@
+% !TeX root = ../se200_identity_regimes.tex
+
+% =============================================================================
+\section{Determinacy}
+\label{sec:determinacy}
+% =============================================================================
+
+The lower-bound result shows that fewer than nine core regimes are insufficient.
+This section records a limited determinacy property for the lower-bound core.
+It does not claim that every admissible carrier in every deployed system
+is exhausted by these nine regimes.
+It claims only that each carrier-basis pair used in the lower-bound construction
+has a well-defined assignment to one core regime.
+
+The result is deliberately limited.
+Once a carrier kind and identity basis from the lower-bound core are fixed, the regime assignment is determined.
+Which identity basis a real-world referent ought to use remains a matter of modeling judgment.
+Additional admissible bases may require additional regimes.
+
+% -----------------------------------------------------------------------------
+\subsection{Core Carrier-Basis Pairs}
+\label{subsec:core_carrier_basis_pairs}
+% -----------------------------------------------------------------------------
+
+\begin{definition}[Core carrier-basis pair]
+\label{def:core_carrier_basis_pair}
+A \emph{core carrier-basis pair} is one of the carrier kind and identity basis
+combinations used in the nine-regime lower-bound core.
+The core pairs are:
+\[
+\begin{array}{rcl}
+\text{obligation-bearer with responsibility-bearing identity} &\mapsto& \OBL,\\
+\text{occurrence with realization-and-provenance identity} &\mapsto& \OCC,\\
+\text{record with descriptive-record identity} &\mapsto& \REC,\\
+\text{plain referent with locus-fixed identity} &\mapsto& \LOC,\\
+\text{plain referent with object-fixed identity} &\mapsto& \OBJ,\\
+\text{scope with extension-fixed identity} &\mapsto& \SCOPEE,\\
+\text{scope with structure-fixed identity} &\mapsto& \SCOPES,\\
+\text{rule with content-fixed identity} &\mapsto& \RULEC,\\
+\text{rule with structure-fixed identity} &\mapsto& \RULES.
+\end{array}
+\]
+\end{definition}
+
+The first three pairs are included as one-basis pairs in the lower-bound construction.
+This does not assert that obligation-bearers, occurrences, or records admit no other admissible bases in richer systems.
+It asserts only that the lower-bound proof requires these three core bases.
+The remaining six pairs arise from the witnessed split cases proved in Section~\ref{sec:algebra}.
+
+\begin{definition}[Core regime assignment]
+\label{def:core_regime_assignment}
+The \emph{core regime assignment} maps each core carrier-basis pair
+to the identity regime displayed in Definition~\ref{def:core_carrier_basis_pair}.
+\end{definition}
+
+% -----------------------------------------------------------------------------
+\subsection{Existence}
+\label{subsec:determinacy_existence}
+% -----------------------------------------------------------------------------
+
+\begin{lemma}[Existence for the core]
+\label{se200.lem.CoreExistence}
+Every core carrier-basis pair is assigned to at least one of the nine core regimes.
+\end{lemma}
+
+\begin{proof}
+\sloppy
+The three one-basis core pairs are assigned by construction:
+obligation-bearer with responsibility-bearing identity maps to $\OBL$,
+occurrence with realization-and-provenance identity maps to $\OCC$,
+and record with descriptive-record identity maps to $\REC$.
+
+The remaining core pairs are assigned by the split results of Section~\ref{sec:algebra}.
+A plain referent with locus-fixed identity maps to $\LOC$,
+and a plain referent with object-fixed identity maps to $\OBJ$,
+by Proposition~\ref{se200.prop.PlainReferentUnderdetermination}.
+A scope with extension-fixed identity maps to $\SCOPEE$,
+and a scope with structure-fixed identity maps to $\SCOPES$,
+by Proposition~\ref{se200.prop.ScopeUnderdetermination}.
+A rule with content-fixed identity maps to $\RULEC$,
+and a rule with structure-fixed identity maps to $\RULES$,
+by Proposition~\ref{se200.prop.RuleUnderdetermination}.
+Therefore every core carrier-basis pair is assigned to at least one of the nine core regimes.
+\end{proof}
+
+% -----------------------------------------------------------------------------
+\subsection{Uniqueness}
+\label{subsec:determinacy_uniqueness}
+% -----------------------------------------------------------------------------
+
+\begin{lemma}[Uniqueness for the core]
+\label{se200.lem.CoreUniqueness}
+No core carrier-basis pair is assigned to more than one of the nine core regimes.
+\end{lemma}
+
+\begin{proof}
+Each core carrier-basis pair contains a fixed carrier kind and a fixed identity basis.
+The core regime assignment maps that fixed pair to the regime that preserves the declared basis under the transformation behavior used in the lower-bound construction.
+
+The three one-basis core pairs map to $\OBL$, $\OCC$, and $\REC$ respectively.
+For the split cases, the declared basis selects the side of the split:
+locus-fixed plain referent maps to $\LOC$ and not $\OBJ$;
+object-fixed plain referent maps to $\OBJ$ and not $\LOC$;
+extension-fixed scope maps to $\SCOPEE$ and not $\SCOPES$;
+structure-fixed scope maps to $\SCOPES$ and not $\SCOPEE$;
+content-fixed rule maps to $\RULEC$ and not $\RULES$;
+and structure-fixed rule maps to $\RULES$ and not $\RULEC$.
+Thus the assignment is functional on the core pairs.
+Therefore no core carrier-basis pair is assigned to more than one core regime.
+\end{proof}
+
+% -----------------------------------------------------------------------------
+\subsection{Determinacy Theorem}
+\label{subsec:determinacy_theorem}
+% -----------------------------------------------------------------------------
+
+\begin{theorem}[Core regime assignment]
+\label{se200.thm.CoreRegimeAssignment}
+Every core carrier-basis pair is assigned to exactly one of the nine core identity regimes.
+\end{theorem}
+
+\begin{proof}
+\sloppy
+Existence follows from Lemma~\ref{se200.lem.CoreExistence}.
+Uniqueness follows from Lemma~\ref{se200.lem.CoreUniqueness}.
+Therefore every core carrier-basis pair is assigned to exactly one of the nine core regimes.
+\end{proof}
+
+This is determinacy for the lower-bound core, not global representational determinacy.
+The theorem does not decide whether a modeler has chosen the correct identity basis for a particular real-world referent.
+It also does not deny that additional admissible identity bases may be needed in richer systems.
+It says only that the carrier-basis pairs used in the lower-bound construction have fixed regime assignments.
+
+% -----------------------------------------------------------------------------
+\subsection{Failure of Basis Declaration}
+\label{subsec:basis_declaration_failure}
+% -----------------------------------------------------------------------------
+
+For the witnessed split cases, omission of the basis is not harmless.
+A scope without an extension-fixed or structure-fixed basis does not specify what decomposition preserves.
+A rule without a content-fixed or structure-fixed basis does not specify what refinement preserves.
+A plain referent without a locus-fixed or object-fixed basis does not specify what forking preserves.
+Such a carrier is not determinately assigned within the lower-bound core.
+It is under-specified.
+
+The same point generalizes beyond the three witnessed splits.
+If a deployment needs to distinguish content-fixed from carrier-fixed records,
+fine-grained from coarse-grained occurrences,
+or legal-person from role-holder obligation-bearers,
+then those bases must also be declared.
+They may require additional regimes.
+That possibility is outside the lower-bound core, but it is consistent with the result.
+
+This observation anticipates the conformance analysis
+of the companion \emph{Accountable Records} paper.
+In a deployed record system, basis declaration becomes a schema obligation.
+In this paper, it marks the boundary of the determinacy result:
+regime assignment is fixed for the carrier-basis pairs included in the lower-bound core.

@@ -1,0 +1,170 @@
+% !TeX root = ../se200_identity_regimes.tex
+
+% =============================================================================
+\section{Related Work}
+\label{sec:related}
+% =============================================================================
+
+This paper is situated at the intersection of formal ontology, provenance, and
+classification under disagreement.
+It does not propose a new upper ontology.
+It derives a lower bound on identity regimes required when a substrate
+is optimized for neutral reference under persistent disagreement.
+
+% -----------------------------------------------------------------------------
+\subsection{Classification under Disagreement}
+\label{subsec:related_classification_disagreement}
+% -----------------------------------------------------------------------------
+
+Classification systems embed institutional, social, and evaluative commitments
+rather than functioning as neutral descriptions~\citep{bowkerstar1999,haslanger2012}.
+In scientific and policy settings, disagreement is often persistent rather than transient,
+reflecting incompatible evidentiary, methodological, or evaluative frameworks
+rather than temporary empirical uncertainty~\citep{longino1990}.
+This motivates representations that remain usable without presupposing interpretive convergence.
+
+This paper adopts that motivation but addresses a narrower structural question:
+which identity distinctions become unavoidable when disagreement
+is persistent and causal or normative commitment is externalized from the substrate.
+The answer is conditional on the neutral-substrate constraint developed
+in \emph{Neutral Substrates}~\citep{case2026neutral}
+and on the formal setting fixed above.
+Under those assumptions, stable reference requires at least the nine core identity regimes derived here.
+
+% -----------------------------------------------------------------------------
+\subsection{Identity, Roles, and Ontological Methodology}
+\label{subsec:related_identity_roles}
+% -----------------------------------------------------------------------------
+
+Formal ontology has long emphasized that categories are individuated
+by identity conditions and persistence criteria.
+OntoClean clarifies why anti-rigid properties such as roles
+cannot supply identity conditions~\citep{guarino1998roles,guarinowelty2002}.
+Work on social and institutional entities further develops distinctions among
+bearers, roles, social objects, and institutional structures~\citep{masolo2003wonderweb,guizzardi2005}.
+
+This paper builds on those insights but applies them at the substrate level.
+Its regimes are not derived from domain taxonomy.
+They are derived from transformation behavior over identity bases.
+The central move is to make identity operational:
+a regime is determined by what ordinary transformations preserve, break, or leave identity-neutral.
+
+% -----------------------------------------------------------------------------
+\subsection{Upper Ontologies}
+\label{subsec:related_upper_ontologies}
+% -----------------------------------------------------------------------------
+
+Upper ontologies such as BFO, DOLCE, and UFO provide rich accounts of
+dependence, endurants and perdurants, social objects, qualities, and
+institutional entities~\citep{smithceusters2015bfo,arp2015building,gangemi2002dolce,guizzardi2005}.
+They support broad ontology-engineering objectives, including reuse,
+domain modeling, semantic integration, and metaphysical clarity.
+The present result addresses a narrower design objective:
+stable substrate-level reference under persistent disagreement.
+It offers a constraint that can be imposed on
+implementations when that objective is adopted.
+
+From the perspective of BFO, several of the required carriers have natural
+representational starting points.
+Occurrences map naturally to occurrents.
+Material plain referents map naturally to independent continuants.
+Rules, records, roles, dispositions, information artifacts, and institutional
+bearers can also be modeled using BFO resources, depending on the intended application.
+When a BFO-based implementation is intended to serve as a
+neutral substrate under persistent disagreement,
+the relevant identity bases can be specified as part of the implementation.
+For example, non-spatial normative applicability, record identity, and obligation-bearing capacity
+may require dedicated modeling patterns to ensure that the
+regime-level distinctions are preserved across transformations.
+
+DOLCE and UFO provide especially rich resources for social objects,
+institutional entities, qualities, roles, and dependence relations.
+These resources make them natural candidates for representing
+obligation-bearers, rules, and institutional structures.
+Here again, the contribution is an additional constraint imposed when neutrality under persistent
+disagreement is adopted as a design objective.
+A deployed substrate must make clear when it is
+tracking a rule by content rather than structure,
+a scope by extension rather than internal organization,
+a plain referent by locus rather than object,
+and a record as distinct from the thing recorded.
+Where those distinctions are handled by
+local modeling conventions, role predicates, or application logic,
+the implementation may consider whether those conventions remain stable
+when shared interpretation cannot be assumed.
+
+These observations are illustrative.
+The nine-regime lower-bound core is derived from the
+transformation analysis of Sections~\ref{sec:algebra}--\ref{sec:bound},
+not from any gaps in upper ontologies.
+Upper ontologies can realize the regime structure derived here when
+their implementations preserve the relevant identity behavior.
+The benefit is a reusable constraint for cases where an ontology must support
+neutral reference across divergent interpretations.
+
+% -----------------------------------------------------------------------------
+\subsection{Provenance, Versioning, and Exchange}
+\label{subsec:related_provenance_exchange}
+% -----------------------------------------------------------------------------
+
+The transformation basis used in this paper mirrors operations
+already tracked by provenance and versioning systems.
+PROV represents derivation, attribution, generation, use, and revision
+in ways that overlap naturally with re-expression, annotation,
+refinement, branching, and provenance extension~\citep{provdm2013}.
+This paper adds an identity-level constraint for cases
+where provenance and versioning records
+must remain referable across incompatible interpretations.
+
+The neutral substrate and its regimes can be stated as a conservative theory
+over an exchange formalism such as Common Logic~\citep{isoiec24707}.
+Conservativity matters because extensions should add interpretive structure
+without changing consequences about substrate-level terms~\citep{hodges1997}.
+This supports heterogeneous ontology exchange and pluralistic structuring
+in settings where no single interpretive framework can govern all use~\citep{kutz2010}.
+
+Large-scale information infrastructures and digital-twin systems face
+related problems of long-lived reference, versioning, and cross-institutional
+reuse~\citep{edwards2011,grieves2016}.
+The literature emphasizes that infrastructure must remain usable
+across evolving communities and interpretations.
+This paper provides a constraint that enables stable reference under persistent disagreement.
+
+% -----------------------------------------------------------------------------
+\subsection{Causal and Normative Separation}
+\label{subsec:related_causal_normative}
+% -----------------------------------------------------------------------------
+
+The distinction between descriptive record and causal claim follows a familiar discipline in causal analysis.
+Causal claims require additional modeling commitments and should not be confused
+with descriptive structure alone~\citep{pearl2009}.
+The neutral-substrate constraint applies the same discipline at the substrate boundary.
+A substrate may record that a source asserted a causal or normative proposition.
+It must not thereby assert the proposition as substrate-level fact.
+
+The regimes derived here make that separation usable under transformation.
+Records can persist, be annotated, forked, and extended with provenance
+without becoming causal explanations or normative judgments.
+Rules can remain referable without the substrate deciding which interpretation governs.
+Occurrences can remain referable without the substrate deciding
+what they caused or whether they complied.
+That separation is essential when identity must remain stable
+before interpretation is settled.
+
+% -----------------------------------------------------------------------------
+\subsection{FAIR Reuse under Persistent Disagreement}
+\label{subsec:related_fair}
+% -----------------------------------------------------------------------------
+
+The FAIR principles promote data reuse across communities and over time~\citep{wilkinson2016}.
+They do not specify the ontological identity conditions required
+when reuse occurs under persistent legal, institutional, or analytic disagreement.
+In practice, reuse is often pursued through negotiated
+vocabularies, shared schemas, or domain-specific interpretive conventions.
+Those strategies are valuable, but they presuppose forms of
+convergence that may be unavailable in contested settings.
+
+This result complements FAIR-aligned reuse in contested settings.
+Stable reference must be maintained independently of causal or normative agreement.
+The nine core regimes name identity distinctions that a neutral substrate
+must represent when reuse is expected to continue across divergent interpretations.

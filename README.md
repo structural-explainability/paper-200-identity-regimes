@@ -42,7 +42,7 @@ On Windows (MiKTeX):
 Requires a LaTeX distribution with `latexmk` (MiKTeX, TeX Live, or MacTeX):
 
 ```bash
-latexmk -pdf se200_identity_regimes.tex
+latexmk -pdf se200_identity_regimes.tex -f
 
 texcount -inc -sum -total se200_identity_regimes.tex
 ```

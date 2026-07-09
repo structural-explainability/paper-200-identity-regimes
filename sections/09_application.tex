@@ -1,0 +1,172 @@
+% !TeX root = ../se200_identity_regimes.tex
+
+% =============================================================================
+\section{The Nine Regimes at Work}
+\label{sec:application}
+% =============================================================================
+
+The preceding sections derive a nine-regime lower-bound core.
+This section shows how they appear in the running diagnostic settings.
+The examples are illustrative.
+They show that the surplus regimes in the lower-bound core are load-bearing:
+they mark distinctions that ordinary transformations force
+and that accountability systems must track.
+
+% -----------------------------------------------------------------------------
+\subsection{Multi-Jurisdiction Regulatory Reporting}
+\label{subsec:app_regulatory}
+% -----------------------------------------------------------------------------
+
+A corporation is an obligation-bearer.
+It persists across jurisdictional differences in corporate personhood, subsidiary responsibility,
+delegated liability, and compliance theory.
+It is therefore represented under $\OBL$.
+
+The reporting statute is a rule.
+If it is identified by what it requires, then it is represented under $\RULEC$.
+A later re-codification that preserves the requirements is the same rule under $\RULEC$
+because refinement preserves content-fixed identity.
+If the statute is identified by its section structure, then it is represented under $\RULES$.
+The same re-codification is then a different rule,
+because refinement changes the structure-fixed identity basis.
+
+Each filing, inspection, transaction, or enforcement action is an occurrence.
+It is individuated by temporal realization and provenance.
+It is therefore represented under $\OCC$.
+Two jurisdictions may disagree about whether the occurrence constitutes compliance.
+They must still be able to refer to the same occurrence.
+
+The jurisdiction is a scope.
+If it is identified by the set of regulated cases it covers, then it is represented under $\SCOPEE$.
+Splitting the jurisdiction into districts that together cover the same cases preserves identity under $\SCOPEE$.
+If it is identified by its named administrative partition, then it is represented under $\SCOPES$.
+The same split changes the structure and therefore breaks identity under $\SCOPES$.
+
+Compliance indicators, filings as documents, measurement reports, and audit records are descriptive records.
+They are represented under $\REC$.
+They can be compared, annotated, and transferred without the substrate asserting whether compliance actually occurred.
+
+A regulated substance, facility, instrument, parcel, or asset is a plain referent.
+If the relevant identity basis is the regulated locus, then it is represented under $\LOC$.
+If the relevant identity basis is the object occupying or moving through that locus,
+then it is represented under $\OBJ$.
+
+The case exercises all nine regimes in the lower-bound core.
+Two jurisdictions can refer to the same corporation, statute, filing, jurisdiction, record,
+and facility while evaluating compliance incompatibly.
+They can also disagree about whether decomposing a jurisdiction changed the jurisdiction.
+That disagreement is the $\SCOPEE/\SCOPES$ distinction.
+A kind-count that stops at ``scope'' would miss it.
+
+% -----------------------------------------------------------------------------
+\subsection{Legislative History Tracking}
+\label{subsec:app_legislative}
+% -----------------------------------------------------------------------------
+
+A statute is a rule.
+If tracked by normative content, it is represented under $\RULEC$.
+An amendment or refinement that preserves what the statute requires preserves identity under $\RULEC$.
+If tracked by text, section structure, or internal organization, the statute is represented under $\RULES$.
+The same amendment or refinement may then produce a new structure-fixed rule.
+
+The enactment, amendment, vote, administrative application, judicial decision,
+or repeal event is an occurrence.
+It is represented under $\OCC$.
+The occurrence may enact, modify, interpret, or challenge the statute,
+but it is not identical with the statute.
+
+The legislature, agency, court, officer, or regulated party is an obligation-bearer
+when represented as a party that can bear responsibility, authority, or accountability.
+Such entities are represented under $\OBL$.
+Their identity does not depend on any single enactment or application event.
+
+Geographic, subject-matter, procedural, temporal, or institutional boundaries are scopes.
+A statutory scope may be tracked extensionally by the cases it covers, yielding $\SCOPEE$.
+It may also be tracked structurally by the named jurisdictional or procedural partition, yielding $\SCOPES$.
+Redistricting, reclassification, or subdivision can preserve coverage while changing structure.
+
+Legislative records, committee reports, interpretive memoranda, docket entries, and compliance histories are records.
+They are represented under $\REC$.
+They may record that someone asserted a causal or normative claim without
+making that claim at the substrate level.
+
+Objects acted upon by the legal regime, such as land parcels, facilities, permits,
+instruments, samples, or regulated assets, are plain referents.
+They may be locus-fixed under $\LOC$ or object-fixed under $\OBJ$ depending on
+what identity basis the substrate declares.
+
+The case shows why the rule split matters.
+Legal practice often needs both readings.
+A doctrine may remain unchanged while the text is superseded.
+A text may remain identifiable while its content is interpreted differently.
+The $\RULEC/\RULES$ split prevents these two identity bases from being collapsed.
+
+% -----------------------------------------------------------------------------
+\subsection{Cross-Institutional Provenance}
+\label{subsec:app_provenance}
+% -----------------------------------------------------------------------------
+
+Cross-institutional provenance separates records from the things those records describe.
+A dataset entry, measurement record, transfer log, annotation record, or derived metric
+is represented under $\REC$.
+It may be copied, annotated, refined, and extended with provenance while remaining the same record.
+
+The sampled object, monitored site, instrument, facility, specimen, or collection point
+is a plain referent.
+If the identity basis is the site, location, or collection point,
+then it is represented under $\LOC$.
+A fork over records concerning the same site preserves the locus-fixed referent.
+If the identity basis is the specimen, instrument, or physical object,
+then it is represented under $\OBJ$.
+A fork that produces distinct object continuations breaks object-fixed identity.
+
+Producing institutions, custodians, laboratories, agencies, and receiving organizations
+are obligation-bearers when represented as parties responsible for custody, transfer, use, retention, or analysis.
+They are represented under $\OBL$.
+
+Data-use policies, retention rules, consent terms, sharing agreements, and access restrictions are rules.
+When tracked by what they require, they are represented under $\RULEC$.
+When tracked by their text, version, or internal structure, they are represented under $\RULES$.
+
+Transfers, annotations, re-analyses, approvals, denials, measurements, and custody changes are occurrences.
+They are represented under $\OCC$.
+They remain referable as the same events even when institutions disagree about their significance.
+
+Institutional coverage conditions, consent scopes, policy domains, project boundaries,
+and data-sharing jurisdictions are scopes.
+They may be extension-fixed under $\SCOPEE$ or structure-fixed under $\SCOPES$.
+A policy domain may cover the same records after decomposition while no longer having
+the same internal structure.
+
+The provenance chain can therefore remain stable while institutions disagree about
+classification, causal interpretation, data quality, responsibility, or permissible use.
+The $\LOC/\OBJ$ distinction keeps ``the same site'' and ``the same specimen''
+from being conflated across a fork.
+The record-versus-referent distinction keeps a record from being confused with the thing it records.
+
+% -----------------------------------------------------------------------------
+\subsection{Summary}
+\label{subsec:app_summary}
+% -----------------------------------------------------------------------------
+
+The proof of the lower bound was given in Section~\ref{sec:bound}.
+The running cases illustrate why the lower-bound core is not artificial.
+
+Each case uses the three core regimes that are not split in this construction:
+$\OBL$, $\OCC$, and $\REC$.
+Each case also exercises the three witnessed split pairs:
+$\LOC/\OBJ$, $\SCOPEE/\SCOPES$, and $\RULEC/\RULES$.
+The surplus regimes correspond to identity distinctions
+that ordinary record operations already force.
+
+A jurisdiction that stays the same under decomposition and one that does not are both scopes.
+A statute individuated by what it requires and a statute individuated by its text are both rules.
+A site and the object occupying it may both be plain referents.
+The kind names are the same.
+The identity bases are not.
+
+This is a core contribution of the paper.
+Reference kinds supply carriers.
+Transformations determine regimes.
+Counting reference kinds gives six.
+The transformation analysis forces at least nine identity regimes.

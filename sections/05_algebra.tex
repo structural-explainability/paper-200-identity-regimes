@@ -1,0 +1,310 @@
+% !TeX root = ../se200_identity_regimes.tex
+
+% =============================================================================
+\section{Transformation-Invariant Identity}
+\label{sec:algebra}
+% =============================================================================
+
+The previous section fixed what the substrate must be able to refer to.
+This section explores what makes two representations of such a referent count as the same entity.
+The answer is transformation-invariant identity.
+An identity regime is determined by how a declared identity basis behaves
+under the transformation basis fixed in Section~\ref{sec:formal_setting}.
+
+The governing idea is familiar from formal ontology:
+categories are individuated by identity conditions, not by classificatory convenience,
+and properties that a thing can gain or lose cannot carry identity~\citep{guarino1998roles,guarinowelty2002}.
+This paper applies that idea at the substrate level and in operational form.
+A referent remains the same under a regime when the transformations applied to its representations do not break the identity basis for that regime.
+Two representations may be the same under one regime and different under another.
+Whether they co-refer therefore depends on which regime is in force,
+so a substrate that leaves the regime implicit has not fixed reference:
+it has deferred the identity question to whoever later decides which reading applies.
+Under persistent disagreement that decision cannot be assumed shared,
+so the regime must be declared at the substrate.
+
+% -----------------------------------------------------------------------------
+\subsection{Identity Bases}
+\label{subsec:identity_bases}
+% -----------------------------------------------------------------------------
+
+\begin{definition}[Identity basis]
+\label{se200.def.IdentityBasis}
+An \emph{identity basis} is the feature, structure, role in reference, or persistence condition
+whose preservation constitutes remaining the same referent under a given identity regime.
+\end{definition}
+
+An identity basis is what a regime tracks through transformation.
+For an obligation-bearer, the relevant basis is persistence as the responsible party.
+For an occurrence, the relevant basis is temporal realization and provenance.
+For a record, the relevant basis is descriptive record persistence.
+For some carriers, however, the reference kind does not determine a unique basis.
+A rule may be content-fixed or structure-fixed.
+A scope may be extension-fixed or structure-fixed.
+A plain referent may be locus-fixed or object-fixed.
+
+This is where the lower-bound argument begins.
+The inventory supplies carriers.
+The identity basis determines what sameness means for a carrier.
+The transformation classification determines whether that basis is preserved or broken.
+
+% -----------------------------------------------------------------------------
+\subsection{Profiles and Collapse}
+\label{subsec:profiles_and_collapse}
+% -----------------------------------------------------------------------------
+
+The formal setting already defined identity regimes as classification profiles over the transformation basis.
+We now use the induced identity relation $\sim_\tau$ to compare regimes.
+
+\begin{definition}[Collapse]
+\label{se200.def.Collapse}
+Two identity regimes $\tau$ and $\tau'$ \emph{collapse} when they induce the same identity relation:
+\[
+\sim_\tau \ =\ \sim_{\tau'} .
+\]
+They are \emph{distinct} when some pair of representations is identified under one regime and separated under the other.
+\end{definition}
+
+\begin{definition}[Underdetermined kind]
+\label{def:underdetermined_kind}
+A reference kind is \emph{underdetermined} when admissible carriers of that kind
+require incompatible classifications for some transformation family.
+Equivalently, one admissible identity basis for the kind requires a transformation
+to be non-breaking, while another admissible identity basis for the same kind
+requires that transformation to be breaking.
+\end{definition}
+
+Underdetermination is the engine of the result.
+When a reference kind contains admissible carriers that disagree about
+whether an ordinary transformation preserves identity, no single regime profile serves the kind.
+The kind must split into multiple identity regimes.
+The split is forced by transformation behavior.
+
+% -----------------------------------------------------------------------------
+\subsection{Single-Basis Reference Kinds}
+\label{subsec:single_basis_kinds}
+% -----------------------------------------------------------------------------
+
+Three reference kinds fix their identity basis uniquely under the transformation basis used here.
+Obligation-bearers, occurrences, and records each yield one regime.
+
+\paragraph{Obligation-bearers.}
+An obligation-bearer is individuated by persistence as the party that can bear
+responsibility, duty, liability, authority, or accountability.
+Re-expression, annotation, re-contextualization, reassignment, branching,
+provenance extension, and state evolution do not alter that identity basis.
+Refinement and decomposition preserve identity when they add detail or decompose descriptions
+of the bearer without replacing the bearer.
+Substitution breaks identity because it replaces the bearer.
+
+\paragraph{Occurrences.}
+An occurrence is individuated by temporal realization and provenance.
+Re-expression, annotation, refinement, re-contextualization, and provenance extension do not replace the occurrence.
+State evolution preserves identity when it tracks phases or stages of the same occurrence.
+Decomposition breaks identity when it produces sub-occurrences with their own temporal individuation.
+Substitution breaks identity because it replaces the occurrence.
+Branching and reassignment are inapplicable to a fixed realization event.
+
+\paragraph{Records.}
+A record is individuated by descriptive persistence without substrate-level causal or normative commitment.
+Annotation, refinement, decomposition, branching, and provenance extension
+preserve record identity because the record survives enrichment, derivation, copying, and descriptive elaboration.
+Re-expression, re-contextualization, reassignment, and state evolution are
+identity-neutral for the record as such.
+Substitution breaks identity because it replaces the record.
+
+These three regimes are internally consistent.
+They are not split by the transformation basis.
+We name them:
+\[
+\OBL,\qquad \OCC,\qquad \REC .
+\]
+
+% -----------------------------------------------------------------------------
+\subsection{Dual-Basis Reference Kinds}
+\label{subsec:dual_basis_kinds}
+% -----------------------------------------------------------------------------
+
+Three reference kinds do not fix a unique identity basis.
+Each admits two admissible readings that an ordinary transformation separates.
+The pattern is the same in all three cases.
+A kind admits two bases $B_1$ and $B_2$.
+A transformation $f$ is non-breaking for $B_1$ and breaking for $B_2$.
+Both readings are admissible instances of the same reference kind.
+Therefore the kind cannot be governed by a single identity regime.
+
+\begin{lemma}[Split pattern]
+\label{se200.lem.SplitPattern}
+Let $K$ be a reference kind with two admissible identity bases $B_1$ and $B_2$.
+Suppose there is a transformation family $f\in\Fset$ and representations $r,s$
+such that $f$ preserves identity under $B_1$ but breaks identity under $B_2$.
+Then $K$ is underdetermined at $f$ and requires two distinct identity regimes.
+\end{lemma}
+
+\begin{proof}
+If one regime governed both bases, it would assign a single classification to $f$
+for the kind.
+But the $B_1$ reading requires $f$ to be non-breaking,
+while the $B_2$ reading requires $f$ to be breaking.
+No single classification can satisfy both readings.
+Thus the kind is underdetermined at $f$.
+Applying $f$ to the witnessing representations
+identifies them under $B_1$ and
+separates them under $B_2$,
+so the two readings induce distinct identity relations,
+and the kind requires two distinct identity regimes.
+\end{proof}
+
+% -----------------------------------------------------------------------------
+\subsection{Scope Under Decomposition}
+\label{subsec:scope_split}
+% -----------------------------------------------------------------------------
+
+A scope may be individuated by its extension or by its structure.
+An extension-fixed scope is individuated by the
+cases, persons, places, entities, or conditions it covers.
+A structure-fixed scope is individuated
+by the internal organization through which that coverage is represented.
+
+\begin{proposition}[Scope Underdetermination]
+\label{se200.prop.ScopeUnderdetermination}
+The scope reference kind is underdetermined at aggregation/decomposition $\mathrm{AD}$.
+\end{proposition}
+
+\begin{proof}
+Let $r$ be a scope fixed by extension.
+Let $s$ be a decomposition of $r$ into subscopes whose union covers the same cases.
+The extension is preserved, so $\mathrm{AD}$ is non-breaking for the extension-fixed reading.
+Let $r'$ be a scope fixed by structure.
+Let $s'$ be a decomposition of $r'$ into a finer internal partition.
+The structure is changed, so $\mathrm{AD}$ is breaking for the structure-fixed reading.
+Both readings are admissible scopes.
+No single classification of $\mathrm{AD}$ can serve both.
+By Lemma~\ref{se200.lem.SplitPattern}, scope requires two identity regimes.
+\end{proof}
+
+This yields:
+\[
+\SCOPEE,\qquad \SCOPES .
+\]
+$\SCOPEE$ is the extension-fixed scope regime.
+$\SCOPES$ is the structure-fixed scope regime.
+After decomposition, two representations
+can apply to the same cases while no longer being the same scope structure.
+State evolution is inapplicable to both scope regimes:
+a scope is an applicability domain,
+not an enduring referent that passes through internal states.
+
+% -----------------------------------------------------------------------------
+\subsection{Rule Under Refinement}
+\label{subsec:rule_split}
+% -----------------------------------------------------------------------------
+
+A rule may be individuated by its content or by its structure.
+A content-fixed rule is individuated by what it
+requires, permits, prohibits, authorizes, or defines.
+A structure-fixed rule is individuated by the organization of the
+text, sections, clauses, delegations, or internal rule structure
+through which that content is expressed.
+
+\begin{proposition}[Rule Underdetermination]
+\label{se200.prop.RuleUnderdetermination}
+The rule reference kind is underdetermined at refinement $\mathrm{RF}$.
+\end{proposition}
+
+\begin{proof}
+Let $r$ be a rule fixed by normative content.
+Let $s$ be a refinement of $r$ that preserves what the rule requires
+while adding detail or reorganizing expression.
+The content is preserved, so $\mathrm{RF}$ is non-breaking for the content-fixed reading.
+Let $r'$ be a rule fixed by textual or internal structure.
+Let $s'$ be a refinement of $r'$ that changes that structure.
+The structure is changed, so $\mathrm{RF}$ is breaking for the structure-fixed reading.
+Both readings are admissible rules.
+No single classification of $\mathrm{RF}$ can serve both.
+By Lemma~\ref{se200.lem.SplitPattern}, rule requires two identity regimes.
+\end{proof}
+
+This yields:
+\[
+\RULEC,\qquad \RULES .
+\]
+$\RULEC$ is the content-fixed rule regime.
+$\RULES$ is the structure-fixed rule regime.
+After refinement, two representations
+can require the same thing while no longer being the same text or rule structure.
+State evolution is inapplicable to both rule regimes:
+a rule is a normative structure, not an enduring referent that passes through internal states.
+Changes to what a rule requires are amendments or refinements,
+not state transitions of a persisting object.
+
+% -----------------------------------------------------------------------------
+\subsection{Plain Referent Under Forking}
+\label{subsec:plain_referent_split}
+% -----------------------------------------------------------------------------
+
+A plain referent may be individuated by locus or by object.
+A locus-fixed referent is individuated by the
+place, site, slot, location, or institutional position that remains fixed.
+An object-fixed referent is individuated by the
+object, asset, instrument, sample, device, parcel, or thing occupying that locus.
+
+\begin{proposition}[Plain-referent Underdetermination]
+\label{se200.prop.PlainReferentUnderdetermination}
+The plain-referent kind is underdetermined at branch/fork $\mathrm{BF}$.
+\end{proposition}
+
+\begin{proof}
+Let $r$ be a plain referent fixed by locus.
+Let $s$ be a forked continuation over the same locus.
+The locus is preserved, so $\mathrm{BF}$ is non-breaking for the locus-fixed reading.
+Let $r'$ be a plain referent fixed by object.
+Let $s'$ be a fork into non-identical object continuations.
+The object identity is not preserved across both continuations,
+so $\mathrm{BF}$ is breaking for the object-fixed reading.
+Both readings are admissible plain referents.
+No single classification of $\mathrm{BF}$ can serve both.
+By Lemma~\ref{se200.lem.SplitPattern}, plain referent requires two identity regimes.
+\end{proof}
+
+This yields:
+\[
+\LOC,\qquad \OBJ .
+\]
+$\LOC$ is the locus-fixed plain-referent regime.
+$\OBJ$ is the object-fixed plain-referent regime.
+After a fork, two representations
+can be the same place while no longer being the same object.
+State evolution applies to both plain-referent regimes and preserves identity:
+a locus or an object is an enduring referent that persists through changes in its state.
+
+% -----------------------------------------------------------------------------
+\subsection{Result of the Algebra}
+\label{subsec:algebra_result}
+% -----------------------------------------------------------------------------
+
+The reference inventory supplied six kinds.
+Three kinds fix a single identity basis:
+\[
+\OBL,\qquad \OCC,\qquad \REC .
+\]
+Three kinds split into two regimes each:
+\[
+\LOC,\ \OBJ,\qquad
+\SCOPEE,\ \SCOPES,\qquad
+\RULEC,\ \RULES .
+\]
+Thus the transformation algebra yields nine identity regimes:
+\[
+\begin{aligned}
+&\OBL,\quad \OCC,\quad \REC,\quad \LOC,\quad \OBJ,\\
+&\SCOPEE,\quad \SCOPES,\quad \RULEC,\quad \RULES .
+\end{aligned}
+\]
+
+The surplus regimes are the central fact.
+They are not additional reference kinds.
+They are identity bases forced apart by ordinary transformations.
+This is why counting kinds undercounts the structure needed for stable reference.
+The next section collects the nine regimes in a single classification table
+and proves their pairwise distinctness.

@@ -19,6 +19,9 @@ PRIVATE_NOTES.md
 PRIVATE-NOTES.md
 REVIEWER_COMMENTS.md
 REVIEWER_RESPONSE.md
+refs/
+references/
+ss/
 
 
 # WHY: Temporary and swap files are machine-local noise and create meaningless diffs.

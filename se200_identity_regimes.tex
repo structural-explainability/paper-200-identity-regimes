@@ -24,6 +24,35 @@
 % Theorem environments (best-practice, widely standard)
 \usepackage{amsthm}
 
+% Transformation classifications
+\newcommand{\PRS}{\textsf{PRS}}
+\newcommand{\BRK}{\textsf{BRK}}
+\newcommand{\NEU}{\textsf{NEU}}
+\newcommand{\NA}{\textsf{N/A}}
+
+% Identity regimes
+\newcommand{\OBL}{\mathrm{OBL}}
+\newcommand{\OCC}{\mathrm{OCC}}
+\newcommand{\REC}{\mathrm{REC}}
+
+\newcommand{\LOC}{\mathrm{LOC}}
+\newcommand{\OBJ}{\mathrm{OBJ}}
+
+\newcommand{\SCOPEE}{\mathrm{SCOPE\text{-}E}}
+\newcommand{\SCOPES}{\mathrm{SCOPE\text{-}S}}
+
+\newcommand{\RULEC}{\mathrm{RULE\text{-}C}}
+\newcommand{\RULES}{\mathrm{RULE\text{-}S}}
+
+% Formal notation
+\newcommand{\Rspace}{\mathcal{R}}
+\newcommand{\Fset}{\mathcal{F}}
+\newcommand{\Class}{\mathrm{Class}}
+\newcommand{\basis}{\mathrm{basis}}
+\newcommand{\Substrate}{\mathcal{S}}
+\newcommand{\Frameworks}{\mathcal{F}}
+\newcommand{\SubstrateRef}{\mathsf{Ref}(\Substrate)}
+
 % ------------------------------------------------------------
 % Numbering convention:
 % - All theorem-like statements share one counter, numbered by section.
@@ -82,39 +111,8 @@
 % Improve typographic quality and line breaking
 \usepackage{microtype}
 
-% Categorical and commutative diagrams
-\usepackage{tikz}
-\usepackage{tikz-cd}
-\usetikzlibrary{arrows.meta,calc,fit,positioning,shapes.geometric}
-
-% Callout boxes for examples and emphasis
-\usepackage[most]{tcolorbox}
-
 % Keywords macro for structured abstract metadata
 \providecommand{\keywords}[1]{\textbf{Keywords: } #1}
-
-% Notation for Raw vs Canonical categories in EP/CEE
-\newcommand{\Raw}{\mathsf{Raw}}
-\newcommand{\Canon}{\mathsf{Canon}}
-
-% Reusable figure callout box for visual emphasis
-\newcommand{\FigureCallout}[2]{%
-  \begin{tcolorbox}[
-    colback=gray!5,
-    colframe=black!40,
-    title={#1},
-    fonttitle=\bfseries,
-    arc=3pt,
-    boxrule=0.5pt,
-    width=\linewidth,
-    enhanced,
-    breakable
-  ]
-  #2
-  \end{tcolorbox}
-}
-% Notation for stability-critical
-\newcommand{\stabilitycritical}{stability-critical}
 
 % Paragraph spacing prioritizes readability over traditional indentation
 \setlength{\parskip}{0.75em}
@@ -124,17 +122,13 @@
 \usepackage{enumitem}
 \setlist[itemize]{itemsep=0.2em, topsep=0.2em, parsep=0em, partopsep=0em}
 
-% Defensive re-definition ensures commands exist if loaded earlier
-\providecommand{\Raw}{\mathrm{Raw}}
-\providecommand{\Canon}{\mathrm{Canon}}
-
 % =============================================================================
 % PREFERRED CITATION SPECIFICATION
 %
 % @techreport{case2026regimes,
 %   author      = {Case, Denise M.},
-%   title       = {Referential Regimes: Identity and Persistence Structure for Neutral Substrates},
-%   institution = {Preprint},
+%   title       = {Referential Regimes: Transformation-Invariant Identity for Neutral Substrates},
+%   institution = {Northwest Missouri State University},
 %   year        = {2026},
 %   doi         = {10.48550/arXiv.2601.16152},
 %   url         = {https://doi.org/10.48550/arXiv.2601.16152}
@@ -144,7 +138,7 @@
 
 % ============================================================
 \title{Referential Regimes:  \\
-Identity and Persistence Structure \\
+Transformation-Invariant Identity \\
 for Neutral Substrates}
 % ============================================================
 \author{Denise M. Case}
@@ -155,93 +149,77 @@ for Neutral Substrates}
 
 \maketitle
 \vspace{-1em}
-% 200 word maximum
 
 \begin{abstract}
-Modern data systems increasingly operate under conditions of persistent
-legal, political, and analytic disagreement.
-In systems that adopt a neutral substrate, shared interpretation cannot
-be assumed, and representations must preserve stable reference across
-incompatible extensions.
-This paper examines the structural consequences of that architectural choice.
-Treating interpretive neutrality and stable reference as explicit
-design constraints, the analysis asks what
-structure is required for entities and their relations to remain
-referable and comparable under persistent disagreement.
-Minimality is defined structurally:
-reductions are admissible only if they do not
-reintroduce identity-relevant distinctions
-through hidden roles, flags, or contextual predicates.
-A current lower bound is established: under the stated assumptions,
-a neutral substrate operating under persistent disagreement must realize
-at least nine distinct referential regimes.
-The result is a lower-bound result, not an upper-bound or completeness claim.
+  Data systems increasingly operate under persistent
+  legal, political, and analytic disagreement,
+  where no single interpretive authority can be assumed.
+  A \emph{neutral substrate} provides stable shared reference
+  without requiring agreement about causal or normative interpretation:
+  it fixes reference structurally and leaves interpretation to
+  extension layers, following the neutrality-by-design constraint
+  developed in Neutral Substrates~\citep{case2026neutral}.
+
+  This paper derives the identity structure such a substrate requires,
+  using a small transformation algebra rather than a list of kinds.
+  We treat identity as transformation-invariance:
+  a referent is individuated by the admissible operations that preserve it.
+  Once the routine operations that record systems perform are fixed,
+  including re-expression, annotation, refinement, decomposition,
+  reassignment, forking, and provenance extension,
+  individuation becomes a structural calculation.
+
+  That calculation exposes a mismatch between reference kinds and
+  identity regimes. An accountability substrate must refer to six kinds
+  of thing: obligation-bearers, rules, occurrences, scopes, records, and
+  plain referents. Three of those kinds fix no single identity criterion.
+  A scope may be fixed by its extension or by its structure;
+  a rule by its content or by its structure;
+  a plain referent by its locus or by its object.
+  A single routine operation separates each pair:
+  decomposition separates the two scope readings,
+  refinement the two rule readings, and forking
+  the two plain-referent readings.
+
+  Counting reference kinds gives six;
+  transformation analysis forces at least nine identity regimes.
+  The three surplus regimes answer to no additional kind in the inventory.
+  They follow from how identity behaves under operations
+  the substrate cannot avoid performing, and any attempt to collapse them
+  reappears as a hidden discriminator that persistent disagreement
+  cannot hold fixed.
+
+  The result is a conditional lower bound, monotone in the relevant sense:
+  a richer transformation basis may leave the bound unchanged
+  or force further splits, but it cannot erase a distinction
+  already witnessed here. Its content is diagnostic.
+  The surplus regimes are the distinctions upper-ontology
+  implementations may leave to the modeler, and that cannot be recovered
+  under persistent disagreement without hidden discriminators.
 \end{abstract}
 
-% =============================================================================
-% Main Result Preview
-% =============================================================================
-
-\bigskip
-\noindent\textbf{Preview of Main Result.}
-\emph{Under explicit neutrality and stability constraints, attempts to
-  simplify structure by collapsing distinctions reintroduce
-  those distinctions as hidden interpretive mechanisms.
-  Excluding such hidden regimes implies
-  nine distinct referential regimes
-  required for accountability under persistent disagreement:
-  fewer do not satisfy the stated requirements.}
-
-\medskip
-\noindent
-\emph{Informally.}
-Given a neutral substrate capable of supporting persistent
-interpretive disagreement, entities and relations
-must remain stably referable across incompatible interpretive frameworks.
-This requirement constrains how entities may be individuated.
-Attempts to simplify the individuation structure by collapsing
-categories reintroduce those distinctions as hidden interpretive
-mechanisms.
-
-% \medskip
-% \noindent
-% The formal necessity argument appears in Section~\ref{sec:six}.
 \keywords{
   formal ontology;
   identity and persistence;
   neutral substrates;
   extension stability;
-  neutral substrates;
   accountability;
   causal commitment;
-  normative commitment;
+  normative commitment
 }
 
 \input{sections/01_intro}
-
 \input{sections/02_background}
-\input{sections/03_assumptions}
-\input{sections/04_requirements}
-
-\input{sections/05_preliminaries}
-\input{sections/06_formal_setting}
-
-\input{sections/07_six_family_lower_bound}
-\input{sections/08_six_family_construction_before_refinement}
-
-\input{sections/09_refinement}
-\input{sections/09aa_enr_split}
-\input{sections/09ab_ctx_split}
-\input{sections/09ac_nor_split}
-
-\input{sections/10_nine}
-\input{sections/11_representation}
-\input{sections/12_consequences}
-\input{sections/13_interpretation}
-
-\input{sections/14_related_work}
-\input{sections/15_limits}
-\input{sections/16_conclusion}
+\input{sections/03_formal_setting}
+\input{sections/04_reference_inventory}
+\input{sections/05_algebra}
+\input{sections/06_nine_regimes}
+\input{sections/07_lower_bound}
+\input{sections/08_determinancy}
+\input{sections/09_application}
+\input{sections/60_related_work}
+\input{sections/70_limits}
+\input{sections/80_conclusion}
 
 % =============================================================================
 \section*{Statements and Declarations}
@@ -267,6 +245,104 @@ research, authorship, and publication of this work.
 \clearpage
 \input{sections/99_appendixA}   % pairwise collapse enumeration
 
-\bibliographystyle{plainnat}
-\bibliography{bibliography/bibliography}
+\begin{thebibliography}{99}
+  \small
+
+  \bibitem[Arp et al.(2015)]{arp2015building}
+  R.\ Arp, B.\ Smith, and A.\ D.\ Spear.
+  \emph{Building Ontologies with Basic Formal Ontology}.
+  MIT Press, 2015.
+
+  \bibitem[Bowker and Star(1999)]{bowkerstar1999}
+  G.\ C.\ Bowker and S.\ L.\ Star.
+  \emph{Sorting Things Out: Classification and Its Consequences}.
+  MIT Press, Cambridge, MA, 1999.
+
+  \bibitem[Case(2026)]{case2026neutral}
+  D.\ M.\ Case.
+  \emph{Neutral Substrates: A Design Constraint for Interoperability under Persistent Disagreement}.
+  arXiv preprint \href{https://arxiv.org/abs/2601.14271}{arXiv:2601.14271}, 2026.
+
+  \bibitem[Edwards(2011)]{edwards2011}
+  P.\ N.\ Edwards.
+  \emph{A Vast Machine: Computer Models, Climate Data, and the Politics of Global Warming}.
+  MIT Press, 2011.
+
+  \bibitem[Gangemi et al.(2002)]{gangemi2002dolce}
+  A.\ Gangemi, N.\ Guarino, C.\ Masolo, A.\ Oltramari, and L.\ Schneider.
+  Sweetening ontologies with DOLCE.
+  In \emph{EKAW 2002}, volume 2473 of LNCS, pages 166--181. Springer, 2002.
+
+  \bibitem[Grieves and Vickers(2016)]{grieves2016}
+  M.\ Grieves and J.\ Vickers.
+  Digital twin: Mitigating unpredictable, undesirable emergent behavior in complex systems.
+  In \emph{Transdisciplinary Perspectives on Complex Systems}, pages 85--113. Springer, 2016.
+
+  \bibitem[Guarino(1998)]{guarino1998roles}
+  N.\ Guarino.
+  On the ontological status of roles.
+  \emph{Applied Ontology}, 1998.
+
+  \bibitem[Guarino and Welty(2002)]{guarinowelty2002}
+  N.\ Guarino and C.\ A.\ Welty.
+  Evaluating ontological decisions with OntoClean.
+  \emph{Communications of the ACM}, 45(2):61--65, 2002.
+
+  \bibitem[Guizzardi(2005)]{guizzardi2005}
+  G.\ Guizzardi.
+  \emph{Ontological Foundations for Structural Conceptual Models}.
+  PhD thesis, University of Twente, 2005.
+
+  \bibitem[Haslanger(2012)]{haslanger2012}
+  S.\ Haslanger.
+  \emph{Resisting Reality: Social Construction and Social Critique}.
+  Oxford University Press, 2012.
+
+  \bibitem[Hodges(1997)]{hodges1997}
+  W.\ Hodges.
+  \emph{A Shorter Model Theory}.
+  Cambridge University Press, 1997.
+
+  \bibitem[ISO/IEC(2018)]{isoiec24707}
+  ISO/IEC.
+  Information technology --- Common Logic (CL): A framework for a family of logic-based languages.
+  ISO/IEC 24707:2018, 2018.
+
+  \bibitem[Kutz et al.(2010)]{kutz2010}
+  O.\ Kutz, T.\ Mossakowski, and D.\ L\"ucke.
+  Carnap, Goguen, and the hyperontologies: Logical pluralism and heterogeneous structuring in ontology design.
+  \emph{Logica Universalis}, 4(2):255--333, 2010.
+
+  \bibitem[Longino(1990)]{longino1990}
+  H.\ E.\ Longino.
+  \emph{Science as Social Knowledge: Values and Objectivity in Scientific Inquiry}.
+  Princeton University Press, 1990.
+
+  \bibitem[Masolo et al.(2003)]{masolo2003wonderweb}
+  C.\ Masolo, S.\ Borgo, A.\ Gangemi, N.\ Guarino, and A.\ Oltramari.
+  WonderWeb Deliverable D18: Ontology Library.
+  IST Project 2001-33052 WonderWeb, 2003.
+
+  \bibitem[Moreau and Missier(2013)]{provdm2013}
+  L.\ Moreau and P.\ Missier (eds.).
+  PROV-DM: The PROV Data Model.
+  W3C Recommendation, 30 April 2013.
+
+  \bibitem[Pearl(2009)]{pearl2009}
+  J.\ Pearl.
+  \emph{Causality: Models, Reasoning, and Inference}.
+  Cambridge University Press, 2nd edition, 2009.
+
+  \bibitem[Smith and Ceusters(2015)]{smithceusters2015bfo}
+  B.\ Smith and W.\ Ceusters.
+  Basic Formal Ontology 2.0: Specification and user's guide.
+  \emph{Applied Ontology}, 10(1):1--77, 2015.
+
+  \bibitem[Wilkinson et al.(2016)]{wilkinson2016}
+  M.\ D.\ Wilkinson et al.
+  The FAIR Guiding Principles for scientific data management and stewardship.
+  \emph{Scientific Data}, 3:160018, 2016.
+
+\end{thebibliography}
+
 \end{document}
