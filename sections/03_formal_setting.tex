@@ -43,8 +43,8 @@ survive ordinary transformations of records.
 Identity conditions must not depend on interpretive convergence.
 An entity that must change its ontological status to enter a
 new relationship has not been stably referred to.
-A stability-critical distinction may not be carried only by a
-role, flag, or contextual predicate.
+A stability-critical distinction must be represented in the substrate,
+rather than carried by a role, flag, or contextual predicate.
 Such devices rely on downstream conventions and can therefore
 permit divergent judgments under persistent disagreement.
 
@@ -63,10 +63,10 @@ as common ground before interpretive agreement is available.
 We minimize referential structure subject to the above constraints.
 Minimality is measured by the number of identity regimes
 needed to preserve neutrality and stable reference.
-A reduction is admissible only when it preserves the relevant identity distinctions
-without relocating them into hidden discriminators.
+A reduction is admissible when it preserves the relevant identity distinctions
+without relocating them into roles, flags, or other discriminators.
 
-A reduction counts as genuine only when it does not reintroduce
+A reduction counts as genuine when it does not reintroduce
 a collapsed distinction through
 a role, flag, contextual predicate, workflow state, schema convention,
 or application-level discriminator.
@@ -112,11 +112,19 @@ The transformation basis $\Fset$ consists of the following admissible operation 
 \end{enumerate}
 \end{definition}
 
-The transformation families are structural rather than interpretive.
-They do not assert causal or normative claims.
-They describe operations that may be logged or recognized without
-deciding what those operations mean under any particular admissible framework.
-Their significance for this paper lies only in their effect on identity.
+The transformation families are typed operation families.
+A transformation is evaluated relative to the carrier-basis pair to which it is applied.
+Thus aggregation/decomposition does not name one untyped operation
+with the same identity effect for every carrier.
+It names a family of coarsening and refinement operations whose effect
+depends on the identity basis at issue.
+A transformation breaks identity when it restructures identity-relevant components.
+It may remain non-breaking when it restructures a non-identity-bearing description.
+
+The basis is not claimed to be complete for all possible record systems.
+It is a representative basis of ordinary operations in
+provenance, versioning, institutional recordkeeping, and data-governance practice.
+The lower-bound result is conditional on this basis.
 
 % -----------------------------------------------------------------------------
 \subsection{Classification of Transformations}
@@ -124,7 +132,7 @@ Their significance for this paper lies only in their effect on identity.
 % -----------------------------------------------------------------------------
 
 A regime classifies each applicable transformation by how it affects the declared identity basis.
-We use three classifications.
+We use four classifications.
 
 \begin{definition}[Transformation classification]
 \label{def:transformation_classification}
@@ -145,7 +153,7 @@ The distinction between $\PRS$ and $\NEU$ matters.
 A $\PRS$ transformation preserves identity in a way that is relevant to the regime's identity basis.
 An $\NEU$ transformation does not bear on that identity basis.
 Both are non-breaking.
-Only $\BRK$ breaks identity.
+A transformation breaks identity when its classification is $\BRK$.
 Thus $\NEU$ does not mean that the operation is ignored by the system.
 It means that the operation does not alter identity under the regime being considered.
 A fourth value, $\NA$, marks a transformation that cannot arise for the regime's carrier at all,
@@ -197,6 +205,34 @@ and diverge under another.
 The substrate must declare which identity basis is being preserved.
 
 % -----------------------------------------------------------------------------
+\subsection{Basis Plurality}
+\label{subsec:basis_plurality}
+% -----------------------------------------------------------------------------
+
+A carrier kind exhibits basis plurality when admissible frameworks
+require stable reference to that carrier under more than one identity basis.
+Basis plurality is stronger than the mere availability of multiple descriptions.
+It means that the substrate must support frameworks that preserve different
+sameness conditions for the same carrier kind.
+
+\begin{definition}[Basis plurality]
+\label{def:basis_plurality}
+A carrier kind has \emph{basis plurality} when admissible frameworks
+require stable reference to that carrier kind under more than one identity basis.
+A neutral substrate serving those frameworks must preserve each required basis
+without relocating the distinction into a hidden regime.
+\end{definition}
+
+The lower-bound proof uses three witnessed cases of basis plurality.
+Plain referents may be tracked by locus or object,
+scopes by extension or structure,
+and rules by content or structure.
+Other admissible bases may exist.
+When both witnessed bases are in play,
+one regime cannot serve both without changing identity behavior
+or recovering the distinction elsewhere.
+
+% -----------------------------------------------------------------------------
 \subsection{Hidden Regimes}
 \label{subsec:hidden_regimes}
 % -----------------------------------------------------------------------------
@@ -219,7 +255,7 @@ Hidden regimes violate the neutral-substrate discipline because their
 application is not fixed by the substrate.
 They require agreement about how the discriminator should be interpreted.
 Under persistent disagreement, that agreement cannot be assumed.
-A collapse that can be repaired only by a hidden regime is therefore
+A collapse repaired through a hidden regime is therefore
 not a genuine reduction in declared referential structure.
 
 % -----------------------------------------------------------------------------
@@ -229,17 +265,21 @@ not a genuine reduction in declared referential structure.
 
 The lower bound proved below is conditional.
 It holds for neutral accountability substrates satisfying the assumptions
-of this section and using the transformation basis of Definition~\ref{def:transformation_basis}.
-It asserts that, under the stated constraints,
-fewer than nine regimes cannot preserve stable reference
+of this section, using the transformation basis of
+Definition~\ref{def:transformation_basis},
+and supporting the witnessed basis pluralities of
+Definition~\ref{def:basis_plurality}.
+
+Under those conditions, fewer than nine regimes cannot preserve stable reference
 without changing transformation behavior or reintroducing a hidden regime.
-The claim is a lower bound only:
-it does not assert that nine regimes
-are sufficient for every substrate,
-nor that the nine derived below exhaust
-the coherent identity regimes.
+
+The result is open-ended upward but fixed downward.
+The carrier kinds, identity bases, and transformation families used here
+are sufficient to witness the core.
+Further regimes may be required in richer deployments.
+That possibility does not affect the lower bound proved here.
 
 The next section states the reference inventory.
 The inventory supplies the referents that must remain addressable.
-The transformation basis supplied here determines
-which of those referents can share an identity regime.
+The transformation basis supplied here determines which of those referents
+can share an identity regime.

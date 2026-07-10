@@ -5,25 +5,22 @@
 \label{sec:inventory}
 % =============================================================================
 
-Before asking how identity behaves, we fix what there is to individuate.
-An accountability substrate must let one state, inspect, and
-compare claims about who is responsible, which authority governs, what happened, where it applies, what was recorded, and what was acted upon.
+Before analyzing identity, we fix the carrier inventory.
+An accountability substrate must let one state, inspect, and compare claims
+about who is responsible, which authority governs, what happened,
+where it applies, what was recorded, and what was acted upon.
 It must do this without embedding causal or normative content at the substrate level.
-That imposes a short inventory of reference kinds.
-The inventory is modest:
-not a theorem, not an upper ontology,
-and not a claim that these are the only things a domain may represent.
-It states that an accountability substrate under the assumptions of
-Section~\ref{sec:formal_setting}
-must be able to refer to these kinds of things.
 
-The inventory supplies identity carriers.
-The transformation algebra of Section~\ref{sec:algebra} determines how those carriers are individuated.
-This distinction matters.
-A reference kind says what must remain addressable.
-An identity regime says what counts as the same referent under transformation.
-The central result of the paper is that the number of identity regimes
-required by stable reference exceeds the number of reference kinds in the inventory.
+The inventory is modest.
+It is not a theorem, an upper ontology, or a complete domain ontology.
+It states the carrier kinds required by the accountability setting analyzed here.
+Those carriers are the referents that must remain addressable under the assumptions
+of Section~\ref{sec:formal_setting}.
+
+The inventory supplies identity carriers but does not determine identity regimes.
+A reference kind identifies the referents that must remain addressable.
+An identity regime specifies sameness for a carrier under transformation.
+The lower-bound proof depends on that distinction.
 
 % -----------------------------------------------------------------------------
 \subsection{Reference Kinds and Identity Carriers}
@@ -31,17 +28,17 @@ required by stable reference exceeds the number of reference kinds in the invent
 % -----------------------------------------------------------------------------
 
 \begin{definition}[Reference kind]
-\label{def:reference_kind}
-A \emph{reference kind} is a class of referents that a
-neutral accountability substrate must be able to identify, track, and
-distinguish from other referents without making object-level causal or normative commitments.
+  \label{def:reference_kind}
+  A \emph{reference kind} is a class of referents that a
+  neutral accountability substrate must be able to identify, track, and
+  distinguish from other referents without making object-level causal or normative commitments.
 \end{definition}
 
 \begin{definition}[Identity carrier]
-\label{def:identity_carrier}
-An \emph{identity carrier} is a referential position in the substrate to
-which an identity regime may be assigned.
-It is the object whose sameness, difference, and persistence are evaluated under transformation.
+  \label{def:identity_carrier}
+  An \emph{identity carrier} is a referential position in the substrate to
+  which an identity regime may be assigned.
+  It is the object whose sameness, difference, and persistence are evaluated under transformation.
 \end{definition}
 
 Reference kinds supply identity carriers.
@@ -57,33 +54,33 @@ The inventory used in this paper is:
 \begin{center}
   \begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.68\textwidth}@{}}
     \toprule
-    Reference kind & What must remain referable \\
+    Reference kind    & Required referent                                                             \\
     \midrule
     Obligation-bearer &
     a party that can bear responsibility across the occurrences
-    discharging, violating, or contesting that responsibility \\
-    Rule &
+    discharging, violating, or contesting that responsibility                                         \\
+    Rule              &
     a governing normative structure, distinct from the acts that enact, amend, apply, or challenge it \\
-    Occurrence &
-    a happening individuated by temporal realization and provenance \\
-    Scope &
-    the domain where, to whom, or under what conditions a rule applies \\
-    Record &
+    Occurrence        &
+    a happening individuated by temporal realization and provenance                                   \\
+    Scope             &
+    the applicability domain for a rule, including places, parties, periods,
+    procedures, classifications, or conditions                                                        \\
+    Record            &
     a descriptive indicator or record that carries reference without
-    asserting causal or normative truth \\
-    Plain referent &
+    asserting causal or normative truth                                                               \\
+    Plain referent    &
     a thing acted upon, regulated, located, transferred, or observed
-    that neither bears obligations nor grounds authority as such \\
+    that neither bears obligations nor grounds authority as such                                      \\
     \bottomrule
   \end{tabular}
 \end{center}
 
-These six reference kinds are familiar from foundational
-ontology, legal ontology, provenance, and institutional recordkeeping.
+These six reference kinds are familiar from foundational ontology,
+legal ontology, provenance, and institutional recordkeeping.
 The paper does not claim novelty for the inventory itself.
-The novelty lies in showing that this inventory does not settle the
-identity structure required by a neutral substrate.
-Three of the six kinds split when ordinary transformations are considered.
+The inventory matters because it supplies the carriers on which
+the later identity analysis operates.
 
 % -----------------------------------------------------------------------------
 \subsection{Obligation-Bearers}
@@ -94,8 +91,8 @@ An accountability substrate must support reference to obligation-bearing entitie
 An obligation-bearer is a party that can bear
 responsibility, duty, liability, authority, or accountability
 across occurrences in which those statuses are fulfilled, violated, transferred, contested, or discharged.
-The substrate need not decide whether a party is actually responsible in a particular case.
-It must only preserve reference to the party that a framework may treat as responsible.
+The substrate need not decide whether a party is responsible in a particular case.
+It must preserve reference to the party that a framework may treat as responsible.
 
 In multi-jurisdiction regulatory reporting, a corporate entity may be treated differently across jurisdictions.
 One jurisdiction may individuate responsibility at the parent-entity level.
@@ -127,9 +124,9 @@ for purposes of citation, comparison, and provenance.
 If the rule is collapsed into its enactment or application occurrence,
 then later disagreement about the occurrence changes reference to the rule itself.
 
-Rules therefore supply identity carriers distinct from occurrences.
-They also supply one of the important split cases below.
-A rule may be individuated by what it requires or by how its text or internal structure is organized.
+Rules also preview one of the split cases below.
+A rule may be individuated by imposed requirements
+or by textual or internal structure.
 That difference is not settled by naming the kind ``rule.''
 It is settled by transformation behavior.
 
@@ -138,12 +135,11 @@ It is settled by transformation behavior.
 \label{subsec:inventory_occurrences}
 % -----------------------------------------------------------------------------
 
-An accountability substrate must support reference to occurrences.
+An accountability substrate must support reference to \emph{occurrences}.
 An occurrence is a happening individuated by temporal realization and provenance.
-Examples include filings, inspections, votes, transfers, transactions,
+Illustrative examples include filings, inspections, votes, transfers, transactions,
 observations, decisions, enactments, amendments, and enforcement actions.
-The list is illustrative.
-What matters is that the occurrence can be referred to as something that happened,
+The substrate must preserve reference to the occurrence as something that happened,
 independently of how competing frameworks evaluate it.
 
 In multi-jurisdiction regulatory reporting, two jurisdictions may disagree about
@@ -170,17 +166,17 @@ They may be nested, overlapping, partially coincident, or contested.
 
 In multi-jurisdiction regulatory reporting, the same rule may apply to
 different entities, places, facilities, transactions, or reporting periods under different frameworks.
-If scope is represented only as an attribute of the rule, then a change in
+If scope is represented as an attribute of the rule, then a change in
 applicability can appear to change the identity of the rule.
-If scope is represented only as a property of obligation-bearers, then the
+If scope is represented as a property of obligation-bearers, then the
 domain of applicability cannot be compared independently of the parties within it.
-A neutral substrate needs scope as a referent in its own right.
+A neutral substrate needs scope as a separate referent.
 
-Scopes supply another split case.
-A scope may be individuated extensionally, by what it covers.
-It may also be individuated structurally, by how its internal jurisdictional or applicability structure is organized.
-Decomposing a scope can preserve its extension while changing its structure.
-The reference kind ``scope'' therefore does not determine a single identity regime.
+Scopes also preview one of the split cases below.
+A scope may be individuated extensionally, by covered cases,
+or structurally, by internal jurisdictional or applicability organization.
+Decomposition can preserve one basis while changing the other.
+The reference kind ``scope'' therefore does not determine an identity regime.
 
 % -----------------------------------------------------------------------------
 \subsection{Records}
@@ -193,17 +189,14 @@ provenance item, or other referent that can be cited, transferred, compared, ann
 The substrate may record that a source asserts a claim.
 It does not thereby assert the claim.
 
-In cross-institutional provenance, a record may be produced by
-one institution, transferred to another, annotated by a third, and re-analyzed by a fourth.
+In cross-institutional provenance, a record may be produced by one institution,
+received by another, annotated by a third, and reanalyzed by a fourth.
 The institutions may disagree about what the record shows or whether it supports a conclusion.
-They must nevertheless be able to refer to the same record through the chain of custody, annotation, and reuse.
+They must nevertheless be able to refer to the same record through custody, annotation, and reuse.
 
-Records cannot be reduced to the entities or occurrences they describe.
-A record may describe an occurrence without being that occurrence.
-A record may concern a rule without being that rule.
-A record may support an attributed causal or normative claim without
-making that claim at the substrate level.
-Stable reference to records is therefore required independently of the referents described by records.
+Records cannot be reduced to the entities, occurrences, rules, or claims they describe.
+Stable reference to records is required independently of those referents,
+including when a record supports an attributed causal or normative claim.
 
 % -----------------------------------------------------------------------------
 \subsection{Plain Referents}
@@ -228,36 +221,28 @@ A sample may be transferred across institutions.
 The substrate must preserve reference to the thing without deciding which
 causal or normative interpretation applies to it.
 
-Plain referents supply the third split case.
-A referent may be individuated by locus, such as the site or place that remains fixed.
+Plain referents also preview one of the split cases below.
+A referent may be individuated by locus,
+such as the site or place that remains fixed.
 It may also be individuated by the object occupying that locus.
-Forking or replacement can preserve the locus while changing the object, or preserve
-the object while changing the locus.
-The reference kind ``plain referent'' therefore does not determine a single identity regime.
+Forking or replacement can separate those bases.
+The reference kind ``plain referent'' therefore
+does not by itself determine an identity regime.
 
 % -----------------------------------------------------------------------------
 \subsection{Summary}
 \label{subsec:inventory_summary}
 % -----------------------------------------------------------------------------
 
-Counting reference kinds gives six:
+The inventory supplies six reference kinds:
 obligation-bearer, rule, occurrence, scope, record, and plain referent.
-Counting identity regimes will yield nine (Section~\ref{sec:nine}).
-The inventory does not derive that lower bound.
-It supplies the carriers on which the bound operates once the transformation
-basis is applied, which is why the paper distinguishes reference kinds from
-identity regimes.
-The additional regimes appear because three reference kinds underdetermine their identity basis.
-Rules split into content-fixed and structure-fixed regimes.
-Scopes split into extension-fixed and structure-fixed regimes.
-Plain referents split into locus-fixed and object-fixed regimes.
+These kinds are the carriers for the lower-bound construction
+and do not determine identity regimes.
 
-This distinction addresses the main methodological risk.
-An argument that listed six requirements and then named six regimes would be circular.
-Here the inventory names only what must remain referable, the transformation
-algebra determines how identity behaves, and the nine-regime lower-bound core follows
-from the mismatch between those two levels.
+The inventory identifies the required referents.
+The transformation analysis determines their behavior under ordinary record operations.
+The core is derived after applying those operations
+to the carrier-basis pairs.
 
 The next section applies the transformation basis of
-Section~\ref{sec:formal_setting} to these six carriers, determining which can
-share identity behavior and which must split.
+Section~\ref{sec:formal_setting} to these six carriers.

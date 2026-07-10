@@ -5,9 +5,9 @@
 \label{sec:background}
 % =============================================================================
 
-This paper builds on the \emph{Neutral Substrates (NS)} paper~\citep{case2026neutral},
-which states the design constraint for a shared representational base that must
-remain usable under persistent interpretive disagreement.
+This paper builds on \emph{Neutral Substrates (NS)}~\citep{case2026neutral}.
+That paper defines the design constraint for a shared representational base
+that must remain usable under persistent interpretive disagreement.
 This paper analyzes one aspect of that constraint:
 the identity and persistence structure needed for stable reference to survive
 ordinary transformations of records.
@@ -31,7 +31,7 @@ their source.
 \end{definition}
 
 A substrate is not the whole record system.
-It is the foundational layer on which further interpretive claims may be layered,
+It is the foundational layer for later interpretive claims,
 including causal or normative interpretations,
 evidentiary assessments, explanatory accounts, and institutional determinations.
 Its purpose is to make shared reference possible without forcing agreement about
@@ -39,10 +39,8 @@ every interpretation of the referent.
 A substrate may identify an event, entity, decision, document, instrument, rule,
 policy, observation, or institutional artifact, and it may preserve identifiers,
 timestamps, provenance, and persistence relations among them.
-Whether some event caused another, whether some decision was justified, or
-whether some rule ought to apply are not commitments of the substrate simply
-because the substrate identifies the relevant event, decision, rule, or
-institutional artifact.
+Identifying the relevant event, decision, rule, or institutional artifact
+does not commit the substrate to claims about causation, justification, or applicability.
 
 \begin{definition}[Referential Regime, from NS]
   \label{def:ns-referential-regime}
@@ -52,8 +50,7 @@ institutional artifact.
     \item co-reference conditions, and
     \item persistence conditions
   \end{enumerate}
-  by which a substrate fixes and tracks entities, occurrences, and institutional
-  artifacts.
+  used by a substrate to fix and track entities, occurrences, and institutional artifacts.
 \end{definition}
 
 Individuation conditions determine when something counts as one thing rather
@@ -61,10 +58,10 @@ than another.
 Co-reference conditions determine when two references refer to the same thing.
 Persistence conditions determine when something remains the same thing across
 time, transformation, revision, or institutional change.
-The referential regime is what allows a substrate to support shared use:
-if parties cannot share enough reference to identify what is being interpreted,
-they cannot reliably disagree about causes, norms, explanations, or obligations
-concerning that thing.
+The referential regime allows a substrate to support shared use:
+if parties cannot share enough reference to identify the referent under interpretation,
+they cannot reliably disagree about
+causes, norms, explanations, or obligations concerning that referent.
 
 \begin{definition}[Referential Commitments, from NS]
   \label{def:ns-referential-commitments}
@@ -98,8 +95,8 @@ not to the asserted causal or normative proposition.
 \emph{Neutral Substrates} establishes the design constraint:
 a neutral substrate requires stable reference while leaving causal and normative
 interpretation to admissible extensions.
-It does not analyze what makes stable reference achievable once the substrate's
-records are transformed in ordinary use.
+This paper analyzes the identity structure needed to preserve stable reference
+as substrate records are transformed in ordinary use.
 Records may be re-expressed, annotated, refined, decomposed, aggregated,
 reassigned, substituted, forked, extended with provenance, or evolved through
 state change.
@@ -120,15 +117,15 @@ by deriving the lower-bound identity structure it imposes.
 The dependency is:
 
 \begin{center}
-\begin{tabular}{@{}p{0.2\textwidth}>{\raggedright\arraybackslash}p{0.7\textwidth}@{}}
-\textbf{Neutral Substrates:} &
-a neutral substrate requires stable reference through individuation,
-co-reference, and persistence.\\[2pt]
-\textbf{This paper:} &
-stable reference under ordinary transformations requires
-transformation-invariant identity regimes, at least nine under the
-assumptions fixed below.\\
-\end{tabular}
+  \begin{tabular}{@{}p{0.2\textwidth}>{\raggedright\arraybackslash}p{0.7\textwidth}@{}}
+    \textbf{Neutral Substrates:} &
+    a neutral substrate requires stable reference through individuation,
+    co-reference, and persistence. \\[2pt]
+    \textbf{This paper:}         &
+    stable reference under ordinary transformations requires
+    transformation-invariant identity regimes, at least nine under the
+    assumptions fixed below.       \\
+  \end{tabular}
 \end{center}
 
 Section~\ref{sec:algebra} makes Definition~\ref{def:tinv} operational as a

@@ -5,12 +5,11 @@
 \label{sec:bound}
 % =============================================================================
 
-The previous section collected the nine core identity regimes used in this paper.
+The previous section collected the nine core identity regimes.
 This section proves the lower-bound claim.
-The proof does not require showing that these nine regimes exhaust all admissible identity bases.
-It requires only two facts:
+The proof requires two facts:
 the inventory requires stable reference to six carrier kinds,
-and three of those carrier kinds exhibit witnessed split pressure under the transformation basis.
+and three of those carrier kinds exhibit witnessed basis plurality under the transformation basis.
 
 % -----------------------------------------------------------------------------
 \subsection{The Inventory Floor}
@@ -19,7 +18,8 @@ and three of those carrier kinds exhibit witnessed split pressure under the tran
 
 The reference inventory of Section~\ref{sec:inventory} requires stable reference to six kinds of carrier:
 obligation-bearers, rules, occurrences, scopes, records, and plain referents.
-Stable reference to a carrier kind requires an identity regime for that kind, because the substrate must determine when representations of that carrier count as the same referent.
+Stable reference to a carrier kind requires an identity regime for that kind,
+because the substrate must determine when representations of that carrier count as the same referent.
 
 \begin{lemma}[Inventory floor]
 \label{se200.lem.InventoryFloor}
@@ -32,7 +32,7 @@ must realize at least one identity regime for each required carrier kind.
 By Definition~\ref{def:reference_kind}, each reference kind in the inventory
 must be identifiable, trackable, and distinguishable from other referents
 without making object-level causal or normative commitments.
-By Definition~\ref{def:identity_regime}, an identity regime states what counts as
+By Definition~\ref{def:identity_regime}, an identity regime specifies
 sameness for a referent under transformation.
 Thus each required carrier kind needs identity conditions sufficient to
 preserve stable reference to carriers of that kind.
@@ -46,37 +46,41 @@ That is a hidden regime, excluded by Section~\ref{sec:formal_setting}.
 Therefore each required carrier kind contributes at least one identity regime.
 \end{proof}
 
-The inventory alone therefore gives a floor of six regimes.
-This is not yet the main result.
-The main result comes from the fact that three required carrier kinds
-cannot be served by only one regime each.
+The inventory therefore gives a floor of six regimes.
+The witnessed basis pluralities for plain referents, scopes, and rules
+raise that floor to nine.
 
 % -----------------------------------------------------------------------------
 \subsection{Witnessed Splits}
 \label{subsec:witnessed_splits}
 % -----------------------------------------------------------------------------
 
-Three carrier kinds exhibit witnessed split pressure under the transformation basis.
+Three carrier kinds exhibit witnessed basis plurality under the transformation basis.
 
 First, plain referents split into locus-fixed and object-fixed identity.
-By Proposition~\ref{se200.prop.PlainReferentUnderdetermination}, branch/fork separates these bases.
+By Proposition~\ref{se200.prop.PlainReferentUnderdetermination},
+branch/fork separates these bases.
 A fork may preserve the locus while breaking object identity.
-Thus plain referents require both $\LOC$ and $\OBJ$.
+When both bases are in play,
+plain referents require both $\LOC$ and $\OBJ$.
 
 Second, scopes split into extension-fixed and structure-fixed identity.
-By Proposition~\ref{se200.prop.ScopeUnderdetermination}, aggregation/decomposition separates these bases.
+By Proposition~\ref{se200.prop.ScopeUnderdetermination},
+aggregation/decomposition separates these bases.
 A decomposition may preserve the covered cases while changing the internal scope structure.
-Thus scopes require both $\SCOPEE$ and $\SCOPES$.
+When both bases are in play,
+scopes require both $\SCOPEE$ and $\SCOPES$.
 
 Third, rules split into content-fixed and structure-fixed identity.
-By Proposition~\ref{se200.prop.RuleUnderdetermination}, refinement separates these bases.
-A refinement may preserve what the rule requires while changing its textual or internal structure.
-Thus rules require both $\RULEC$ and $\RULES$.
+By Proposition~\ref{se200.prop.RuleUnderdetermination},
+refinement separates these bases.
+A refinement may preserve rule content while changing textual or internal structure.
+When both bases are in play,
+rules require both $\RULEC$ and $\RULES$.
 
-Each split adds one regime beyond the one-regime-per-carrier minimum.
-The additional regimes are not additional reference kinds.
+Each witnessed split adds one regime beyond the one-regime-per-carrier floor.
+The additional regimes are not new reference kinds.
 They are distinct identity bases for required carrier kinds.
-
 
 % -----------------------------------------------------------------------------
 \subsection{The Bound}
@@ -86,22 +90,28 @@ They are distinct identity bases for required carrier kinds.
 \begin{theorem}[Nine-regime lower bound]
 \label{se200.thm.NineRegimeLowerBound}
 Under the assumptions of Section~\ref{sec:formal_setting},
-a neutral accountability substrate operating under persistent disagreement
-must realize at least nine identity regimes
-for the carrier-basis pairs considered in this paper.
+a neutral accountability substrate that supports the inventory of
+Section~\ref{sec:inventory}
+and supports the witnessed basis pluralities for plain referents,
+scopes, and rules
+must realize at least nine identity regimes.
 \end{theorem}
 
 \begin{proof}
 By Lemma~\ref{se200.lem.InventoryFloor},
 the six required carrier kinds in Section~\ref{sec:inventory}
-|require at least six identity regimes.
+require at least six identity regimes.
 
-Three of those carrier kinds require an additional regime because they exhibit witnessed split pressure.
-Plain referents require both $\LOC$ and $\OBJ$ by Proposition~\ref{se200.prop.PlainReferentUnderdetermination}.
-Scopes require both $\SCOPEE$ and $\SCOPES$ by Proposition~\ref{se200.prop.ScopeUnderdetermination}.
-Rules require both $\RULEC$ and $\RULES$ by Proposition~\ref{se200.prop.RuleUnderdetermination}.
+Three of those carrier kinds require an additional regime when the witnessed
+basis pluralities are in play.
+Plain referents require both $\LOC$ and $\OBJ$ by
+Proposition~\ref{se200.prop.PlainReferentUnderdetermination}.
+Scopes require both $\SCOPEE$ and $\SCOPES$ by
+Proposition~\ref{se200.prop.ScopeUnderdetermination}.
+Rules require both $\RULEC$ and $\RULES$ by
+Proposition~\ref{se200.prop.RuleUnderdetermination}.
 
-Therefore the required lower-bound core contains:
+Therefore the required core contains:
 \[
 \begin{gathered}
 \OBL,\quad \OCC,\quad \REC,\quad \LOC,\quad \OBJ,\\
@@ -113,7 +123,8 @@ Equivalently,
 1 + 1 + 1 + 2 + 2 + 2 = 9 .
 \]
 Thus any neutral accountability substrate satisfying the stated assumptions
-|must realize at least nine identity regimes for these carrier-basis pairs.
+and supporting the witnessed basis pluralities
+must realize at least nine identity regimes.
 This proves the lower-bound claim.
 \end{proof}
 
@@ -129,11 +140,11 @@ established by Theorem~\ref{se200.thm.NineRegimeLowerBound}.
 \end{corollary}
 
 \begin{proof}
-The nine-regime lower-bound core is witnessed by distinctions
+The core is witnessed by distinctions
 already forced by the transformation basis $\Fset$.
 Adding transformations adds classification coordinates.
 It may leave the existing distinctions unchanged.
-It may make an already-distinct pair distinct in additional ways.
+It may separate an already-distinct pair in further ways.
 It may also force further splits.
 But it cannot erase a split already witnessed by $\Fset$.
 Therefore any transformation basis containing $\Fset$ still requires
@@ -141,26 +152,22 @@ at least the nine core regimes derived here.
 \end{proof}
 
 The monotonicity claim is intentionally limited.
-It establishes only that incompleteness of the transformation basis
+It establishes that incompleteness of the transformation basis
 cannot make the present lower bound disappear.
-A richer basis may leave the bound unchanged or raise it, but cannot lower it.
+A richer basis may leave the bound unchanged or raise it,
+but cannot lower it.
 
 % -----------------------------------------------------------------------------
-\subsection{Limits}
+\subsection{Boundary of the Proof}
 \label{subsec:bound_not_claim}
 % -----------------------------------------------------------------------------
 
-The claim is a lower bound.
-Under the stated neutral-substrate assumptions,
-fewer than nine regimes cannot preserve stable reference for the carrier-basis pairs analyzed here.
-The result does not say that these nine regimes exhaust the coherent identity regimes.
-It does not say that the transformation basis is complete for every record system.
-It does not say that a deployed system should expose these nine regimes and no others.
+The claim proved here is a lower bound.
+Under the stated assumptions and witnessed basis pluralities,
+fewer than nine regimes cannot preserve stable reference
+without changing transformation behavior or reintroducing a hidden regime.
 
-Additional admissible identity bases may force additional regimes.
-For example, a record may be tracked by descriptive content,
-by a particular file, by a signed original, by a cryptographic hash, or by a chain-of-custody token.
-An occurrence may be tracked as a fine-grained realization or as a coarser event complex.
-An obligation-bearer may be tracked as a person, role, or organizational unit.
-Such refinements would raise the number of regimes required in a deployment.
-They do not remove the nine-regime lower-bound core established here.
+The proof does not establish an upper bound.
+It does not claim that the nine regimes exhaust all coherent identity regimes.
+It does not claim that every deployed system must expose these regimes.
+Those broader limits are stated in Section~\ref{sec:limits}.

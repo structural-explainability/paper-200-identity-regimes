@@ -1,13 +1,14 @@
 % !TeX root = ../se200_referential_regimes.tex
 
 % =============================================================================
-\section{Nine Regimes of Referential Identity}
+\section{The Nine-Regime Lower-Bound Core}
 \label{sec:nine}
 % =============================================================================
 
-The transformation analysis of Section~\ref{sec:algebra} yields nine identity regimes.
-Three reference kinds have a single identity basis.
-Three reference kinds split into two identity bases each.
+The transformation analysis of Section~\ref{sec:algebra}
+yields the following nine core regimes.
+Three carrier-basis pairs contribute one regime each.
+Three carrier kinds have witnessed split pairs.
 
 The table uses the following short regime labels:
 
@@ -24,9 +25,12 @@ The table uses the following short regime labels:
 \end{description}
 
 Their classifications over $\Fset$ are collected in Table~\ref{tab:master}.
-The table records the lower-bound profiles used in this paper.
-It is not a complete classification of every identity basis a deployed system may need.
-Additional identity bases may refine these profiles or introduce further regimes.
+The table records the core profiles used in the lower-bound proof.
+The witnessed split cells force the lower bound:
+BF for $\LOC/\OBJ$,
+AD for $\SCOPEE/\SCOPES$,
+and RF for $\RULEC/\RULES$.
+The remaining entries summarize the diagnostic behavior of the core profiles.
 
 \begin{table}[ht]
   \centering
@@ -53,9 +57,9 @@ Additional identity bases may refine these profiles or introduce further regimes
     \BRK{}: breaks identity;
     \NEU{}: identity-neutral/non-breaking;
     \NA{}: not applicable.
-    Each dual-basis pair has a canonical separating operation that forces its split:
+    Each witnessed split pair has a canonical separating operation:
     plain referent at BF, scope at AD, and rule at RF.
-    Some basis differences propagate to additional transformation families.}
+    Some basis differences also affect other transformation families.}
   \label{tab:master}
 \end{table}
 
@@ -65,15 +69,15 @@ A \BRK{} entry means that the transformation \emph{breaks} that basis and produc
 An \NEU{} entry means that the transformation is \emph{identity-neutral} for that regime.
 An \NA{} entry means that the transformation is \emph{not applicable} to that regime.
 
-The dual-basis pairs are the crucial rows of the result.
-$\LOC$ and $\OBJ$ are separated canonically by branching or forking.
-$\SCOPEE$ and $\SCOPES$ are separated canonically by aggregation or decomposition.
-$\RULEC$ and $\RULES$ are separated canonically by refinement.
-The canonical separating operation explains why the split is forced,
-though the two profiles may differ at other transformations as well.
+The witnessed split pairs carry the lower-bound work.
+$\LOC$ and $\OBJ$ are separated by branching or forking.
+$\SCOPEE$ and $\SCOPES$ are separated by aggregation or decomposition.
+$\RULEC$ and $\RULES$ are separated by refinement.
+The canonical separating operation explains why each split is forced.
+The two profiles in a split pair may also differ at other transformations.
 
-These regimes are defined by identity basis and transformation behavior,
-introducing no additional ontological categories.
+These regimes are defined by identity basis and transformation behavior.
+They introduce no new carrier kinds.
 
 \begin{definition}[Separation witness]
   \label{def:separation_witness}
@@ -86,7 +90,7 @@ introducing no additional ontological categories.
   or conversely.
 \end{definition}
 
-\begin{proposition}[Pairwise distinctness]
+\begin{proposition}[Distinctness of the core profiles]
   \label{se200.prop.distinct}
   The nine profiles of Table~\ref{tab:master} are pairwise distinct.
 \end{proposition}
@@ -110,7 +114,8 @@ introducing no additional ontological categories.
   Identifying such profiles would collapse the reference inventory of
   Section~\ref{sec:inventory} and force one carrier to stand in for another.
 
-  Therefore every pair of regimes in Table~\ref{tab:master} is
-  separated either by a same-carrier transformation witness or by carrier difference.
-  Appendix~\ref{app:sep} records a separating operation or carrier difference for all $\binom{9}{2}=36$ pairs.
+  Therefore every pair of core regimes in Table~\ref{tab:master}
+  is separated either by a same-carrier transformation witness
+  or by carrier difference.
+  Appendix~\ref{app:sep} records the separation basis for all $\binom{9}{2}=36$ pairs.
 \end{proof}

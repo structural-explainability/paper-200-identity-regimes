@@ -1,6 +1,29 @@
 $tex   = ".\se200_referential_regimes.tex"
 $files = @($tex) + (Get-ChildItem ".\sections\*.tex" | ForEach-Object { $_.FullName })
 
+Select-String -LiteralPath $files `
+  -Pattern "lower-bound core" `
+  -Context 1,0
+Exit 0
+
+
+Select-String -LiteralPath $files `
+  -Pattern "only|merely|exactly|alone" `
+  -Context 1,0
+Exit 0
+
+
+
+"--- current SE-200 tokens (expect all present) ---"
+"OBL","OCC","REC","LOC","OBJ","SCOPE-E","SCOPE-S","RULE-C","RULE-S" | ForEach-Object {
+  $c = (Select-String -LiteralPath $files -SimpleMatch $_).Count
+  [PSCustomObject]@{ Token = $_; Count = $c }
+} | Format-Table -AutoSize
+Exit 0
+
+
+
+
 "=== hidden regime vs discriminator ==="
 Select-String -LiteralPath $files `
   -Pattern "hidden|regime|discriminator" `
@@ -42,20 +65,6 @@ Select-String -LiteralPath $files -SimpleMatch "case2026neutral" -Context 0,0 |
   Measure-Object | ForEach-Object { "case2026neutral used: $($_.Count) time(s)" }
 Select-String -LiteralPath $tex -SimpleMatch "2601.14271" -Context 1,1
 "(expect the NS arXiv id 2601.14271 in the bibitem; confirm it matches SE-100's live id.)"
-Exit 0
-
-
-"=== regime token check ==="
-"--- current SE-200 tokens (expect all present) ---"
-"OBL","OCC","REC","LOC","OBJ","SCOPE-E","SCOPE-S","RULE-C","RULE-S" | ForEach-Object {
-  $c = (Select-String -LiteralPath $files -SimpleMatch $_).Count
-  [PSCustomObject]@{ Token = $_; Count = $c }
-} | Format-Table -AutoSize
-"--- retired tokens (expect zero; these are p300's old scheme / old NEU name) ---"
-"ENRL","ENRI","CTXE","CTXS","NORC","NORS","IGN" | ForEach-Object {
-  $c = (Select-String -LiteralPath $files -SimpleMatch $_).Count
-  [PSCustomObject]@{ Token = $_; Count = $c }
-} | Format-Table -AutoSize
 Exit 0
 
 "=== every 'nine regimes' site, to confirm 'at least' framing ==="
