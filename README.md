@@ -9,22 +9,57 @@
 [![ArXiv Prep](https://github.com/structural-explainability/paper-200-identity-regimes/actions/workflows/arxiv-prep.yml/badge.svg?branch=main)](https://github.com/structural-explainability/paper-200-identity-regimes/actions/workflows/arxiv-prep.yml)
 [![DOI](https://img.shields.io/badge/DOI-10.48550/arXiv.2601.16152-blue)](https://doi.org/10.48550/arXiv.2601.16152)
 
-> IN-PROGRESS. This paper derives the referential-regime structure
-> required by neutral substrates operating
-> under persistent interpretive disagreement.
+> Derives identity regimes that preserve stable reference
+> when neutral substrates are transformed under persistent disagreement.
+
+## Main Contribution
+
+This project derives a lower-bound identity constraint for neutral accountability records.
+When stable reference must be preserved across admissible frameworks,
+and causal or normative interpretation remains outside the substrate layer,
+reference kinds alone are insufficient.
+The substrate must also preserve the identity basis
+under which each referent remains the same through ordinary transformations.
+
+The paper shows that six required reference kinds supply the carriers:
+obligation-bearers, rules, occurrences, scopes, records, and plain referents.
+Three of those kinds underdetermine identity.
+Plain referents may be locus-fixed or object-fixed.
+Scopes may be extension-fixed or structure-fixed.
+Rules may be content-fixed or structure-fixed.
+Thus the transformation analysis forces a nine-regime lower-bound core
+
+The result is conditional on the stated neutral-substrate assumptions:
+persistent disagreement, strong stable reference, minimality, and exclusion of hidden regimes.
+It is a lower bound, not a completeness claim.
+Additional identity bases may require additional regimes,
+but do not remove the nine-regime core derived here.
+
+## Nine-Regime Lower-Bound Core
+
+| Regime    | Carrier           | Identity basis                      | Forced by                                                   |
+| --------- | ----------------- | ----------------------------------- | ----------------------------------------------------------- |
+| `OBL`     | Obligation-bearer | Responsibility-bearing identity     | Required carrier in the accountability inventory            |
+| `OCC`     | Occurrence        | Realization-and-provenance identity | Required carrier in the accountability inventory            |
+| `REC`     | Record            | Descriptive-record identity         | Required carrier in the accountability inventory            |
+| `LOC`     | Plain referent    | Locus-fixed identity                | Branch/fork separates locus identity from object identity   |
+| `OBJ`     | Plain referent    | Object-fixed identity               | Branch/fork separates object identity from locus identity   |
+| `SCOPE-E` | Scope             | Extension-fixed identity            | Aggregation/decomposition separates coverage from structure |
+| `SCOPE-S` | Scope             | Structure-fixed identity            | Aggregation/decomposition separates structure from coverage |
+| `RULE-C`  | Rule              | Content-fixed identity              | Refinement separates rule content from rule structure       |
+| `RULE-S`  | Rule              | Structure-fixed identity            | Refinement separates rule structure from rule content       |
+
+## Structural Explainability: Accountable Records Paper Series
+
+| Paper                   | Description                                                                                                                                                                                                                        |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Neutral Substrates**  | Defines the neutrality constraint for shared accountability records. A neutral substrate preserves shared reference and attribution without adopting contested causal or normative interpretations as substrate-level commitments. |
+| **Referential Regimes** | Derives the identity cost of the neutrality constraint. The paper shows that stable reference under persistent disagreement requires transformation-invariant identity regimes and derives a nine-regime lower-bound core.         |
+| **Accountable Records** | Develops the conformance layer for deployed record systems. The paper studies how basis declarations, transformation logs, and schema checks can make neutral-substrate identity commitments inspectable in practice.              |
 
 ## Paper
 
 - [PDF](./se200_referential_regimes.pdf)
-
-## Repository Structure
-
-```text
-.github/         # CI workflows
-.vscode/         # Editor settings
-bibliography/    # BibTeX references
-tools/           # Scripts
-```
 
 ## Building Locally
 
@@ -53,20 +88,6 @@ Windows:
 .\tools\build\build.ps1
 .\size.ps1
 texcount -merge -sub=section -inc -sum se200_referential_regimes.tex
-```
-
-## Stats
-
-```text
-Sum count: 12288
-Words in text: 11789
-Words in headers: 211
-Words outside text (captions, etc.): 48
-Number of headers: 81
-Number of floats/tables/figures: 1
-Number of math inlines: 222
-Number of math displayed: 18
-Files: 14
 ```
 
 ## Annotations

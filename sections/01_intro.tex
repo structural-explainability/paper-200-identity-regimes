@@ -5,126 +5,75 @@
 
 Modern accountability systems increasingly operate under legal,
 institutional, and analytic disagreement.
-In such settings, a shared data substrate cannot
-assume a single interpretation of what records mean,
-yet it must still preserve stable reference as records are amended,
-branched, refined, decomposed, aggregated, and reclassified.
+A shared data substrate cannot assume a single interpretation,
+and it must preserve stable reference as records are
+amended, forked, refined, decomposed, aggregated, and reclassified.
 This paper studies the identity conditions required by that setting.
 
-The analysis treats identity as transformation-invariance:
-two referents count as the same only relative
-to the transformations that preserve or break their identity.
-A minimal accountability inventory supplies the
-referents that must remain addressable,
-while ordinary provenance and versioning operations
-determine which referents can share an identity profile.
-The result is a lower bound: under neutral-substrate constraints,
-at least nine distinct referential regimes are required.
-Collapsing any pair either changes what is
-preserved through transformation or
-reintroduces the distinction through
-hidden roles, flags, or contextual predicates.
-The result is not an upper ontology or completeness claim;
-it identifies a stability constraint that is often implicit,
-and may be violated, in applied ontology and data-governance practice.
+The analysis treats identity as transformation-invariance.
+An identity regime states which operations preserve sameness for a carrier
+under a declared identity basis.
+Once the ordinary operations of record systems are fixed,
+individuation becomes a structural question that
+depends on what survives transformation.
+The alternative is to leave the distinction to interpretive mechanisms:
+role predicates such as \texttt{isAgent} or \texttt{isAuthority},
+or contextual flags supplied at query time.
+Such a mechanism relocates the identity distinction off the substrate,
+where its consistent application requires the shared commitments
+that persistent disagreement denies.
+We call a distinction recovered this way a \emph{hidden regime}:
+operationally necessary, but not fixed at the substrate level.
 
-Three diagnostic settings make the problem concrete.
-In multi-jurisdiction regulatory reporting,
-one corporate entity operates under overlapping legal
-regimes that individuate obligations,
-violations, and responsible parties
-differently; audit trails must stay
-comparable across jurisdictions without
-presupposing which regime governs.
-In legislative history tracking,
-statutory authority is
-enacted, amended, delegated, and contested over time;
-reference to the governing rule must
-remain stable and independent of the acts that enact or challenge it.
-In cross-institutional provenance, a
-record is produced, transferred, and
-re-analyzed across institutions whose
-classificatory and causal assumptions differ,
-yet must remain referable as
-the same record throughout.
+For accountability substrates the inventory has six carrier kinds:
+obligation-bearers, rules, occurrences, scopes, records, and plain referents.
+Identity fixes sameness under transformation, relative to a declared basis.
+Three carrier kinds admit more than one such basis in the settings analyzed here.A scope may be individuated by which cases it covers
+or by how it is internally organized.
+A rule may be individuated by what it requires
+or by how its text is structured.
+A plain referent may be individuated by its location
+or by the object occupying it.
 
-The tempting response is to minimize commitment: represent entities,
-occurrences, authorities, and records as one undifferentiated type,
-distinguished only by role predicates such as \texttt{isAgent} or
-\texttt{isAuthority},
-or by contextual flags supplied at query time.
-This buys surface parsimony but not neutrality.
-It relocates essential
-distinctions from the substrate to interpretive mechanisms whose consistent
-application requires the shared commitments that persistent disagreement denies.
-We call such relocated discriminations \emph{hidden
-regimes}: distinctions that are operationally necessary
-but not represented at the substrate level.
-Under disagreement, a hidden regime cannot be
-relied on because its application is not fixed.
+These alternatives are separated by ordinary operations.
+Decomposition separates extension-fixed from structure-fixed scopes.
+Refinement separates content-fixed from structure-fixed rules.
+Forking separates locus-fixed from object-fixed plain referents.
+The same pair of representations may be equivalent under one basis
+and distinct under another.
+When admissible frameworks require both bases,
+a neutral substrate must preserve both.
 
-This paper describes the kinds of things
-the substrate must name,
-and what makes two representations the same entity.
-Fix the ordinary operations these systems perform,
-and identity becomes something to compute
-rather than to stipulate.
-An accountability substrate must be able to refer
-to six kinds of thing: obligation-bearers, rules, occurrences, scopes,
-records, and plain referents that are merely acted upon.
-That inventory is
-not the theorem.
-The theorem begins when three of those kinds fail to
-determine a single identity criterion.
-
-A jurisdiction can be individuated
-by which cases it covers or by how it is
-internally organized.
-A rule can be individuated by what it requires or by
-how its text is structured.
-A physical referent can be individuated by its
-location or by the object occupying it.
-These are not shades of meaning.
-In each case, an ordinary operation separates two readings:
-decomposing a jurisdiction, refining a rule, or forking a referent.
-The two readings land in different equivalence classes,
-so they are different identity regimes.
-Counting kinds gives six;
-counting the identity regimes the substrate must enforce gives nine.
-
-The contribution is this reframing and its consequence.
-Identity regime is determined by transformation behavior
-over an identity basis, not by ontological kind.
-Because three kinds underdetermine their basis,
-the number of regimes a neutral accountability substrate
-must enforce strictly exceeds the number of kinds it names.
-The three surplus regimes answer to no kind on the inventory.
-They are forced by operations.
-An analysis that stops at naming kinds will undercount.
+The lower-bound core follows from that structure.
+The six carrier kinds provide a floor of six regimes.
+The three witnessed splits add one regime each.
+Thus a neutral accountability substrate satisfying the stated assumptions,
+and supporting those basis-plural cases,
+requires at least nine identity regimes.
+The additional regimes arise within kinds already named,
+so an analysis that stops at naming kinds will undercount.
+Collapsing a split either changes what transformation preserves
+or reintroduces the distinction through a hidden regime.
 
 The result is conditional.
-It holds under the neutrality and stability
-assumptions fixed in Section~\ref{sec:formal_setting}.
-It is a lower bound,
-not an upper bound, and it makes no completeness claim:
-we do not assert that the operation set is complete,
-nor that these nine profiles exhaust the coherent ones.
-Adding transformations cannot collapse distinctions
-already witnessed by the current basis;
-it may leave the bound unchanged or force additional splits.
-Structural comparison, intervention, and conformance checking
-are left to companion analysis;
-this paper addresses only identity.
+It holds under the neutrality and stability assumptions fixed in
+Section~\ref{sec:formal_setting}
+for substrates in which the witnessed basis pluralities are in play.
+Adding transformations may force further splits;
+it cannot erase a distinction witnessed by the current basis.
+This paper addresses only identity;
+structural comparison, intervention, and conformance checking
+are left to companion analysis.
 
 The remainder of the paper proceeds as follows.
-Section~\ref{sec:background} imports definitions the proofs use and states the one new primitive.
+Section~\ref{sec:background} imports definitions the proofs use and states one new primitive.
 Section~\ref{sec:formal_setting} fixes the operating conditions.
 Section~\ref{sec:inventory} states the reference inventory.
 Section~\ref{sec:algebra} develops the transformation algebra.
-Section~\ref{sec:nine} derives the nine regimes.
+Section~\ref{sec:nine} derives the nine-regime lower-bound core.
 Section~\ref{sec:bound} proves the lower bound.
-Section~\ref{sec:determinacy} establishes determinacy.
+Section~\ref{sec:determinacy} establishes core regime assignment.
 Section~\ref{sec:application} exhibits the regimes in the diagnostic settings.
 Section~\ref{sec:related} situates the result in prior work.
 Section~\ref{sec:limits} states limits.
-Appendix~\ref{app:sep} gives the pairwise separation.
+Appendix~\ref{app:sep} provides the pairwise separation table.

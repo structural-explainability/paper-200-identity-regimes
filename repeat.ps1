@@ -1,306 +1,79 @@
-$tex = ".\se200_referential_regimes.tex"
+$tex   = ".\se200_referential_regimes.tex"
+$files = @($tex) + (Get-ChildItem ".\sections\*.tex" | ForEach-Object { $_.FullName })
 
-Select-String -Path build\se200_referential_regimes.log -Pattern "Reference .* undefined|Citation .* undefined" |
-  ForEach-Object { $_.Line } |
-  Sort-Object -Unique
-
+"=== hidden regime vs discriminator ==="
+Select-String -LiteralPath $files `
+  -Pattern "hidden|regime|discriminator" `
+  -Context 1,0
 Exit 0
 
-Select-String -LiteralPath $tex `
-  -SimpleMatch "object-level" `
-  -Context 3,3
-
+"=== se200. stable-label convention ==="
+Select-String -LiteralPath $files -Pattern "\\label\{(se200\.[^}]+)\}" |
+  ForEach-Object {
+    if ($_.Line -match "\\label\{(se200\.[^}]+)\}") {
+      $ok = $Matches[1] -match "^se200\.(def|lem|prop|thm|cor|remark|note|assump)\."
+      [PSCustomObject]@{ Label = $Matches[1]; WellFormed = $ok }
+    }
+  } | Format-Table -AutoSize
+"(expect WellFormed=True for all; a False means a kind-segment typo.)"
 Exit 0
 
-$citeKeys =
-  Select-String -LiteralPath $tex `
-    -Pattern "\\cite[a-zA-Z*]*\{([^}]+)\}" |
-  ForEach-Object {
-    if ($_.Line -match "\\cite[a-zA-Z*]*\{([^}]+)\}") {
-      $Matches[1] -split "," | ForEach-Object { $_.Trim() }
-    }
-  } |
-  Sort-Object -Unique
 
-$bibItemKeys =
-  Select-String -LiteralPath $tex `
-    -Pattern "\\bibitem(?:\[[^\]]+\])?\{([^}]+)\}" |
-  ForEach-Object {
-    if ($_.Line -match "\\bibitem(?:\[[^\]]+\])?\{([^}]+)\}") {
-      $Matches[1].Trim()
-    }
-  } |
-  Sort-Object -Unique
-
-$unused =
-  $bibItemKeys |
-  Where-Object { $citeKeys -notcontains $_ }
-
-if ($unused) {
-  "UNUSED BIBITEM KEYS:"
-  $unused
-} else {
-  "OK: no unused bibitem keys."
-}
-
-exit 0
-
-$citeKeys =
-  Select-String -LiteralPath $tex `
-    -Pattern "\\cite[a-zA-Z*]*\{([^}]+)\}" |
-  ForEach-Object {
-    if ($_.Line -match "\\cite[a-zA-Z*]*\{([^}]+)\}") {
-      $Matches[1] -split "," | ForEach-Object { $_.Trim() }
-    }
-  } |
-  Sort-Object -Unique
-
-$bibItemKeys =
-  Select-String -LiteralPath $tex `
-    -Pattern "\\bibitem(?:\[[^\]]+\])?\{([^}]+)\}" |
-  ForEach-Object {
-    if ($_.Line -match "\\bibitem(?:\[[^\]]+\])?\{([^}]+)\}") {
-      $Matches[1].Trim()
-    }
-  } |
-  Sort-Object -Unique
-
-$missing =
-  $citeKeys |
-  Where-Object { $bibItemKeys -notcontains $_ }
-
-$unused =
-  $bibItemKeys |
-  Where-Object { $citeKeys -notcontains $_ }
-
-if ($missing) {
-  "MISSING BIBITEM KEYS:"
-  $missing
-} else {
-  "OK: all citation keys have matching \bibitem entries."
-}
-
-if ($unused) {
-  ""
-  "UNUSED BIBITEM KEYS:"
-  $unused
-}
-
-exit 0
-
-$expected = @{
-  "DefRef"    = "^se100\.def\."
-  "AssumpRef" = "^se100\.assump\."
-  "ConstRef"  = "^se100\.constraint\."
-  "ExRef"     = "^se100\.example\."
-  "RemRef"    = "^se100\.remark\."
-  "NoteRef"   = "^se100\.note\."
-  "SecRef"    = "^sec:"
-}
-
-$refs =
-  Select-String -LiteralPath $tex `
-    -Pattern "\\(DefRef|AssumpRef|ConstRef|ExRef|RemRef|NoteRef|SecRef)\{([^}]+)\}" |
-  ForEach-Object {
-    if ($_.Line -match "\\(DefRef|AssumpRef|ConstRef|ExRef|RemRef|NoteRef|SecRef)\{([^}]+)\}") {
-      [PSCustomObject]@{
-        Macro      = $Matches[1]
-        Target     = $Matches[2]
-        LineNumber = $_.LineNumber
-        Line       = $_.Line.Trim()
-      }
-    }
-  }
-
-$wrongType =
-  $refs |
-  Where-Object {
-    $_.Target -notmatch $expected[$_.Macro]
-  }
-
-if ($wrongType) {
-  "CUSTOM REFERENCE TYPE MISMATCHES:"
-  $wrongType | Format-Table -AutoSize
-} else {
-  "OK: all custom references use the correct macro type."
-}
-
-exit 0
-
-$labels =
-  Select-String -LiteralPath $tex -Pattern "\\label\{([^}]+)\}" |
+"=== duplicate labels across all section files ==="
+Select-String -LiteralPath $files -Pattern "\\label\{([^}]+)\}" |
   ForEach-Object {
     if ($_.Line -match "\\label\{([^}]+)\}") {
-      $Matches[1]
+      [PSCustomObject]@{ Label = $Matches[1]; File = Split-Path $_.Path -Leaf; Line = $_.LineNumber }
     }
   } |
-  Sort-Object -Unique
-
-$refs =
-  Select-String -LiteralPath $tex `
-    -Pattern "\\(DefRef|AssumpRef|ConstRef|ExRef|RemRef|NoteRef|SecRef)\{([^}]+)\}" |
-  ForEach-Object {
-    if ($_.Line -match "\\(DefRef|AssumpRef|ConstRef|ExRef|RemRef|NoteRef|SecRef)\{([^}]+)\}") {
-      [PSCustomObject]@{
-        Macro      = $Matches[1]
-        Target     = $Matches[2]
-        LineNumber = $_.LineNumber
-        Line       = $_.Line.Trim()
-      }
-    }
-  }
-
-$missing =
-  $refs |
-  Where-Object { $labels -notcontains $_.Target }
-
-if ($missing) {
-  "MISSING CUSTOM REFERENCE TARGETS:"
-  $missing | Format-Table -AutoSize
-} else {
-  "OK: all custom reference targets exist."
-}
-
+  Group-Object Label | Where-Object Count -gt 1 |
+  ForEach-Object { $_.Group } | Format-Table -AutoSize
+"(expect: none.)"
 Exit 0
 
-Select-String -LiteralPath $tex `
-  -SimpleMatch "neutral by design" `
-  -Context 3,3
 
-Select-String -LiteralPath $tex `
-  -SimpleMatch "neutrality by design" `
-  -Context 3,3
-
+"=== stray leading-pipe artifacts (the sec:bound typos) ==="
+Select-String -LiteralPath $files -Pattern "^\s*\|" -Context 1,1
+"(expect: none. two known hits in 07_lower_bound until fixed.)"
 Exit 0
 
-Select-String -LiteralPath $tex `
-  -Pattern "interpretive commitment|interpretive|commitments|interpretive content must|interpretive claims must" `
-  -Context 4,4
-
+"=== NS citation + arXiv id ==="
+Select-String -LiteralPath $files -SimpleMatch "case2026neutral" -Context 0,0 |
+  Measure-Object | ForEach-Object { "case2026neutral used: $($_.Count) time(s)" }
+Select-String -LiteralPath $tex -SimpleMatch "2601.14271" -Context 1,1
+"(expect the NS arXiv id 2601.14271 in the bibitem; confirm it matches SE-100's live id.)"
 Exit 0
 
-Select-String -LiteralPath $tex `
-  -Pattern "permitted attribution propositions|permitted attribution proposition|attribution propositions whose|attributional basis|grounded in|fixed by" `
-  -Context 3,3
 
-
-
-Select-String -LiteralPath $tex `
-  -SimpleMatch "provenance-bearing assertions" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -Pattern "\\Asserts\(" `
-  -Context 2,2
-
-Select-String -LiteralPath $tex `
-  -SimpleMatch "\Asserts(x,\varphi)" `
-  -Context 2,2
-
-Select-String -LiteralPath $tex `
-  -SimpleMatch "\Asserts(\Framework" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -Pattern "substrate-layer commitment[s]?" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -SimpleMatch "object-level causal or normative" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -Pattern "object-level interpretive commitment[s]?" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -SimpleMatch "object-level interpretive" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -SimpleMatch "causal and normative content" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -SimpleMatch "C_{cn}" `
-  -Context 4,4
-
-Select-String -LiteralPath $tex `
-  -SimpleMatch "framework-invariant" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -SimpleMatch "uncertified at design time" `
-  -Context 4,4
-
-Select-String -LiteralPath $tex `
-  -SimpleMatch "neutral by design" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -SimpleMatch "neutrality by design" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -SimpleMatch "referential commitments" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -SimpleMatch "\SubstrateRef" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -SimpleMatch "attributional basis" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -Pattern "boundary|contested reference|referential regime|unavailable" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -Pattern "all interpretive|any interpretive|every interpretive|interpretive content must|interpretive claims must" `
-  -Context 4,4
-
-Select-String -LiteralPath $tex `
-  -Pattern "evidentiary|explanatory|justificatory|institutional conclusions|empirical" `
-  -Context 3,3
-
-Select-String -LiteralPath $tex `
-  -Pattern "\\label\{[^}]+\}" `
-  -Context 0,0
-
-Select-String -LiteralPath $tex -Pattern "\\label\{([^}]+)\}" |
-  ForEach-Object {
-    if ($_.Line -match "\\label\{([^}]+)\}") {
-      [PSCustomObject]@{ Label = $Matches[1]; LineNumber = $_.LineNumber; Line = $_.Line.Trim() }
-    }
-  } |
-  Group-Object Label |
-  Where-Object Count -gt 1 |
-  Format-Table -AutoSize
-
-Select-String -LiteralPath $tex `
-  -Pattern "\\(DefRef|AssumpRef|ConstRef|ExRef|RemRef|NoteRef|SecRef)\{" `
-  -Context 0,0
-
-Select-String -LiteralPath $tex `
-  -Pattern "committment|committments|substrate level|substrate-level" `
-  -Context 2,2
-
-Select-String -LiteralPath $tex `
-  -Pattern "contribution|biconditional|constraint|checkable" `
-  -Context 3,3
-
-@(
-  "provenance-bearing assertions",
-  "object-level causal or normative",
-  "substrate-layer commitment",
-  "\Asserts(x,\varphi)",
-  "\Asserts(\Framework",
-  "neutral by design",
-  "referential common ground",
-  "attributional basis"
-) | ForEach-Object {
-  $count = (Select-String -LiteralPath $tex -SimpleMatch $_).Count
-  [PSCustomObject]@{ Phrase = $_; Count = $count }
+"=== regime token check ==="
+"--- current SE-200 tokens (expect all present) ---"
+"OBL","OCC","REC","LOC","OBJ","SCOPE-E","SCOPE-S","RULE-C","RULE-S" | ForEach-Object {
+  $c = (Select-String -LiteralPath $files -SimpleMatch $_).Count
+  [PSCustomObject]@{ Token = $_; Count = $c }
 } | Format-Table -AutoSize
+"--- retired tokens (expect zero; these are p300's old scheme / old NEU name) ---"
+"ENRL","ENRI","CTXE","CTXS","NORC","NORS","IGN" | ForEach-Object {
+  $c = (Select-String -LiteralPath $files -SimpleMatch $_).Count
+  [PSCustomObject]@{ Token = $_; Count = $c }
+} | Format-Table -AutoSize
+Exit 0
+
+"=== every 'nine regimes' site, to confirm 'at least' framing ==="
+Select-String -LiteralPath $files `
+  -Pattern "nine[^.]*identity regime|nine[^.]*regime|nine-regime" `
+  -Context 1,0
+Exit 0
+
+"=== discovered-framing / banned diction ==="
+Select-String -LiteralPath $files `
+  -Pattern "gives nine|yields nine|yield nine|exactly nine|underdetermine|\bexactly\b" `
+  -Context 1,1
+"(expect: none. 'underdetermined kind' as the DEFINED term in sec:algebra is the one allowed exception.)"
+Exit 0
+
+"=== referential/identity term collisions ==="
+Select-String -LiteralPath $files `
+  -Pattern "(nine|six|distinct|these)\s+referential\s+regime|referential\s+kind" `
+  -Context 1,1
+"(expect: no matches. 'referential regime' is legal ONLY as the singular NS triple in background.)"
+Exit 0
