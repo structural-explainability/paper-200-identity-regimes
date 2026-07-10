@@ -26,11 +26,12 @@ The table uses the following short regime labels:
 
 Their classifications over $\Fset$ are collected in Table~\ref{tab:master}.
 The table records the core profiles used in the lower-bound proof.
-The witnessed split cells force the lower bound:
+Three same-carrier cells carry the split arguments:
 BF for $\LOC/\OBJ$,
 AD for $\SCOPEE/\SCOPES$,
 and RF for $\RULEC/\RULES$.
-The remaining entries summarize the diagnostic behavior of the core profiles.
+Together with carrier disjointness, those cells carry the lower-bound result.
+The remaining entries summarize diagnostic behavior of the core profiles.
 
 \begin{table}[ht]
   \centering
@@ -59,7 +60,8 @@ The remaining entries summarize the diagnostic behavior of the core profiles.
     \NA{}: not applicable.
     Each witnessed split pair has a canonical separating operation:
     plain referent at BF, scope at AD, and rule at RF.
-    Some basis differences also affect other transformation families.}
+    The remaining classifications are diagnostic rather than load-bearing
+    for the lower-bound proof.}
   \label{tab:master}
 \end{table}
 
@@ -69,18 +71,31 @@ A \BRK{} entry means that the transformation \emph{breaks} that basis and produc
 An \NEU{} entry means that the transformation is \emph{identity-neutral} for that regime.
 An \NA{} entry means that the transformation is \emph{not applicable} to that regime.
 
-The witnessed split pairs carry the lower-bound work.
+Two columns bracket the profiles.
+Re-expression is identity-neutral for every core regime:
+a change of representation format preserves the declared identity basis.
+Substitution is identity-breaking for every core regime:
+replacement of the identity carrier breaks identity under each basis.
+These uniform columns serve as classification sanity checks.
+They set uniform boundary cases for the profile table.
+The lower-bound witnesses are the separating cells for the three split pairs.
+
+The witnessed split pairs carry the lower-bound argument.
 $\LOC$ and $\OBJ$ are separated by branching or forking.
 $\SCOPEE$ and $\SCOPES$ are separated by aggregation or decomposition.
 $\RULEC$ and $\RULES$ are separated by refinement.
 The canonical separating operation explains why each split is forced.
 The two profiles in a split pair may also differ at other transformations.
+For scope,
+re-contextualization and reassignment are two such non-canonical differences.
+They preserve covered cases and are non-breaking for $\SCOPEE$.
+They change applicability context or assignment structure and are breaking for $\SCOPES$.
 
 These regimes are defined by identity basis and transformation behavior.
-They introduce no new carrier kinds.
+They refine identity bases within the existing carrier kinds.
 
 \begin{definition}[Separation witness]
-  \label{def:separation_witness}
+  \label{se200.def.SeparationWitness}
   A \emph{separation witness} for identity regimes $\tau$ and $\tau'$ is a pair of representations $(r,s)$ such that
   \[
     r \sim_\tau s
@@ -90,8 +105,8 @@ They introduce no new carrier kinds.
   or conversely.
 \end{definition}
 
-\begin{proposition}[Distinctness of the core profiles]
-  \label{se200.prop.distinct}
+\begin{proposition}[Distinct core profiles]
+  \label{se200.prop.DistinctCoreProfiles}
   The nine profiles of Table~\ref{tab:master} are pairwise distinct.
 \end{proposition}
 

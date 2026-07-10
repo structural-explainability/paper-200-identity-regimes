@@ -5,7 +5,7 @@
 \label{sec:background}
 % =============================================================================
 
-This paper builds on \emph{Neutral Substrates (NS)}~\citep{case2026neutral}.
+This paper builds on \emph{Neutral Substrates}~\citep{case2026neutral}.
 That paper defines the design constraint for a shared representational base
 that must remain usable under persistent interpretive disagreement.
 This paper analyzes one aspect of that constraint:
@@ -14,16 +14,15 @@ ordinary transformations of records.
 
 The definitions in this section are inherited from that work.
 They are reproduced here to make the dependency clear.
-Local labels are used in this paper, while the definition titles indicate
-their source.
+Stable SE-100 labels are preserved for imported definitions.
 
 % -----------------------------------------------------------------------------
 \subsection{Inherited Definitions}
 \label{subsec:ns-inherited-definitions}
 % -----------------------------------------------------------------------------
 
-\begin{definition}[Substrate, from NS]
-  \label{def:ns-substrate}
+\begin{definition}[Substrate]
+  \label{se100.def.Substrate}
   A \emph{substrate} $\Substrate$ is a shared representational base providing
   stable reference for entities, occurrences, and institutional artifacts
   across a class of admissible interpretive frameworks $\Frameworks$.
@@ -42,8 +41,8 @@ timestamps, provenance, and persistence relations among them.
 Identifying the relevant event, decision, rule, or institutional artifact
 does not commit the substrate to claims about causation, justification, or applicability.
 
-\begin{definition}[Referential Regime, from NS]
-  \label{def:ns-referential-regime}
+\begin{definition}[Referential Regime]
+  \label{se100.def.ReferentialRegime}
   A \emph{referential regime} is the triple of
   \begin{enumerate}
     \item individuation conditions,
@@ -63,9 +62,10 @@ if parties cannot share enough reference to identify the referent under interpre
 they cannot reliably disagree about
 causes, norms, explanations, or obligations concerning that referent.
 
-\begin{definition}[Referential Commitments, from NS]
-  \label{def:ns-referential-commitments}
-  Let $\SubstrateRef$ denote the \emph{referential commitments} of $\Substrate$.
+\begin{definition}[Referential Commitments]
+  \label{se100.def.ReferentialCommitments}
+  Let $\SubstrateRef$ denote the
+  \emph{referential commitments} of $\Substrate$.
   These are the substrate-layer commitments fixed by its referential regime,
   including identifiers;
   the typing of entities, occurrences, and institutional artifacts;
@@ -79,7 +79,7 @@ object-level causal or normative commitments, interpretive non-commitment,
 extension stability, and neutrality by design.
 Those definitions support its central \emph{constraint}:
 under the stated contestability and common-ground assumptions,
-a substrate's neutrality is guaranteed at design time when its
+a substrate's neutrality is guaranteed at design time exactly when its
 foundational layer is restricted
 to referential commitments and permitted attribution propositions.
 Specifically, the substrate must not make object-level causal or normative commitments.
@@ -105,29 +105,15 @@ This paper specializes the referential-regime component of that constraint
 by deriving the lower-bound identity structure it imposes.
 
 \begin{definition}[Transformation-Invariant Identity]
-  \label{def:tinv}
+  \label{se200.def.TransformationInvariantIdentity}
   Within a neutral substrate, an \emph{identity regime} specifies how a
   referent's identity basis behaves under admissible transformations.
   For each transformation, the regime specifies whether the transformation
-  preserves identity, breaks identity, or is identity-neutral.
+  preserves identity, breaks identity, is identity-neutral, or is inapplicable.
   A referent is \emph{transformation-invariant} under transformations that do
   not break its declared identity basis.
 \end{definition}
 
-The dependency is:
-
-\begin{center}
-  \begin{tabular}{@{}p{0.2\textwidth}>{\raggedright\arraybackslash}p{0.7\textwidth}@{}}
-    \textbf{Neutral Substrates:} &
-    a neutral substrate requires stable reference through individuation,
-    co-reference, and persistence. \\[2pt]
-    \textbf{This paper:}         &
-    stable reference under ordinary transformations requires
-    transformation-invariant identity regimes, at least nine under the
-    assumptions fixed below.       \\
-  \end{tabular}
-\end{center}
-
-Section~\ref{sec:algebra} makes Definition~\ref{def:tinv} operational as a
+Section~\ref{sec:algebra} makes Definition~\ref{se200.def.TransformationInvariantIdentity} operational as a
 classification over a fixed transformation basis.
 The rest of the paper computes the resulting lower bound.

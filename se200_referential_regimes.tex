@@ -49,10 +49,20 @@
 \newcommand{\Fset}{\mathcal{F}}
 \newcommand{\Class}{\mathrm{Class}}
 \newcommand{\basis}{\mathrm{basis}}
-\newcommand{\Substrate}{\mathcal{S}}
-\newcommand{\Frameworks}{\mathcal{F}}
-\newcommand{\SubstrateRef}{\mathsf{Ref}(\Substrate)}
 
+% =============================================================================
+% Stable named-reference helpers.
+% =============================================================================
+\newcommand{\DefRef}[2]{\hyperref[#1]{Definition (#2)}}
+\newcommand{\ConstRef}[2]{\hyperref[#1]{Constraint (#2)}}
+\newcommand{\SecRef}[1]{Section~\ref{#1}}
+
+% =============================================================================
+% Imported SE-100 notation.
+% =============================================================================
+\newcommand{\Substrate}{\mathcal{S}}
+\newcommand{\SubstrateRef}{\mathcal{S}_{\mathrm{ref}}}
+\newcommand{\Frameworks}{\mathbb{F}}
 % ------------------------------------------------------------
 % Numbering convention:
 % - All theorem-like statements share one counter, numbered by section.
@@ -121,6 +131,12 @@
 % Compact list formatting for dense conceptual content
 \usepackage{enumitem}
 \setlist[itemize]{itemsep=0.2em, topsep=0.2em, parsep=0em, partopsep=0em}
+
+\hypersetup{
+  pdftitle={Referential Regimes: Transformation-Invariant Identity for Neutral Substrates},
+  pdfauthor={Denise M. Case},
+  pdfkeywords={formal ontology, identity and persistence, neutral substrates, accountability}
+}
 
 % =============================================================================
 % PREFERRED CITATION SPECIFICATION
@@ -194,9 +210,10 @@ for Neutral Substrates}
   a richer transformation basis may leave the bound unchanged
   or force further splits, but it cannot erase a distinction
   already witnessed here. Its content is diagnostic.
-  The additional regimes are the distinctions upper-ontology
-  implementations may leave to the modeler, and that cannot be recovered
-  under persistent disagreement without hidden regimes.
+  The additional regimes correspond to distinctions
+  often handled by modeling convention,
+  but such conventions cannot substitute
+  for regime-level identity commitments under persistent disagreement.
 \end{abstract}
 
 \keywords{

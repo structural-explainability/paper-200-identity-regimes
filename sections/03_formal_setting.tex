@@ -37,9 +37,10 @@ without embedding any one framework's interpretation as the substrate-level acco
 \label{subsec:stable_reference_strong}
 % -----------------------------------------------------------------------------
 
-Extension-stable reference is inherited from \emph{Neutral Substrates}.
-Here we fix the demanding case in which stability must
-survive ordinary transformations of records.
+The persistence component of the referential regime is inherited from
+\emph{Neutral Substrates}.
+Here we fix the demanding case in which persistence must be evaluated
+under ordinary transformations of records.
 Identity conditions must not depend on interpretive convergence.
 An entity that must change its ontological status to enter a
 new relationship has not been stably referred to.
@@ -83,9 +84,9 @@ the neutral-substrate conditions analyzed here.
 Identity pressure appears when records are transformed.
 We therefore fix a finite transformation basis
 \[
-\Fset =
-\{\mathrm{RE},\mathrm{AN},\mathrm{RF},\mathrm{AD},\mathrm{RC},
-\mathrm{RA},\mathrm{SU},\mathrm{BF},\mathrm{PV},\mathrm{SE}\}.
+  \Fset =
+  \{\mathrm{RE},\mathrm{AN},\mathrm{RF},\mathrm{AD},\mathrm{RC},
+  \mathrm{RA},\mathrm{SU},\mathrm{BF},\mathrm{PV},\mathrm{SE}\}.
 \]
 The basis is not claimed to be complete for all possible record systems.
 It is a representative basis of ordinary operations in
@@ -93,38 +94,37 @@ provenance, versioning, institutional recordkeeping, and data-governance practic
 The lower-bound result is conditional on this basis.
 Adding further transformations cannot collapse distinctions
 already witnessed by this basis.
-It may leave the lower bound unchanged or force additional splits.
+It may leave the lower bound unchanged or force further splits.
 
 \begin{definition}[Transformation basis]
-\label{def:transformation_basis}
-The transformation basis $\Fset$ consists of the following admissible operation families:
-\begin{enumerate}[label=(\alph*),nosep]
-  \item $\mathrm{RE}$, re-expression: change of representation format while preserving the represented content;
-  \item $\mathrm{AN}$, annotation: addition of non-identity-bearing information;
-  \item $\mathrm{RF}$, refinement: increase in descriptive, structural, or normative detail;
-  \item $\mathrm{AD}$, aggregation or decomposition: restructuring into coarser or finer components;
-  \item $\mathrm{RC}$, re-contextualization: change in applicability context;
-  \item $\mathrm{RA}$, reassignment: change in association, bearer, or assignment relation;
-  \item $\mathrm{SU}$, substitution: replacement of the identity carrier;
-  \item $\mathrm{BF}$, branch or fork: divergence into multiple continuations;
-  \item $\mathrm{PV}$, provenance extension: addition of historical, derivational, or evidentiary metadata;
-  \item $\mathrm{SE}$, state evolution: change in state of an enduring referent over time.
-\end{enumerate}
+  \label{se200.def.TransformationBasis}
+  The transformation basis $\Fset$ consists of the following admissible operation families:
+  \begin{enumerate}[label=(\alph*),nosep]
+    \item $\mathrm{RE}$, re-expression: change of representation format while preserving the represented content;
+    \item $\mathrm{AN}$, annotation: addition of non-identity-bearing information;
+    \item $\mathrm{RF}$, refinement: increase in descriptive, structural, or normative detail;
+    \item $\mathrm{AD}$, aggregation or decomposition: whole-preserving restructuring into coarser or finer components;  \item $\mathrm{RC}$, re-contextualization: change in applicability context;
+    \item $\mathrm{RA}$, reassignment: change in association, bearer, or assignment relation;
+    \item $\mathrm{SU}$, substitution: replacement of the identity carrier;
+    \item $\mathrm{BF}$, branch or fork: divergence into multiple continuations;
+    \item $\mathrm{PV}$, provenance extension: addition of historical, derivational, or evidentiary metadata;
+    \item $\mathrm{SE}$, state evolution: change in state of an enduring referent over time.
+  \end{enumerate}
 \end{definition}
 
 The transformation families are typed operation families.
 A transformation is evaluated relative to the carrier-basis pair to which it is applied.
-Thus aggregation/decomposition does not name one untyped operation
-with the same identity effect for every carrier.
-It names a family of coarsening and refinement operations whose effect
-depends on the identity basis at issue.
-A transformation breaks identity when it restructures identity-relevant components.
+In particular, $\mathrm{AD}$ names aggregation or decomposition
+that preserves the represented whole while changing its component structure.
+For scopes, this means preserving the covered cases while changing
+the internal scope organization.
+Operations that add or remove covered cases fall outside $\mathrm{AD}$.
+The transformation basis is representative rather than complete,
+as stated in Definition~\ref{se200.def.TransformationBasis}.
+By Corollary~\ref{se200.cor.Monotonicity},
+adding further transformations cannot lower the bound.
+A transformation may break identity when it restructures identity-relevant components.
 It may remain non-breaking when it restructures a non-identity-bearing description.
-
-The basis is not claimed to be complete for all possible record systems.
-It is a representative basis of ordinary operations in
-provenance, versioning, institutional recordkeeping, and data-governance practice.
-The lower-bound result is conditional on this basis.
 
 % -----------------------------------------------------------------------------
 \subsection{Classification of Transformations}
@@ -135,18 +135,18 @@ A regime classifies each applicable transformation by how it affects the declare
 We use four classifications.
 
 \begin{definition}[Transformation classification]
-\label{def:transformation_classification}
-For a regime $\tau$ and transformation family $f\in\Fset$, the classification
-\[
-\Class_\tau(f)\in\{\PRS,\BRK,\NEU,\NA\}
-\]
-has the following meaning:
-\begin{enumerate}[label=(\alph*),nosep]
-  \item $\PRS$: the transformation is identity-preserving for $\tau$;
-  \item $\BRK$: the transformation is identity-breaking for $\tau$;
-  \item $\NEU$: the transformation is identity-neutral for $\tau$;
-  \item $\NA$: the transformation is inapplicable to $\tau$.
-\end{enumerate}
+  \label{se200.def.TransformationClassification}
+  For a regime $\tau$ and transformation family $f\in\Fset$, the classification
+  \[
+    \Class_\tau(f)\in\{\PRS,\BRK,\NEU,\NA\}
+  \]
+  has the following meaning:
+  \begin{enumerate}[label=(\alph*),nosep]
+    \item $\PRS$: the transformation is identity-preserving for $\tau$;
+    \item $\BRK$: the transformation is identity-breaking for $\tau$;
+    \item $\NEU$: the transformation is identity-neutral for $\tau$;
+    \item $\NA$: the transformation is inapplicable to $\tau$.
+  \end{enumerate}
 \end{definition}
 
 The distinction between $\PRS$ and $\NEU$ matters.
@@ -160,15 +160,15 @@ A fourth value, $\NA$, marks a transformation that cannot arise for the regime's
 as distinct from one that arises but leaves identity untouched.
 
 \begin{definition}[Non-breaking transformation]
-\label{def:nonbreaking}
-A transformation family $f$ is \emph{non-breaking} for regime $\tau$ when
-\[
-\Class_\tau(f)\in\{\PRS,\NEU\}.
-\]
-It is \emph{breaking} for $\tau$ when
-\[
-\Class_\tau(f)=\BRK.
-\]
+  \label{se200.def.NonBreakingTransformation}
+  A transformation family $f$ is \emph{non-breaking} for regime $\tau$ when
+  \[
+    \Class_\tau(f)\in\{\PRS,\NEU\}.
+  \]
+  It is \emph{breaking} for $\tau$ when
+  \[
+    \Class_\tau(f)=\BRK.
+  \]
 \end{definition}
 
 % -----------------------------------------------------------------------------
@@ -181,22 +181,23 @@ An identity regime is not an ontological kind.
 It is a transformation profile over an identity basis.
 
 \begin{definition}[Identity regime]
-\label{def:identity_regime}
-An \emph{identity regime} $\tau$ consists of an identity basis
-together with a classification function
-\[
-\Class_\tau:\Fset\to\{\PRS,\BRK,\NEU,\NA\}.
-\]
-The identity basis states what counts as sameness for the referent.
-The classification function states how each transformation family affects sameness under that basis.
+  \label{se200.def.IdentityRegime}
+  An \emph{identity regime} $\tau$ consists of an identity basis
+  together with a classification function
+  \[
+    \Class_\tau:\Fset\to\{\PRS,\BRK,\NEU,\NA\}.
+  \]
+  The identity basis specifies sameness for the referent.
+  The classification function states the effect of each transformation family
+  under that basis.
 \end{definition}
 
 \begin{definition}[Induced identity relation]
-\label{def:induced_identity}
-Let $\tau$ be an identity regime.
-The induced identity relation $\sim_\tau$ is the equivalence relation
-generated by transformations that are non-breaking for $\tau$.
-Thus $r\sim_\tau s$ means that $r$ and $s$ are representations of the same referent under regime $\tau$.
+  \label{se200.def.InducedIdentityRelation}
+  Let $\tau$ be an identity regime.
+  The induced identity relation $\sim_\tau$ is the equivalence relation
+  generated by transformations that are non-breaking for $\tau$.
+  Thus $r\sim_\tau s$ means that $r$ and $s$ are representations of the same referent under regime $\tau$.
 \end{definition}
 
 This definition makes identity transformation-relative.
@@ -216,11 +217,11 @@ It means that the substrate must support frameworks that preserve different
 sameness conditions for the same carrier kind.
 
 \begin{definition}[Basis plurality]
-\label{def:basis_plurality}
-A carrier kind has \emph{basis plurality} when admissible frameworks
-require stable reference to that carrier kind under more than one identity basis.
-A neutral substrate serving those frameworks must preserve each required basis
-without relocating the distinction into a hidden regime.
+  \label{se200.def.BasisPlurality}
+  A carrier kind has \emph{basis plurality} when admissible frameworks
+  require stable reference to that carrier kind under more than one identity basis.
+  A neutral substrate serving those frameworks must preserve each required basis
+  without relocating the distinction into a hidden regime.
 \end{definition}
 
 The lower-bound proof uses three witnessed cases of basis plurality.
@@ -244,11 +245,11 @@ They allow a system to appear to use fewer identity regimes
 while relying on downstream discriminators to perform the missing identity work.
 
 \begin{definition}[Hidden regime]
-\label{def:hidden_regime}
-A \emph{hidden regime} is a stability-critical distinction that
-is not represented as an identity regime in the substrate,
-but is instead recovered through a role, flag, contextual predicate,
-workflow state, schema convention, or application-level discriminator.
+  \label{se200.def.HiddenRegime}
+  A \emph{hidden regime} is a stability-critical distinction that
+  is not represented as an identity regime in the substrate,
+  but is instead recovered through a role, flag, contextual predicate,
+  workflow state, schema convention, or application-level discriminator.
 \end{definition}
 
 Hidden regimes violate the neutral-substrate discipline because their
@@ -266,9 +267,9 @@ not a genuine reduction in declared referential structure.
 The lower bound proved below is conditional.
 It holds for neutral accountability substrates satisfying the assumptions
 of this section, using the transformation basis of
-Definition~\ref{def:transformation_basis},
+Definition~\ref{se200.def.TransformationBasis},
 and supporting the witnessed basis pluralities of
-Definition~\ref{def:basis_plurality}.
+Definition~\ref{se200.def.BasisPlurality}.
 
 Under those conditions, fewer than nine regimes cannot preserve stable reference
 without changing transformation behavior or reintroducing a hidden regime.

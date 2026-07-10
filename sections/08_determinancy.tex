@@ -8,11 +8,12 @@
 The lower-bound result requires a fixed assignment
 from core carrier-basis pairs to identity regimes.
 This section records that assignment and
-only addresses the carrier-basis pairs used in the lower-bound construction.
+is restricted to the carrier-basis pairs used in the lower-bound construction.
 
 Once a core carrier-basis pair is fixed,
 the regime assignment is determined.
-Which identity basis a real-world referent ought to use requires modeling judgment.
+Choosing the identity basis for a real-world referent remains a matter of
+modeling judgment.
 
 % -----------------------------------------------------------------------------
 \subsection{Core Carrier-Basis Pairs}
@@ -20,7 +21,7 @@ Which identity basis a real-world referent ought to use requires modeling judgme
 % -----------------------------------------------------------------------------
 
 \begin{definition}[Core carrier-basis pair]
-\label{def:core_carrier_basis_pair}
+\label{se200.def.CoreCarrierBasisPair}
 A \emph{core carrier-basis pair} is one of the carrier kind and identity basis
 combinations used in the lower-bound construction.
 The core pairs are:
@@ -43,9 +44,9 @@ The first three pairs contribute one regime each.
 The remaining six pairs arise from the witnessed split cases proved in Section~\ref{sec:algebra}.
 
 \begin{definition}[Core regime assignment]
-\label{def:core_regime_assignment}
+\label{se200.def.CoreRegimeAssignment}
 The \emph{core regime assignment} maps each core carrier-basis pair
-to the identity regime displayed in Definition~\ref{def:core_carrier_basis_pair}.
+to the identity regime displayed in Definition~\ref{se200.def.CoreCarrierBasisPair}.
 \end{definition}
 
 % -----------------------------------------------------------------------------
@@ -113,14 +114,14 @@ Therefore no core carrier-basis pair is assigned to more than one core regime.
 
 \begin{theorem}[Core regime assignment]
 \label{se200.thm.CoreRegimeAssignment}
-Every core carrier-basis pair is assigned to exactly one of the nine core identity regimes.
+Every core carrier-basis pair is assigned to a unique core identity regime.
 \end{theorem}
 
 \begin{proof}
 \sloppy
 Existence follows from Lemma~\ref{se200.lem.CoreExistence}.
 Uniqueness follows from Lemma~\ref{se200.lem.CoreUniqueness}.
-Therefore every core carrier-basis pair is assigned to exactly one of the nine core regimes.
+Therefore every core carrier-basis pair is assigned to a unique core regime.
 \end{proof}
 
 This determines the core assignment.
@@ -140,7 +141,7 @@ whether decomposition preserves covered cases or internal structure.
 A rule without a content-fixed or structure-fixed basis does not specify
 whether refinement preserves rule content or textual structure.
 A plain referent without a locus-fixed or object-fixed basis does not specify
-whether forking preserves location or object identity.
+whether forking preserves locus or object identity.
 A declared identity basis is required for deterministic assignment.
 
 This observation anticipates the conformance analysis

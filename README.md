@@ -27,13 +27,7 @@ Three of those kinds underdetermine identity.
 Plain referents may be locus-fixed or object-fixed.
 Scopes may be extension-fixed or structure-fixed.
 Rules may be content-fixed or structure-fixed.
-Thus the transformation analysis forces a nine-regime lower-bound core
-
-The result is conditional on the stated neutral-substrate assumptions:
-persistent disagreement, strong stable reference, minimality, and exclusion of hidden regimes.
-It is a lower bound, not a completeness claim.
-Additional identity bases may require additional regimes,
-but do not remove the nine-regime core derived here.
+This transformation analysis forces at least nine identity regimes.
 
 ## Nine-Regime Lower-Bound Core
 
@@ -51,15 +45,16 @@ but do not remove the nine-regime core derived here.
 
 ## Structural Explainability: Accountable Records Paper Series
 
-| Paper                   | Description                                                                                                                                                                                                                        |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Neutral Substrates**  | Defines the neutrality constraint for shared accountability records. A neutral substrate preserves shared reference and attribution without adopting contested causal or normative interpretations as substrate-level commitments. |
-| **Referential Regimes** | Derives the identity cost of the neutrality constraint. The paper shows that stable reference under persistent disagreement requires transformation-invariant identity regimes and derives a nine-regime lower-bound core.         |
-| **Accountable Records** | Develops the conformance layer for deployed record systems. The paper studies how basis declarations, transformation logs, and schema checks can make neutral-substrate identity commitments inspectable in practice.              |
+| Paper                   | Description                                                                                                                                                                                                 |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Neutral Substrates**  | Defines the neutrality constraint. A neutral substrate preserves shared reference and attribution without adopting contested causal or normative interpretations as substrate-level commitments.            |
+| **Referential Regimes** | Derives the identity cost of the neutrality constraint. Shows stable reference under persistent disagreement requires transformation-invariant identity regimes and derives a nine-regime lower-bound core. |
+| **Accountable Records** | Develops the conformance layer for deployed record systems. Studies how basis declarations, transformation logs, and schema checks can make neutral-substrate identity commitments inspectable in practice. |
 
-## Paper
+## Links
 
-- [PDF](./se200_referential_regimes.pdf)
+- [Paper 1 SE 100: Neutral Substrates](https://arxiv.org/abs/2601.14271)
+- [Paper 2 SE 200: Referential Regimes (9) PDF](./se200_referential_regimes.pdf)
 
 ## Building Locally
 
