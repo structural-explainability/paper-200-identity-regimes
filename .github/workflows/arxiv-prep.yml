@@ -52,13 +52,6 @@ jobs:
 
           # WHY: Copy content directories
           cp -r sections arxiv_src/
-          cp -r bibliography arxiv_src/
-
-          # WHY: Include .bbl if present to reduce arXiv bibliography failures
-          # OBS: This is a no-op if file does not exist
-          if [ -f se200_referential_regimes.bbl ]; then
-            cp se200_referential_regimes.bbl arxiv_src/
-          fi
 
       # WHY: arXiv builds from source - doesn't need build artifacts
       - name: D2) Clean auxiliary files

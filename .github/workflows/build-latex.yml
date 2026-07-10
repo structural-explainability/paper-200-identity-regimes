@@ -8,7 +8,6 @@ on:
     branches: [main]
     paths:
       - "sections/**"
-      - "bibliography/**"
       - "*.tex"
       - ".github/workflows/build-latex.yml"
       - ".github/tl_packages"
@@ -17,7 +16,6 @@ on:
     branches: [main]
     paths:
       - "sections/**"
-      - "bibliography/**"
       - "*.tex"
       - ".github/workflows/build-latex.yml"
       - ".github/tl_packages"
@@ -66,6 +64,6 @@ jobs:
       - name: D1) Build PDF to validate LaTeX
         run: |
           mkdir -p artifacts
-          latexmk -pdf -bibtex -interaction=nonstopmode -halt-on-error \
+          latexmk -pdf -interaction=nonstopmode -halt-on-error \
             -auxdir=artifacts -outdir=artifacts \
             se200_referential_regimes.tex
