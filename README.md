@@ -85,6 +85,20 @@ Windows:
 texcount -merge -sub=section -inc -sum se200_referential_regimes.tex
 ```
 
+## Release Commands (Examples)
+
+```shell
+# delete tags only as needed
+git tag -d v0.3.0
+git push origin :refs/tags/v0.3.0
+
+.\tools\build\clean.ps1
+.\tools\build\build.ps1
+
+git tag v0.3.0 -m "0.3.0"
+git push origin v0.3.0
+```
+
 ## Annotations
 
 [ANNOTATIONS.md](./ANNOTATIONS.md)
