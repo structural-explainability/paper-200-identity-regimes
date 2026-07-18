@@ -217,7 +217,7 @@ uvx se-manifest-schema validate-manifest --path SE_MANIFEST.toml --strict
 ## Related and Adjacent Work
 
 Selected papers from the
-[Harvard's SciX similar-papers search](https://ui.adsabs.harvard.edu/abs/2026arXiv260114271C/similar)
+[Harvard's SciX similar-papers search](https://ui.adsabs.harvard.edu/abs/2026arXiv260116152C/similar)
 for _Referential Regimes_.
 
 ### Structural Explainability Foundation
