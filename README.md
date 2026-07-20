@@ -1,4 +1,4 @@
-# Structural Explainability: Identity Regimes
+# Structural Explainability: Referential Regimes
 
 <!-- CUSTOM: arXiv badge is static by design to avoid Shields/arXiv API lag and cache failures -->
 
@@ -11,6 +11,11 @@
 
 > Derives identity regimes that preserve stable reference
 > when neutral substrates are transformed under persistent disagreement.
+
+## Paper Overview
+
+- [arXiv](https://arxiv.org/abs/2601.16152)
+- [SciX](https://scixplorer.org/abs/2026arXiv260116152C/abstract)
 
 ## Main Contribution
 
