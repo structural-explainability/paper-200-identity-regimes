@@ -9,10 +9,9 @@
 # USAGE: See https://citation-file-format.github.io/ for details.
 
 cff-version: "1.2.0"
-type: software
-message: "If you use this work, please cite it as below."
+message: "If you use this work, please cite the article below."
 
-title: "Referential Regimes: Transformation-Invariant Identity for Neutral Substrates"
+title: "Referential Regimes paper repository"
 version: "v0.3.0"
 date-released: "2026-07-10"
 
@@ -23,11 +22,9 @@ authors:
     affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
 
 repository-code: "https://github.com/structural-explainability/paper-200-identity-regimes"
-license: CC-BY-4.0
-doi: "10.48550/arXiv.2601.16152"
-url: "https://doi.org/10.48550/arXiv.2601.16152"
+license: "CC-BY-4.0"
 
-abstract: >
+abstract: >-
   This repository contains the source materials for Referential Regimes:
   Transformation-Invariant Identity for Neutral Substrates. The paper derives
   a nine-regime lower-bound core for neutral accountability substrates operating
@@ -72,5 +69,7 @@ references:
     authors:
       - family-names: Case
         given-names: Denise M.
+        orcid: "https://orcid.org/0000-0001-6165-7389"
+    year: 2026
     doi: "10.48550/arXiv.2601.14271"
     url: "https://doi.org/10.48550/arXiv.2601.14271"
