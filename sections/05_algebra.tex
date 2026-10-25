@@ -5,23 +5,24 @@
 \label{sec:algebra}
 % =============================================================================
 
-The previous section fixed the referents the substrate must preserve.
-This section analyzes the conditions under which two representations
-of such a referent count as the same entity.
-The analysis treats identity as \emph{transformation-invariance}:
-an identity regime is determined by the behavior of a declared identity basis
-under the transformation basis fixed in Section~\ref{sec:formal_setting}.
+The selected reference inventory of Section~\ref{sec:inventory} identifies
+candidate carriers for comparing identity judgments under transformation.
+This section examines how declared identity bases and classification profiles
+can differ over the transformation basis of
+Section~\ref{sec:formal_setting}.
+A classification records proposed behavior relative to a specified basis;
+it does not independently establish that two presentations have the same
+real-world referent.
+The scientific adequacy of the basis, the operation,
+and their interpretation remains a separate obligation.
 
-The governing idea is familiar from formal ontology:
-categories are individuated by identity conditions, not by classificatory convenience,
-and properties that a thing can gain or lose cannot carry identity~\citep{guarino1998roles,guarinowelty2002}.
-This paper applies that idea at the substrate level and in operational form.
-A referent remains the same under a regime when the transformations applied
-to its representations do not break the identity basis for that regime.
-Two representations may be the same under one regime and different under another.
-A substrate that leaves the regime implicit has not fixed reference.
-It has deferred the identity question to a later interpretive choice.
-Under persistent disagreement, that choice cannot be assumed shared.
+The inquiry draws on the distinction between reference kinds and identity
+conditions familiar in formal ontology~\citep{guarino1998roles,guarinowelty2002}.
+A kind name alone does not settle whether a transformation preserves its
+intended bearer.
+A stated identity basis helps formulate a test, but a
+warranted persistence judgment also requires evidence and an appropriate
+criterion for that referent.
 
 % -----------------------------------------------------------------------------
 \subsection{Identity Bases}
@@ -29,290 +30,328 @@ Under persistent disagreement, that choice cannot be assumed shared.
 % -----------------------------------------------------------------------------
 
 \begin{definition}[Identity basis]
-\label{se200.def.IdentityBasis}
-An \emph{identity basis} is the feature, structure, role in reference, or persistence condition
-whose preservation constitutes remaining the same referent under a given identity regime.
+  \label{se200.def.IdentityBasis}
+  An \emph{identity basis} is a stated criterion proposed for deciding when
+  eligible presentations concern the same intended referent.
+  It specifies
+  the conditions whose preservation would warrant sameness under the
+  interpretation in question.
+  Its declaration alone does not establish
+  that the criterion is adequate for the intended referent.
 \end{definition}
 
-An identity basis is the condition a regime tracks through transformation.
-The lower-bound construction uses responsibility-bearing identity
-for obligation-bearers,
-temporal-realization and provenance identity for occurrences,
-and descriptive-record identity for records.
-It also uses three witnessed split cases.
-A rule may be content-fixed or structure-fixed.
-A scope may be extension-fixed or structure-fixed.
-A plain referent may be locus-fixed or object-fixed.
+The selected construction considers three candidate bases associated with
+obligation-bearers, occurrences, and records, and three pairs of bases:
+content versus structure for rules, extension versus structure for scopes,
+and locus versus object for plain referents.
+These are proposed criteria
+for examining transformation behavior, not an exhaustive inventory of
+scientifically adequate identity conditions.
 
-The inventory supplies carriers.
-The identity basis determines sameness for a carrier.
-The transformation classification determines whether that basis is preserved or broken.
-The lower-bound argument begins when two bases for the same carrier kind
-classify an ordinary transformation differently.
+A transformation classification is meaningful only relative to the
+identity basis, the eligible comparison domain, and the actual effects
+of the operation.
+Different candidate bases may classify a selected
+operation differently; that does not by itself decide which basis is
+appropriate or whether the resulting judgments warrant strict identity.
 
 % -----------------------------------------------------------------------------
 \subsection{Profiles and Collapse}
 \label{subsec:profiles_and_collapse}
 % -----------------------------------------------------------------------------
 
-The formal setting already defined identity regimes as classification profiles over the transformation basis.
-We now use the induced identity relation $\sim_\tau$ to compare regimes.
+Section~\ref{sec:formal_setting} defines identity regimes as proposed
+basis--classification profiles and defines an equivalence relation
+$\sim_\tau$ generated from specified non-breaking steps.
+The generated relation and an independently warranted strict-identity
+relation must not be conflated.
 
 \begin{definition}[Collapse]
-\label{se200.def.Collapse}
-Two identity regimes $\tau$ and $\tau'$ \emph{collapse} when they induce the same identity relation:
-\[
-\sim_\tau \ =\ \sim_{\tau'} .
-\]
-They are \emph{distinct} when some pair of representations is identified under one regime and separated under the other.
+  \label{se200.def.Collapse}
+  Fix a common comparison domain $D$ of eligible presentations for
+  two profiles $\tau$ and $\tau'$.
+  The profiles \emph{collapse at the level
+    of generated relations on $D$} when the restrictions of their generated
+  relations agree:
+  \[
+    {\sim_\tau}\big|_D = {\sim_{\tau'}}\big|_D.
+  \]
+  Those generated relations are \emph{distinct on $D$} if one relates
+  an eligible pair that the other does not.
 \end{definition}
+
+Distinct classification functions do not necessarily induce distinct
+generated relations.
+For example, a transformation classified $\PRS$
+under one profile and $\NEU$ under another is non-breaking for both.
+Even a $\PRS$/$\BRK$ difference need not separate their equivalence
+closures if the endpoints of the disputed step are connected by a
+second path of non-breaking steps.
+Such a discrepancy would require
+examination of the path and its identity warrants rather than an
+inference of strict identity from closure.
 
 \begin{definition}[Underdetermined kind]
-\label{se200.def.UnderdeterminedKind}
-A reference kind is an \emph{underdetermined kind}
-when the kind admits more than one identity basis
-and those bases classify some transformation family differently.
-Equivalently, one admissible basis for the kind
-classifies a transformation as non-breaking,
-while another admissible basis for the same kind
-classifies that transformation as breaking.
+  \label{se200.def.UnderdeterminedKind}
+  A reference kind is \emph{underdetermined at a transformation family}
+  $f$ within the selected construction when two proposed bases for that
+  kind assign, on a shared eligible comparison domain, a non-breaking
+  classification and a breaking classification, respectively, to $f$.
 \end{definition}
 
-Underdetermination is the transformation-level counterpart of basis plurality:
-basis plurality requires support for both bases,
-while underdetermination shows that one regime cannot support them both.
-When basis plurality is in play for an underdetermined kind,
-no single regime profile serves all required bases.
-The kind must be represented through distinct identity regimes.
-The split is forced by transformation behavior, not by the name of the kind.
+This is a difference between candidate classification profiles.
+If
+both bases are adequately justified for a particular use, a system must
+retain the distinction between the judgments they authorize.
+It does not follow that they require separately implemented or
+non-amalgamable relations: an explicit basis parameter may preserve both.
+Nor does a classification difference alone establish a separating pair
+in the generated equivalence relations or in the world.
 
 % -----------------------------------------------------------------------------
 \subsection{Carrier Kinds Not Split in the Core Construction}
 \label{subsec:core_unsplit_kinds}
 % -----------------------------------------------------------------------------
 
-Three reference kinds contribute one carrier-basis pair each to the core.
-They are not split by the witness operations used in this construction:
-obligation-bearers, occurrences, and records.
+The selected catalog specifies one candidate basis for each of three
+kinds: obligation-bearer, occurrence, and record.
+This selection does
+not establish that no other adequate bases exist.
 
-An \emph{obligation-bearer} is individuated by persistence as the party that can bear
-responsibility, duty, liability, authority, or accountability.
-Re-expression, annotation, re-contextualization, reassignment, branching,
-provenance extension, and state evolution do not alter that identity basis.
-Refinement and decomposition preserve identity when they add detail or decompose descriptions
-of the bearer without replacing the bearer.
-Substitution breaks identity because it replaces the bearer.
+For an \emph{obligation-bearer}, a possible criterion tracks the continuing
+party rather than each obligation attributed to that party.
+A change in
+location, assigned role, or obligation may preserve that party, provided
+an appropriate account of the party's continuity warrants the judgment.
+Replacement of the party may instead break its identity.
+Organizational
+continuity and continuity of role occupancy must not be conflated.
 
-An \emph{occurrence} is individuated by temporal realization and provenance.
-Re-expression, annotation, refinement, re-contextualization, and provenance extension do not replace the occurrence.
-State evolution preserves identity when it tracks phases or stages of the same occurrence.
-Decomposition breaks identity when it produces sub-occurrences with their own temporal individuation.
-Substitution breaks identity because it replaces the occurrence.
-Branching and reassignment are inapplicable to a fixed realization event.
+For an \emph{occurrence}, temporal realization and provenance may supply
+useful evidence, but they do not by themselves establish one bounded
+whole.
+Redescription of an independently individuated occurrence may
+preserve it; treating a proper phase as the whole may not.
+Decomposition,
+branching, and other transformations cannot be classified uniformly
+without specifying the occurrence and eligible presentations.
 
-A \emph{record} is individuated by descriptive persistence without substrate-level causal or normative commitment.
-Annotation, refinement, decomposition, branching, and provenance extension
-preserve record identity because the record survives enrichment, derivation, copying, and descriptive elaboration.
-Re-expression, re-contextualization, reassignment, and state evolution are
-identity-neutral for the record as such.
-Substitution breaks identity because it replaces the record.
+For a \emph{record}, content identity, token identity, version identity,
+and continuity of custody can produce different judgments.
+Copying a
+report may preserve its content while creating another token; annotation
+may preserve an informational core while creating a new version.
+Neither preservation nor breakage follows from the label ``record'' alone.
 
-These three carrier-basis pairs are included once in the core.
-We name their regimes:
+The selected profile names are
 \[
-\OBL,\qquad \OCC,\qquad \REC .
+  \OBL,\qquad \OCC,\qquad \REC.
 \]
+Their intended identity criteria and transformation classifications
+remain subject to the qualifications above.
 
 % -----------------------------------------------------------------------------
 \subsection{Witnessed Split Kinds}
 \label{subsec:witnessed_split_kinds}
 % -----------------------------------------------------------------------------
 
-Three reference kinds have witnessed split pairs in the lower-bound construction.
-Each admits at least the two admissible readings used here,
-and an ordinary transformation separates those readings.
-The pattern is the same in all three cases.
-A kind admits two bases $B_1$ and $B_2$.
-A transformation $f$ is non-breaking for $B_1$ and breaking for $B_2$.
-When admissible frameworks require both bases,
-the kind cannot be governed by a single identity regime.
+The other three carrier kinds in the selected catalog have pairs of
+candidate bases.
+Their comparisons can be expressed by a common
+classification pattern.
+In particular, a difference between proposed
+values of $\Class_\tau(f)$ is an algebraic fact about the profiles;
+a difference between warranted identity relations requires more.
 
-\begin{lemma}[Split pattern]
-\label{se200.lem.SplitPattern}
-Let $K$ be a reference kind with two admissible identity bases $B_1$ and $B_2$.
-Suppose there is a transformation family $f\in\Fset$ and representations $r,s$
-such that $f$ preserves identity under $B_1$ but breaks identity under $B_2$.
-If a neutral substrate must support both bases for $K$,
-then $K$ requires at least two distinct identity regimes.
+\begin{lemma}[Split pattern for classification profiles]
+  \label{se200.lem.SplitPattern}
+  Let $K$ be a reference kind and let $\tau_1,\tau_2$ be two candidate
+  profiles for $K$ over the same transformation basis and a shared
+  eligible comparison domain.
+  If some $f\in\Fset$ satisfies
+  \[
+    \Class_{\tau_1}(f)\in\{\PRS,\NEU\}
+    \quad\text{and}\quad
+    \Class_{\tau_2}(f)=\BRK,
+  \]
+  then the classification functions of $\tau_1$ and $\tau_2$
+  are distinct.
+  This conclusion alone does not establish distinct generated
+  equivalence relations, scientifically warranted strict-identity
+  relations, or a minimum number of irreducible regimes.
 \end{lemma}
 
 \begin{proof}
-If one regime governed both bases, it would assign a single classification to $f$
-for the kind.
-But the $B_1$ reading requires $f$ to be non-breaking,
-while the $B_2$ reading requires $f$ to be breaking.
-No single classification can satisfy both readings.
-Thus the kind is underdetermined at $f$.
-
-Applying $f$ to the witnessing representations identifies them under $B_1$
-and separates them under $B_2$.
-The two bases therefore induce distinct identity relations.
-When both bases must be supported, the substrate requires at least two
-distinct identity regimes for $K$.
+  The first classification is different from $\BRK$, so the
+  classification functions disagree at $f$ and cannot be equal.
+  Their generated relations depend on the eligible step pairs and
+  equivalence closure; those relations, and their interpretations,
+  are not determined by this disagreement alone.
 \end{proof}
+
+A stronger, referent-level separation would need a common eligible
+pair of presentations together with independently justified identity
+criteria that agree and disagree on that pair.
+The following examples
+show how candidate separating situations can be constructed.
+They do
+not prove that the corresponding criteria are necessary for every
+realization of the reference kind.
 
 % -----------------------------------------------------------------------------
 \subsection{Scope Under Decomposition}
 \label{subsec:scope_split}
 % -----------------------------------------------------------------------------
 
-A scope may be individuated by its extension or by its structure.
-An extension-fixed scope is individuated by the
-cases, persons, places, entities, or conditions it covers.
-A structure-fixed scope is individuated
-by the internal organization through which that coverage is represented.
+For a scope presentation, distinguish the cases covered from their
+internal organization.
+Consider a finite set $C=\{a,b\}$ and two
+partitions
+\[
+  P=\{\{a,b\}\},\qquad P'=\{\{a\},\{b\}\}.
+\]
+The presentations $(C,P)$ and $(C,P')$ have the same extension but
+different partition structures.
+A stipulated extension-fixed basis
+identifies them; a stipulated structure-fixed basis distinguishes them.
+An eligible decomposition that replaces $P$ by $P'$ while preserving $C$
+therefore provides a candidate separating example.
 
-\begin{proposition}[Scope Underdetermination]
-\label{se200.prop.ScopeUnderdetermination}
-The scope reference kind is underdetermined at aggregation/decomposition $\mathrm{AD}$.
+\begin{proposition}[Scope underdetermination in the selected model]
+  \label{se200.prop.ScopeUnderdetermination}
+  If an eligible $\mathrm{AD}$ operation preserves the coverage $C$
+  while changing the identity-relevant partition $P$, then the
+  extension-fixed and structure-fixed candidate profiles can assign
+  different classifications to that operation.
 \end{proposition}
 
 \begin{proof}
-Let $r$ be a scope fixed by extension.
-Let $s$ be a decomposition of $r$ into subscopes whose union covers the same cases.
-The extension is preserved, so $\mathrm{AD}$ is non-breaking for the extension-fixed reading.
-Let $r'$ be a scope fixed by structure.
-Let $s'$ be a decomposition of $r'$ into a finer internal partition.
-The structure is changed, so $\mathrm{AD}$ is breaking for the structure-fixed reading.
-Both readings are admissible scopes.
-No single classification of $\mathrm{AD}$ can serve both.
-By Lemma~\ref{se200.lem.SplitPattern}, when both bases must be supported,
-scope requires at least two identity regimes.
+  Under the stipulated extension-fixed criterion, equality of $C$
+  supplies preservation; under the stipulated structure-fixed
+  criterion, inequality of $P$ supplies breakage.
+  On a domain where these are the specified effects of $\mathrm{AD}$,
+  its two classifications differ, as in
+  Lemma~\ref{se200.lem.SplitPattern}.
 \end{proof}
 
-This yields:
+We call the two proposed profiles
 \[
-\SCOPEE,\qquad \SCOPES .
+  \SCOPEE,\qquad \SCOPES.
 \]
-$\SCOPEE$ is the extension-fixed scope regime.
-$\SCOPES$ is the structure-fixed scope regime.
-After decomposition, two representations
-can apply to the same cases while no longer being the same scope structure.
-State evolution is inapplicable to both scope regimes:
-a scope is an applicability domain,
-not an enduring referent that passes through internal states.
+This example demonstrates a distinction between coverage and
+structure within the model.
+It does not show that partition equality
+is the correct identity criterion for every scope, or that a scope
+cannot be faithfully represented with an explicit basis parameter.
 
 % -----------------------------------------------------------------------------
 \subsection{Rule Under Refinement}
 \label{subsec:rule_split}
 % -----------------------------------------------------------------------------
 
-A rule may be individuated by its content or by its structure.
-A content-fixed rule is individuated by its requirements,
-permissions, prohibitions, authorizations, or definitions.
-A structure-fixed rule is individuated by the organization of the
-text, sections, clauses, delegations, or internal rule structure
-through which that content is expressed.
+For a rule presentation, distinguish the specified normative content
+from its textual or organizational structure.
+Consider two
+presentations $(N,S)$ and $(N,S')$ with identical stipulated content
+$N$ but different structures $S\ne S'$.
+A content-fixed comparison
+identifies the presentations, whereas a structure-fixed comparison
+separates them.
+Whether a particular refinement actually preserves
+normative content must be assessed rather than inferred from the word
+``refinement.''
 
-\begin{proposition}[Rule Underdetermination]
-\label{se200.prop.RuleUnderdetermination}
-The rule reference kind is underdetermined at refinement $\mathrm{RF}$.
+\begin{proposition}[Rule underdetermination in the selected model]
+  \label{se200.prop.RuleUnderdetermination}
+  If an eligible $\mathrm{RF}$ operation preserves the specified
+  content $N$ while changing the identity-relevant structure $S$,
+  then the content-fixed and structure-fixed candidate profiles can
+  assign different classifications to that operation.
 \end{proposition}
 
 \begin{proof}
-Let $r$ be a rule fixed by normative content.
-Let $s$ be a refinement of $r$ that preserves the rule's requirements
-while adding detail or reorganizing expression.
-The content is preserved, so $\mathrm{RF}$ is non-breaking for the content-fixed reading.
-Let $r'$ be a rule fixed by textual or internal structure.
-Let $s'$ be a refinement of $r'$ that changes that structure.
-The structure is changed, so $\mathrm{RF}$ is breaking for the structure-fixed reading.
-Both readings are admissible rules.
-No single classification of $\mathrm{RF}$ can serve both.
-By Lemma~\ref{se200.lem.SplitPattern}, when both bases must be supported,
-rule requires at least two identity regimes.
+  The stipulated content-fixed criterion is preserved because $N$
+  is unchanged; the stipulated structure-fixed criterion is broken
+  because $S\ne S'$.
+  The corresponding classifications differ,
+  as in Lemma~\ref{se200.lem.SplitPattern}.
 \end{proof}
 
-This yields:
+We call the two proposed profiles
 \[
-\RULEC,\qquad \RULES .
+  \RULEC,\qquad \RULES.
 \]
-$\RULEC$ is the content-fixed rule regime.
-$\RULES$ is the structure-fixed rule regime.
-After refinement, two representations
-can require the same thing while no longer being the same text or rule structure.
-State evolution is inapplicable to both rule regimes:
-a rule is a normative structure, not an enduring referent that passes through internal states.
-Changes to rule content are amendments or refinements,
-not state transitions of a persisting object.
+This comparison does not decide whether a particular statute or rule
+persists across amendment, recodification, or re-expression.
+That
+requires a justified account of the relevant rule referent.
 
 % -----------------------------------------------------------------------------
 \subsection{Plain Referent Under Forking}
 \label{subsec:plain_referent_split}
 % -----------------------------------------------------------------------------
 
-A plain referent may be individuated by locus or by object.
-A locus-fixed referent is individuated by the
-place, site, slot, location, or institutional position that remains fixed.
-An object-fixed referent is individuated by the
-object, asset, instrument, sample, device, parcel, or thing occupying that locus.
+For plain referents, distinguish a locus from an object associated
+with that locus.
+A toy configuration $(L,O)$ records both.
+Two
+configurations $(L,O_1)$ and $(L,O_2)$ may have the same locus $L$
+but different objects $O_1\ne O_2$.
+A locus-fixed comparison then
+identifies them, while an object-fixed comparison distinguishes them.
+The inequality of the objects is an assumption of the toy model,
+not a conclusion from their labels alone.
 
-\begin{proposition}[Plain-referent Underdetermination]
-\label{se200.prop.PlainReferentUnderdetermination}
-The plain-referent kind is underdetermined at branch/fork $\mathrm{BF}$.
+\begin{proposition}[Plain-referent underdetermination in the selected model]
+  \label{se200.prop.PlainReferentUnderdetermination}
+  If an eligible $\mathrm{BF}$ operation yields compared presentations
+  with the same locus but independently distinct objects, then
+  locus-fixed and object-fixed candidate profiles can assign
+  different classifications to that comparison.
 \end{proposition}
 
 \begin{proof}
-Let $r$ be a plain referent fixed by locus.
-Let $s$ be a forked continuation over the same locus.
-The locus is preserved, so $\mathrm{BF}$ is non-breaking for the locus-fixed reading.
-Let $r'$ be a plain referent fixed by object.
-Let $s'$ be a fork into non-identical object continuations.
-The object identity is not preserved across both continuations,
-so $\mathrm{BF}$ is breaking for the object-fixed reading.
-Both readings are admissible plain referents.
-No single classification of $\mathrm{BF}$ can serve both.
-By Lemma~\ref{se200.lem.SplitPattern}, when both bases must be supported,
-plain referents require at least two identity regimes.
+  The locus-fixed criterion is preserved by the shared locus; the
+  object-fixed criterion is broken by the stipulated object
+  distinction.
+  The candidate classifications consequently differ,
+  as in Lemma~\ref{se200.lem.SplitPattern}.
 \end{proof}
 
-This yields:
+We call the two proposed profiles
 \[
-\LOC,\qquad \OBJ .
+  \LOC,\qquad \OBJ.
 \]
-$\LOC$ is the locus-fixed plain-referent regime.
-$\OBJ$ is the object-fixed plain-referent regime.
-After a fork, two representations
-can be the same place while no longer being the same object.
-State evolution applies to both plain-referent regimes and preserves identity:
-a locus or an object is an enduring referent that persists through changes in its state.
+A fork of record representations does not by itself create distinct
+objects or imply loss of object identity.
+Nor does relocation of an
+object necessarily end its identity.
+The separating case depends on
+which referent is being tracked and whether the assumed operation
+and object distinction are independently warranted.
 
 % -----------------------------------------------------------------------------
 \subsection{Result of the Algebra}
 \label{subsec:algebra_result}
 % -----------------------------------------------------------------------------
 
-The reference inventory supplied six carrier kinds.
-Three carrier-basis pairs contribute one regime each:
+The selected inventory contributes three single-basis candidate
+profiles and three pairs of candidate profiles:
 \[
-\OBL,\qquad \OCC,\qquad \REC .
+  \begin{aligned}
+     & \OBL,\quad \OCC,\quad \REC,                       \\
+     & \LOC,\quad \OBJ,\quad \SCOPEE,\quad \SCOPES,\quad
+    \RULEC,\quad \RULES.
+  \end{aligned}
 \]
-Three carrier kinds have witnessed split pairs:
-\[
-\LOC,\ \OBJ,\qquad
-\SCOPEE,\ \SCOPES,\qquad
-\RULEC,\ \RULES .
-\]
-Thus the transformation analysis yields the nine-regime lower-bound core:
-\[
-\begin{aligned}
-&\OBL,\quad \OCC,\quad \REC,\quad \LOC,\quad \OBJ,\\
-&\SCOPEE,\quad \SCOPES,\quad \RULEC,\quad \RULES .
-\end{aligned}
-\]
+These are nine named carrier--basis profiles in the chosen catalog.
+The conditional examples show how different identity bases can
+classify specified transformations differently.
+They do not establish
+that every transformation of the named family has the same effect,
+that the generated relations warrant strict identity, or that all
+nine profiles are scientifically necessary or non-amalgamable.
 
-The additional regimes arise within carrier kinds already named.
-They are identity bases separated by ordinary transformations.
-This is why counting carrier kinds undercounts the structure needed
-for stable reference.
-The next section collects the nine core regimes in a single classification table.
+Section~\ref{sec:nine} collects the proposed classifications;
+Section~\ref{sec:bound} distinguishes the catalog count from an
+unproved lower bound on irreducible identity regimes.

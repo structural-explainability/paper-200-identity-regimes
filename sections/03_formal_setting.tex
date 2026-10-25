@@ -5,282 +5,305 @@
 \label{sec:formal_setting}
 % =============================================================================
 
-The results in this paper are conditional on the assumptions fixed here.
-These assumptions specify the operating conditions under which the
-neutral-substrate constraint of Section~\ref{sec:background} is applied.
-The goal is to identify the lower-bound identity structure required of a
-neutral accountability substrate under those conditions.
+This paper investigates candidate conditions for stable reference under
+transformation in settings of persistent interpretive disagreement.
+Its formal results are relative to the selected carriers, identity bases,
+transformation families, and assumptions stated below.
+The construction does not independently establish that those choices are
+scientifically adequate for every intended referent or that the selected
+profiles constitute a minimum number of irreducible identity regimes.
 
 % -----------------------------------------------------------------------------
 \subsection{Persistent Disagreement}
 \label{subsec:persistent_disagreement}
 % -----------------------------------------------------------------------------
 
-We assume environments in which disagreement is persistent and extensions are uncoordinated.
-Extensions may introduce
-incompatible causal accounts, incompatible normative attributions, and
-incompatible interpretive classifications.
-They cannot be forced to converge.
-Substrate revision may not be used to resolve interpretive conflict.
-Consequently, substrate-level admissibility must not depend on agreement among extensions.
-Neutrality must be maintained without recourse to convergence.
+We consider environments in which interpretive frameworks may remain
+in disagreement and their extensions need not be coordinated.
+Frameworks may advance incompatible causal accounts, normative attributions,
+or interpretive classifications without being required to converge.
+The neutrality constraint of Section~\ref{sec:background} concerns which
+propositions the shared substrate itself adopts; it does not adjudicate
+among those interpretations.
 
-Persistent disagreement is not mere temporary uncertainty.
-It is the condition in which multiple admissible frameworks
-may remain simultaneously usable while disagreeing about
-causation, responsibility, justification, applicability, or normative significance.
-A neutral substrate must therefore support shared reference
-without embedding any one framework's interpretation as the substrate-level account.
+This setting assumes neither that all admissible frameworks agree nor that
+they are mutually consistent.
+The conditional neutrality result of
+\emph{Neutral Substrates} also requires Referential Common Ground: the
+complete adopted referential commitment set must remain jointly compatible
+with each admissible framework.
+That premise is not established by the
+present inventory or transformation classifications.
+
+Revising a substrate merely to make conflicting interpretations converge
+would not resolve their disagreement neutrally.
+Revising an inadequately
+justified referential commitment is a different matter: any revised
+construction requires renewed examination of its own compatibility and
+referential warrant.
+This paper does not define such a revision procedure.
 
 % -----------------------------------------------------------------------------
 \subsection{Stable Reference in Strong Form}
 \label{subsec:stable_reference_strong}
 % -----------------------------------------------------------------------------
 
-The persistence component of the referential regime is inherited from
-\emph{Neutral Substrates}.
-Here we fix the demanding case in which persistence must be evaluated
-under ordinary transformations of records.
-Identity conditions must not depend on interpretive convergence.
-An entity that must change its ontological status to enter a
-new relationship has not been stably referred to.
-A stability-critical distinction must be represented in the substrate,
-rather than carried by a role, flag, or contextual predicate.
-Such devices rely on downstream conventions and can therefore
-permit divergent judgments under persistent disagreement.
+We examine the demanding case in which representations of a purported
+referent change through ordinary record transformations while the question
+of its identity remains meaningful.
+The referential regime in
+\emph{Neutral Substrates} supplies abstract individuation, co-reference,
+and persistence interfaces; it does not independently determine which
+referents persist through a particular operation.
 
-This is a deliberately strong setting.
-Engineering systems often manage identity pressure through
-negotiated, local, or context-relative schemes, which may be useful in
-practice but are not the case analyzed here.
-This paper studies the case in which stable reference must be available
-as common ground before interpretive agreement is available.
+Stable reference requires identifying the intended referent and supplying
+an adequate criterion for when presentations concern that same referent.
+A change in location, role, description, or state need not constitute a
+change of bearer identity; conversely, preservation of a record or label
+does not establish the persistence of what it represents.
+The applicable judgment depends on the proposed identity criterion and
+its independent justification.
+
+Roles, flags, contextual predicates, and carrier/basis parameters are not
+inherently incompatible with neutral shared reference.
+They may carry
+explicit, fixed distinctions.
+What matters is whether their meanings and
+use are adequately specified and whether the resulting referential
+commitments satisfy the relevant common-ground conditions.
+A convention
+whose identity-relevant meaning is left to conflicting interpretations
+cannot, without further grounds, establish a shared identity judgment.
 
 % -----------------------------------------------------------------------------
-\subsection{Minimality}
+\subsection{Minimality and Counting}
 \label{subsec:minimality}
 % -----------------------------------------------------------------------------
 
-We minimize referential structure subject to the above constraints.
-Minimality is measured by the number of identity regimes
-needed to preserve neutrality and stable reference.
-A reduction is admissible when it preserves the relevant identity distinctions
-without relocating them into roles, flags, or other discriminators.
+The finite construction below selects carrier kinds and candidate identity
+bases for comparison.
+It is possible to count the resulting named profiles.
+It is a separate question whether those profiles require distinct,
+irreducible identity relations or implementations.
 
-A reduction counts as genuine when it does not reintroduce
-a collapsed distinction through
-a role, flag, contextual predicate, workflow state, schema convention,
-or application-level discriminator.
-The criterion is analytic.
-It identifies the regime structure required under the stated constraints.
-It does not recommend use of the core set beyond
-the neutral-substrate conditions analyzed here.
+A necessity or minimality result would require a justified unit of counting
+and a criterion for faithful representations of the intended identity
+judgments.
+In particular, carrier-indexed relations may be combined in
+one explicitly tagged relation while retaining their separate restrictions.
+The admissibility and scientific adequacy of such combinations cannot be
+settled by counting declarations or excluding parameters by stipulation.
+
+We therefore do not minimize a number of irreducible identity regimes in
+this paper.
+Section~\ref{sec:bound} describes the selected catalog,
+its limited distinctions, and the outstanding non-amalgamation question,
+including the lossless-union comparison CE-5.
 
 % -----------------------------------------------------------------------------
 \subsection{Transformation Basis}
 \label{subsec:transformation_basis}
 % -----------------------------------------------------------------------------
 
-Identity pressure appears when records are transformed.
-We therefore fix a finite transformation basis
+Identity questions become visible when representations are transformed.
+We select the following finite transformation basis for analysis:
 \[
   \Fset =
   \{\mathrm{RE},\mathrm{AN},\mathrm{RF},\mathrm{AD},\mathrm{RC},
-  \mathrm{RA},\mathrm{SU},\mathrm{BF},\mathrm{PV},\mathrm{SE}\}.
+    \mathrm{RA},\mathrm{SU},\mathrm{BF},\mathrm{PV},\mathrm{SE}\}.
 \]
-The basis is not claimed to be complete for all possible record systems.
-It is a representative basis of ordinary operations in
-provenance, versioning, institutional recordkeeping, and data-governance practice.
-The lower-bound result is conditional on this basis.
-Adding further transformations cannot collapse distinctions
-already witnessed by this basis.
-It may leave the lower bound unchanged or force further splits.
+The basis is a selected set of operation families, not a claim of
+completeness for record systems or of identity effects uniform across
+all referent kinds.
 
 \begin{definition}[Transformation basis]
   \label{se200.def.TransformationBasis}
-  The transformation basis $\Fset$ consists of the following admissible operation families:
+  The transformation basis $\Fset$ consists of these operation families:
   \begin{enumerate}[label=(\alph*),nosep]
-    \item $\mathrm{RE}$, re-expression: change of representation format while preserving the represented content;
+    \item $\mathrm{RE}$, re-expression: change of representation format while preserving represented content;
     \item $\mathrm{AN}$, annotation: addition of non-identity-bearing information;
     \item $\mathrm{RF}$, refinement: increase in descriptive, structural, or normative detail;
-    \item $\mathrm{AD}$, aggregation or decomposition: whole-preserving restructuring into coarser or finer components;  \item $\mathrm{RC}$, re-contextualization: change in applicability context;
+    \item $\mathrm{AD}$, aggregation or decomposition: restructuring into coarser or finer components under a specified whole-preservation condition;
+    \item $\mathrm{RC}$, re-contextualization: change in applicability context;
     \item $\mathrm{RA}$, reassignment: change in association, bearer, or assignment relation;
-    \item $\mathrm{SU}$, substitution: replacement of the identity carrier;
+    \item $\mathrm{SU}$, substitution: replacement of the designated carrier;
     \item $\mathrm{BF}$, branch or fork: divergence into multiple continuations;
     \item $\mathrm{PV}$, provenance extension: addition of historical, derivational, or evidentiary metadata;
     \item $\mathrm{SE}$, state evolution: change in state of an enduring referent over time.
   \end{enumerate}
 \end{definition}
 
-The transformation families are typed operation families.
-A transformation is evaluated relative to the carrier-basis pair to which it is applied.
-In particular, $\mathrm{AD}$ names aggregation or decomposition
-that preserves the represented whole while changing its component structure.
-For scopes, this means preserving the covered cases while changing
-the internal scope organization.
-Operations that add or remove covered cases fall outside $\mathrm{AD}$.
-The transformation basis is representative rather than complete,
-as stated in Definition~\ref{se200.def.TransformationBasis}.
-By Corollary~\ref{se200.cor.Monotonicity},
-adding further transformations cannot lower the bound.
-A transformation may break identity when it restructures identity-relevant components.
-It may remain non-breaking when it restructures a non-identity-bearing description.
+These names designate typed operation families.
+Their meaning and
+identity effects must be evaluated relative to an intended referent,
+eligible presentations, and a stated identity basis.
+In particular,
+$\mathrm{AD}$ may preserve the covered cases of a scope while changing
+its internal organization; whether either property is identity-relevant
+is a separate question.
+Changes to covered cases are not represented
+by that particular whole-preserving instance of $\mathrm{AD}$.
+
+If a larger transformation basis preserves the previously assigned
+classifications on $\Fset$, then any existing classification disagreement
+remains a disagreement on the larger basis, as expressed in
+Proposition~\ref{se200.prop.ClassificationDistinctionPersists}.
+This does not establish a minimum number of identity regimes.
 
 % -----------------------------------------------------------------------------
 \subsection{Classification of Transformations}
 \label{subsec:classification_transformations}
 % -----------------------------------------------------------------------------
 
-A regime classifies each applicable transformation by how it affects the declared identity basis.
-We use four classifications.
+The construction assigns a classification to each operation family
+relative to a declared identity basis and its intended comparison domain.
 
 \begin{definition}[Transformation classification]
   \label{se200.def.TransformationClassification}
-  For a regime $\tau$ and transformation family $f\in\Fset$, the classification
+  For a profile $\tau$ and transformation family $f\in\Fset$,
   \[
-    \Class_\tau(f)\in\{\PRS,\BRK,\NEU,\NA\}
+    \Class_\tau(f)\in\{\PRS,\BRK,\NEU,\NA\}.
   \]
-  has the following meaning:
+  The proposed classifications mean:
   \begin{enumerate}[label=(\alph*),nosep]
-    \item $\PRS$: the transformation is identity-preserving for $\tau$;
-    \item $\BRK$: the transformation is identity-breaking for $\tau$;
-    \item $\NEU$: the transformation is identity-neutral for $\tau$;
-    \item $\NA$: the transformation is inapplicable to $\tau$.
+    \item $\PRS$: the operation preserves the declared identity basis;
+    \item $\BRK$: the operation breaks the declared identity basis;
+    \item $\NEU$: the operation is applicable but does not affect that basis;
+    \item $\NA$: the operation is inapplicable on the selected domain.
   \end{enumerate}
 \end{definition}
 
-The distinction between $\PRS$ and $\NEU$ matters.
-A $\PRS$ transformation preserves identity in a way that is relevant to the regime's identity basis.
-An $\NEU$ transformation does not bear on that identity basis.
-Both are non-breaking.
-A transformation breaks identity when its classification is $\BRK$.
-Thus $\NEU$ does not mean that the operation is ignored by the system.
-It means that the operation does not alter identity under the regime being considered.
-A fourth value, $\NA$, marks a transformation that cannot arise for the regime's carrier at all,
-as distinct from one that arises but leaves identity untouched.
+$\PRS$ and $\NEU$ both designate non-breaking behavior in this
+classification scheme, but they express different reasons.
+A family-level value is meaningful only when its proposed behavior
+is sufficiently uniform over the specified eligible operations;
+otherwise the intended scope must be refined.
+Neither the classification label nor its recorded presence in a
+profile independently warrants strict identity for particular referents.
 
 \begin{definition}[Non-breaking transformation]
   \label{se200.def.NonBreakingTransformation}
-  A transformation family $f$ is \emph{non-breaking} for regime $\tau$ when
+  A family $f$ is \emph{non-breaking} for profile $\tau$ when
   \[
     \Class_\tau(f)\in\{\PRS,\NEU\}.
   \]
-  It is \emph{breaking} for $\tau$ when
-  \[
-    \Class_\tau(f)=\BRK.
-  \]
+  It is \emph{breaking} when $\Class_\tau(f)=\BRK$.
 \end{definition}
 
 % -----------------------------------------------------------------------------
-\subsection{Identity Regimes}
+\subsection{Identity Regimes and Generated Relations}
 \label{subsec:identity_regimes}
 % -----------------------------------------------------------------------------
 
-The new primitive of this paper is the identity regime.
-An identity regime is not an ontological kind.
-It is a transformation profile over an identity basis.
+An identity regime is a proposed pairing of an identity basis with a
+transformation classification.
+It is not itself an ontological kind
+or proof that its basis is adequate for a particular referent.
 
 \begin{definition}[Identity regime]
   \label{se200.def.IdentityRegime}
-  An \emph{identity regime} $\tau$ consists of an identity basis
-  together with a classification function
+  An \emph{identity regime} $\tau$ consists of a declared identity basis
+  and a classification function
   \[
     \Class_\tau:\Fset\to\{\PRS,\BRK,\NEU,\NA\}.
   \]
-  The identity basis specifies sameness for the referent.
-  The classification function states the effect of each transformation family
-  under that basis.
+  The basis proposes conditions of sameness for the intended referent;
+  the classification records proposed transformation behavior relative
+  to that basis.
 \end{definition}
 
-\begin{definition}[Induced identity relation]
+\begin{definition}[Induced relation from non-breaking steps]
   \label{se200.def.InducedIdentityRelation}
-  Let $\tau$ be an identity regime.
-  The induced identity relation $\sim_\tau$ is the equivalence relation
-  generated by transformations that are non-breaking for $\tau$.
-  Thus $r\sim_\tau s$ means that $r$ and $s$ are representations of the same referent under regime $\tau$.
+  Fix a profile $\tau$ and a domain $D_\tau$ of eligible presentations.
+  Let $E_\tau\subseteq D_\tau\times D_\tau$ consist of pairs joined
+  by specified, admissible transformation steps classified as
+  non-breaking for $\tau$.
+  Define $\sim_\tau$ as the smallest
+  equivalence relation on $D_\tau$ containing $E_\tau$.
 \end{definition}
 
-This definition makes identity transformation-relative.
-The same pair of representations may coincide under one regime
-and diverge under another.
-The substrate must declare which identity basis is being preserved.
+The generated relation $\sim_\tau$ is mathematically an equivalence
+relation by construction.
+That does not mean every related pair has
+been shown to present one and the same real-world referent.
+An interpretation as strict identity requires an independently warranted
+criterion, suitable evidence for the classified steps, and justification
+that the generated closure preserves that criterion.
+In particular, a path through branching or through multiple
+non-breaking steps cannot by itself discharge these obligations.
 
 % -----------------------------------------------------------------------------
 \subsection{Basis Plurality}
 \label{subsec:basis_plurality}
 % -----------------------------------------------------------------------------
 
-A carrier kind exhibits basis plurality when admissible frameworks
-require stable reference to that carrier under more than one identity basis.
-Basis plurality is stronger than the mere availability of multiple descriptions.
-It means that the substrate must support frameworks that preserve different
-sameness conditions for the same carrier kind.
+A carrier kind may admit more than one proposed identity basis.
+For example, one can compare locus-fixed with object-fixed criteria,
+coverage with structural organization, or rule content with rule structure.
+These comparisons are meaningful even before scientific adequacy and
+non-amalgamation are established.
 
 \begin{definition}[Basis plurality]
   \label{se200.def.BasisPlurality}
-  A carrier kind has \emph{basis plurality} when admissible frameworks
-  require stable reference to that carrier kind under more than one identity basis.
-  A neutral substrate serving those frameworks must preserve each required basis
-  without relocating the distinction into a hidden regime.
+  A carrier kind exhibits \emph{basis plurality} within a construction
+  when at least two distinct identity bases are specified for it.
+  Whether both bases are independently justified, required for the
+  intended applications, or irreducible is a separate question.
 \end{definition}
 
-The lower-bound proof uses three witnessed cases of basis plurality.
-Plain referents may be tracked by locus or object,
-scopes by extension or structure,
-and rules by content or structure.
-Other admissible bases may exist.
-When both witnessed bases are in play,
-one regime cannot serve both without changing identity behavior
-or recovering the distinction elsewhere.
+The selected construction examines three proposed pairs: plain referents
+tracked by locus or object, scopes by extension or structure, and rules
+by content or structure.
+Distinct descriptions or classification values
+do not alone prove distinct warranted identity relations.
 
 % -----------------------------------------------------------------------------
 \subsection{Hidden Regimes}
 \label{subsec:hidden_regimes}
 % -----------------------------------------------------------------------------
 
-A hidden regime is a collapsed identity distinction recovered outside
-the declared substrate structure.
-Hidden regimes obstruct genuine minimality.
-They allow a system to appear to use fewer identity regimes
-while relying on downstream discriminators to perform the missing identity work.
+A representation can fail to disclose an identity-relevant distinction
+on which its identity judgments nevertheless depend.
+This issue is
+separate from whether those judgments are expressed in one relation
+or several relations.
 
 \begin{definition}[Hidden regime]
   \label{se200.def.HiddenRegime}
-  A \emph{hidden regime} is a stability-critical distinction that
-  is not represented as an identity regime in the substrate,
-  but is instead recovered through a role, flag, contextual predicate,
-  workflow state, schema convention, or application-level discriminator.
+  A \emph{hidden regime} is an identity-relevant criterion or distinction
+  used to determine sameness in a realization but not adequately
+  declared or fixed in the shared referential account, so that its
+  application depends on an unstated or contested interpretation.
 \end{definition}
 
-Hidden regimes violate the neutral-substrate discipline because their
-application is not fixed by the substrate.
-They require agreement about how the discriminator should be interpreted.
-Under persistent disagreement, that agreement cannot be assumed.
-A collapse repaired through a hidden regime is therefore
-not a genuine reduction in declared referential structure.
+A declared role, flag, carrier tag, or basis parameter is not hidden
+merely because it is a discriminator.
+Its adequacy depends on whether
+its semantics are fixed and its use is justified for the intended
+referents.
+Conversely, an unacknowledged convention cannot be treated
+as established common ground merely because a system implements it.
+Whether a proposed combined representation is faithful must therefore
+be examined rather than decided by terminology alone.
 
 % -----------------------------------------------------------------------------
-\subsection{Scope of the Lower Bound}
+\subsection{Scope of the Analysis}
 \label{subsec:lower_bound_scope}
 % -----------------------------------------------------------------------------
 
-The lower bound proved below is conditional.
-It holds for neutral accountability substrates satisfying the assumptions
-of this section, using the transformation basis of
-Definition~\ref{se200.def.TransformationBasis},
-and supporting the witnessed basis pluralities of
-Definition~\ref{se200.def.BasisPlurality}.
+The selected carrier inventory, identity bases, and transformation
+classifications supply a finite candidate construction.
+Sections~\ref{sec:algebra}--\ref{sec:bound} analyze its proposed
+transformation distinctions and the limits of the resulting count.
 
-Under those conditions, fewer than nine regimes cannot preserve stable reference
-without changing transformation behavior or reintroducing a hidden regime.
+The analysis does not establish a universal minimum of nine identity
+regimes, a complete inventory of identity criteria, or a general
+procedure for determining strict identity under transformation.
+Such conclusions would require justified referent-specific criteria,
+sound classifications, and a satisfactory account of faithful
+combinations and non-amalgamation.
 
-The result is open-ended upward but fixed downward.
-The carrier kinds, identity bases, and transformation families used here
-are sufficient to witness the core.
-Further regimes may be required in richer deployments.
-That possibility does not affect the lower bound proved here.
-
-The next section states the reference inventory.
-The inventory supplies the referents that must remain addressable.
-The transformation basis supplied here determines which of those referents
-can share an identity regime.
+The next section presents the selected reference inventory.
+Its carrier
+kinds identify subjects of inquiry; they do not themselves supply
+independent identity warrants.

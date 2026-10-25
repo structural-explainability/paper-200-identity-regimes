@@ -1,30 +1,30 @@
 % !TeX root = ../se200_referential_regimes.tex
 
 % =============================================================================
-\section{Determinacy}
+\section{Determinacy of the Selected Profile Assignment}
 \label{sec:determinacy}
 % =============================================================================
 
-The lower-bound result requires a fixed assignment
-from core carrier-basis pairs to identity regimes.
-This section records that assignment and
-is restricted to the carrier-basis pairs used in the lower-bound construction.
-
-Once a core carrier-basis pair is fixed,
-the regime assignment is determined.
-Choosing the identity basis for a real-world referent remains a matter of
-modeling judgment.
+Sections~\ref{sec:inventory}--\ref{sec:nine} specify a finite catalog of
+carrier--basis pairs and proposed transformation-classification profiles.
+This section asks whether the catalog assigns a named profile to each
+selected pair without ambiguity.
+This is an internal property of the
+specified assignment, not a claim that a particular identity basis is
+scientifically adequate, that the catalog is exhaustive, or that nine
+irreducible regimes are required.
 
 % -----------------------------------------------------------------------------
-\subsection{Core Carrier-Basis Pairs}
+\subsection{Core Carrier--Basis Pairs}
 \label{subsec:core_carrier_basis_pairs}
 % -----------------------------------------------------------------------------
 
-\begin{definition}[Core carrier-basis pair]
+\begin{definition}[Core carrier--basis pair]
 \label{se200.def.CoreCarrierBasisPair}
-A \emph{core carrier-basis pair} is one of the carrier kind and identity basis
-combinations used in the lower-bound construction.
-The core pairs are:
+A \emph{core carrier--basis pair} is one of the nine selected carrier-kind
+and candidate identity-basis combinations displayed below.
+The arrows
+record the profile names assigned within this construction:
 \[
 \begin{array}{rcl}
 \text{obligation-bearer with responsibility-bearing identity} &\mapsto& \OBL,\\
@@ -40,43 +40,40 @@ The core pairs are:
 \]
 \end{definition}
 
-The first three pairs contribute one regime each.
-The remaining six pairs arise from the witnessed split cases proved in Section~\ref{sec:algebra}.
+The first three carrier kinds have one candidate basis each in this
+catalog.
+The remaining three have two candidate bases each, motivated
+by the conditional comparisons in Section~\ref{sec:algebra}.
+The selection does not establish that these bases are necessary,
+sufficient, or the only adequate bases for those carrier kinds.
 
 \begin{definition}[Core regime assignment]
 \label{se200.def.CoreRegimeAssignment}
-The \emph{core regime assignment} maps each core carrier-basis pair
-to the identity regime displayed in Definition~\ref{se200.def.CoreCarrierBasisPair}.
+The \emph{core regime assignment} $A$ maps each selected core
+carrier--basis pair to the named classification profile indicated by
+the corresponding arrow in Definition~\ref{se200.def.CoreCarrierBasisPair}.
+Its codomain is the nine-profile catalog in Section~\ref{sec:nine}.
 \end{definition}
+
+The assignment is stipulated as part of the finite construction.
+It does not choose or justify a basis for an actual referent.
 
 % -----------------------------------------------------------------------------
 \subsection{Existence}
 \label{subsec:determinacy_existence}
 % -----------------------------------------------------------------------------
 
-\begin{lemma}[Existence for the core]
+\begin{lemma}[Assignment existence]
 \label{se200.lem.CoreExistence}
-Every core carrier-basis pair is assigned to at least one of the nine core regimes.
+Every selected core carrier--basis pair has an assigned profile under $A$.
 \end{lemma}
 
 \begin{proof}
-\sloppy
-The three one-basis core pairs are assigned by construction:
-obligation-bearer with responsibility-bearing identity maps to $\OBL$,
-occurrence with realization-and-provenance identity maps to $\OCC$,
-and record with descriptive-record identity maps to $\REC$.
-
-The remaining core pairs are assigned by the split results of Section~\ref{sec:algebra}.
-A plain referent with locus-fixed identity maps to $\LOC$,
-and a plain referent with object-fixed identity maps to $\OBJ$,
-by Proposition~\ref{se200.prop.PlainReferentUnderdetermination}.
-A scope with extension-fixed identity maps to $\SCOPEE$,
-and a scope with structure-fixed identity maps to $\SCOPES$,
-by Proposition~\ref{se200.prop.ScopeUnderdetermination}.
-A rule with content-fixed identity maps to $\RULEC$,
-and a rule with structure-fixed identity maps to $\RULES$,
-by Proposition~\ref{se200.prop.RuleUnderdetermination}.
-Therefore every core carrier-basis pair is assigned to at least one of the nine core regimes.
+Definition~\ref{se200.def.CoreCarrierBasisPair} lists all nine selected
+pairs and gives an image for each.
+By
+Definition~\ref{se200.def.CoreRegimeAssignment}, $A$ is defined on
+every pair in its stated domain.
 \end{proof}
 
 % -----------------------------------------------------------------------------
@@ -84,27 +81,19 @@ Therefore every core carrier-basis pair is assigned to at least one of the nine 
 \label{subsec:determinacy_uniqueness}
 % -----------------------------------------------------------------------------
 
-\begin{lemma}[Uniqueness for the core]
+\begin{lemma}[Assignment uniqueness]
 \label{se200.lem.CoreUniqueness}
-No core carrier-basis pair is assigned to more than one of the nine core regimes.
+Each selected core carrier--basis pair has exactly one assigned profile
+under $A$.
 \end{lemma}
 
 \begin{proof}
-Each core carrier-basis pair contains a fixed carrier kind and a fixed identity basis.
-The core regime assignment maps that pair
-to the regime that preserves the declared basis
-under the transformation behavior used in the lower-bound construction.
-
-The three one-basis core pairs map to $\OBL$, $\OCC$, and $\REC$ respectively.
-For the split cases, the declared basis selects the side of the split:
-locus-fixed plain referent maps to $\LOC$ and not $\OBJ$;
-object-fixed plain referent maps to $\OBJ$ and not $\LOC$;
-extension-fixed scope maps to $\SCOPEE$ and not $\SCOPES$;
-structure-fixed scope maps to $\SCOPES$ and not $\SCOPEE$;
-content-fixed rule maps to $\RULEC$ and not $\RULES$;
-and structure-fixed rule maps to $\RULES$ and not $\RULEC$.
-Thus the assignment is functional on the core pairs.
-Therefore no core carrier-basis pair is assigned to more than one core regime.
+Each pair occurs exactly once on the left-hand side of the displayed
+assignment in Definition~\ref{se200.def.CoreCarrierBasisPair}, with
+one profile name on the right-hand side.
+The definition of $A$ assigns
+no additional value to that pair.
+Hence its image under $A$ is unique.
 \end{proof}
 
 % -----------------------------------------------------------------------------
@@ -114,39 +103,48 @@ Therefore no core carrier-basis pair is assigned to more than one core regime.
 
 \begin{theorem}[Core regime assignment]
 \label{se200.thm.CoreRegimeAssignment}
-Every core carrier-basis pair is assigned to a unique core identity regime.
+For each carrier--basis pair in the selected catalog, there exists
+exactly one named classification profile assigned to it by $A$.
 \end{theorem}
 
 \begin{proof}
-\sloppy
-Existence follows from Lemma~\ref{se200.lem.CoreExistence}.
-Uniqueness follows from Lemma~\ref{se200.lem.CoreUniqueness}.
-Therefore every core carrier-basis pair is assigned to a unique core regime.
+Existence is Lemma~\ref{se200.lem.CoreExistence}; uniqueness is
+Lemma~\ref{se200.lem.CoreUniqueness}.
 \end{proof}
 
-This determines the core assignment.
-It does not decide whether a modeler has chosen the correct identity basis
-for a particular real-world referent.
-It says only that the carrier-basis pairs used in the lower-bound construction
-have fixed regime assignments.
+This theorem records determinacy of a defined, finite assignment.
+It does not derive the assignment from the neutrality constraint,
+establish the scientific correctness of its classification entries,
+or show that the assigned profile yields a warranted strict-identity
+relation on real-world referents.
+Other candidate profiles or identity
+bases may be relevant outside this selected catalog.
 
 % -----------------------------------------------------------------------------
-\subsection{Failure of Basis Declaration}
+\subsection{Limits of Basis Declaration}
 \label{subsec:basis_declaration_failure}
 % -----------------------------------------------------------------------------
 
-For the witnessed split cases, omission of the basis is not harmless.
-A scope without an extension-fixed or structure-fixed basis does not specify
-whether decomposition preserves covered cases or internal structure.
-A rule without a content-fixed or structure-fixed basis does not specify
-whether refinement preserves rule content or textual structure.
-A plain referent without a locus-fixed or object-fixed basis does not specify
-whether forking preserves locus or object identity.
-A declared identity basis is required for deterministic assignment.
+A carrier-kind label alone does not select one profile when the
+catalog contains more than one candidate basis for that kind.
+For example, a scope may be examined under extension-fixed or
+structure-fixed criteria, a rule under content-fixed or
+structure-fixed criteria, and a plain referent under locus-fixed
+or object-fixed criteria.
+Supplying the corresponding basis label
+makes the input to $A$ unambiguous \emph{within this catalog}.
 
-This observation anticipates the conformance analysis
-of the companion \emph{Accountable Records} paper.
-In a deployed record system, basis declaration becomes a schema obligation.
-In this paper, it marks the boundary of the determinacy result:
-regime assignment is fixed for the carrier-basis pairs included
-in the core.
+That is not the same as establishing which basis is appropriate for
+a particular referent.
+A declared basis needs independently justified
+individuation and persistence conditions, and each proposed
+transformation classification needs an adequate interpretation.
+Even the carrier kinds represented by only one profile in this
+catalog may admit other legitimate identity bases.
+
+Consequently, a possible conformance check could verify whether a
+system discloses a selected basis and applies its declared profile
+consistently.
+It could not, on that evidence alone, certify the
+basis's scientific adequacy or the truth of its identity judgments.
+This is the boundary of the determinacy result proved here.

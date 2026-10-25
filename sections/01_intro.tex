@@ -5,68 +5,92 @@
 
 Modern accountability systems increasingly operate under legal,
 institutional, and analytic disagreement.
-A shared data substrate cannot assume a single interpretation,
-and it must preserve stable reference as records are
-amended, forked, refined, decomposed, aggregated, and reclassified.
-This paper studies the identity conditions required by that setting.
+A shared record may need to
+support reference to the same intended subject while its representations
+are amended, forked, refined, decomposed, aggregated, or reclassified.
+Agreement about what a record means cannot be assumed, and neither can
+agreement about which identity conditions apply to its referents.
+This paper investigates candidate ways to characterize individuation,
+co-reference, and persistence under those transformations.
 
-The analysis treats identity as transformation-invariance.
-An identity regime states the operations that preserve sameness for a carrier
-under a declared identity basis.
-Once the ordinary operations of record systems are fixed,
-individuation becomes a structural question:
-the identity basis preserved across those operations determines sameness.
-A system may collapse a distinction at the substrate level
-and recover it through a role, flag, contextual predicate,
-workflow state, schema convention, or application-level discriminator.
-That recovered distinction is a hidden regime.
+\emph{Neutral Substrates}~\citep{case2026neutral} provides the motivating
+constraint: under Referential Common Ground and the stated foundational-layer
+restriction, a substrate satisfies semantic neutrality relative to its
+admissible frameworks.
+That conditional result does not establish a
+referential identity criterion for a particular bearer.
+The present paper
+examines what a declared criterion and selected transformation behavior
+can express, while keeping the adequacy of those choices open to
+independent justification.
 
-For accountability substrates the inventory has six carrier kinds:
-obligation-bearers, rules, occurrences, scopes, records, and plain referents.
-Identity fixes sameness under transformation, relative to a declared basis.
-Three carrier kinds admit more than one basis in the settings analyzed here.
-A scope may be individuated by covered cases or by internal organization.
-A rule may be individuated by imposed requirements or by textual structure.
-A plain referent may be individuated by its location or by the object occupying it.
+The analysis pairs proposed identity bases with classifications of selected
+transformation families.
+An identity regime, in the terminology of this
+paper, is a declared basis together with its transformation profile.
+A classification records a proposed preservation, breakage, neutrality,
+or inapplicability judgment; it does not independently prove that the
+judgment describes identity in the world.
+Likewise, the equivalence
+relation generated from non-breaking steps is a formal construction,
+not by itself a warrant for strict identity of the represented referent.
 
-These alternatives are separated by ordinary operations.
-Decomposition separates extension-fixed from structure-fixed scopes.
-Refinement separates content-fixed from structure-fixed rules.
-Forking separates locus-fixed from object-fixed plain referents.
-The same pair of representations may be equivalent under one basis
-and distinct under another.
-When admissible frameworks require both bases,
-a neutral substrate must preserve both.
+We select six reference kinds for analysis: obligation-bearers, rules,
+occurrences, scopes, records, and plain referents.
+The construction uses
+nine candidate carrier--basis profiles.
+Three pairs distinguish a locus
+from an object occupying it, a scope's coverage from its internal
+structure, and a rule's content from its structure.
+Forking,
+aggregation or decomposition, and refinement provide possible tests of
+those distinctions.
+Their proposed identity effects must be evaluated
+against the intended referent, the eligible presentations, and an
+independently justified identity criterion.
 
-The lower-bound core follows from that structure.
-The six carrier kinds provide a floor of six regimes.
-The three witnessed splits add one regime each.
-Thus a neutral accountability substrate satisfying the stated assumptions,
-and supporting those basis-plural cases,
-requires at least nine identity regimes.
-The additional regimes arise within kinds already named,
-so an analysis that stops at naming kinds will undercount.
-Collapsing a split either changes the transformations that preserve identity
-or reintroduces the distinction through a hidden regime.
+Within the selected construction, the nine classification functions are
+pairwise distinct, and the specified carrier--basis assignment is
+mathematically determinate.
+These are limited results.
+Different
+classification profiles need not yield different generated equivalence
+relations, and neither kind of formal distinction alone establishes
+scientifically warranted strict identity.
+Nor does the selection of six
+carrier kinds and nine profiles prove a minimum number of irreducible
+identity regimes.
+A carrier-indexed combination can preserve separate
+relations within one explicitly tagged relation, making the meaning of
+``regime count'' and any proposed non-amalgamation requirement matters
+for further investigation.
 
-The result is conditional.
-It holds under the assumptions fixed in Section~\ref{sec:formal_setting}
-for substrates in which the witnessed basis pluralities are in play.
-Adding transformations may force further splits;
-it cannot erase a distinction witnessed by the current basis.
-This paper addresses identity.
-Conformance checking is left to the companion \emph{Accountable Records} paper.
+The contribution is therefore a finite comparative framework for
+examining identity criteria under transformation, including formal
+profile distinctions, conditional transformation witnesses, a
+specified assignment, and a counterpoint to the earlier counting
+argument.
+It identifies open obligations rather than resolving them
+by stipulation: independently grounded identity bases, sound
+classification of transformation instances, the interpretation of
+generated relations, and whether any faithful realization requires
+irreducibly separate regimes.
+The application settings are tests of
+those questions, not validations of all selected identity criteria.
 
 The remainder of the paper proceeds as follows.
-Section~\ref{sec:background} imports definitions the proofs use and states one new primitive.
-Section~\ref{sec:formal_setting} fixes the operating conditions.
-Section~\ref{sec:inventory} states the reference inventory.
-Section~\ref{sec:algebra} develops the transformation algebra.
-Section~\ref{sec:nine} collects the nine core regimes.
-Section~\ref{sec:bound} proves the lower bound.
-Section~\ref{sec:determinacy} establishes core regime assignment.
-Section~\ref{sec:application} exhibits the regimes in the diagnostic settings.
-Section~\ref{sec:related} situates the result in prior work.
-Section~\ref{sec:limits} states limits.
+Section~\ref{sec:background} states the Neutral Substrate foundation
+and the narrower contribution pursued here.
+Section~\ref{sec:formal_setting} sets out the formal setting and
+transformation classifications.
+Section~\ref{sec:inventory} specifies the selected reference inventory.
+Section~\ref{sec:algebra} develops conditional comparisons among identity
+bases, and Section~\ref{sec:nine} collects the nine candidate profiles.
+Section~\ref{sec:bound} examines their distinctions and the limits of
+regime counting.
+Section~\ref{sec:determinacy} establishes determinacy of the selected
+profile assignment, while Section~\ref{sec:application} treats three
+application settings as identity-criterion tests.
+Section~\ref{sec:related} situates the work in prior research;
+Section~\ref{sec:limits} states its boundaries; and
 Section~\ref{sec:conclusion} concludes.
-Appendix~\ref{app:sep} provides the pairwise separation table.

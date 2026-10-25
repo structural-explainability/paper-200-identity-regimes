@@ -6,15 +6,19 @@
 % =============================================================================
 
 This paper builds on \emph{Neutral Substrates}~\citep{case2026neutral}.
-That paper defines the design constraint for a shared representational base
-that must remain usable under persistent interpretive disagreement.
-This paper analyzes one aspect of that constraint:
-the identity and persistence structure needed for stable reference to survive
-ordinary transformations of records.
+That work studies a shared representational base intended to support
+reference under persistent interpretive disagreement without adopting
+contested causal or normative interpretations as unqualified foundational
+commitments.
+The present paper investigates proposed identity conditions
+and their behavior when representations are transformed.
+It does not
+assume that the abstract referential interfaces have been given adequate
+identity criteria for every intended kind of referent.
 
-The definitions in this section are inherited from that work.
-They are reproduced here to make the dependency clear.
-Stable SE-100 labels are preserved for imported definitions.
+The three definitions below retain their SE-100 labels and wording.
+They establish the terminology imported for the present analysis;
+they do not independently justify a concrete referential regime.
 
 % -----------------------------------------------------------------------------
 \subsection{Inherited Definitions}
@@ -29,17 +33,14 @@ Stable SE-100 labels are preserved for imported definitions.
   Stable reference consists of individuation, co-reference, and persistence.
 \end{definition}
 
-A substrate is not the whole record system.
-It is the foundational layer for later interpretive claims,
-including causal or normative interpretations,
-evidentiary assessments, explanatory accounts, and institutional determinations.
-Its purpose is to make shared reference possible without forcing agreement about
-every interpretation of the referent.
-A substrate may identify an event, entity, decision, document, instrument, rule,
-policy, observation, or institutional artifact, and it may preserve identifiers,
-timestamps, provenance, and persistence relations among them.
-Identifying the relevant event, decision, rule, or institutional artifact
-does not commit the substrate to claims about causation, justification, or applicability.
+A substrate is the foundational layer, not the complete record system.
+It can support later causal, normative, evidentiary, or institutional
+interpretations without adopting those interpretations as its own
+object-level commitments.
+The distinction between a referent and
+interpretations attributed to it is central; preserving a shared label
+or descriptive record does not itself establish that the intended
+referent has been fixed.
 
 \begin{definition}[Referential Regime]
   \label{se100.def.ReferentialRegime}
@@ -49,23 +50,23 @@ does not commit the substrate to claims about causation, justification, or appli
     \item co-reference conditions, and
     \item persistence conditions
   \end{enumerate}
-  used by a substrate to fix and track entities, occurrences, and institutional artifacts.
+  by which a substrate fixes and tracks entities, occurrences, and institutional
+  artifacts.
 \end{definition}
 
-Individuation conditions determine when something counts as one thing rather
-than another.
-Co-reference conditions determine when two references refer to the same thing.
-Persistence conditions determine when something remains the same thing across
-time, transformation, revision, or institutional change.
-The referential regime allows a substrate to support shared use:
-if parties cannot share enough reference to identify the referent under interpretation,
-they cannot reliably disagree about
-causes, norms, explanations, or obligations concerning that referent.
+Individuation concerns what counts as one whole and sameness across
+presentations; co-reference concerns whether references denote the same
+referent; persistence concerns strict identity across settings and must
+be distinguished from succession, derivation, or counterpart relations.
+The abstract triple supplies interfaces for those questions, not their
+independently warranted answers.
+A relation defined by closure of
+proposed preserving steps does not, without additional grounding,
+establish identity in an intended domain.
 
 \begin{definition}[Referential Commitments]
   \label{se100.def.ReferentialCommitments}
-  Let $\SubstrateRef$ denote the
-  \emph{referential commitments} of $\Substrate$.
+  Let $\SubstrateRef$ denote the \emph{referential commitments} of $\Substrate$.
   These are the substrate-layer commitments fixed by its referential regime,
   including identifiers;
   the typing of entities, occurrences, and institutional artifacts;
@@ -74,46 +75,72 @@ causes, norms, explanations, or obligations concerning that referent.
   and referential relations among them.
 \end{definition}
 
-\emph{Neutral Substrates} also defines permitted attribution propositions,
-object-level causal or normative commitments, interpretive non-commitment,
-extension stability, and neutrality by design.
-Those definitions support its central \emph{constraint}:
-under the stated contestability and common-ground assumptions,
-a substrate's neutrality is guaranteed at design time exactly when its
-foundational layer is restricted
-to referential commitments and permitted attribution propositions.
-Specifically, the substrate must not make object-level causal or normative commitments.
-Causal and normative content may appear through attributed assertions,
-but the substrate commits to the attribution,
-not to the asserted causal or normative proposition.
+Identifiers, types, timestamps, provenance, and relations may supply
+materials for referential fixing.
+Their mere presence does not justify
+which object-language propositions are fixed by a proposed referential
+regime.
+That connection requires independently grounded interpretation.
+
+\emph{Neutral Substrates} distinguishes a permitted attribution from
+the proposition attributed: accepting the attribution does not require
+accepting its content.
+It also defines interpretive non-commitment,
+extension stability, semantic neutrality, and neutrality by design.
+
+Its central result is conditional sufficiency.
+Under Referential Common
+Ground, restricting foundational commitments to referential commitments
+and permitted attribution propositions suffices for semantic neutrality
+relative to every admissible framework.
+Permitted attributions are
+determined by the referential commitments.
+
+The result does not establish that Referential Common Ground holds in
+a given realization, that the adopted referential criteria are adequate,
+that neutrality has been guaranteed by a permitted design-time basis,
+or that the foundational restriction is necessary for every neutral
+architecture.
+In particular, the formal restriction alone does not
+show that no object-level causal or normative proposition is contained
+in the purported referential commitments.
+Those boundaries also apply
+to the present paper.
 
 % -----------------------------------------------------------------------------
 \subsection{Contribution}
 \label{subsec:contribution}
 % -----------------------------------------------------------------------------
 
-\emph{Neutral Substrates} establishes the design constraint:
-a neutral substrate requires stable reference while leaving causal and normative
-interpretation to admissible extensions.
-This paper analyzes the identity structure needed to preserve stable reference
-as substrate records are transformed in ordinary use.
-Records may be re-expressed, annotated, refined, decomposed, aggregated,
-reassigned, substituted, forked, extended with provenance, or evolved through
-state change.
-Those operations place pressure on individuation, co-reference, and persistence.
-This paper specializes the referential-regime component of that constraint
-by deriving the lower-bound identity structure it imposes.
+This paper selects a finite reference inventory, candidate identity
+bases, and transformation families through which to investigate
+identity-sensitive distinctions.
+It studies classifications of
+re-expression, annotation, refinement, aggregation or decomposition,
+re-contextualization, reassignment, substitution, branching,
+provenance extension, and state evolution.
+The resulting classification
+profiles support limited formal comparison; their empirical or semantic
+adequacy remains an independent question.
 
 \begin{definition}[Transformation-Invariant Identity]
   \label{se200.def.TransformationInvariantIdentity}
-  Within a neutral substrate, an \emph{identity regime} specifies how a
-  referent's identity basis behaves under admissible transformations.
-  For each transformation, the regime specifies whether the transformation
-  preserves identity, breaks identity, is identity-neutral, or is inapplicable.
-  A referent is \emph{transformation-invariant} under transformations that do
-  not break its declared identity basis.
+  Relative to a specified referent kind, proposed identity basis, and
+  admissible transformation instances, a presentation is treated as
+  \emph{transformation-invariant} along steps classified as preserving
+  the declared basis.
+  A transformation classification expresses a
+  proposed identity judgment relative to that basis; it does not,
+  without independent justification, establish strict identity of
+  the represented referent across those steps.
 \end{definition}
 
-Section~\ref{sec:algebra} makes Definition~\ref{se200.def.TransformationInvariantIdentity} operational as a
-classification over a fixed transformation basis.
-The rest of the paper computes the resulting lower bound.
+Section~\ref{sec:formal_setting} formalizes candidate profiles and a
+relation generated from non-breaking steps; Section~\ref{sec:algebra}
+compares selected basis-sensitive classifications.
+The finite
+nine-profile catalog and its assignment results do not yield a
+universal lower bound on irreducible identity regimes.
+The counting
+question and the need for independent scientific warrant are examined
+in Sections~\ref{sec:bound} and~\ref{sec:limits}.

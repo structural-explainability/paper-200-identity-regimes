@@ -133,7 +133,7 @@
 \setlist[itemize]{itemsep=0.2em, topsep=0.2em, parsep=0em, partopsep=0em}
 
 \hypersetup{
-  pdftitle={Referential Regimes: Transformation-Invariant Identity for Neutral Substrates},
+  pdftitle={Referential Regimes: Transformation-Based Identity Profiles for Neutral Substrates},
   pdfauthor={Denise M. Case},
   pdfkeywords={formal ontology, identity and persistence, neutral substrates, accountability}
 }
@@ -143,7 +143,7 @@
 %
 % @techreport{case2026regimes,
 %   author      = {Case, Denise M.},
-%   title       = {Referential Regimes: Transformation-Invariant Identity for Neutral Substrates},
+%   title       = {Referential Regimes: Transformation-Based Identity Profiles for Neutral Substrates},
 %   institution = {Northwest Missouri State University},
 %   year        = {2026},
 %   doi         = {10.48550/arXiv.2601.16152},
@@ -154,7 +154,7 @@
 
 % ============================================================
 \title{Referential Regimes:  \\
-Transformation-Invariant Identity \\
+Transformation-Based Identity Profiles \\
 for Neutral Substrates}
 % ============================================================
 \author{Denise M. Case}
@@ -167,63 +167,50 @@ for Neutral Substrates}
 \vspace{-1em}
 
 \begin{abstract}
-  Data systems increasingly operate under persistent
-  legal, political, and analytic disagreement,
-  where no single interpretive authority can be assumed.
-  A \emph{neutral substrate} provides stable shared reference
-  without requiring agreement about causal or normative interpretation:
-  it fixes reference structurally and leaves interpretation to
-  extension layers, following the neutrality-by-design constraint
-  developed in \emph{Neutral Substrates}~\citep{case2026neutral}.
+  Data systems operating under persistent legal, institutional, and analytic
+  disagreement require shared reference without presupposing agreement about
+  causal or normative interpretation.
+  \emph{Neutral Substrates} establishes conditional sufficiency for semantic
+  neutrality under a referential common-ground assumption.
+  This paper investigates how identity criteria behave under ordinary
+  transformations of records and what conclusions follow from their
+  formal classification.
 
-  This paper derives the identity structure such a substrate requires,
-  using a small transformation algebra rather than a list of kinds.
-  We treat identity as transformation-invariance:
-  a referent is individuated by the admissible operations that preserve it.
-  Once the routine operations that record systems perform are fixed,
-  including re-expression, annotation, refinement, decomposition,
-  reassignment, forking, and provenance extension,
-  individuation becomes a structural calculation.
+  We select six reference kinds:
+  obligation-bearers, rules, occurrences, scopes, records, and plain referents.
+  For these kinds, we construct nine candidate carrier--basis profiles
+  and classify their behavior under a finite transformation basis.
+  The construction includes three paired comparisons:
+  extension-fixed and structure-fixed scopes,
+  content-fixed and structure-fixed rules,
+  and locus-fixed and object-fixed plain referents.
 
-  That calculation exposes a mismatch between reference kinds and
-  identity regimes. An accountability substrate must refer to six kinds
-  of thing: obligation-bearers, rules, occurrences, scopes, records, and
-  plain referents.
-  Three of those kinds are assigned more than one admissible basis.
-  A scope may be fixed by its extension or by its structure;
-  a rule by its content or by its structure;
-  a plain referent by its locus or by its object.
-  A single routine operation separates each pair:
-  decomposition separates the two scope readings,
-  refinement the two rule readings, and forking
-  the two plain-referent readings.
+  The nine classification functions are pairwise distinct.
+  Assignment within the selected carrier--basis catalog is determinate,
+  and existing classification distinctions persist when the transformation
+  basis is extended without changing earlier classifications.
+  A carrier-indexed combination construction also demonstrates why
+  distinct carrier kinds alone do not establish an irreducible number
+  of identity regimes.
 
-  Counting reference kinds gives six;
-  transformation analysis forces at least nine identity regimes.
-  The three additional regimes add no new kind to the inventory.
-  They follow from how identity behaves under operations
-  the substrate cannot avoid performing, and any attempt to collapse them
-  reappears as a hidden regime that persistent disagreement
-  cannot hold fixed.
-
-  The result is a conditional lower bound, monotone in the relevant sense:
-  a richer transformation basis may leave the bound unchanged
-  or force further splits, but it cannot erase a distinction
-  already witnessed here. Its content is diagnostic.
-  The additional regimes correspond to distinctions
-  often handled by modeling convention,
-  but such conventions cannot substitute
-  for regime-level identity commitments under persistent disagreement.
+  These results do not establish necessary identity relations
+  or independently warranted strict identity for the intended referents.
+  The analysis distinguishes formal classification, generated relations,
+  and substantive identity criteria, identifying the additional
+  individuation, co-reference, persistence, and non-amalgamation
+  justification required for scientifically adequate applications.
 \end{abstract}
 
 \keywords{
   formal ontology;
-  identity and persistence;
+  identity profiles;
+  transformation classification;
+  individuation;
+  co-reference;
+  persistence;
   neutral substrates;
-  extension stability;
-  accountability;
-  causal commitment;
-  normative commitment
+  referential common ground;
+  stable reference
 }
 
 \input{sections/01_intro}
@@ -231,7 +218,7 @@ for Neutral Substrates}
 \input{sections/03_formal_setting}
 \input{sections/04_reference_inventory}
 \input{sections/05_algebra}
-\input{sections/06_nine_regimes}
+\input{sections/06_regimes}
 \input{sections/07_lower_bound}
 \input{sections/08_determinancy}
 \input{sections/09_application}
@@ -256,8 +243,7 @@ AI-assisted tools were used for editing, formatting, and consistency checking.
 The author reviewed all suggestions and is solely responsible for the content.
 
 \subsection*{Declaration of Conflicting Interest}
-The author declares no potential conflicts of interest with respect to the
-research, authorship, and publication of this work.
+The author declares no potential conflicts of interest.
 
 \appendix
 \clearpage
@@ -290,19 +276,22 @@ research, authorship, and publication of this work.
   A.\ Gangemi, N.\ Guarino, C.\ Masolo, A.\ Oltramari, and L.\ Schneider.
   Sweetening ontologies with DOLCE.
   In \emph{Knowledge Engineering and Knowledge Management: Ontologies and the Semantic Web (EKAW 2002)},
-  volume 2473 of LNCS, pages 166--181. Springer, 2002.
+  volume 2473 of LNCS, pages 166--181.
+  Springer, 2002.
 
   \bibitem[Grieves and Vickers(2017)]{grieves2016}
   M.\ Grieves and J.\ Vickers.
   Digital twin: Mitigating unpredictable, undesirable emergent behavior in complex systems.
-  In \emph{Transdisciplinary Perspectives on Complex Systems}, pages 85--113. Springer, 2017.
+  In \emph{Transdisciplinary Perspectives on Complex Systems}, pages 85--113.
+  Springer, 2017.
 
   \bibitem[Guarino(1999)]{guarino1998roles}
   N.\ Guarino.
   The role of identity conditions in ontology design.
   In C.\ Freksa and D.\ M.\ Mark, editors,
   \emph{Spatial Information Theory: Cognitive and Computational Foundations of Geographic Information Science (COSIT '99)},
-  volume 1661 of LNCS, pages 221--234. Springer, 1999.
+  volume 1661 of LNCS, pages 221--234.
+  Springer, 1999.
 
   \bibitem[Guarino and Welty(2002)]{guarinowelty2002}
   N.\ Guarino and C.\ A.\ Welty.

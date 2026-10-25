@@ -1,178 +1,219 @@
 % !TeX root = ../se200_referential_regimes.tex
 
 % =============================================================================
-\section{The Lower Bound}
+\section{Regime Distinctions and the Limits of Counting}
 \label{sec:bound}
 % =============================================================================
 
-The previous section collected the nine core identity regimes.
-This section proves the lower-bound claim.
-The proof requires two facts:
-the inventory requires stable reference to six carrier kinds,
-and three of those carrier kinds exhibit witnessed basis plurality under the transformation basis.
+The preceding sections specify a finite inventory of carrier kinds,
+proposed identity bases, and transformation classifications.
+They exhibit distinctions within that construction.
+A separate question is whether every realization preserving those
+distinctions must implement a particular minimum number of
+irreducible identity regimes.
+The present construction does not establish such a lower bound.
 
 % -----------------------------------------------------------------------------
-\subsection{The Inventory Floor}
+\subsection{The Inventory and Its Identity Conditions}
 \label{subsec:inventory_floor}
 % -----------------------------------------------------------------------------
 
-The reference inventory of Section~\ref{sec:inventory} requires stable reference to six kinds of carrier:
+Section~\ref{sec:inventory} selects six carrier kinds for the
+accountability setting considered here:
 obligation-bearers, rules, occurrences, scopes, records, and plain referents.
-Stable reference to a carrier kind requires an identity regime for that kind,
-because the substrate must determine when representations of that carrier count as the same referent.
+To reason about stable reference to any of these carriers, a realization
+needs adequate criteria for the relevant referents and the identity
+judgments it makes about them.
+The selection of these six kinds, however, is an assumption of the
+chosen inventory, not a proof that all neutral substrates require them.
 
-\begin{lemma}[Inventory floor]
-\label{se200.lem.InventoryFloor}
-Under the assumptions of Section~\ref{sec:formal_setting},
-a neutral accountability substrate realizing the inventory of Section~\ref{sec:inventory}
-must realize at least one identity regime for each required carrier kind.
-\end{lemma}
-
-\begin{proof}
-By Definition~\ref{se200.def.ReferenceKind}, each reference kind in the inventory
-must be identifiable, trackable, and distinguishable from other referents
-without making object-level causal or normative commitments.
-By Definition~\ref{se200.def.IdentityRegime}, an identity regime specifies
-sameness for a referent under transformation.
-Thus each required carrier kind needs identity conditions sufficient to
-preserve stable reference to carriers of that kind.
-
-The required carrier kinds have disjoint representation domains in the inventory.
-A representation of an obligation-bearer is not a representation of an occurrence;
-an occurrence is not a record;
-a rule is not a scope;
-a scope is not a plain referent;
-and a record is not the thing it records.
-Stable reference to each required carrier kind therefore requires identity
-conditions for that carrier kind.
-Collapsing carrier kinds would collapse the reference inventory.
-Therefore each required carrier kind contributes at least one identity regime.
-\end{proof}
-
-The inventory therefore gives a floor of six regimes.
-The witnessed basis pluralities for plain referents, scopes, and rules
-raise that floor to nine.
+Nor does the distinction between carrier kinds by itself establish a
+minimum number of irreducible identity regimes.
+Distinct representation domains can have distinguishable identity
+relations without those relations requiring separate, non-amalgamable
+formal structures.
+A lower-bound claim must first say what counts as one regime and which
+ways of combining relations are admissible.
 
 % -----------------------------------------------------------------------------
-\subsection{Witnessed Splits}
+\subsection{Witnessed Differences Within the Selected Profiles}
 \label{subsec:witnessed_splits}
 % -----------------------------------------------------------------------------
 
-Three carrier kinds exhibit witnessed basis plurality under the transformation basis.
+The proposed core contains three pairs of identity bases associated
+with the same carrier kind.
+These pairs motivate tests of whether ordinary transformations make
+different identity judgments under the respective bases.
 
-First, plain referents split into locus-fixed and object-fixed identity.
-By Proposition~\ref{se200.prop.PlainReferentUnderdetermination},
-branch/fork separates these bases.
-A fork may preserve the locus while breaking object identity.
-When both bases are in play,
-plain referents require both $\LOC$ and $\OBJ$.
+For plain referents, the proposed locus-fixed and object-fixed bases
+are compared using branch/fork operations
+(Proposition~\ref{se200.prop.PlainReferentUnderdetermination}).
+A particular fork may preserve a locus while distinguishing the objects
+associated with that locus.
+The question for a realization is which bearer each basis tracks and
+whether the proposed preservation and breakage judgments are warranted.
 
-Second, scopes split into extension-fixed and structure-fixed identity.
-By Proposition~\ref{se200.prop.ScopeUnderdetermination},
-aggregation/decomposition separates these bases.
-A decomposition may preserve the covered cases while changing the internal scope structure.
-When both bases are in play,
-scopes require both $\SCOPEE$ and $\SCOPES$.
+For scopes, the proposed extension-fixed and structure-fixed bases
+are compared using aggregation and decomposition
+(Proposition~\ref{se200.prop.ScopeUnderdetermination}).
+An operation may preserve coverage while changing component structure.
+Whether that difference is an identity difference depends on the
+independently justified criterion for the scope in question.
 
-Third, rules split into content-fixed and structure-fixed identity.
-By Proposition~\ref{se200.prop.RuleUnderdetermination},
-refinement separates these bases.
-A refinement may preserve rule content while changing textual or internal structure.
-When both bases are in play,
-rules require both $\RULEC$ and $\RULES$.
+For rules, the proposed content-fixed and structure-fixed bases
+are compared using refinement
+(Proposition~\ref{se200.prop.RuleUnderdetermination}).
+A refinement may preserve specified content while changing structure.
+Again, the relevant sameness judgment depends on what the rule is
+and on which criterion of its identity is justified.
 
-Each witnessed split adds one regime beyond the one-regime-per-carrier floor.
-The additional regimes are not new reference kinds.
-They are distinct identity bases for required carrier kinds.
+If two justified identity relations disagree on the same eligible pair
+of presentations, they are distinct relations on that comparison domain.
+A difference between declared transformation classifications alone,
+however, does not establish such a disagreement about real referents.
+It requires a sound interpretation of the operation, its applicable
+presentations, and the asserted identity basis.
+The three pairs are therefore useful candidate distinctions, not
+independent demonstrations of universally required regimes.
 
 % -----------------------------------------------------------------------------
-\subsection{The Bound}
+\subsection{What the Finite Catalog Counts}
 \label{subsec:the_bound}
 % -----------------------------------------------------------------------------
 
-\begin{theorem}[Nine-regime lower bound]
-\label{se200.thm.NineRegimeLowerBound}
-Under the assumptions of Section~\ref{sec:formal_setting},
-a neutral accountability substrate that supports the inventory of
-Section~\ref{sec:inventory}
-and supports the witnessed basis pluralities for plain referents,
-scopes, and rules
-must realize at least nine identity regimes.
-\end{theorem}
-
-\begin{proof}
-By Lemma~\ref{se200.lem.InventoryFloor},
-the six required carrier kinds in Section~\ref{sec:inventory}
-require at least six identity regimes.
-
-Three of those carrier kinds require an additional regime when the witnessed
-basis pluralities are in play.
-Plain referents require both $\LOC$ and $\OBJ$ by
-Proposition~\ref{se200.prop.PlainReferentUnderdetermination}.
-Scopes require both $\SCOPEE$ and $\SCOPES$ by
-Proposition~\ref{se200.prop.ScopeUnderdetermination}.
-Rules require both $\RULEC$ and $\RULES$ by
-Proposition~\ref{se200.prop.RuleUnderdetermination}.
-
-Therefore the required core contains:
+The catalog of Section~\ref{sec:nine} contains nine named
+carrier--basis profiles:
 \[
 \begin{gathered}
 \OBL,\quad \OCC,\quad \REC,\quad \LOC,\quad \OBJ,\\
 \SCOPEE,\quad \SCOPES,\quad \RULEC,\quad \RULES .
 \end{gathered}
 \]
-By Proposition~\ref{se200.prop.DistinctCoreProfiles},
-these nine core profiles are pairwise distinct.
-Thus the required regimes number at least,
+Its cardinality is the arithmetic of the selected construction:
 \[
 1 + 1 + 1 + 2 + 2 + 2 = 9.
 \]
-Thus any neutral accountability substrate satisfying the stated assumptions
-and supporting the witnessed basis pluralities
-must realize at least nine identity regimes.
-This proves the lower-bound claim.
-\end{proof}
+The count records three selected single-basis carriers and three
+selected two-basis carriers.
+It is not, by itself, a minimum number of independent identity
+relations, a lower bound on every faithful realization, or an
+exhaustive inventory of admissible identity criteria.
+
+Proposition~\ref{se200.prop.DistinctCoreProfiles} concerns distinctions
+among the specified profiles.
+Even when profile distinctions are formally established, the further
+claim that they cannot be represented together without loss is a
+separate obligation.
 
 % -----------------------------------------------------------------------------
-\subsection{Monotonicity}
+\subsection{Carrier-Indexed Combination and the Counting Question}
+\label{subsec:amalgamation}
+% -----------------------------------------------------------------------------
+
+An elementary construction illustrates why distinct carrier kinds do
+not, without more, establish an irreducible regime count.
+Let $K$ index the selected carrier kinds, and let $D_k$ be a domain
+of presentations for carrier kind $k$.
+Suppose $E_k$ is an equivalence relation on $D_k$ for each $k\in K$.
+Use the tagged disjoint union
+\[
+D = \bigsqcup_{k\in K} D_k
+\]
+and define a relation $E$ on $D$ by
+\[
+(k,x)\mathrel{E}(\ell,y)
+\quad\Longleftrightarrow\quad
+k=\ell\ \text{and}\ x\mathrel{E_k}y.
+\]
+
+\begin{proposition}[Carrier-indexed combination]
+\label{se200.prop.CarrierIndexedCombination}
+Then $E$ is an equivalence relation on $D$.
+Restricting $E$ to the $k$-th summand recovers $E_k$
+for each $k\in K$.
+\end{proposition}
+
+\begin{proof}
+Reflexivity and symmetry follow from the corresponding properties
+of each $E_k$.
+If $(k,x)\mathrel{E}(\ell,y)$ and
+$(\ell,y)\mathrel{E}(m,z)$, then $k=\ell=m$ and
+$x\mathrel{E_k}y\mathrel{E_k}z$.
+Transitivity of $E_k$ therefore gives $(k,x)\mathrel{E}(m,z)$.
+For presentations in the $k$-th summand, the definition of $E$
+is exactly the definition of $E_k$.
+\end{proof}
+
+This construction preserves the component equivalence relations
+without identifying presentations belonging to different carrier kinds.
+It therefore blocks an inference from disjoint carrier domains alone
+to an irreducible count of identity relations.
+It does not prove that the combined relation is one scientifically
+adequate identity regime, that it preserves all required transformation
+semantics, or that it satisfies the Neutral Substrate constraint.
+In particular, it does not resolve the differing identity bases
+proposed for the same carrier kind.
+
+The unresolved question is whether a faithful realization can combine
+the selected identity criteria while retaining every warranted
+identity judgment and transformation distinction.
+A publicly declared carrier or basis parameter is not automatically
+a hidden regime merely because it is a parameter.
+Conversely, naming a parameter does not establish that its semantics
+are adequate or that it preserves the required distinctions.
+The admissibility of such a combination, and any scientifically
+justified non-amalgamation condition, require further analysis.
+The lossless-union comparison (CE-5) is a specific test of this issue.
+
+% -----------------------------------------------------------------------------
+\subsection{Separation Under an Extended Transformation Basis}
 \label{subsec:monotonicity}
 % -----------------------------------------------------------------------------
 
-\begin{corollary}[Monotonicity]
-\label{se200.cor.Monotonicity}
-Enlarging the transformation basis cannot lower the bound
-established by Theorem~\ref{se200.thm.NineRegimeLowerBound}.
-\end{corollary}
+A narrower monotonicity result applies to the declared
+classification profiles.
+Let $\Fset\subseteq\Fset'$ be transformation bases.
+Suppose the classifications of two profiles on $\Fset'$ agree
+with their existing classifications on every operation in $\Fset$.
+
+\begin{proposition}[Persistence of a classification distinction]
+\label{se200.prop.ClassificationDistinctionPersists}
+If two profiles have different classifications for some
+$f\in\Fset$, their classification functions remain distinct
+under extensions to $\Fset'$ that preserve the original classifications.
+\end{proposition}
 
 \begin{proof}
-The core is witnessed by distinctions
-already forced by the transformation basis $\Fset$.
-Adding transformations adds classification coordinates.
-It may leave the existing distinctions unchanged.
-It may separate an already-distinct pair in further ways.
-It may also force further splits.
-But it cannot erase a split already witnessed by $\Fset$.
-Therefore any transformation basis containing $\Fset$ still requires
-at least the nine core regimes derived here.
+The extended classification functions still disagree at $f$,
+so they cannot be equal.
 \end{proof}
 
-The monotonicity claim is intentionally limited.
-It establishes that incompleteness of the transformation basis
-cannot make the present lower bound disappear.
-A richer basis may leave the bound unchanged or raise it,
-but cannot lower it.
+This result concerns the preservation of a previously recorded
+classification difference.
+It does not establish a minimum number of irreducible identity
+regimes, nor does it establish that a classification difference
+warrants strict identity or non-identity for particular referents.
 
 % -----------------------------------------------------------------------------
-\subsection{Boundary of the Proof}
+\subsection{Boundary of the Result}
 \label{subsec:bound_not_claim}
 % -----------------------------------------------------------------------------
 
-The claim proved here is a lower bound.
-Under the stated assumptions and witnessed basis pluralities,
-fewer than nine regimes cannot preserve stable reference
-without changing transformation behavior or reintroducing a hidden regime.
+The present analysis records a finite set of proposed carrier--basis
+profiles, identifies conditional transformation-level distinctions,
+and establishes limited formal consequences of the stated
+classification and relation constructions.
+The selected carrier inventory and candidate identity bases require
+independent scientific justification for their intended referents.
 
-The proof does not establish an upper bound.
-It does not claim that the nine regimes exhaust all coherent identity regimes.
-It does not claim that every deployed system must expose these regimes.
-Those broader limits are stated in Section~\ref{sec:limits}.
+In particular, this analysis does not establish that six carrier kinds
+require six irreducible regimes, that the nine selected profiles impose
+a universal nine-regime lower bound, or that a distinct classification
+profile necessarily determines a distinct, warranted identity relation.
+A necessity result would require, among other things, a justified unit
+of counting, sound identity and transformation interpretations,
+and an adequate account of admissible combinations and non-amalgamation.
+
+These remain open scientific and mathematical questions.
+The limitations on the broader application of the construction
+are discussed in Section~\ref{sec:limits}.

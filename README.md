@@ -4,57 +4,50 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![arXiv](https://img.shields.io/badge/arXiv-2601.16152-b31b1b.svg)](https://arxiv.org/abs/2601.16152)
+
 [![Build PDF](https://github.com/structural-explainability/paper-200-identity-regimes/actions/workflows/build-latex.yml/badge.svg?branch=main)](https://github.com/structural-explainability/paper-200-identity-regimes/actions/workflows/build-latex.yml)
 [![Check Links](https://github.com/structural-explainability/paper-200-identity-regimes/actions/workflows/links.yml/badge.svg?branch=main)](https://github.com/structural-explainability/paper-200-identity-regimes/actions/workflows/links.yml)
 [![ArXiv Prep](https://github.com/structural-explainability/paper-200-identity-regimes/actions/workflows/arxiv-prep.yml/badge.svg?branch=main)](https://github.com/structural-explainability/paper-200-identity-regimes/actions/workflows/arxiv-prep.yml)
 [![DOI](https://img.shields.io/badge/DOI-10.48550/arXiv.2601.16152-blue)](https://doi.org/10.48550/arXiv.2601.16152)
 
-> Derives identity regimes that preserve stable reference
-> when neutral substrates are transformed under persistent disagreement.
+> Investigates transformation-based identity profiles for stable reference
+> in neutral substrates under persistent interpretive disagreement.
+
+## Paper Overview
+
+**Referential Regimes**: Transformation-Based Identity Profiles for Neutral Substrates
+
+- [arXiv](https://arxiv.org/abs/2601.16152)
 
 ## Main Contribution
 
-This project derives a lower-bound identity constraint for neutral accountability records.
-When stable reference must be preserved across admissible frameworks,
-and causal or normative interpretation remains outside the substrate layer,
-reference kinds alone are insufficient.
-The substrate must also preserve the identity basis
-under which each referent remains the same through ordinary transformations.
+This paper investigates how individuation, co-reference, and persistence
+criteria characterize stable reference under transformation.
 
-The paper shows that six required reference kinds supply the carriers:
-obligation-bearers, rules, occurrences, scopes, records, and plain referents.
-Three of those kinds underdetermine identity.
-Plain referents may be locus-fixed or object-fixed.
-Scopes may be extension-fixed or structure-fixed.
-Rules may be content-fixed or structure-fixed.
-This transformation analysis forces at least nine identity regimes.
+Using six selected reference kinds and a finite transformation basis,
+it constructs nine candidate carrier–basis identity profiles.
+The analysis establishes pairwise distinctions among their classification
+functions, determinate assignment within the selected catalog,
+and persistence of classification distinctions under compatible
+extensions of the transformation basis.
 
-## Nine-Regime Lower-Bound Core
+A carrier-indexed combination construction demonstrates why distinct
+reference kinds do not, by themselves, establish an irreducible number
+of identity regimes.
 
-| Regime    | Carrier           | Identity basis                      | Forced by                                                   |
-| --------- | ----------------- | ----------------------------------- | ----------------------------------------------------------- |
-| `OBL`     | Obligation-bearer | Responsibility-bearing identity     | Required carrier in the accountability inventory            |
-| `OCC`     | Occurrence        | Realization-and-provenance identity | Required carrier in the accountability inventory            |
-| `REC`     | Record            | Descriptive-record identity         | Required carrier in the accountability inventory            |
-| `LOC`     | Plain referent    | Locus-fixed identity                | Branch/fork separates locus identity from object identity   |
-| `OBJ`     | Plain referent    | Object-fixed identity               | Branch/fork separates object identity from locus identity   |
-| `SCOPE-E` | Scope             | Extension-fixed identity            | Aggregation/decomposition separates coverage from structure |
-| `SCOPE-S` | Scope             | Structure-fixed identity            | Aggregation/decomposition separates structure from coverage |
-| `RULE-C`  | Rule              | Content-fixed identity              | Refinement separates rule content from rule structure       |
-| `RULE-S`  | Rule              | Structure-fixed identity            | Refinement separates rule structure from rule content       |
+The paper distinguishes formal classification, generated identity
+relations, and scientifically warranted strict identity.
+It identifies the additional semantic and evidential justification
+needed to establish adequate identity criteria and any non-amalgamation
+result.
 
-## Structural Explainability: Accountable Records Paper Series
-
-| Paper                   | Description                                                                                                                                                                                                 |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Neutral Substrates**  | Defines the neutrality constraint. A neutral substrate preserves shared reference and attribution without adopting contested causal or normative interpretations as substrate-level commitments.            |
-| **Referential Regimes** | Derives the identity cost of the neutrality constraint. Shows stable reference under persistent disagreement requires transformation-invariant identity regimes and derives a nine-regime lower-bound core. |
-| **Accountable Records** | Develops the conformance layer for deployed record systems. Studies how basis declarations, transformation logs, and schema checks can make neutral-substrate identity commitments inspectable in practice. |
+The nine profiles are a selected formal construction,
+not a proven universal lower bound.
 
 ## Links
 
 - [Paper 1 SE 100: Neutral Substrates](https://arxiv.org/abs/2601.14271)
-- [Paper 2 SE 200: Referential Regimes (9) PDF](./se200_referential_regimes.pdf)
+- [Paper 2 SE 200: Referential Regimes](./se200_referential_regimes.pdf)
 
 ## Building Locally
 
@@ -80,28 +73,18 @@ texcount -inc -sum -total se200_referential_regimes.tex
 Windows:
 
 ```pwsh
+# build
 .\tools\build\build.ps1
-.\size.ps1
+
+# update ps1 as needed and calculate the basis (defs, etc.)
+.\basis.ps1
+
 texcount -merge -sub=section -inc -sum se200_referential_regimes.tex
-```
-
-## Release Commands (Examples)
-
-```shell
-# delete tags only as needed
-git tag -d v0.3.0
-git push origin :refs/tags/v0.3.0
-
-.\tools\build\clean.ps1
-.\tools\build\build.ps1
-
-git tag v0.3.0 -m "0.3.0"
-git push origin v0.3.0
 ```
 
 ## Annotations
 
-[ANNOTATIONS.md](./ANNOTATIONS.md)
+[Annotations](./.annotations/annotations.md)
 
 ## Citation
 
@@ -114,12 +97,6 @@ See [CITATION.cff](./CITATION.cff).
 ## SE Manifest
 
 [SE_MANIFEST](./SE_MANIFEST.toml)
-
-Validate with:
-
-```shell
-uvx se-manifest-schema validate-manifest --path SE_MANIFEST.toml --strict
-```
 
 ## References
 
