@@ -18,10 +18,6 @@
 **Referential Regimes**: Transformation-Based Identity Profiles for Neutral Substrates
 
 - [arXiv](https://arxiv.org/abs/2601.16152)
-
-## Paper Overview
-
-- [arXiv](https://arxiv.org/abs/2601.16152)
 - [SciX](https://scixplorer.org/abs/2026arXiv260116152C/abstract)
 
 ## Main Contribution
