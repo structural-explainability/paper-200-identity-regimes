@@ -27,7 +27,6 @@ and required referential commitments.
 
 Determine whether any non-amalgamation condition can be
 independently justified.
-There is no need to restore a proposed lower bound.
 
 #### 2. Establish scientific adequacy of candidate profiles.
 
