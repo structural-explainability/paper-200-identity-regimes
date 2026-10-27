@@ -85,6 +85,9 @@ Determine what the formal construction explains and where it remains inadequate.
 - States that seven (PRS-only) and eight (PRS-or-NEU) count distinct
   stipulated family sets, not necessary regimes.
 - Cites the companion Lean development.
+- Reframes the paper around its contributions, consolidates statements of
+  limits in the limits section, and removes repeated counts of profiles,
+  reference kinds, and transformation families from the prose.
 
 ---
 

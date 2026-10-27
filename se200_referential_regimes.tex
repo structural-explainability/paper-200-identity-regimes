@@ -59,7 +59,7 @@
 \newcommand{\SecRef}[1]{Section~\ref{#1}}
 
 % =============================================================================
-% Imported SE-100 notation.
+% Imported SE-100 notation (\emph{Neutral Substrates})
 % =============================================================================
 \newcommand{\Substrate}{\mathcal{S}}
 \newcommand{\SubstrateRef}{\mathcal{S}_{\mathrm{ref}}}
@@ -175,31 +175,28 @@ for Neutral Substrates}
   transformation, building on the conditional neutrality
   result of \emph{Neutral Substrates}.
 
-  We retain a finite catalog of candidate identity profiles and
-  transformation families, while distinguishing stipulated
-  classifications from model-derived results.
+  We pair candidate identity bases with families of record
+  transformations and classify each family as preserving, breaking,
+  neutral, or inapplicable for a basis.
   Using invariant-defined identity bases and explicit effect
-  models, we obtain six classification cells certified in
-  Lean~4 across scope decomposition, rule refinement, and
-  forking.
-  The results demonstrate dependencies on field
+  models, we derive and certify six classification cells in Lean~4
+  for scope decomposition, rule refinement, and forking.
+  The derivations show how classifications depend on field
   granularity, admissible transformation steps, and explicit
   continuity warrants.
 
-  We additionally characterize identity relations generated
+  We also characterize the identity relations generated
   by invariant-preserving steps.
-  Equality of these relations is equivalent to
-  agreement on preservation of admissible steps
-  in a shared comparison domain;
-  a separating step provides a concrete witness of their difference.
+  Two bases generate equal relations exactly when they agree on
+  the preservation of every admissible step in a shared comparison
+  domain, and a single separating step witnesses a difference.
 
   The formalization makes identity claims auditable, provides
-  testable conditions for systems transforming records, and
-  exposes the assumptions responsible for each classification.
-  Neither the finite catalog nor the derived results establish
-  necessary identity criteria, strict identity of intended
-  referents, or a universal lower bound on identity regimes.
-  Those conclusions require independent scientific grounding.
+  testable conditions for systems that transform records, and
+  exposes the assumptions behind each classification.
+  The results are conditional on the declared bases, models, and
+  warrants, whose adequacy for particular referents requires
+  independent justification.
 \end{abstract}
 
 \keywords{

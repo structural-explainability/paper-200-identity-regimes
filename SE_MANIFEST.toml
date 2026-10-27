@@ -22,7 +22,7 @@ class = "paper"
 kind = "paper"
 status = "active"
 since = "2026"
-summary = "Paper investigating transformation-based identity profiles for neutral substrates, establishing finite classification results and identifying unresolved scientific adequacy and non-amalgamation requirements."
+summary = "Paper developing a formal method for deriving and auditing identity-preservation classifications under transformation for neutral substrates, with Lean-certified derived classifications and a characterization of step-generated identity relations."
 
 # === Layer Position ===
 
@@ -59,8 +59,8 @@ artifacts = [
 includes = [
     "referential-regime analysis for neutral substrates",
     "individuation, co-reference, and persistence under transformation",
-    "six selected reference kinds for accountability analysis",
-    "nine candidate carrier-basis identity profiles",
+    "selected reference kinds for accountability analysis",
+    "candidate carrier-basis identity profiles",
     "locus-fixed and object-fixed profiles for plain referents",
     "extension-fixed and structure-fixed profiles for scopes",
     "content-fixed and structure-fixed profiles for rules",
@@ -74,8 +74,7 @@ includes = [
     "boundary conditions for stable reference",
 ]
 excludes = [
-    "universal nine-regime lower-bound claim",
-    "proof of irreducible identity-regime count",
+    "claim of a required number of identity regimes",
     "proof of non-amalgamation for candidate identity relations",
     "independent establishment of strict identity for intended referents",
     "unconditional guarantee of referential common ground",

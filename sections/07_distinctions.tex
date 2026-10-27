@@ -1,45 +1,24 @@
 % !TeX root = ../se200_referential_regimes.tex
 
 % =============================================================================
-\section{Regime Distinctions and the Limits of Counting}
+\section{Profile Distinctions and Carrier-Indexed Combination}
 \label{sec:distinctions}
 % =============================================================================
 
-The preceding sections specify a finite inventory of carrier kinds,
-proposed identity bases, and transformation classifications.
-They exhibit distinctions within that construction.
-A separate question is whether every realization preserving those
-distinctions must implement a particular minimum number of
-irreducible identity regimes.
+The preceding sections specify candidate carrier kinds,
+identity bases, and transformation classifications.
+This section compares the resulting profiles by their classification
+functions and by the relations they generate, and shows how
+carrier-specific relations can be combined in one tagged relation.
 
-% -----------------------------------------------------------------------------
-\subsection{The Inventory and Its Identity Conditions}
-\label{subsec:inventory_conditions}
-% -----------------------------------------------------------------------------
 
-Section~\ref{sec:inventory} selects six carrier kinds for the
-accountability setting considered here:
-obligation-bearers, rules, occurrences, scopes, records, and plain referents.
-To reason about stable reference to any of these carriers, a realization
-needs adequate criteria for the relevant referents and the identity
-judgments it makes about them.
-The selection of these kinds is an assumption of the
-chosen inventory, not proof that all neutral substrates require them.
-
-Nor does the distinction between carrier kinds establish a
-minimum number of irreducible identity regimes.
-Distinct representation domains can have distinguishable identity
-relations without those relations requiring separate, non-amalgamable
-formal structures.
-A lower-bound claim must first say what counts as one regime and which
-ways of combining relations are admissible.
 
 % -----------------------------------------------------------------------------
 \subsection{Witnessed Differences Within the Selected Profiles}
 \label{subsec:witnessed_splits}
 % -----------------------------------------------------------------------------
 
-The proposed core contains three pairs of identity bases associated
+The proposed core contains pairs of identity bases associated
 with the same carrier kind.
 These pairs motivate tests of whether ordinary transformations make
 different identity judgments under the respective bases.
@@ -66,52 +45,45 @@ A refinement may preserve specified content while changing structure.
 Again, the relevant sameness judgment depends on what the rule is
 and on which criterion of its identity is justified.
 
-If two justified identity relations disagree on the same eligible pair
-of presentations, they are distinct relations on that comparison domain.
-A difference between declared transformation classifications alone,
-however, does not establish such a disagreement about real referents.
-It requires a sound interpretation of the operation, its applicable
-presentations, and the asserted identity basis.
-The three pairs are therefore useful candidate distinctions, not
-independent demonstrations of universally required regimes.
+Two justified identity relations that disagree on an eligible pair
+of presentations are distinct on that comparison domain.
+A difference between declared transformation classifications does not
+by itself exhibit a pair on which the generated relations disagree.
+Such a witness requires a shared eligible comparison domain and
+appropriate transformation and identity interpretations.
+These pairs supply candidate distinctions for further testing.
 
 % -----------------------------------------------------------------------------
-\subsection{Counting Profiles Versus Counting Relations}
+\subsection{Profiles and Generated Relations}
 \label{subsec:profiles_vs_relations}
 % -----------------------------------------------------------------------------
 
 The profiles catalogued in Section~\ref{sec:profiles}
 arise from the selected carrier--basis assignments.
-Their number is a property of the chosen construction,
-not an exhaustive inventory of admissible identity criteria.
-
 Proposition~\ref{se200.prop.DistinctCoreProfiles} concerns distinctions
-among the specified classification profiles.
+among their classification functions.
 
-The number of potentially distinct family-level generated relations
+The number of distinct family-level generated relations
 depends on the generating rule.
 The \PRS{}-only and \PRS{}-or-\NEU{} constructions
-induce different family-set equality patterns.
-Their corresponding upper bounds are established
-in Appendix~\ref{app:sep}.
-
-Additional equalities may arise when the dynamics do not distinguish
+induce different patterns of equal family sets;
+Appendix~\ref{app:sep} enumerates them and gives the resulting
+upper bounds.
+Further equalities may arise when the dynamics do not distinguish
 the selected family sets.
-Neither count applies as a general bound on the newer
-invariant-based step relations, nor does either establish
-a minimum number of scientifically warranted identity regimes.
-
-Even when profile distinctions are formally established, the further
-claim that they cannot be represented together without loss is a
-separate obligation.
+These bounds do not apply to the invariant-based step relations,
+whose equality and separation are characterized by
+Theorem~\ref{se200.thm.StepIdentityCollapse} and
+Proposition~\ref{se200.prop.StepSeparation}.
 
 % -----------------------------------------------------------------------------
-\subsection{Carrier-Indexed Combination and the Counting Question}
+\subsection{Carrier-Indexed Combination}
 \label{subsec:amalgamation}
 % -----------------------------------------------------------------------------
 
-An elementary construction illustrates why distinct carrier kinds do
-not, without more, establish an irreducible regime count.
+An elementary construction shows that relations on distinct carrier
+kinds can be represented together while preserving each component
+equivalence relation.
 Let $K$ index the selected carrier kinds, and let $D_k$ be a domain
 of presentations for carrier kind $k$.
 Suppose $E_k$ is an equivalence relation on $D_k$ for each $k\in K$.
@@ -146,31 +118,16 @@ is exactly the definition of $E_k$.
 
 This construction preserves the component equivalence relations
 without identifying presentations belonging to different carrier kinds.
-It therefore blocks an inference from disjoint carrier domains alone
-to an irreducible count of identity relations.
-It does not prove that the combined relation is one scientifically
-adequate identity regime, that it preserves all required transformation
-semantics, or that it satisfies the Neutral Substrate constraint.
-In particular, it does not resolve the differing identity bases
-proposed for the same carrier kind.
-
-The unresolved question is whether a faithful realization can combine
-the selected identity criteria while retaining every warranted
-identity judgment and transformation distinction.
-A publicly declared carrier or basis parameter is not automatically
-a hidden regime merely because it is a parameter.
-Conversely, naming a parameter does not establish that its semantics
-are adequate or that it preserves the required distinctions.
-The admissibility of such a combination, and any scientifically
-justified non-amalgamation condition, require further analysis.
-
-Proposition~\ref{se200.prop.CarrierIndexedCombination}
-constructs a tagged union preserving the component
-equivalence relations.
-
-The outstanding question is whether a proposed combined
-realization also preserves all warranted identity judgments,
-transformation distinctions, and required referential commitments.
+Distinct carrier kinds therefore do not by themselves require
+separate formal structures: a declared carrier tag carries the
+distinction within one relation.
+Whether a combined relation is an adequate identity account, preserves
+all required transformation semantics, and satisfies the Neutral
+Substrate constraint depends on the semantics of the tags and on the
+bases proposed for each carrier kind.
+A publicly declared carrier or basis parameter is not a hidden regime
+merely because it is a parameter; its adequacy depends on whether its
+semantics are fixed and its use is justified.
 
 % -----------------------------------------------------------------------------
 \subsection{Separation Under an Extended Transformation Basis}
@@ -195,34 +152,8 @@ The extended classification functions still disagree at $f$,
 so they cannot be equal.
 \end{proof}
 
-This result concerns the preservation of a previously recorded
-classification difference.
-It does not establish a minimum number of irreducible identity
-regimes, nor does it establish that a classification difference
-warrants strict identity or non-identity for particular referents.
-
-% -----------------------------------------------------------------------------
-\subsection{Boundary of the Result}
-\label{subsec:boundary_of_the_result}
-% -----------------------------------------------------------------------------
-
-The present analysis specifies a finite set of candidate carrier--basis
-profiles, identifies conditional transformation-level distinctions,
-and establishes formal consequences of the stated classification
-and relation constructions.
-The selected carrier inventory and identity bases require
-independent scientific justification for their intended referents.
-
-A difference between classification profiles does not necessarily
-yield distinct generated relations or scientifically warranted
-identity judgments.
-
-The carrier-indexed construction demonstrates that separate
-equivalence relations can be represented together.
-Whether such a combination preserves all warranted identity
-judgments, transformation distinctions, and required referential
-commitments remains an open scientific question.
-Any restriction on admissible combinations requires
-independent justification.
+This result records that a classification difference, once established,
+is stable under extensions of the transformation basis that retain the
+original classifications.
 
 The broader limitations are discussed in Section~\ref{sec:limits}.
