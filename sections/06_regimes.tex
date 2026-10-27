@@ -103,7 +103,7 @@ compared on a common eligible domain.
   Let $\tau$ and $\tau'$ be profiles with a common domain $D$ of
   eligible presentations.
   A \emph{separation witness for their generated
-  relations on $D$} is a pair $(r,s)\in D\times D$ for which
+    relations on $D$} is a pair $(r,s)\in D\times D$ for which
   \[
     r\sim_\tau s \quad\text{and}\quad r\not\sim_{\tau'}s,
   \]
@@ -134,7 +134,7 @@ by another non-breaking path.
 \end{proof}
 
 This proposition establishes distinctness of nine \emph{declared
-classification functions} in the selected catalog.
+  classification functions} in the selected catalog.
 It does not establish pairwise distinctness of their generated
 relations on a common domain, that all nine identity bases are
 independently warranted, or that any faithful realization requires
@@ -150,18 +150,52 @@ Section~\ref{sec:bound}.
 
 Table~\ref{tab:master} records the proposed classification matrix.
 Its entries are not inputs to the following derivations.
+
 Instead, the companion Lean models specify presentation fields,
 identity invariants, admissible transformation steps, and their effects.
-For a fixed model and basis, the derived verdict records whether the
-transformation family
-has no effective instances (\NA),
-whether every effective instance changes the invariant (\BRK),
-whether some change it and some preserve it (\textsf{MIX}), or
-whether all preserve it while engaging a supported field (\PRS) or
-engaging none (\NEU).
-\textsf{MIX} is a diagnostic that the family needs refinement,
-not a uniform classification asserted in Table~\ref{tab:master}.
-Applicability here is defined for the model's presentation space,
+
+An invariant basis consists of a function on presentations
+and a declared support of presentation fields.
+Agreement on the supported fields implies equality of the invariant.
+The Lean development additionally proves minimality of the
+supports used in the six certified cells: every supported field
+can independently affect its invariant.
+
+An effect model declares admissible transformation steps and
+the fields each transformation family may write.
+An effective instance is an admissible step that changes
+at least one presentation field.
+
+\begin{definition}[Model-derived transformation verdict]
+  \label{se200.def.ModelDerivedVerdict}
+  Fix an invariant basis $b$, an effect model $M$, and a
+  transformation family $f$.
+
+  The derived verdict is:
+  \begin{enumerate}[label=(\alph*),nosep]
+    \item $\NA$: no effective instance exists;
+    \item $\BRK$: effective instances exist and every one
+          changes the invariant;
+    \item $\MIX$: some effective instance changes the invariant
+          and another preserves it;
+    \item $\PRS$: effective instances exist, all preserve the
+          invariant, and at least one changes a supported field;
+    \item $\NEU$: effective instances exist, all preserve the
+          invariant, and none changes a supported field.
+  \end{enumerate}
+\end{definition}
+
+\MIX{} establishes that the declared transformation family contains
+both invariant-preserving and invariant-breaking effective instances.
+
+The family therefore cannot receive a uniform preserving or breaking
+verdict under those modeled conditions.
+A uniform verdict would require restricting or refining the family.
+
+Alternatively, individual preservation judgments can be retained
+at the step level without assigning one uniform verdict to the family.
+
+Applicability is defined for the model's presentation space,
 not for an arbitrarily selected smaller comparison domain.
 
 \begin{table}[ht]
@@ -170,27 +204,51 @@ not for an arbitrarily selected smaller comparison domain.
   \setlength{\tabcolsep}{5pt}
   \begin{tabular}{@{}p{0.30\linewidth}p{0.41\linewidth}cc@{}}
     \toprule
-    Pair and family & Model or explicit warrant & First & Second \\
+    Pair and family       & Model or explicit warrant                                             & First & Second \\
     \midrule
-    $\SCOPEE/\SCOPES$, AD & Coverage-preserving; one organization field & \PRS & \BRK \\
-    $\SCOPEE/\SCOPES$, AD & Coverage-preserving; field per case-pair & \NEU & \BRK \\
-    $\SCOPEE/\SCOPES$, AD & Broader variant allowing coverage changes; field per pair & \textsf{MIX} & \BRK \\
-    $\RULEC/\RULES$, RF & Norm-preserving strict refinement; coarse organization field & \PRS & \BRK \\
-    $\RULEC/\RULES$, RF & Broader variant permitting changes to norms & \textsf{MIX} & \BRK \\
-    $\LOC/\OBJ$, BF & Branch changes; no further warrant & \textsf{MIX} & \textsf{MIX} \\
-    $\LOC/\OBJ$, BF & Colocated and FreshObject warrants & \NEU & \BRK \\
-    $\LOC/\OBJ$, BF & Colocated and SameObject warrants & \NEU & \NEU \\
+    $\SCOPEE/\SCOPES$, AD & Coverage-preserving; one organization field                           & \PRS  & \BRK   \\
+    $\SCOPEE/\SCOPES$, AD & Coverage-preserving; field per case-pair                              & \NEU  & \BRK   \\
+    $\SCOPEE/\SCOPES$, AD & Broader variant allowing coverage changes; field per pair             & \MIX  & \BRK   \\
+    $\RULEC/\RULES$, RF   & Norm-preserving strict refinement; coarse organization field          & \PRS  & \BRK   \\
+    $\RULEC/\RULES$, RF   & Norm-preserving strict refinement; fields per case-pair and case norm & \NEU  & \BRK   \\
+    $\RULEC/\RULES$, RF   & Broader variant permitting changes to norms                           & \MIX  & \BRK   \\
+    $\LOC/\OBJ$, BF       & Branch changes; no further warrant                                    & \MIX  & \MIX   \\
+    $\LOC/\OBJ$, BF       & Colocated and FreshObject warrants                                    & \NEU  & \BRK   \\
+    $\LOC/\OBJ$, BF       & Colocated and SameObject warrants                                     & \NEU  & \NEU   \\
     \bottomrule
   \end{tabular}
-  \caption{Selected derived verdicts under explicitly specified finite
-    models or warrants.
-    The two rightmost columns follow the order of
-    bases named in the first column.
-    These are conditional model consequences,
-    not universal identity laws or a complete derived
-    $9\times10$ matrix.}
+  \caption{Selected verdicts under explicitly specified Lean effect
+    models and warrants.
+    The two rightmost columns follow the order of the bases named
+    in the first column.
+    The field-level strict AD, strict RF, and warranted BF rows
+    account for the six certified cells in the derived matrix.
+    The remaining rows are supplementary model comparisons.
+    All verdicts are conditional mathematical results,
+    not universal identity laws.}
   \label{tab:derived_initial}
 \end{table}
+
+The six certified cells in the current Lean derived matrix are:
+
+\begin{itemize}
+  \item $\SCOPEE$ under strict AD: \NEU;
+  \item $\SCOPES$ under strict AD: \BRK;
+  \item $\RULEC$ under strict RF: \NEU;
+  \item $\RULES$ under strict RF: \BRK;
+  \item $\LOC$ under BF with Colocated and FreshObject warrants: \NEU;
+  \item $\OBJ$ under BF with those same warrants: \BRK.
+\end{itemize}
+
+Each certified cell contains an explicit effect model,
+an invariant basis with a proven minimal support,
+and a proof of its derived verdict.
+The other 84 cells in the stipulated matrix
+have no derived model yet.
+
+The additional rows in Table~\ref{tab:derived_initial}
+are sensitivity analyses or alternative warranted models,
+not additional certified matrix cells.
 
 Two findings are especially consequential.
 First, refining the scope presentation from one organization field
@@ -205,9 +263,18 @@ not invariant under the choice of field representation.
 The model therefore exposes a granularity dependence that must be
 controlled before an unqualified classification can be asserted.
 
+The rule model exhibits a corresponding dependence.
+Under strict RF, the content basis is \PRS{} when the organization
+is represented coarsely, but \NEU{} when fields separately
+represent case-pair organization and case-specific norms.
+The structure basis is \BRK{} in both representations.
+The field-level content support reads diagonal organization
+entries and the case-specific norms; strict RF preserves both.
+The content and structure supports are proved minimal in this model.
+
 Second, branching alone specifies a change of branch, not a change of
 locus or object.
-With no additional warrant, both corresponding verdicts are \textsf{MIX}.
+With no additional warrant, both corresponding verdicts are \MIX.
 Under the Colocated and FreshObject warrants,
 the locus basis is neutral and the object basis breaking;
 under the Colocated and SameObject warrants,
@@ -227,7 +294,56 @@ A comparison with Table~\ref{tab:master} is warranted only after
 matching operation semantics, identity basis, field granularity, and
 admissibility conditions.
 
+\begin{theorem}[Step-generated relation equality]
+  \label{se200.thm.StepIdentityCollapse}
+  Fix a common effect model, two invariant bases $b$ and $b'$,
+  and a comparison domain $D$.
+
+  The equivalence relations generated by their respective
+  invariant-preserving admissible steps are equal if and only if
+  the bases agree on invariant preservation for every admissible
+  step with both endpoints in $D$.
+\end{theorem}
+
+\begin{proof}
+  If preservation judgments agree on every admissible step
+  in $D$, the generating relations are equal.
+  Their equivalence closures therefore agree.
+
+  Conversely, suppose the generated relations agree.
+  An admissible step preserving $b$ belongs to the relation
+  generated by $b$ and hence also to the relation generated
+  by $b'$.
+
+  Every generating step for the latter relation preserves
+  $b'$. Equality of invariant values is an equivalence
+  relation, so its closure also preserves $b'$.
+  Thus the original step preserves $b'$.
+  The converse follows symmetrically.
+\end{proof}
+
+\begin{proposition}[Separating transformation step]
+  \label{se200.prop.StepSeparation}
+  Let $x,y\in D$ be connected by an admissible
+  transformation step.
+
+  If $b(x)=b(y)$ but $b'(x)\ne b'(y)$, then the
+  step-generated identity relations for $b$ and
+  $b'$ are distinct.
+\end{proposition}
+
+\begin{proof}
+  The step generates a relation between $x$ and $y$
+  under $b$.
+
+  Under $b'$, the generated relation cannot connect
+  $x$ and $y$, because every generating step preserves
+  $b'$, and equality of invariant values is preserved
+  under equivalence closure.
+\end{proof}
+
 These derivations are mathematically conditional.
+
 Independently justifying the invariants and fork warrants for actual referents,
 and showing that a generated equivalence relation expresses warranted
 strict identity, remain separate scientific obligations.

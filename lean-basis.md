@@ -3,11 +3,11 @@
 > Exact labeled mathematical environments extracted from the authoritative LaTeX section files.
 
 - Source directory: `sections`
-- Source files: 14
-- Extracted: 2026-10-27T07:11:55-05:00
-- Labeled items: 29
+- Source files: 13
+- Extracted: 2026-10-27T07:50:14-05:00
+- Labeled items: 32
 - Required labels verified: 4
-- Additional labels extracted: 25
+- Additional labels extracted: 28
 
 Each item contains the exact LaTeX environment from its opening `\begin{...}` through its matching `\end{...}`.
 
@@ -17,9 +17,9 @@ Items remain in section-file and source-line order. No mathematical text inside 
 
 | Kind | Count |
 | --- | ---: |
-| definition | 19 |
-| theorem | 1 |
-| proposition | 6 |
+| definition | 20 |
+| theorem | 2 |
+| proposition | 7 |
 | lemma | 3 |
 
 ## Paper-Order Index
@@ -32,11 +32,11 @@ Items remain in section-file and source-line order. No mathematical text inside 
 | 4 | `se200.def.TransformationInvariantIdentity` | definition | Transformation-Invariant Identity | `02_background.tex` | 126-136 |
 | 5 | `se200.def.TransformationBasis` | definition | Transformation basis | `03_formal_setting.tex` | 119-134 |
 | 6 | `se200.def.TransformationClassification` | definition | Transformation classification | `03_formal_setting.tex` | 161-174 |
-| 7 | `se200.def.NonBreakingTransformation` | definition | Non-breaking transformation | `03_formal_setting.tex` | 184-191 |
-| 8 | `se200.def.IdentityRegime` | definition | Identity regime | `03_formal_setting.tex` | 203-213 |
-| 9 | `se200.def.InducedIdentityRelation` | definition | Induced relation from non-breaking steps | `03_formal_setting.tex` | 215-223 |
-| 10 | `se200.def.BasisPlurality` | definition | Basis plurality | `03_formal_setting.tex` | 246-252 |
-| 11 | `se200.def.HiddenRegime` | definition | Hidden regime | `03_formal_setting.tex` | 271-277 |
+| 7 | `se200.def.NonBreakingTransformation` | definition | Non-breaking transformation | `03_formal_setting.tex` | 200-207 |
+| 8 | `se200.def.IdentityRegime` | definition | Identity regime | `03_formal_setting.tex` | 219-229 |
+| 9 | `se200.def.InducedIdentityRelation` | definition | Induced relation from non-breaking steps | `03_formal_setting.tex` | 231-239 |
+| 10 | `se200.def.BasisPlurality` | definition | Basis plurality | `03_formal_setting.tex` | 262-268 |
+| 11 | `se200.def.HiddenRegime` | definition | Hidden regime | `03_formal_setting.tex` | 287-293 |
 | 12 | `se200.def.ReferenceKind` | definition | Reference kind | `04_reference_inventory.tex` | 36-43 |
 | 13 | `se200.def.IdentityCarrier` | definition | Identity carrier | `04_reference_inventory.tex` | 45-52 |
 | 14 | `se200.def.IdentityBasis` | definition | Identity basis | `05_algebra.tex` | 32-41 |
@@ -48,13 +48,16 @@ Items remain in section-file and source-line order. No mathematical text inside 
 | 20 | `se200.prop.PlainReferentUnderdetermination` | proposition | Plain-referent underdetermination in the selected model | `05_algebra.tex` | 308-314 |
 | 21 | `se200.def.SeparationWitness` | definition | Separation witness | `06_regimes.tex` | 101-111 |
 | 22 | `se200.prop.DistinctCoreProfiles` | proposition | Distinct core profiles | `06_regimes.tex` | 121-125 |
-| 23 | `se200.prop.CarrierIndexedCombination` | proposition | Carrier-indexed combination | `07_lower_bound.tex` | 129-134 |
-| 24 | `se200.prop.ClassificationDistinctionPersists` | proposition | Persistence of a classification distinction | `07_lower_bound.tex` | 179-184 |
-| 25 | `se200.def.CoreCarrierBasisPair` | definition | Core carrier--basis pair | `08_determinancy.tex` | 22-41 |
-| 26 | `se200.def.CoreRegimeAssignment` | definition | Core regime assignment | `08_determinancy.tex` | 50-56 |
-| 27 | `se200.lem.CoreExistence` | lemma | Assignment existence | `08_determinancy.tex` | 66-69 |
-| 28 | `se200.lem.CoreUniqueness` | lemma | Assignment uniqueness | `08_determinancy.tex` | 84-88 |
-| 29 | `se200.thm.CoreRegimeAssignment` | theorem | Core regime assignment | `08_determinancy.tex` | 104-108 |
+| 23 | `se200.def.ModelDerivedVerdict` | definition | Model-derived transformation verdict | `06_regimes.tex` | 169-186 |
+| 24 | `se200.thm.StepIdentityCollapse` | theorem | Step-generated relation equality | `06_regimes.tex` | 297-306 |
+| 25 | `se200.prop.StepSeparation` | proposition | Separating transformation step | `06_regimes.tex` | 325-333 |
+| 26 | `se200.prop.CarrierIndexedCombination` | proposition | Carrier-indexed combination | `07_lower_bound.tex` | 129-134 |
+| 27 | `se200.prop.ClassificationDistinctionPersists` | proposition | Persistence of a classification distinction | `07_lower_bound.tex` | 179-184 |
+| 28 | `se200.def.CoreCarrierBasisPair` | definition | Core carrier--basis pair | `08_determinancy.tex` | 22-41 |
+| 29 | `se200.def.CoreRegimeAssignment` | definition | Core regime assignment | `08_determinancy.tex` | 50-56 |
+| 30 | `se200.lem.CoreExistence` | lemma | Assignment existence | `08_determinancy.tex` | 66-69 |
+| 31 | `se200.lem.CoreUniqueness` | lemma | Assignment uniqueness | `08_determinancy.tex` | 84-88 |
+| 32 | `se200.thm.CoreRegimeAssignment` | theorem | Core regime assignment | `08_determinancy.tex` | 104-108 |
 
 ## Required Label Checkpoints
 
@@ -185,7 +188,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 07. `se200.def.NonBreakingTransformation` — Non-breaking transformation
 
 - Kind: `definition`
-- Source: `03_formal_setting.tex:184-191`
+- Source: `03_formal_setting.tex:200-207`
 
 ```latex
 \begin{definition}[Non-breaking transformation]
@@ -201,7 +204,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 08. `se200.def.IdentityRegime` — Identity regime
 
 - Kind: `definition`
-- Source: `03_formal_setting.tex:203-213`
+- Source: `03_formal_setting.tex:219-229`
 
 ```latex
 \begin{definition}[Identity regime]
@@ -220,7 +223,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 09. `se200.def.InducedIdentityRelation` — Induced relation from non-breaking steps
 
 - Kind: `definition`
-- Source: `03_formal_setting.tex:215-223`
+- Source: `03_formal_setting.tex:231-239`
 
 ```latex
 \begin{definition}[Induced relation from non-breaking steps]
@@ -237,7 +240,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 10. `se200.def.BasisPlurality` — Basis plurality
 
 - Kind: `definition`
-- Source: `03_formal_setting.tex:246-252`
+- Source: `03_formal_setting.tex:262-268`
 
 ```latex
 \begin{definition}[Basis plurality]
@@ -252,7 +255,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 11. `se200.def.HiddenRegime` — Hidden regime
 
 - Kind: `definition`
-- Source: `03_formal_setting.tex:271-277`
+- Source: `03_formal_setting.tex:287-293`
 
 ```latex
 \begin{definition}[Hidden regime]
@@ -431,7 +434,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
   Let $\tau$ and $\tau'$ be profiles with a common domain $D$ of
   eligible presentations.
   A \emph{separation witness for their generated
-  relations on $D$} is a pair $(r,s)\in D\times D$ for which
+    relations on $D$} is a pair $(r,s)\in D\times D$ for which
   \[
     r\sim_\tau s \quad\text{and}\quad r\not\sim_{\tau'}s,
   \]
@@ -452,7 +455,68 @@ Items remain in section-file and source-line order. No mathematical text inside 
 \end{proposition}
 ```
 
-## 23. `se200.prop.CarrierIndexedCombination` — Carrier-indexed combination
+## 23. `se200.def.ModelDerivedVerdict` — Model-derived transformation verdict
+
+- Kind: `definition`
+- Source: `06_regimes.tex:169-186`
+
+```latex
+\begin{definition}[Model-derived transformation verdict]
+  \label{se200.def.ModelDerivedVerdict}
+  Fix an invariant basis $b$, an effect model $M$, and a
+  transformation family $f$.
+
+  The derived verdict is:
+  \begin{enumerate}[label=(\alph*),nosep]
+    \item $\NA$: no effective instance exists;
+    \item $\BRK$: effective instances exist and every one
+          changes the invariant;
+    \item $\MIX$: some effective instance changes the invariant
+          and another preserves it;
+    \item $\PRS$: effective instances exist, all preserve the
+          invariant, and at least one changes a supported field;
+    \item $\NEU$: effective instances exist, all preserve the
+          invariant, and none changes a supported field.
+  \end{enumerate}
+\end{definition}
+```
+
+## 24. `se200.thm.StepIdentityCollapse` — Step-generated relation equality
+
+- Kind: `theorem`
+- Source: `06_regimes.tex:297-306`
+
+```latex
+\begin{theorem}[Step-generated relation equality]
+  \label{se200.thm.StepIdentityCollapse}
+  Fix a common effect model, two invariant bases $b$ and $b'$,
+  and a comparison domain $D$.
+
+  The equivalence relations generated by their respective
+  invariant-preserving admissible steps are equal if and only if
+  the bases agree on invariant preservation for every admissible
+  step with both endpoints in $D$.
+\end{theorem}
+```
+
+## 25. `se200.prop.StepSeparation` — Separating transformation step
+
+- Kind: `proposition`
+- Source: `06_regimes.tex:325-333`
+
+```latex
+\begin{proposition}[Separating transformation step]
+  \label{se200.prop.StepSeparation}
+  Let $x,y\in D$ be connected by an admissible
+  transformation step.
+
+  If $b(x)=b(y)$ but $b'(x)\ne b'(y)$, then the
+  step-generated identity relations for $b$ and
+  $b'$ are distinct.
+\end{proposition}
+```
+
+## 26. `se200.prop.CarrierIndexedCombination` — Carrier-indexed combination
 
 - Kind: `proposition`
 - Source: `07_lower_bound.tex:129-134`
@@ -466,7 +530,7 @@ for each $k\in K$.
 \end{proposition}
 ```
 
-## 24. `se200.prop.ClassificationDistinctionPersists` — Persistence of a classification distinction
+## 27. `se200.prop.ClassificationDistinctionPersists` — Persistence of a classification distinction
 
 - Kind: `proposition`
 - Source: `07_lower_bound.tex:179-184`
@@ -480,7 +544,7 @@ under extensions to $\Fset'$ that preserve the original classifications.
 \end{proposition}
 ```
 
-## 25. `se200.def.CoreCarrierBasisPair` — Core carrier--basis pair
+## 28. `se200.def.CoreCarrierBasisPair` — Core carrier--basis pair
 
 - Kind: `definition`
 - Source: `08_determinancy.tex:22-41`
@@ -508,7 +572,7 @@ record the profile names assigned within this construction:
 \end{definition}
 ```
 
-## 26. `se200.def.CoreRegimeAssignment` — Core regime assignment
+## 29. `se200.def.CoreRegimeAssignment` — Core regime assignment
 
 - Kind: `definition`
 - Source: `08_determinancy.tex:50-56`
@@ -523,7 +587,7 @@ Its codomain is the nine-profile catalog in Section~\ref{sec:nine}.
 \end{definition}
 ```
 
-## 27. `se200.lem.CoreExistence` — Assignment existence
+## 30. `se200.lem.CoreExistence` — Assignment existence
 
 - Kind: `lemma`
 - Source: `08_determinancy.tex:66-69`
@@ -535,7 +599,7 @@ Every selected core carrier--basis pair has an assigned profile under $A$.
 \end{lemma}
 ```
 
-## 28. `se200.lem.CoreUniqueness` — Assignment uniqueness
+## 31. `se200.lem.CoreUniqueness` — Assignment uniqueness
 
 - Kind: `lemma`
 - Source: `08_determinancy.tex:84-88`
@@ -548,7 +612,7 @@ under $A$.
 \end{lemma}
 ```
 
-## 29. `se200.thm.CoreRegimeAssignment` — Core regime assignment
+## 32. `se200.thm.CoreRegimeAssignment` — Core regime assignment
 
 - Kind: `theorem`
 - Source: `08_determinancy.tex:104-108`
