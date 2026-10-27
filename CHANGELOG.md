@@ -11,6 +11,10 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ## [Unreleased]
 
+---
+
+## [0.6.0] - 2026-10-27
+
 ### Added
 
 - Added this changelog.
@@ -47,9 +51,9 @@ but their scientific adequacy remains unresolved.
 Determine which proposed carrier–basis pairs have independently justified
 individuation, co-reference, and persistence criteria.
 
-Distinguish classification differences, generated identity relations, and
-warranted strict identity.lations, and
-assess whether the proposed carrier–basis pairs are independently justified.
+Distinguish differences between classification profiles, differences between
+their generated identity relations, and independently warranted identity or
+persistence judgments about intended referents.
 
 #### 3. Complete integration with separated theories.
 
@@ -77,21 +81,21 @@ Determine what the formal construction explains and where it remains inadequate.
 ## [0.5.0] - 2026-07-10
 
 Released before this changelog existed. See the
-[release](https://github.com/structural-explainability/paper-200-identity-regimes/releases/tag/v1.0.0).
+[release](https://github.com/structural-explainability/paper-200-identity-regimes/releases/tag/v0.5.0).
 
 ---
 
 ## [0.4.0] - 2026-07-10
 
 Released before this changelog existed. See the
-[release](https://github.com/structural-explainability/paper-200-identity-regimes/releases/tag/v1.0.0).
+[release](https://github.com/structural-explainability/paper-200-identity-regimes/releases/tag/v0.4.0).
 
 ---
 
 ## [0.3.0] - 2026-07-10
 
 Released before this changelog existed. See the
-[release](https://github.com/structural-explainability/paper-200-identity-regimes/releases/tag/v1.0.0).
+[release](https://github.com/structural-explainability/paper-200-identity-regimes/releases/tag/v0.3.0).
 
 ---
 
@@ -161,7 +165,7 @@ Verify that all required GitHub Actions complete successfully.
 
 1. As Needed: Run the **Prepare arXiv Source** workflow manually.
 2. As Needed: Download `arxiv-source.zip` and the compiled PDF artifact; check the PDF.
-3. Replace the existing arXiv submission (2601.14271) with the new source.
+3. Submit the revised source as a replacement.
 4. Update the arXiv abstract field to match the paper's abstract.
 5. Summarize the change in the arXiv Comments field.
 
@@ -179,7 +183,7 @@ git push origin vX.Y.Z
 After it succeeds, for a major revision, create a release:
 
 ```shell
-gh release create v1.0.0 --verify-tag --title "v1.0.0" --generate-notes
+gh release create v0.6.0 --verify-tag --title "v0.6.0" --generate-notes
 ```
 
 ## Only As Needed (delete a tag)
@@ -191,7 +195,8 @@ git push origin :refs/tags/vX.Z.Y
 
 ## Links
 
-[Unreleased]: https://github.com/structural-explainability/paper-200-identity-regimes/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/structural-explainability/paper-200-identity-regimes/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/structural-explainability/paper-200-identity-regimes/releases/tag/v0.6.0
 [0.5.0]: https://github.com/structural-explainability/paper-200-identity-regimes/releases/tag/v0.5.0
 [0.4.0]: https://github.com/structural-explainability/paper-200-identity-regimes/releases/tag/v0.4.0
 [0.3.0]: https://github.com/structural-explainability/paper-200-identity-regimes/releases/tag/v0.3.0

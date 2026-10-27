@@ -141,3 +141,93 @@ independently warranted, or that any faithful realization requires
 nine non-amalgamable regimes.
 Those questions are examined as limits of the counting argument in
 Section~\ref{sec:bound}.
+
+
+% -----------------------------------------------------------------------------
+\subsection{Initial Model-Derived Classification Results}
+\label{subsec:model_derived_results}
+% -----------------------------------------------------------------------------
+
+Table~\ref{tab:master} records the proposed classification matrix.
+Its entries are not inputs to the following derivations.
+Instead, the companion Lean models specify presentation fields,
+identity invariants, admissible transformation steps, and their effects.
+For a fixed model and basis, the derived verdict records whether the
+transformation family
+has no effective instances (\NA),
+whether every effective instance changes the invariant (\BRK),
+whether some change it and some preserve it (\textsf{MIX}), or
+whether all preserve it while engaging a supported field (\PRS) or
+engaging none (\NEU).
+\textsf{MIX} is a diagnostic that the family needs refinement,
+not a uniform classification asserted in Table~\ref{tab:master}.
+Applicability here is defined for the model's presentation space,
+not for an arbitrarily selected smaller comparison domain.
+
+\begin{table}[ht]
+  \centering
+  \small
+  \setlength{\tabcolsep}{5pt}
+  \begin{tabular}{@{}p{0.30\linewidth}p{0.41\linewidth}cc@{}}
+    \toprule
+    Pair and family & Model or explicit warrant & First & Second \\
+    \midrule
+    $\SCOPEE/\SCOPES$, AD & Coverage-preserving; one organization field & \PRS & \BRK \\
+    $\SCOPEE/\SCOPES$, AD & Coverage-preserving; field per case-pair & \NEU & \BRK \\
+    $\SCOPEE/\SCOPES$, AD & Broader variant allowing coverage changes; field per pair & \textsf{MIX} & \BRK \\
+    $\RULEC/\RULES$, RF & Norm-preserving strict refinement; coarse organization field & \PRS & \BRK \\
+    $\RULEC/\RULES$, RF & Broader variant permitting changes to norms & \textsf{MIX} & \BRK \\
+    $\LOC/\OBJ$, BF & Branch changes; no further warrant & \textsf{MIX} & \textsf{MIX} \\
+    $\LOC/\OBJ$, BF & Colocated and FreshObject warrants & \NEU & \BRK \\
+    $\LOC/\OBJ$, BF & Colocated and SameObject warrants & \NEU & \NEU \\
+    \bottomrule
+  \end{tabular}
+  \caption{Selected derived verdicts under explicitly specified finite
+    models or warrants.
+    The two rightmost columns follow the order of
+    bases named in the first column.
+    These are conditional model consequences,
+    not universal identity laws or a complete derived
+    $9\times10$ matrix.}
+  \label{tab:derived_initial}
+\end{table}
+
+Two findings are especially consequential.
+First, refining the scope presentation from one organization field
+to one field per case-pair changes the strict AD extension verdict
+from \PRS{} to \NEU{}.
+The fine-grained extension basis reads diagonal entries (coverage),
+while restructuring changes only off-diagonal entries.
+The support of each fine-grained scope basis is proved minimal in that
+model.
+Both verdicts are non-breaking, but the classification is
+not invariant under the choice of field representation.
+The model therefore exposes a granularity dependence that must be
+controlled before an unqualified classification can be asserted.
+
+Second, branching alone specifies a change of branch, not a change of
+locus or object.
+With no additional warrant, both corresponding verdicts are \textsf{MIX}.
+Under the Colocated and FreshObject warrants,
+the locus basis is neutral and the object basis breaking;
+under the Colocated and SameObject warrants,
+both are neutral and their step-generated relations
+collapse on every comparison domain.
+These outcomes are consequences of distinct, explicitly stated
+hypotheses.
+None establishes that one warrant is true of every fork
+in an actual system.
+
+The broader scope variant in the table permits changes to coverage and
+therefore is not an instance of the coverage-preserving AD family as
+originally defined in Section~\ref{sec:formal_setting}.
+It is included as a separate sensitivity analysis.
+The broader rule variant likewise changes the specification of eligible refinements.
+A comparison with Table~\ref{tab:master} is warranted only after
+matching operation semantics, identity basis, field granularity, and
+admissibility conditions.
+
+These derivations are mathematically conditional.
+Independently justifying the invariants and fork warrants for actual referents,
+and showing that a generated equivalence relation expresses warranted
+strict identity, remain separate scientific obligations.

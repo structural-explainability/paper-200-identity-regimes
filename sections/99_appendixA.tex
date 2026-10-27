@@ -1,53 +1,58 @@
 % !TeX root = ../se200_referential_regimes.tex
 
 % =============================================================================
-\section{Pairwise Separation}
+\section{Pairwise Distinctions and Their Limits}
 \label{app:sep}
 % =============================================================================
 
-The nine regimes yield $\binom{9}{2}=36$ unordered pairs.
-Each pair is separated either by carrier difference or, for same-carrier split pairs,
-by a separation witness in the sense of
-Definition~\ref{se200.def.SeparationWitness}.
-Three pairs share a reference kind and differ by identity basis:
-$\LOC/\OBJ$, $\SCOPEE/\SCOPES$, and $\RULEC/\RULES$.
-All other pairs are separated by carrier difference.
+The nine candidate profiles in Table~\ref{tab:master} yield
+$\binom{9}{2}=36$ unordered pairs. The declared classification
+functions are different for each pair, as established by
+Proposition~\ref{se200.prop.DistinctCoreProfiles}.
+This is a result about the \emph{proposed matrix}, not a proof
+that all pairs induce distinct identity relations or represent
+scientifically necessary identity criteria.
 
-\begin{center}
-\small
-\setlength{\tabcolsep}{2pt}
-\begin{tabular}{@{}l ccccccccc@{}}
-\toprule
- & $\OBL$ & $\OCC$ & $\REC$ & $\LOC$ & $\OBJ$ & $\SCOPEE$ & $\SCOPES$ & $\RULEC$ & $\RULES$\\
-\midrule
-$\OBL$   & -- & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$\\
-$\OCC$   & $\bullet$ & -- & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$\\
-$\REC$   & $\bullet$ & $\bullet$ & -- & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$\\
-$\LOC$  & $\bullet$ & $\bullet$ & $\bullet$ & -- & BF & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$\\
-$\OBJ$  & $\bullet$ & $\bullet$ & $\bullet$ & BF & -- & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$\\
-$\SCOPEE$  & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & -- & AD & $\bullet$ & $\bullet$\\
-$\SCOPES$  & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & AD & -- & $\bullet$ & $\bullet$\\
-$\RULEC$  & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & -- & RF\\
-$\RULES$  & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & RF & --\\
-\bottomrule
-\end{tabular}
-\end{center}
+\paragraph{Family-level generated relations.}
+The older family-level construction in the companion Persistence
+formalization generates a relation from families classified as
+preserving (\PRS). Within the stipulated matrix, two pairs have
+identical sets of preserving families:
+$\OBL/\RULEC$ and $\SCOPES/\RULES$.
+They generate identical relations under that construction on any
+shared transformation dynamics. The other 34 unordered pairs have
+some difference in their sets of preserving families, and are
+distinguishable under free dynamics. Such differences do not, by
+themselves, prove separation on arbitrary dynamics, which may lack
+a step witnessing the difference.
 
-Here $\bullet$ indicates separation by carrier difference.
-The entries BF, AD, and RF indicate same-kind split pairs separated by the corresponding canonical operation.
+\paragraph{Invariant-generated relations.}
+The newer invariant-based construction includes the admissible
+individual steps that preserve a declared invariant, rather than
+selecting entire families solely by their matrix labels.
+For two bases on a common presentation space and comparison domain,
+equality of the step-generated relations is equivalent to agreement
+on preservation of each admissible step in that domain.
+In particular, an admissible step preserved by one basis and changed
+by another is a sufficient witness of separation, provided both
+endpoints lie in the comparison domain.
+Conversely, bases that classify a family differently can still
+produce equal relations on a restricted domain containing no
+separating step. Neither relation construction establishes strict
+identity without an independently justified interpretation.
 
-The $\LOC/\OBJ$ pair is separated by branch/fork.
-A fork over a fixed locus may preserve locus identity while breaking object identity.
-Thus the two regimes induce distinct identity relations.
+\paragraph{Conditional examples.}
+The scope, rule, and fork models discussed in
+Section~\ref{subsec:model_derived_results} demonstrate how specific
+presentation fields and transformation hypotheses determine derived
+verdicts. The fork model is especially instructive: a bare fork does
+not entail either a change of locus or a change of object, so the
+proposed $\LOC/\OBJ$ split is not warranted by the family name
+alone. With additional warrants the resulting bases may separate,
+or may collapse on every domain.
 
-The $\SCOPEE/\SCOPES$ pair is separated by $\mathrm{AD}$.
-A whole-preserving decomposition may preserve the covered cases
-while changing the internal scope structure.
-Thus the two regimes induce distinct identity relations.
-
-The $\RULEC/\RULES$ pair is separated by refinement.
-A refinement may preserve rule content while changing textual or internal rule structure.
-Thus the two regimes induce distinct identity relations.
-
-Therefore every pair of regimes is separated either by carrier difference or by a transformation witness.
-No pair collapses.
+Therefore, the matrix establishes 36 differences among the
+\emph{proposed classification rows}; it does not establish
+36 separations among generated relations, nine irreducible identity
+regimes, or a universal lower bound. The distinction between these
+levels is essential to the remaining scientific adequacy inquiry.

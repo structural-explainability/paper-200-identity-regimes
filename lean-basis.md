@@ -3,8 +3,8 @@
 > Exact labeled mathematical environments extracted from the authoritative LaTeX section files.
 
 - Source directory: `sections`
-- Source files: 13
-- Extracted: 2026-10-25T14:31:38-05:00
+- Source files: 14
+- Extracted: 2026-10-27T07:11:55-05:00
 - Labeled items: 29
 - Required labels verified: 4
 - Additional labels extracted: 25
@@ -41,11 +41,11 @@ Items remain in section-file and source-line order. No mathematical text inside 
 | 13 | `se200.def.IdentityCarrier` | definition | Identity carrier | `04_reference_inventory.tex` | 45-52 |
 | 14 | `se200.def.IdentityBasis` | definition | Identity basis | `05_algebra.tex` | 32-41 |
 | 15 | `se200.def.Collapse` | definition | Collapse | `05_algebra.tex` | 69-81 |
-| 16 | `se200.def.UnderdeterminedKind` | definition | Underdetermined kind | `05_algebra.tex` | 94-100 |
-| 17 | `se200.lem.SplitPattern` | lemma | Split pattern for classification profiles | `05_algebra.tex` | 166-182 |
-| 18 | `se200.prop.ScopeUnderdetermination` | proposition | Scope underdetermination in the selected model | `05_algebra.tex` | 220-226 |
-| 19 | `se200.prop.RuleUnderdetermination` | proposition | Rule underdetermination in the selected model | `05_algebra.tex` | 264-270 |
-| 20 | `se200.prop.PlainReferentUnderdetermination` | proposition | Plain-referent underdetermination in the selected model | `05_algebra.tex` | 305-311 |
+| 16 | `se200.def.UnderdeterminedKind` | definition | Underdetermined kind | `05_algebra.tex` | 102-108 |
+| 17 | `se200.lem.SplitPattern` | lemma | Split pattern for classification profiles | `05_algebra.tex` | 169-185 |
+| 18 | `se200.prop.ScopeUnderdetermination` | proposition | Scope underdetermination in the selected model | `05_algebra.tex` | 223-229 |
+| 19 | `se200.prop.RuleUnderdetermination` | proposition | Rule underdetermination in the selected model | `05_algebra.tex` | 267-273 |
+| 20 | `se200.prop.PlainReferentUnderdetermination` | proposition | Plain-referent underdetermination in the selected model | `05_algebra.tex` | 308-314 |
 | 21 | `se200.def.SeparationWitness` | definition | Separation witness | `06_regimes.tex` | 101-111 |
 | 22 | `se200.prop.DistinctCoreProfiles` | proposition | Distinct core profiles | `06_regimes.tex` | 121-125 |
 | 23 | `se200.prop.CarrierIndexedCombination` | proposition | Carrier-indexed combination | `07_lower_bound.tex` | 129-134 |
@@ -338,7 +338,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 16. `se200.def.UnderdeterminedKind` — Underdetermined kind
 
 - Kind: `definition`
-- Source: `05_algebra.tex:94-100`
+- Source: `05_algebra.tex:102-108`
 
 ```latex
 \begin{definition}[Underdetermined kind]
@@ -353,7 +353,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 17. `se200.lem.SplitPattern` — Split pattern for classification profiles
 
 - Kind: `lemma`
-- Source: `05_algebra.tex:166-182`
+- Source: `05_algebra.tex:169-185`
 
 ```latex
 \begin{lemma}[Split pattern for classification profiles]
@@ -378,7 +378,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 18. `se200.prop.ScopeUnderdetermination` — Scope underdetermination in the selected model
 
 - Kind: `proposition`
-- Source: `05_algebra.tex:220-226`
+- Source: `05_algebra.tex:223-229`
 
 ```latex
 \begin{proposition}[Scope underdetermination in the selected model]
@@ -393,7 +393,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 19. `se200.prop.RuleUnderdetermination` — Rule underdetermination in the selected model
 
 - Kind: `proposition`
-- Source: `05_algebra.tex:264-270`
+- Source: `05_algebra.tex:267-273`
 
 ```latex
 \begin{proposition}[Rule underdetermination in the selected model]
@@ -408,7 +408,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 20. `se200.prop.PlainReferentUnderdetermination` — Plain-referent underdetermination in the selected model
 
 - Kind: `proposition`
-- Source: `05_algebra.tex:305-311`
+- Source: `05_algebra.tex:308-314`
 
 ```latex
 \begin{proposition}[Plain-referent underdetermination in the selected model]
