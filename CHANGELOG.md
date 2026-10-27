@@ -72,8 +72,11 @@ Determine what the formal construction explains and where it remains inadequate.
 - Uses the revised Neutral Substrate result as a conditional foundation.
 - Does not assume that neutrality by design, or adequate referential fixing,
   has already been established for actual systems.
-- Defines the generated relation from basis-preserving steps and states its
-  relation to the PRS-only family-level relation.
+- Distinguishes three generated relations: the PRS-only family-level relation
+  of Persistence, the PRS-or-NEU classification-level relation, and the
+  invariant step-generated relation, which now has its own definition.
+- States that seven (PRS-only) and eight (PRS-or-NEU) count distinct
+  stipulated family sets, not necessary regimes.
 - Cites the companion Lean development.
 
 ---

@@ -4,7 +4,7 @@
 
 - Source directory: `sections`
 - Source files: 13
-- Extracted: 2026-10-27T09:03:27-05:00
+- Extracted: 2026-10-27T09:24:04-05:00
 - Labeled items: 32
 - Required labels verified: 4
 - Additional labels extracted: 28
@@ -51,8 +51,8 @@ Items remain in section-file and source-line order. No mathematical text inside 
 | 23 | `se200.def.ModelDerivedVerdict` | definition | Model-derived transformation verdict | `06_regimes.tex` | 170-187 |
 | 24 | `se200.thm.StepIdentityCollapse` | theorem | Step-generated relation equality | `06_regimes.tex` | 302-311 |
 | 25 | `se200.prop.StepSeparation` | proposition | Separating transformation step | `06_regimes.tex` | 330-338 |
-| 26 | `se200.prop.CarrierIndexedCombination` | proposition | Carrier-indexed combination | `07_distinctions.tex` | 134-139 |
-| 27 | `se200.prop.ClassificationDistinctionPersists` | proposition | Persistence of a classification distinction | `07_distinctions.tex` | 185-190 |
+| 26 | `se200.prop.CarrierIndexedCombination` | proposition | Carrier-indexed combination | `07_distinctions.tex` | 139-144 |
+| 27 | `se200.prop.ClassificationDistinctionPersists` | proposition | Persistence of a classification distinction | `07_distinctions.tex` | 190-195 |
 | 28 | `se200.def.CoreCarrierBasisPair` | definition | Core carrier--basis pair | `08_determinancy.tex` | 22-41 |
 | 29 | `se200.def.CoreRegimeAssignment` | definition | Core regime assignment | `08_determinancy.tex` | 50-56 |
 | 30 | `se200.lem.CoreExistence` | lemma | Assignment existence | `08_determinancy.tex` | 66-69 |
@@ -521,7 +521,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 26. `se200.prop.CarrierIndexedCombination` — Carrier-indexed combination
 
 - Kind: `proposition`
-- Source: `07_distinctions.tex:134-139`
+- Source: `07_distinctions.tex:139-144`
 
 ```latex
 \begin{proposition}[Carrier-indexed combination]
@@ -535,7 +535,7 @@ for each $k\in K$.
 ## 27. `se200.prop.ClassificationDistinctionPersists` — Persistence of a classification distinction
 
 - Kind: `proposition`
-- Source: `07_distinctions.tex:185-190`
+- Source: `07_distinctions.tex:190-195`
 
 ```latex
 \begin{proposition}[Persistence of a classification distinction]
