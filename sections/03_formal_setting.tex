@@ -96,9 +96,9 @@ settled by counting declarations or excluding parameters by stipulation.
 
 We therefore do not minimize a number of irreducible identity regimes in
 this paper.
-Section~\ref{sec:bound} describes the selected catalog,
+Section~\ref{sec:distinctions} describes the selected catalog,
 its limited distinctions, and the outstanding non-amalgamation question,
-including the lossless-union comparison CE-5.
+including whether a lossless union of the carrier-specific relations exists.
 
 % -----------------------------------------------------------------------------
 \subsection{Transformation Basis}
@@ -110,7 +110,7 @@ We select the following finite transformation basis for analysis:
 \[
   \Fset =
   \{\mathrm{RE},\mathrm{AN},\mathrm{RF},\mathrm{AD},\mathrm{RC},
-    \mathrm{RA},\mathrm{SU},\mathrm{BF},\mathrm{PV},\mathrm{SE}\}.
+  \mathrm{RA},\mathrm{SU},\mathrm{BF},\mathrm{PV},\mathrm{SE}\}.
 \]
 The basis is a selected set of operation families, not a claim of
 completeness for record systems or of identity effects uniform across
@@ -175,9 +175,11 @@ relative to a declared identity basis and its intended comparison domain.
 
 The four-valued classification above describes the stipulated
 profile catalog.
-The corresponding historical Lean matrix uses
+The canonical Lean matrix uses
 three classification values (IGN, PRS, BRK),
-mapping N/A to IGN and thereby losing the applicability distinction.
+mapping both \NEU{} and N/A to IGN.
+The companion Persistence classification restores applicability
+at exactly the eight N/A cells of Table~\ref{tab:master}.
 
 The newer invariant-based construction instead derives one of
 five verdicts:
@@ -228,15 +230,24 @@ or proof that its basis is adequate for a particular referent.
   to that basis.
 \end{definition}
 
-\begin{definition}[Induced relation from non-breaking steps]
+\begin{definition}[Induced relation from preserving steps]
   \label{se200.def.InducedIdentityRelation}
   Fix a profile $\tau$ and a domain $D_\tau$ of eligible presentations.
   Let $E_\tau\subseteq D_\tau\times D_\tau$ consist of pairs joined
-  by specified, admissible transformation steps classified as
-  non-breaking for $\tau$.
+  by specified, admissible transformation steps that preserve the
+  declared identity basis of $\tau$.
+  Steps of families classified $\PRS$ or $\NEU$ are preserving;
+  steps of families classified $\BRK$ are not.
   Define $\sim_\tau$ as the smallest
   equivalence relation on $D_\tau$ containing $E_\tau$.
 \end{definition}
+
+This is the step-level relation.
+The older family-level relation of the companion Persistence
+formalization is generated only by steps of families classified
+$\PRS$; steps of families classified $\NEU$ generate nothing there.
+The family-level relation is contained in the step-level one whenever
+every step of a $\PRS$ family preserves the declared basis.
 
 The generated relation $\sim_\tau$ is mathematically an equivalence
 relation by construction.
@@ -304,12 +315,12 @@ be examined rather than decided by terminology alone.
 
 % -----------------------------------------------------------------------------
 \subsection{Scope of the Analysis}
-\label{subsec:lower_bound_scope}
+\label{subsec:scope_of_analysis}
 % -----------------------------------------------------------------------------
 
 The selected carrier inventory, identity bases, and transformation
 classifications supply a finite candidate construction.
-Sections~\ref{sec:algebra}--\ref{sec:bound} analyze its proposed
+Sections~\ref{sec:algebra}--\ref{sec:distinctions} analyze its proposed
 transformation distinctions and the limits of the resulting count.
 
 The analysis does not establish a universal minimum of nine identity

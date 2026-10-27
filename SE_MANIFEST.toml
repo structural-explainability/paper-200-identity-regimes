@@ -35,6 +35,7 @@ role = "justification-identity"
 [depends]
 required = [
     { repository = "paper-100-neutral-substrate", kind = "semantic", reason = "Uses the conditional semantic-neutrality result and referential framework developed in Neutral Substrates." },
+    { repository = "se-theory-identity-regimes", kind = "semantic", reason = "Companion Lean 4 formalization of the derived classification cells and step-generated relations reported here." },
 ]
 optional = []
 

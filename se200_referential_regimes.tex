@@ -179,8 +179,8 @@ for Neutral Substrates}
   ten transformation families, while distinguishing its
   stipulated classifications from model-derived results.
   Using invariant-defined identity bases and explicit effect
-  models, we obtain six formally certified classification
-  cells across scope decomposition, rule refinement, and
+  models, we obtain six classification cells certified in
+  Lean~4 across scope decomposition, rule refinement, and
   forking.
   The results demonstrate dependencies on field
   granularity, admissible transformation steps, and explicit
@@ -220,7 +220,7 @@ for Neutral Substrates}
 \input{sections/04_reference_inventory}
 \input{sections/05_algebra}
 \input{sections/06_regimes}
-\input{sections/07_lower_bound}
+\input{sections/07_distinctions}
 \input{sections/08_determinancy}
 \input{sections/09_application}
 \input{sections/60_related_work}
@@ -240,7 +240,10 @@ The author is the sole contributor to this work and
 is responsible for all aspects of the research, authorship, and publication.
 
 \subsection*{Use of AI-Assisted Tools}
-AI-assisted tools were used for editing, formatting, and consistency checking.
+AI-assisted tools were used for editing, formatting, and consistency checking,
+and in developing and reviewing mathematical definitions, proofs,
+and the Lean formalization.
+Formal proofs have been checked by Lean~4.
 The author reviewed all suggestions and is solely responsible for the content.
 
 \subsection*{Declaration of Conflicting Interest}
@@ -263,10 +266,15 @@ The author declares no potential conflicts of interest.
   \emph{Sorting Things Out: Classification and Its Consequences}.
   MIT Press, Cambridge, MA, 1999.
 
-  \bibitem[Case(2026)]{case2026neutral}
+  \bibitem[Case(2026a)]{case2026neutral}
   D.\ M.\ Case.
   \emph{Neutral Substrates: A Design Constraint for Shared Records Under Persistent Interpretive Disagreement}.
   arXiv preprint \href{https://arxiv.org/abs/2601.14271}{arXiv:2601.14271}, 2026.
+
+  \bibitem[Case(2026b)]{case2026identityregimes}
+  D.\ M.\ Case.
+  \emph{SE Theory: Identity Regimes} (Lean~4 formalization), release v0.7.0.
+  \url{https://github.com/structural-explainability/se-theory-identity-regimes}, 2026.
 
   \bibitem[Edwards(2010)]{edwards2011}
   P.\ N.\ Edwards.

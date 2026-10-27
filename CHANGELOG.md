@@ -11,31 +11,9 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ## [Unreleased]
 
----
-
-## [0.6.0] - 2026-10-27
-
-### Added
-
-- Added this changelog.
-
-### Updated
-
-- The unsupported nine-regime lower-bound claim has been withdrawn.
-- Presented referential regimes as candidate formal characterizations
-  of individuation, co-reference, and persistence under transformation.
-- Distinguish definitions, conditional results, proposed criteria, and
-  unresolved scientific claims.
-- Uses the revised Neutral Substrate result as a conditional foundation.
-- Does not assume that neutrality by design, or adequate referential fixing,
-- has already been established for actual systems.
-
 ### Planned
 
 Complete the remaining work:
-
-- Review the appendix for obsolete lower-bound and generated-relation separation claims.
-- Verify references, citations, and retired theorem labels.
 
 #### 1. Investigate CE-5 and non-amalgamation.
 
@@ -75,6 +53,28 @@ For each case, specify the intended referent,
 identity criterion, transformation, and independently justified judgment.
 
 Determine what the formal construction explains and where it remains inadequate.
+
+---
+
+## [0.6.0] - 2026-10-27
+
+### Added
+
+- Added this changelog.
+
+### Updated
+
+- The unsupported nine-regime lower-bound claim has been withdrawn.
+- Presented referential regimes as candidate formal characterizations
+  of individuation, co-reference, and persistence under transformation.
+- Distinguish definitions, conditional results, proposed criteria, and
+  unresolved scientific claims.
+- Uses the revised Neutral Substrate result as a conditional foundation.
+- Does not assume that neutrality by design, or adequate referential fixing,
+  has already been established for actual systems.
+- Defines the generated relation from basis-preserving steps and states its
+  relation to the PRS-only family-level relation.
+- Cites the companion Lean development.
 
 ---
 

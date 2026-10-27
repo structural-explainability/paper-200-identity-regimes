@@ -140,7 +140,7 @@ relations on a common domain, that all nine identity bases are
 independently warranted, or that any faithful realization requires
 nine non-amalgamable regimes.
 Those questions are examined as limits of the counting argument in
-Section~\ref{sec:bound}.
+Section~\ref{sec:distinctions}.
 
 
 % -----------------------------------------------------------------------------
@@ -151,8 +151,9 @@ Section~\ref{sec:bound}.
 Table~\ref{tab:master} records the proposed classification matrix.
 Its entries are not inputs to the following derivations.
 
-Instead, the companion Lean models specify presentation fields,
-identity invariants, admissible transformation steps, and their effects.
+Instead, the companion Lean models~\citep{case2026identityregimes}
+specify presentation fields, identity invariants,
+admissible transformation steps, and their effects.
 
 An invariant basis consists of a function on presentations
 and a declared support of presentation fields.
@@ -229,7 +230,8 @@ not for an arbitrarily selected smaller comparison domain.
   \label{tab:derived_initial}
 \end{table}
 
-The six certified cells in the current Lean derived matrix are:
+The six certified cells in the derived matrix of the companion Lean
+development are:
 
 \begin{itemize}
   \item $\SCOPEE$ under strict AD: \NEU;
@@ -245,6 +247,9 @@ an invariant basis with a proven minimal support,
 and a proof of its derived verdict.
 The other 84 cells in the stipulated matrix
 have no derived model yet.
+Wherever a cell is derived, it is breaking exactly when the stipulated
+cell is breaking; the three derived \NEU{} cells are \PRS{} in
+Table~\ref{tab:master}, a difference of field granularity.
 
 The additional rows in Table~\ref{tab:derived_initial}
 are sensitivity analyses or alternative warranted models,

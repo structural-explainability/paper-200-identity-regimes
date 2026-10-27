@@ -2,7 +2,7 @@
 
 % =============================================================================
 \section{Regime Distinctions and the Limits of Counting}
-\label{sec:bound}
+\label{sec:distinctions}
 % =============================================================================
 
 The preceding sections specify a finite inventory of carrier kinds,
@@ -15,7 +15,7 @@ The present construction does not establish such a lower bound.
 
 % -----------------------------------------------------------------------------
 \subsection{The Inventory and Its Identity Conditions}
-\label{subsec:inventory_floor}
+\label{subsec:inventory_conditions}
 % -----------------------------------------------------------------------------
 
 Section~\ref{sec:inventory} selects six carrier kinds for the
@@ -77,8 +77,8 @@ The three pairs are therefore useful candidate distinctions, not
 independent demonstrations of universally required regimes.
 
 % -----------------------------------------------------------------------------
-\subsection{What the Finite Catalog Counts}
-\label{subsec:the_bound}
+\subsection{Counting Profiles Versus Counting Relations}
+\label{subsec:profiles_vs_relations}
 % -----------------------------------------------------------------------------
 
 The catalog of Section~\ref{sec:nine} contains nine named
@@ -101,6 +101,11 @@ exhaustive inventory of admissible identity criteria.
 
 Proposition~\ref{se200.prop.DistinctCoreProfiles} concerns distinctions
 among the specified profiles.
+At the level of family-level generated relations the count is smaller:
+two pairs of profiles ($\OBL/\RULEC$ and $\SCOPES/\RULES$) have identical
+sets of preserving families, so the nine rows yield exactly seven
+relations on free dynamics and at most seven on any dynamics
+(Appendix~\ref{app:sep}).
 Even when profile distinctions are formally established, the further
 claim that they cannot be represented together without loss is a
 separate obligation.
@@ -123,7 +128,7 @@ and define a relation $E$ on $D$ by
 \[
 (k,x)\mathrel{E}(\ell,y)
 \quad\Longleftrightarrow\quad
-k=\ell\ \text{and}\ x\mathrel{E_k}y.
+\bigl(k=\ell \;\wedge\; x\mathrel{E_k} y\bigr).
 \]
 
 \begin{proposition}[Carrier-indexed combination]
@@ -163,7 +168,8 @@ Conversely, naming a parameter does not establish that its semantics
 are adequate or that it preserves the required distinctions.
 The admissibility of such a combination, and any scientifically
 justified non-amalgamation condition, require further analysis.
-The lossless-union comparison (CE-5) is a specific test of this issue.
+Whether a lossless union of the carrier-specific relations exists is a
+specific test of this issue.
 
 % -----------------------------------------------------------------------------
 \subsection{Separation Under an Extended Transformation Basis}
@@ -196,7 +202,7 @@ warrants strict identity or non-identity for particular referents.
 
 % -----------------------------------------------------------------------------
 \subsection{Boundary of the Result}
-\label{subsec:bound_not_claim}
+\label{subsec:boundary_of_the_result}
 % -----------------------------------------------------------------------------
 
 The present analysis records a finite set of proposed carrier--basis
