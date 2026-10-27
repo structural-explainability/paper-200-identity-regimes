@@ -1,3 +1,8 @@
+# ============================================================
+# .github/workflows/build-latex.yml
+# ============================================================
+# Updated: 2026-10-27
+
 # WHY: Automatically builds LaTeX PDF when the paper changes
 # ALT: Manual trigger available via workflow_dispatch
 
@@ -8,6 +13,7 @@ on:
     branches: [main]
     paths:
       - "*.tex"
+      - "sections/**/*.tex"
       - ".github/workflows/build-latex.yml"
       - ".github/tl_packages"
 
@@ -15,6 +21,7 @@ on:
     branches: [main]
     paths:
       - "*.tex"
+      - "sections/**/*.tex"
       - ".github/workflows/build-latex.yml"
       - ".github/tl_packages"
 
@@ -62,12 +69,12 @@ jobs:
           kpsewhich authblk.sty
 
       # ============================================================
-      # === DEPLOY: Build only, don't deploy yet ===
+      # BUILD: Validate LaTeX compilation
       # ============================================================
 
       # WHY: Validate LaTeX compiles without errors so ready for arXiv prep
       # OBS: PDF is built but not saved as artifact
-      - name: D1) Build PDF to validate LaTeX
+      - name: B1) Build PDF to validate LaTeX
         run: |
           mkdir -p artifacts
           latexmk -pdf -interaction=nonstopmode -halt-on-error \

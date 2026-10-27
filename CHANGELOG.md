@@ -92,7 +92,8 @@ Determine what the formal construction explains and where it remains inadequate.
 - Reframes the paper around its contributions, consolidates statements of
   limits in the limits section, and removes repeated counts of profiles,
   reference kinds, and transformation families from the prose.
-- Updated GH action arxiv-prep.yml
+- Updated GitHub action arxiv-prep.yml
+- Updated GitHub action build-latex.yml
 
 ---
 
