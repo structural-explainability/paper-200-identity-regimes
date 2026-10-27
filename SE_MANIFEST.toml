@@ -50,7 +50,7 @@ artifacts = [
     "SE_MANIFEST.toml",
     "se200_referential_regimes.tex",
     "sections/*.tex",
-    "bibliography/*.bib",
+    "lean-basis.md"
 ]
 
 # === Scope ===

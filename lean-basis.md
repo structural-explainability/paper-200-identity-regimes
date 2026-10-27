@@ -4,7 +4,7 @@
 
 - Source directory: `sections`
 - Source files: 13
-- Extracted: 2026-10-27T09:24:04-05:00
+- Extracted: 2026-10-27T09:49:22-05:00
 - Labeled items: 32
 - Required labels verified: 4
 - Additional labels extracted: 28
@@ -30,29 +30,29 @@ Items remain in section-file and source-line order. No mathematical text inside 
 | 2 | `se100.def.ReferentialRegime` | definition | Referential Regime | `02_background.tex` | 45-55 |
 | 3 | `se100.def.ReferentialCommitments` | definition | Referential Commitments | `02_background.tex` | 67-76 |
 | 4 | `se200.def.TransformationInvariantIdentity` | definition | Transformation-Invariant Identity | `02_background.tex` | 126-136 |
-| 5 | `se200.def.TransformationBasis` | definition | Transformation basis | `03_formal_setting.tex` | 119-134 |
-| 6 | `se200.def.TransformationClassification` | definition | Transformation classification | `03_formal_setting.tex` | 161-174 |
-| 7 | `se200.def.NonBreakingTransformation` | definition | Non-breaking transformation | `03_formal_setting.tex` | 202-209 |
-| 8 | `se200.def.IdentityRegime` | definition | Identity regime | `03_formal_setting.tex` | 221-231 |
-| 9 | `se200.def.InducedIdentityRelation` | definition | Induced relation from preserving steps | `03_formal_setting.tex` | 233-243 |
-| 10 | `se200.def.BasisPlurality` | definition | Basis plurality | `03_formal_setting.tex` | 273-279 |
-| 11 | `se200.def.HiddenRegime` | definition | Hidden regime | `03_formal_setting.tex` | 298-304 |
+| 5 | `se200.def.TransformationBasis` | definition | Transformation basis | `03_formal_setting.tex` | 120-135 |
+| 6 | `se200.def.TransformationClassification` | definition | Transformation classification | `03_formal_setting.tex` | 162-175 |
+| 7 | `se200.def.NonBreakingTransformation` | definition | Non-breaking transformation | `03_formal_setting.tex` | 203-210 |
+| 8 | `se200.def.IdentityRegime` | definition | Identity regime | `03_formal_setting.tex` | 222-232 |
+| 9 | `se200.def.InducedIdentityRelation` | definition | Induced relation from non-breaking families | `03_formal_setting.tex` | 234-245 |
+| 10 | `se200.def.BasisPlurality` | definition | Basis plurality | `03_formal_setting.tex` | 287-293 |
+| 11 | `se200.def.HiddenRegime` | definition | Hidden regime | `03_formal_setting.tex` | 312-318 |
 | 12 | `se200.def.ReferenceKind` | definition | Reference kind | `04_reference_inventory.tex` | 36-43 |
 | 13 | `se200.def.IdentityCarrier` | definition | Identity carrier | `04_reference_inventory.tex` | 45-52 |
 | 14 | `se200.def.IdentityBasis` | definition | Identity basis | `05_algebra.tex` | 32-41 |
 | 15 | `se200.def.Collapse` | definition | Collapse | `05_algebra.tex` | 69-81 |
-| 16 | `se200.def.UnderdeterminedKind` | definition | Underdetermined kind | `05_algebra.tex` | 107-113 |
-| 17 | `se200.lem.SplitPattern` | lemma | Split pattern for classification profiles | `05_algebra.tex` | 174-190 |
-| 18 | `se200.prop.ScopeUnderdetermination` | proposition | Scope underdetermination in the selected model | `05_algebra.tex` | 228-234 |
-| 19 | `se200.prop.RuleUnderdetermination` | proposition | Rule underdetermination in the selected model | `05_algebra.tex` | 272-278 |
-| 20 | `se200.prop.PlainReferentUnderdetermination` | proposition | Plain-referent underdetermination in the selected model | `05_algebra.tex` | 313-319 |
+| 16 | `se200.def.UnderdeterminedKind` | definition | Underdetermined kind | `05_algebra.tex` | 113-119 |
+| 17 | `se200.lem.SplitPattern` | lemma | Split pattern for classification profiles | `05_algebra.tex` | 180-196 |
+| 18 | `se200.prop.ScopeUnderdetermination` | proposition | Scope underdetermination in the selected model | `05_algebra.tex` | 234-240 |
+| 19 | `se200.prop.RuleUnderdetermination` | proposition | Rule underdetermination in the selected model | `05_algebra.tex` | 278-284 |
+| 20 | `se200.prop.PlainReferentUnderdetermination` | proposition | Plain-referent underdetermination in the selected model | `05_algebra.tex` | 319-325 |
 | 21 | `se200.def.SeparationWitness` | definition | Separation witness | `06_regimes.tex` | 101-111 |
 | 22 | `se200.prop.DistinctCoreProfiles` | proposition | Distinct core profiles | `06_regimes.tex` | 121-125 |
 | 23 | `se200.def.ModelDerivedVerdict` | definition | Model-derived transformation verdict | `06_regimes.tex` | 170-187 |
-| 24 | `se200.thm.StepIdentityCollapse` | theorem | Step-generated relation equality | `06_regimes.tex` | 302-311 |
-| 25 | `se200.prop.StepSeparation` | proposition | Separating transformation step | `06_regimes.tex` | 330-338 |
-| 26 | `se200.prop.CarrierIndexedCombination` | proposition | Carrier-indexed combination | `07_distinctions.tex` | 139-144 |
-| 27 | `se200.prop.ClassificationDistinctionPersists` | proposition | Persistence of a classification distinction | `07_distinctions.tex` | 190-195 |
+| 24 | `se200.thm.StepIdentityCollapse` | theorem | Step-generated relation equality | `06_regimes.tex` | 345-354 |
+| 25 | `se200.prop.StepSeparation` | proposition | Separating transformation step | `06_regimes.tex` | 373-381 |
+| 26 | `se200.prop.CarrierIndexedCombination` | proposition | Carrier-indexed combination | `07_distinctions.tex` | 144-149 |
+| 27 | `se200.prop.ClassificationDistinctionPersists` | proposition | Persistence of a classification distinction | `07_distinctions.tex` | 201-206 |
 | 28 | `se200.def.CoreCarrierBasisPair` | definition | Core carrier--basis pair | `08_determinancy.tex` | 22-41 |
 | 29 | `se200.def.CoreRegimeAssignment` | definition | Core regime assignment | `08_determinancy.tex` | 50-56 |
 | 30 | `se200.lem.CoreExistence` | lemma | Assignment existence | `08_determinancy.tex` | 66-69 |
@@ -142,7 +142,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 05. `se200.def.TransformationBasis` — Transformation basis
 
 - Kind: `definition`
-- Source: `03_formal_setting.tex:119-134`
+- Source: `03_formal_setting.tex:120-135`
 
 ```latex
 \begin{definition}[Transformation basis]
@@ -166,7 +166,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 06. `se200.def.TransformationClassification` — Transformation classification
 
 - Kind: `definition`
-- Source: `03_formal_setting.tex:161-174`
+- Source: `03_formal_setting.tex:162-175`
 
 ```latex
 \begin{definition}[Transformation classification]
@@ -188,7 +188,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 07. `se200.def.NonBreakingTransformation` — Non-breaking transformation
 
 - Kind: `definition`
-- Source: `03_formal_setting.tex:202-209`
+- Source: `03_formal_setting.tex:203-210`
 
 ```latex
 \begin{definition}[Non-breaking transformation]
@@ -204,7 +204,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 08. `se200.def.IdentityRegime` — Identity regime
 
 - Kind: `definition`
-- Source: `03_formal_setting.tex:221-231`
+- Source: `03_formal_setting.tex:222-232`
 
 ```latex
 \begin{definition}[Identity regime]
@@ -220,29 +220,30 @@ Items remain in section-file and source-line order. No mathematical text inside 
 \end{definition}
 ```
 
-## 09. `se200.def.InducedIdentityRelation` — Induced relation from preserving steps
+## 09. `se200.def.InducedIdentityRelation` — Induced relation from non-breaking families
 
 - Kind: `definition`
-- Source: `03_formal_setting.tex:233-243`
+- Source: `03_formal_setting.tex:234-245`
 
 ```latex
-\begin{definition}[Induced relation from preserving steps]
+\begin{definition}[Induced relation from non-breaking families]
   \label{se200.def.InducedIdentityRelation}
   Fix a profile $\tau$ and a domain $D_\tau$ of eligible presentations.
   Let $E_\tau\subseteq D_\tau\times D_\tau$ consist of pairs joined
-  by specified, admissible transformation steps that preserve the
-  declared identity basis of $\tau$.
-  Steps of families classified $\PRS$ or $\NEU$ are preserving;
-  steps of families classified $\BRK$ are not.
-  Define $\sim_\tau$ as the smallest
-  equivalence relation on $D_\tau$ containing $E_\tau$.
+  by specified, admissible steps of transformation families $f$
+  satisfying
+  \[
+    \Class_\tau(f)\in\{\PRS,\NEU\}.
+  \]
+  Define $\sim_\tau$ as the smallest equivalence relation
+  on $D_\tau$ containing $E_\tau$.
 \end{definition}
 ```
 
 ## 10. `se200.def.BasisPlurality` — Basis plurality
 
 - Kind: `definition`
-- Source: `03_formal_setting.tex:273-279`
+- Source: `03_formal_setting.tex:287-293`
 
 ```latex
 \begin{definition}[Basis plurality]
@@ -257,7 +258,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 11. `se200.def.HiddenRegime` — Hidden regime
 
 - Kind: `definition`
-- Source: `03_formal_setting.tex:298-304`
+- Source: `03_formal_setting.tex:312-318`
 
 ```latex
 \begin{definition}[Hidden regime]
@@ -343,7 +344,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 16. `se200.def.UnderdeterminedKind` — Underdetermined kind
 
 - Kind: `definition`
-- Source: `05_algebra.tex:107-113`
+- Source: `05_algebra.tex:113-119`
 
 ```latex
 \begin{definition}[Underdetermined kind]
@@ -358,7 +359,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 17. `se200.lem.SplitPattern` — Split pattern for classification profiles
 
 - Kind: `lemma`
-- Source: `05_algebra.tex:174-190`
+- Source: `05_algebra.tex:180-196`
 
 ```latex
 \begin{lemma}[Split pattern for classification profiles]
@@ -383,7 +384,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 18. `se200.prop.ScopeUnderdetermination` — Scope underdetermination in the selected model
 
 - Kind: `proposition`
-- Source: `05_algebra.tex:228-234`
+- Source: `05_algebra.tex:234-240`
 
 ```latex
 \begin{proposition}[Scope underdetermination in the selected model]
@@ -398,7 +399,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 19. `se200.prop.RuleUnderdetermination` — Rule underdetermination in the selected model
 
 - Kind: `proposition`
-- Source: `05_algebra.tex:272-278`
+- Source: `05_algebra.tex:278-284`
 
 ```latex
 \begin{proposition}[Rule underdetermination in the selected model]
@@ -413,7 +414,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 20. `se200.prop.PlainReferentUnderdetermination` — Plain-referent underdetermination in the selected model
 
 - Kind: `proposition`
-- Source: `05_algebra.tex:313-319`
+- Source: `05_algebra.tex:319-325`
 
 ```latex
 \begin{proposition}[Plain-referent underdetermination in the selected model]
@@ -486,7 +487,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 24. `se200.thm.StepIdentityCollapse` — Step-generated relation equality
 
 - Kind: `theorem`
-- Source: `06_regimes.tex:302-311`
+- Source: `06_regimes.tex:345-354`
 
 ```latex
 \begin{theorem}[Step-generated relation equality]
@@ -504,7 +505,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 25. `se200.prop.StepSeparation` — Separating transformation step
 
 - Kind: `proposition`
-- Source: `06_regimes.tex:330-338`
+- Source: `06_regimes.tex:373-381`
 
 ```latex
 \begin{proposition}[Separating transformation step]
@@ -521,7 +522,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 26. `se200.prop.CarrierIndexedCombination` — Carrier-indexed combination
 
 - Kind: `proposition`
-- Source: `07_distinctions.tex:139-144`
+- Source: `07_distinctions.tex:144-149`
 
 ```latex
 \begin{proposition}[Carrier-indexed combination]
@@ -535,7 +536,7 @@ for each $k\in K$.
 ## 27. `se200.prop.ClassificationDistinctionPersists` — Persistence of a classification distinction
 
 - Kind: `proposition`
-- Source: `07_distinctions.tex:190-195`
+- Source: `07_distinctions.tex:201-206`
 
 ```latex
 \begin{proposition}[Persistence of a classification distinction]

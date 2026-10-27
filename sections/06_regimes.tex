@@ -247,9 +247,20 @@ an invariant basis with a proven minimal support,
 and a proof of its derived verdict.
 The other 84 cells in the stipulated matrix
 have no derived model yet.
-Wherever a cell is derived, it is breaking exactly when the stipulated
-cell is breaking; the three derived \NEU{} cells are \PRS{} in
-Table~\ref{tab:master}, a difference of field granularity.
+For all six certified cells, the derived and stipulated
+classifications agree on whether the transformation is breaking.
+
+The three derived \NEU{} cells are classified \PRS{}
+in Table~\ref{tab:master}.
+Both verdicts are non-breaking, but they distinguish
+whether a transformation engages a supported field.
+
+The scope and rule comparisons expose dependencies on
+field granularity.
+The fork classification additionally depends on explicit
+continuity warrants.
+These conditional results do not establish a universal
+correspondence between stipulated and derived classifications.
 
 The additional rows in Table~\ref{tab:derived_initial}
 are sensitivity analyses or alternative warranted models,
@@ -298,6 +309,38 @@ The broader rule variant likewise changes the specification of eligible refineme
 A comparison with Table~\ref{tab:master} is warranted only after
 matching operation semantics, identity basis, field granularity, and
 admissibility conditions.
+
+The invariant-based step construction uses a presentation space $C$,
+an effect model $M$, an invariant basis $b$, and a comparison domain
+$D\subseteq C$.
+
+Define the preserving-step relation by
+\[
+  R_{M,b,D}(x,y)
+  \iff
+  x,y\in D
+  \;\land\;
+  \exists f\,
+  \bigl(
+  M.\mathrm{step}(f,x,y)
+  \land
+  b.\mathrm{inv}(x)=b.\mathrm{inv}(y)
+  \bigr).
+\]
+
+The step-generated identity relation is
+\[
+  \mathrm{StepId}_{M,b,D}
+  =
+  \operatorname{EqCl}_{C}(R_{M,b,D}),
+\]
+where $\operatorname{EqCl}_{C}$ is the smallest equivalence
+relation on $C$ containing the specified generating steps.
+
+Unlike the classification-based family-level constructions,
+this relation tests invariant preservation for each admissible
+step. Its generating edges may include preserving steps from
+families whose derived verdict is \MIX{}.
 
 \begin{theorem}[Step-generated relation equality]
   \label{se200.thm.StepIdentityCollapse}

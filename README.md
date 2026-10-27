@@ -54,6 +54,7 @@ intended referents, or a universal lower bound on identity regimes.
 
 - [Paper 1 SE 100: Neutral Substrates](https://arxiv.org/abs/2601.14271)
 - [Paper 2 SE 200: Referential Regimes](./se200_referential_regimes.pdf)
+- [Companion Lean 4 formalization: Identity Regimes v0.7.0](https://github.com/structural-explainability/se-theory-identity-regimes/releases/tag/v0.7.0)
 
 ## Building Locally
 

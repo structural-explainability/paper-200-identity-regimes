@@ -15,11 +15,19 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 Complete the remaining work:
 
-#### 1. Investigate CE-5 and non-amalgamation.
+#### 1. Investigate admissible combination and non-amalgamation.
 
-Investigate the CE-5 lossless-union countermodel to determine whether carrier-specific identity relations can be represented together without losing relevant distinctions.
+The carrier-indexed combination proposition establishes that
+component equivalence relations can be represented together
+without losing their individual restrictions.
 
-Determine whether any non-amalgamation result can be independently justified. Preserve CE-5 as the priority mathematical and scientific investigation rather than restoring the lower bound through additional assumptions.
+Investigate whether such combinations preserve all scientifically
+warranted identity judgments, transformation distinctions,
+and required referential commitments.
+
+Determine whether any non-amalgamation condition can be
+independently justified.
+There is no need to restore a proposed lower bound.
 
 #### 2. Establish scientific adequacy of candidate profiles.
 
