@@ -4,7 +4,7 @@
 
 - Source directory: `sections`
 - Source files: 13
-- Extracted: 2026-10-27T12:01:21-05:00
+- Extracted: 2026-10-27T12:24:38-05:00
 - Labeled items: 32
 - Required labels verified: 4
 - Additional labels extracted: 28
@@ -26,8 +26,8 @@ Items remain in section-file and source-line order. No mathematical text inside 
 
 | # | Paper ID | Kind | Title | Source | Lines |
 | ---: | --- | --- | --- | --- | ---: |
-| 1 | `se100.def.Substrate` | definition | Substrate | `02_background.tex` | 27-33 |
-| 2 | `se100.def.ReferentialRegime` | definition | Referential Regime | `02_background.tex` | 44-54 |
+| 1 | `se100.def.Substrate` | definition | Substrate | `02_background.tex` | 26-32 |
+| 2 | `se100.def.ReferentialRegime` | definition | Referential Regime | `02_background.tex` | 43-53 |
 | 3 | `se100.def.ReferentialCommitments` | definition | Referential Commitments | `02_background.tex` | 66-75 |
 | 4 | `se200.def.TransformationInvariantIdentity` | definition | Transformation-Invariant Identity | `02_background.tex` | 118-128 |
 | 5 | `se200.def.TransformationBasis` | definition | Transformation basis | `03_formal_setting.tex` | 92-107 |
@@ -71,7 +71,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 01. `se100.def.Substrate` — Substrate
 
 - Kind: `definition`
-- Source: `02_background.tex:27-33`
+- Source: `02_background.tex:26-32`
 
 ```latex
 \begin{definition}[Substrate]
@@ -86,7 +86,7 @@ Items remain in section-file and source-line order. No mathematical text inside 
 ## 02. `se100.def.ReferentialRegime` — Referential Regime
 
 - Kind: `definition`
-- Source: `02_background.tex:44-54`
+- Source: `02_background.tex:43-53`
 
 ```latex
 \begin{definition}[Referential Regime]

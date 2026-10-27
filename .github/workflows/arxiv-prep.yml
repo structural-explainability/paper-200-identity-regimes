@@ -1,7 +1,13 @@
-# WHY: Prepares clean source package for arXiv submission
-# OBS: Removes build artifacts and CI files that arXiv doesn't need
-# REQ: Create account on arxiv.org and start a paper submission before using this
-# ALT: Manual trigger only, use as needed to publish new versions on arXiv
+# ============================================================
+# .github/workflows/arxiv-prep.yml
+# ============================================================
+# Updated: 2026-10-27
+
+# WHY: Prepare and verify LaTeX source for arXiv submission.
+# OBS: Package only required source files.
+# OBS: Compile from the extracted submission ZIP.
+# REQ: Commit and push manuscript changes before running.
+# ALT: Manual trigger for new submissions or replacement versions.
 
 name: Prepare arXiv Source
 
@@ -17,7 +23,7 @@ jobs:
 
     steps:
       # ============================================================
-      # ASSEMBLE: Get code and set up environment
+      # ASSEMBLE: Checkout and configure TeX
       # ============================================================
 
       - name: A1) Checkout repository code
@@ -34,79 +40,82 @@ jobs:
           package-file: .github/tl_packages
           cache: true
 
-      - name: A3) Confirm TeX binaries available
+      - name: A3) Verify TeX tools
         run: |
-          set -e
+          set -euo pipefail
           kpsewhich authblk.sty
-          which pdflatex
-          pdflatex --version
-          which latexmk
+          command -v pdflatex
+          command -v latexmk
           latexmk --version
 
       # ============================================================
-      # === DEPLOY: Build and deploy ===
+      # BUILD: Build source-only arXiv ZIP
       # ============================================================
 
-      # WHY: Create clean staging area with only files arXiv needs
-      - name: D1) Create staging directory
+      - name: B1) Stage source files
         run: |
+          set -euo pipefail
+
           mkdir -p arxiv_src
 
-          # WHY: Copy main tex file
           cp se200_referential_regimes.tex arxiv_src/
-
-          # WHY: Copy content directories
           cp -r sections arxiv_src/
 
-      # WHY: arXiv builds from source - doesn't need build artifacts
-      - name: D2) Clean auxiliary files
-        working-directory: arxiv_src
+      - name: B2) Create source ZIP
         run: |
-          # WHY: Remove LaTeX auxiliary files from local builds
-          # OBS: Keep .bbl if present (do not remove) so arXiv build is deterministic
-          find . -type f \( \
-            -name "*.aux" -o -name "*.log"  -o -name "*.out"  -o -name "*.toc" -o \
-            -name "*.bcf"  -o -name "*.blg"  -o -name "*.run.xml" -o \
-            -name "*.fls" -o -name "*.fdb_latexmk" -o -name "*.synctex.gz" \
-          \) -delete
+          set -euo pipefail
 
-      # WHY: arXiv requires submission as zip file
-      - name: D3) Create arXiv source zip
-        run: |
           cd arxiv_src
-          zip -r ../arxiv-source.zip .
+          zip -q -r ../arxiv-source.zip .
 
-      # WHY: Download this artifact to upload to arxiv.org
-      # OBS: Artifact available for download from Actions tab after workflow runs
-      - name: D4) Upload arXiv source artifact
+      - name: B3) Verify ZIP contents
+        run: |
+          set -euo pipefail
+
+          unzip -t arxiv-source.zip
+          unzip -Z1 arxiv-source.zip
+
+      # ============================================================
+      # COMPILE: Compile from the actual submission archive
+      # ============================================================
+
+      - name: C1) Extract source ZIP
+        run: |
+          set -euo pipefail
+
+          mkdir -p arxiv_check
+          unzip -q arxiv-source.zip -d arxiv_check
+
+      - name: C2) Compile extracted LaTeX source
+        working-directory: arxiv_check
+        run: |
+          set -euo pipefail
+
+          latexmk \
+            -pdf \
+            -interaction=nonstopmode \
+            -halt-on-error \
+            -file-line-error \
+            se200_referential_regimes.tex
+
+          test -s se200_referential_regimes.pdf
+
+      # ============================================================
+      # DELIVERABLES: Upload files to GitHub Actions for manual download
+      # ============================================================
+
+      - name: D1) Upload arXiv source ZIP
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: arxiv-source
           path: arxiv-source.zip
-          if-no-files-found: error # WHY: Fail if packaging didn't work
+          retention-days: 7
+          if-no-files-found: error
 
-      # WHY: Debugging step to verify contents of staging area
-      - name: D5) Debug list files
-        shell: bash
-        run: |
-          set -e
-          echo "PWD: $(pwd)"
-          echo "Top-level:"
-          ls -la
-          echo
-          echo "Recursive listing (first 200 lines):"
-          ls -R | sed -n '1,200p'
-          echo
-          echo "Find PDFs:"
-          find . -type f -name "*.pdf" -print
-
-      # WHY: Provide a compiled PDF for manual verification before arXiv submission
-      # OBS: This PDF is NOT included in the arXiv source zip
-      # OBS: Allows manual confirmation that the staged bundle compiles as expected
-      - name: D6) Upload compiled PDF (CI check)
+      - name: D2) Upload verification PDF
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: compiled-pdf
-          path: ./*.pdf
+          path: arxiv_check/se200_referential_regimes.pdf
           retention-days: 7
           if-no-files-found: error
