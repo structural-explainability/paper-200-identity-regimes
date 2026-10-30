@@ -146,6 +146,8 @@ Follow these steps exactly when creating a new release.
 ### Task 2. Set up and Validate
 
 ```shell
+.\sit.ps1
+
 # Update GitHub Actions and pin all action references to immutable SHAs.
 uvx gha-tools autoupdate --pin=all --write .github/workflows
 
