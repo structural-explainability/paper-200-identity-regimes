@@ -127,12 +127,19 @@ Released before this changelog existed. See the
 
 ## Notes on versioning and releases
 
-- We use **SemVer**:
-  - **MAJOR** - breaking changes to the meaning, assumptions, or conclusions
-    of existing paper items, or removal or renaming of their identifiers
-  - **MINOR** - backward-compatible additions
-  - **PATCH** - fixes, documentation, tooling
-- Versions are driven by git tags. Tag `vX.Y.Z` to release.
+We use SemVer for repository releases:
+
+- **MAJOR** - Breaking changes to the meaning, assumptions,
+  or conclusions of existing paper items, or removal or
+  renaming of their identifiers.
+- **MINOR** - Backward-compatible additions.
+- **PATCH** - Corrections, documentation, and tooling updates.
+
+Versions are driven by git tags.
+Tag `vX.Y.Z` to release.
+
+The Git repository version and the arXiv manuscript version
+are separate version histories.
 
 ## Release Procedure (Required)
 
@@ -141,7 +148,7 @@ Follow these steps exactly when creating a new release.
 ### Task 1. Update release metadata (manual edits)
 
 1.1. CITATION.cff: update version and date-released
-1.2. CHANGELOG.md: add section, move unreleased entries, update links, update release command
+1.2. CHANGELOG.md: add section, move unreleased entries, update links
 
 ### Task 2. Set up and Validate
 
@@ -199,12 +206,6 @@ After the required GitHub Actions succeed:
 ```shell
 git tag vX.Y.Z -m "X.Y.Z"
 git push origin vX.Y.Z
-```
-
-After it succeeds, for a major revision, create a release:
-
-```shell
-gh release create v0.6.0 --verify-tag --title "v0.6.0" --generate-notes
 ```
 
 ## Only As Needed (delete a tag)
